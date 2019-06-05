@@ -480,7 +480,7 @@ class HomeController extends Controller
       $fecha2=$request['fecha2'];
 
       
-                      $datos = \App\tbAsistencia::select("tb_asistencias.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias.se_realizo","tb_asistencias.no_motivo","tb_asistencias.fecha","tb_asistencias.hora_i","tb_asistencias.hora_f","tb_asistencias.jg","tb_asistencias.mp","tb_asistencias.jsp","tb_asistencias.jspi","tb_asistencias.jc","tb_asistencias.ml","tb_asistencias.otro",'tb_asistencias.representante_alcaldia',"tb_asistencias.ins","tb_asistencias.reunionjg",DB::raw('DATE_ADD(tb_asistencias.created_at, INTERVAL -6 HOUR) as fecha_real'))
+                      $datos = \App\tbAsistencia::select("tb_asistencias.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias.se_realizo","tb_asistencias.no_motivo","tb_asistencias.fecha","tb_asistencias.hora_i","tb_asistencias.hora_f","tb_asistencias.jg","tb_asistencias.mp","tb_asistencias.jsp","tb_asistencias.jspi","tb_asistencias.jc","tb_asistencias.ml","tb_asistencias.otro",'tb_asistencias.representante_alcaldia',"tb_asistencias.ins","tb_asistencias.reunionjg")
                       
                       ->leftjoin('users','users.id','=','tb_asistencias.user_registro') 
                       ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
