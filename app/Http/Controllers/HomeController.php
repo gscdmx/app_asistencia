@@ -256,7 +256,7 @@ class HomeController extends Controller
            
             
             
-            Excel::create(' Excel', function($excel) use($datos)  {
+            Excel::store(' Excel', function($excel) use($datos)  {
 
                 $excel->sheet('excel', function($sheet) use($datos) {
 
@@ -310,7 +310,7 @@ class HomeController extends Controller
 
                 });
 
-            })->export('xls');
+            })->download('xlsx');
 
 
 
@@ -336,7 +336,7 @@ class HomeController extends Controller
                     ->get()->toArray();
 
         
-                 Excel::create(' Excel', function($excel) use($datos) {
+                 Excel::store(' Excel', function($excel) use($datos) {
 
                  $excel->sheet('excel', function($sheet)  use($datos){
                     
@@ -390,7 +390,7 @@ class HomeController extends Controller
           
                 });
 
-            })->export('xls');
+            })->download('xlsx');
 
 
 
@@ -402,7 +402,7 @@ class HomeController extends Controller
           public function excel_asistencias_por_fecha_al()
     {   
         
-    Excel::create(' Excel', function($excel) {
+    Excel::store(' Excel', function($excel) {
 
                 $excel->sheet('excel', function($sheet) {
                     
@@ -427,7 +427,7 @@ class HomeController extends Controller
 
                 });
 
-            })->export('xls');
+            })->download('xlsx');
 
 
 
@@ -490,7 +490,7 @@ class HomeController extends Controller
                      ->get()->toArray();
 
 
-      Excel::create(' Excel', function($excel) use($fecha1,$fecha2,$datos) {
+      Excel::store(' Excel', function($excel) use($fecha1,$fecha2,$datos) {
 
                   $excel->sheet('excel', function($sheet) use($fecha1,$fecha2,$datos) {
                       
@@ -786,7 +786,7 @@ class HomeController extends Controller
         $fecha2=$request['fecha2'];
 
 
-         Excel::create(' Excel', function($excel) use($fecha1,$fecha2) {
+         Excel::store(' Excel', function($excel) use($fecha1,$fecha2) {
 
                   $excel->sheet('excel', function($sheet) use($fecha1,$fecha2) {
               
@@ -806,7 +806,7 @@ class HomeController extends Controller
 
                   });
 
-              })->export('xls');
+              })->download('xlsx');
                    
                    
                    
