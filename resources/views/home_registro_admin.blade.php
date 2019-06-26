@@ -405,17 +405,7 @@
 
 
        
-          
-        <!--  <br>
-           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Temas Relevantes:</label>
-          <div class="col-sm-10">
-            
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
-          </div>
-        </div>-->
-
-         
+      
 
 
         <div class="line"></div>

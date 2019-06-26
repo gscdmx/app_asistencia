@@ -38,41 +38,7 @@
 
 
 
-<!--
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Alcaldía:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="alcaldia" name="alcaldia" class="form-control">
 
-              <option value="">Selecciona...</option>
-              @foreach($alcaldias as $alcaldia)
-               <option value="{{$alcaldia->id}}">{{$alcaldia->delegacion}}</option>
-
-              @endforeach
-              
-            </select>
-
-             @if ($errors->has('alcaldia')) <p  style="color: red">{{ $errors->first('alcaldia') }}</p> 
-             @endif
-           
-
-          </div>
-        
-        </div>
-
-
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Coordinación Territorial:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="ct" name="ct" class="form-control"> 
-            </select>
-
-             @if ($errors->has('ct')) <p  style="color: red">{{ $errors->first('ct') }}</p> @endif 
-
-
-          </div>
-        
-        </div>-->
 
 
 
@@ -424,16 +390,6 @@
 
 
        
-          
-        <!--  <br>
-           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Temas Relevantes:</label>
-          <div class="col-sm-10">
-            
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
-          </div>
-        </div>-->
-
          
 
       

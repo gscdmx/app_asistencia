@@ -61,21 +61,30 @@ if (isset(\Auth::user()->permisos)) {
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
           <h5 class="sidenav-heading">Menú</h5>
-          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+          <ul id="side-main-menu" class="side-menu list-unstyled">  
+          
             <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO                             </a></li>
             <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS</a></li>
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS(MIERCOLES)</a></li>
+            
+            <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>CUESTIONARIO PARA VISITAS DOMICILIARIAS</a></li>
              
               <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDFS</a></li>
-           
+              
+              
+             
+          
              <?php if(in_array(1, $array_permisos)):?>
              <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>Usuarios </a>
               <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="{{url('/nuevoUsuario')}}">Nuevo usuario</a></li>
                 <li><a href="{{url('/listadosUsuarios')}}">Listado de usuarios</a></li>
+                
               </ul>
             </li>
              <?php endif?>
+             
+               
              
              
               <?php if(in_array(4, $array_permisos)):?>
@@ -97,8 +106,13 @@ if (isset(\Auth::user()->permisos)) {
                <?php if(in_array(8, $array_permisos)):?>
               <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>Usuario PDF</a></li>
                <?php endif?>
-            
-             
+              
+              
+               <?php if(in_array(9, $array_permisos)):?>
+              <li><a href="{{url('/mapaView')}}"> <i class="icon-list"></i>Mapas</a></li>
+               <?php endif?>
+               
+           
              
              <!--MODULO REPORTES DIARIOS-->
              <?php if(in_array(2, $array_permisos)):?>
@@ -106,12 +120,23 @@ if (isset(\Auth::user()->permisos)) {
                <li><a href="#exampledropdownDropdown_DIARIO" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reporte Diarios </a>
               <ul id="exampledropdownDropdown_DIARIO" class="collapse list-unstyled ">
                 <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Fecha</a></li>
+               
                <!--<li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Faltantes por Fecha Miércoles</a></li>-->
                 <li><a href="{{url('/reporteGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Asistencia</a></li>
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
+                
+                <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Excel cuestionarios</a></li>
               </ul>
             </li>
              <?php endif?>
+             
+             
+             <!--MODULO MAPAS-->
+             
+             
+        
+        
+             
              
              
           
@@ -130,12 +155,19 @@ if (isset(\Auth::user()->permisos)) {
             </li>
             
              <?php endif?>
-          
              
+             
+             
+          
+          
            <?php   $dia= date("w");
             if($dia==4){?>
              <li><a href="{{url('/asistencia_miercoles')}}"> <i class="icon-padnote"></i>Asistencia Miércoles</a></li>
             <?php } ?>
+        
+        
+       
+        
         
       
           </ul>

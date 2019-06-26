@@ -9,9 +9,12 @@ use DB;
 use Validator;
 use Illuminate\Support\Facades\Redirect;
 
-use Excel;
 
-
+use App\Exports\AsistenciasExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\Reporte_fechaExport;
+use App\Exports\FaltantesExport;
+use App\Exports\Reportes_periodosExport;
 
 class HomeController extends Controller
 {
@@ -86,7 +89,7 @@ class HomeController extends Controller
         if ($validator->fails()) {
 
            $messages = $validator->messages();
-           // send back to the page with the input data and errors
+        
            return Redirect::to('/home')->withInput()->withErrors($validator);
 
          }else if ($validator->passes()){
@@ -245,164 +248,29 @@ class HomeController extends Controller
 
       public function excel_asistencias()
     {   
-               $datos = \App\tbAsistencia::select("tb_asistencias.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias.se_realizo","tb_asistencias.no_motivo","tb_asistencias.fecha","tb_asistencias.hora_i","tb_asistencias.hora_f","tb_asistencias.jg","tb_asistencias.mp","tb_asistencias.jsp","tb_asistencias.jspi","tb_asistencias.jc","tb_asistencias.ml","tb_asistencias.otro","tb_asistencias.ins","tb_asistencias.representante_alcaldia","tb_asistencias.reunionjg")
-                    ->leftjoin('users','users.id','=','tb_asistencias.user_registro') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                   ->where('tb_asistencias.user_registro',\Auth::user()->id)
-                   
-                   ->get()->toArray();
-            
-           
-            
-            
-            Excel::store(' Excel', function($excel) use($datos)  {
 
-                $excel->sheet('excel', function($sheet) use($datos) {
-
-              $sheet->cell('A1',function($cell) {$cell->setValue('id'); });   
-              $sheet->cell('B1',function($cell) {$cell->setValue('ALCALDÍA'); });
-              $sheet->cell('C1',function($cell) {$cell->setValue('C.T'); });
-              $sheet->cell('D1',function($cell) {$cell->setValue('SECTOR'); });
-              $sheet->cell('E1',function($cell) {$cell->setValue('SE REALIZÓ GABINETE'); });
-              $sheet->cell('F1',function($cell) {$cell->setValue('NO MOTIVO'); });
-              $sheet->cell('G1',function($cell) {$cell->setValue('FECHA'); });
-              $sheet->cell('H1',function($cell) {$cell->setValue('HORA DE INICIO'); });
-              $sheet->cell('I1',function($cell) {$cell->setValue('HORA DE TERMINO'); });
-              $sheet->cell('J1',function($cell) {$cell->setValue('REPRESENTANTE DE JEFA DE GOBIERNO'); });
-              $sheet->cell('K1',function($cell) {$cell->setValue('MINISTERIO PÚBLICO'); });
-              $sheet->cell('L1',function($cell) {$cell->setValue('JEFE DE SECTOR DE POLICÍA'); });
-              $sheet->cell('M1',function($cell) {$cell->setValue('PDI POLICÍA DE INVESTIGACIÓN'); });
-              $sheet->cell('N1',function($cell) {$cell->setValue('JUEZ CÍVICO'); });
-              $sheet->cell('O1',function($cell) {$cell->setValue('MÉDICO LEGISTA'); });
-              $sheet->cell('P1',function($cell) {$cell->setValue('PDI DE INTELIGENCIA SOCIAL'); });
-              $sheet->cell('Q1',function($cell) {$cell->setValue('OTRO PARTICIPANTE'); });
-              $sheet->cell('R1',function($cell) {$cell->setValue('REPRESENTANTE DE ALCALDÍA'); });
-              $sheet->cell('S1',function($cell) {$cell->setValue('REUNIÓN CON JEFA DE GOBIERNO'); });
-              
-
-
-                   foreach($datos as $key => $value)
-                   {
-                       
-                   $i = $key +2;
-                   $sheet->cell('A'.$i, $value['id']);
-                   $sheet->cell('B'.$i, $value['delegacion']);
-                   $sheet->cell('C'.$i, $value['ct2']);
-                   $sheet->cell('D'.$i, $value['sector']);
-                   $sheet->cell('E'.$i, $value['se_realizo']);
-                   $sheet->cell('F'.$i, $value['no_motivo']);
-                   $sheet->cell('G'.$i, $value['fecha']);
-                   $sheet->cell('H'.$i, $value['hora_i']);
-                   $sheet->cell('I'.$i, $value['hora_f']);
-                   $sheet->cell('J'.$i, $value['jg']);
-                   $sheet->cell('K'.$i, $value['mp']);
-                   $sheet->cell('L'.$i, $value['jsp']);
-                   $sheet->cell('M'.$i, $value['jspi']);
-                   $sheet->cell('N'.$i, $value['jc']);
-                   $sheet->cell('O'.$i, $value['ml']);
-                   $sheet->cell('P'.$i, $value['ins']);
-                   $sheet->cell('Q'.$i, $value['otro']);
-                   $sheet->cell('R'.$i, $value['representante_alcaldia']);
-                   $sheet->cell('S'.$i, $value['reunionjg']);
-                   
-                   }
-
-                });
-
-            })->download('xlsx');
-
-
-
-        
+       return Excel::download(new AsistenciasExport, 'asistencias.xlsx');
     }
 
 
       public function excel_asistencias_por_fecha()
     {   
         
-        $timezone = new \DateTimeZone('America/Mexico_City');
-        $date = new \DateTime();
-        $date->setTimeZone($timezone); 
-        $fecha_actual=$date->format('Y-m-d');
-
-        
-         $datos = \App\tbAsistencia::select("tb_asistencias.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias.se_realizo","tb_asistencias.no_motivo","tb_asistencias.fecha","tb_asistencias.hora_i","tb_asistencias.hora_f","tb_asistencias.jg","tb_asistencias.mp","tb_asistencias.jsp","tb_asistencias.jspi","tb_asistencias.jc","tb_asistencias.ml","tb_asistencias.otro",'tb_asistencias.representante_alcaldia',"tb_asistencias.ins","tb_asistencias.reunionjg")
-                    ->leftjoin('users','users.id','=','tb_asistencias.user_registro') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                    ->whereBetween('tb_asistencias.fecha', [$fecha_actual, $fecha_actual])
-                    ->distinct("cat_coord_territorials.ct2")
-                    ->get()->toArray();
-
-        
-                 Excel::store(' Excel', function($excel) use($datos) {
-
-                 $excel->sheet('excel', function($sheet)  use($datos){
-                    
-              $sheet->cell('A1',function($cell) {$cell->setValue('id'); });   
-              $sheet->cell('B1',function($cell) {$cell->setValue('ALCALDÍA'); });
-              $sheet->cell('C1',function($cell) {$cell->setValue('C.T'); });
-              $sheet->cell('D1',function($cell) {$cell->setValue('SECTOR'); });
-              $sheet->cell('E1',function($cell) {$cell->setValue('SE REALIZÓ GABINETE'); });
-              $sheet->cell('F1',function($cell) {$cell->setValue('NO MOTIVO'); });
-              $sheet->cell('G1',function($cell) {$cell->setValue('FECHA'); });
-              $sheet->cell('H1',function($cell) {$cell->setValue('HORA DE INICIO'); });
-              $sheet->cell('I1',function($cell) {$cell->setValue('HORA DE TERMINO'); });
-              $sheet->cell('J1',function($cell) {$cell->setValue('REPRESENTANTE DE JEFA DE GOBIERNO'); });
-              $sheet->cell('K1',function($cell) {$cell->setValue('MINISTERIO PÚBLICO'); });
-              $sheet->cell('L1',function($cell) {$cell->setValue('JEFE DE SECTOR DE POLICÍA'); });
-              $sheet->cell('M1',function($cell) {$cell->setValue('PDI POLICÍA DE INVESTIGACIÓN'); });
-              $sheet->cell('N1',function($cell) {$cell->setValue('JUEZ CÍVICO'); });
-              $sheet->cell('O1',function($cell) {$cell->setValue('MÉDICO LEGISTA'); });
-              $sheet->cell('P1',function($cell) {$cell->setValue('PDI DE INTELIGENCIA SOCIAL'); });
-              $sheet->cell('Q1',function($cell) {$cell->setValue('OTRO PARTICIPANTE'); });
-              $sheet->cell('R1',function($cell) {$cell->setValue('REPRESENTANTE DE ALCALDÍA'); });
-              $sheet->cell('S1',function($cell) {$cell->setValue('REUNIÓN CON JEFA DE GOBIERNO'); });
-              
-
-                   foreach($datos as $key => $value)
-                   {
-                       
-                   $i = $key +2;
-                   $sheet->cell('A'.$i, $value['id']);
-                   $sheet->cell('B'.$i, $value['delegacion']);
-                   $sheet->cell('C'.$i, $value['ct2']);
-                   $sheet->cell('D'.$i, $value['sector']);
-                   $sheet->cell('E'.$i, $value['se_realizo']);
-                   $sheet->cell('F'.$i, $value['no_motivo']);
-                   $sheet->cell('G'.$i, $value['fecha']);
-                   $sheet->cell('H'.$i, $value['hora_i']);
-                   $sheet->cell('I'.$i, $value['hora_f']);
-                   $sheet->cell('J'.$i, $value['jg']);
-                   $sheet->cell('K'.$i, $value['mp']);
-                   $sheet->cell('L'.$i, $value['jsp']);
-                   $sheet->cell('M'.$i, $value['jspi']);
-                   $sheet->cell('N'.$i, $value['jc']);
-                   $sheet->cell('O'.$i, $value['ml']);
-                   $sheet->cell('P'.$i, $value['ins']);
-                   $sheet->cell('Q'.$i, $value['otro']);
-                   $sheet->cell('R'.$i, $value['representante_alcaldia']);
-                   $sheet->cell('S'.$i, $value['reunionjg']);
-                   
-                   }
-
-          
-                });
-
-            })->download('xlsx');
+       $timezone = new \DateTimeZone('America/Mexico_City');
+       $date = new \DateTime();
+       $date->setTimeZone($timezone); 
+       $fecha_actual=$date->format('Y-m-d');
 
 
-
-        
+          return Excel::download(new Reporte_fechaExport($fecha_actual), 'asistencias_diario.xlsx');
     }
-    
-    
+
+
     
           public function excel_asistencias_por_fecha_al()
-    {   
+               {   
         
-    Excel::store(' Excel', function($excel) {
+               Excel::create(' Excel', function($excel) {
 
                 $excel->sheet('excel', function($sheet) {
                     
@@ -427,7 +295,7 @@ class HomeController extends Controller
 
                 });
 
-            })->download('xlsx');
+            })->create('xlsx');
 
 
 
@@ -479,79 +347,8 @@ class HomeController extends Controller
       $fecha1=$request['fecha'];
       $fecha2=$request['fecha2'];
 
-      
-                      $datos = \App\tbAsistencia::select("tb_asistencias.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias.se_realizo","tb_asistencias.no_motivo","tb_asistencias.fecha","tb_asistencias.hora_i","tb_asistencias.hora_f","tb_asistencias.jg","tb_asistencias.mp","tb_asistencias.jsp","tb_asistencias.jspi","tb_asistencias.jc","tb_asistencias.ml","tb_asistencias.otro",'tb_asistencias.representante_alcaldia',"tb_asistencias.ins","tb_asistencias.reunionjg")
-                      
-                      ->leftjoin('users','users.id','=','tb_asistencias.user_registro') 
-                      ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                      ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                      ->whereBetween('tb_asistencias.fecha', [$fecha1,$fecha2])
-                      ->orderBy('fecha_real','ASC')
-                     ->get()->toArray();
 
-
-      Excel::store(' Excel', function($excel) use($fecha1,$fecha2,$datos) {
-
-                  $excel->sheet('excel', function($sheet) use($fecha1,$fecha2,$datos) {
-                      
-                       $sheet->cell('A1',function($cell) {$cell->setValue('id'); });   
-              $sheet->cell('B1',function($cell) {$cell->setValue('ALCALDÍA'); });
-              $sheet->cell('C1',function($cell) {$cell->setValue('C.T'); });
-              $sheet->cell('D1',function($cell) {$cell->setValue('SECTOR'); });
-              $sheet->cell('E1',function($cell) {$cell->setValue('SE REALIZÓ GABINETE'); });
-              $sheet->cell('F1',function($cell) {$cell->setValue('NO MOTIVO'); });
-              $sheet->cell('G1',function($cell) {$cell->setValue('FECHA'); });
-              $sheet->cell('H1',function($cell) {$cell->setValue('HORA DE INICIO'); });
-              $sheet->cell('I1',function($cell) {$cell->setValue('HORA DE TERMINO'); });
-              $sheet->cell('J1',function($cell) {$cell->setValue('REPRESENTANTE DE JEFA DE GOBIERNO'); });
-              $sheet->cell('K1',function($cell) {$cell->setValue('MINISTERIO PÚBLICO'); });
-              $sheet->cell('L1',function($cell) {$cell->setValue('JEFE DE SECTOR DE POLICÍA'); });
-              $sheet->cell('M1',function($cell) {$cell->setValue('PDI POLICÍA DE INVESTIGACIÓN'); });
-              $sheet->cell('N1',function($cell) {$cell->setValue('JUEZ CÍVICO'); });
-              $sheet->cell('O1',function($cell) {$cell->setValue('MÉDICO LEGISTA'); });
-              $sheet->cell('P1',function($cell) {$cell->setValue('PDI DE INTELIGENCIA SOCIAL'); });
-              $sheet->cell('Q1',function($cell) {$cell->setValue('OTRO PARTICIPANTE'); });
-              $sheet->cell('R1',function($cell) {$cell->setValue('REPRESENTANTE DE ALCALDÍA'); });
-              $sheet->cell('S1',function($cell) {$cell->setValue('REUNIÓN CON JEFA DE GOBIERNO'); });
-              $sheet->cell('T1',function($cell) {$cell->setValue('FECHA REAL DE CAPTURA'); });
-              
-
-                   foreach($datos as $key => $value)
-                   {
-                       
-                   $i = $key +2;
-                   $sheet->cell('A'.$i, $value['id']);
-                   $sheet->cell('B'.$i, $value['delegacion']);
-                   $sheet->cell('C'.$i, $value['ct2']);
-                   $sheet->cell('D'.$i, $value['sector']);
-                   $sheet->cell('E'.$i, $value['se_realizo']);
-                   $sheet->cell('F'.$i, $value['no_motivo']);
-                   $sheet->cell('G'.$i, $value['fecha']);
-                   $sheet->cell('H'.$i, $value['hora_i']);
-                   $sheet->cell('I'.$i, $value['hora_f']);
-                   $sheet->cell('J'.$i, $value['jg']);
-                   $sheet->cell('K'.$i, $value['mp']);
-                   $sheet->cell('L'.$i, $value['jsp']);
-                   $sheet->cell('M'.$i, $value['jspi']);
-                   $sheet->cell('N'.$i, $value['jc']);
-                   $sheet->cell('O'.$i, $value['ml']);
-                   $sheet->cell('P'.$i, $value['ins']);
-                   $sheet->cell('Q'.$i, $value['otro']);
-                   $sheet->cell('R'.$i, $value['representante_alcaldia']);
-                   $sheet->cell('S'.$i, $value['reunionjg']);
-                   $sheet->cell('T'.$i, $value['fecha_real']);
-                   
-                   }
-                    
-                 
-                  });
-
-              })->export('xls');
-
-
-
-
-
+         return Excel::download(new Reportes_periodosExport($fecha1, $fecha2), 'GM POR PERIÓDO.xlsx');
 
     }
     
@@ -786,32 +583,7 @@ class HomeController extends Controller
         $fecha2=$request['fecha2'];
 
 
-         Excel::store(' Excel', function($excel) use($fecha1,$fecha2) {
-
-                  $excel->sheet('excel', function($sheet) use($fecha1,$fecha2) {
-              
-
-                    $datos = \App\tbAsistencia::select("cat_coord_territorials.ct2")
-                    ->leftjoin('users','users.id','=','tb_asistencias.user_registro') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                    ->whereBetween('tb_asistencias.fecha', [$fecha1, $fecha2])
-                   ->get();
-                   
-                   $datos2=\App\catCoordTerritorial::select("cat_coord_territorials.ct2")
-                   ->whereNotIn('cat_coord_territorials.ct2', $datos)
-                           ->get();
-     
-               $sheet->fromArray($datos2);
-
-                  });
-
-              })->download('xlsx');
-                   
-                   
-                   
-                   
-   
+         return Excel::download(new FaltantesExport($fecha1, $fecha2), 'GM_FALTANTES.xlsx');
 
        
     }
@@ -1295,9 +1067,8 @@ class HomeController extends Controller
 
     }
 
-//esta es de tipo get asi que asi esta bien 
 public function vistasubirpdf_admin(){
-    //pon la vista que tenias y me avisas ok
+   
     
      {   
         
@@ -1309,14 +1080,10 @@ public function vistasubirpdf_admin(){
     
 }
 
-//Esta es post
+
 public function guardar_pdf_admin(Request $request){
     
-    //como consejo mientras no sean muchos campos comprueba que obtienes el valor
-    
-    //$id_user=$request['user'];
-    //$descripcion=$request['descripcion'];
-    //$pdf=$request['archivo'];
+  
   
     //validaciones
      $validator = Validator::make($request->all(), [
@@ -1328,15 +1095,11 @@ public function guardar_pdf_admin(Request $request){
         if ($validator->fails()) {
 
            $messages = $validator->messages();
-           // en caso de error de validacion ridirige
+        
            return Redirect::to('/adminpdfView')->withInput()->withErrors($validator);
 
          }else if ($validator->passes()){
-             //exito en validacion
-             //cuando la validacion es exito procedemos a guardar los datos+ç
-             
-            // return "exito";
-            //de esa forma por que no tienes el migration
+            
             
             
          /*si existe el documento*/
@@ -1407,17 +1170,18 @@ public function guardar_pdf_admin(Request $request){
 
     
     
-    
-    
-
-
-
-
-
+     public function get_mapa_file()
+    {   
+             return view('mapas_externos.Mapa');
+    }
 
     
-
-
+    public function mapa()
+    {   
+             return view('mapa');
+    }
+    
+       
 
 
 }

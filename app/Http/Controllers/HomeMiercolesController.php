@@ -8,8 +8,16 @@ use DB;
 
 use Validator;
 use Illuminate\Support\Facades\Redirect;
+//excel nueva version
+use App\Exports\Asistencias_miercolesExport;
+use App\Exports\Reporteperiodo_miercolesExport;
+use App\Exports\Faltantes_miercolesExport;
+use Maatwebsite\Excel\Facades\Excel;
+//use Excel;
 
-use Excel;
+
+
+
 
 
 
@@ -39,13 +47,7 @@ class HomeMiercolesController extends Controller
         $date->setTimeZone($timezone); 
         $fecha_actual=$date->format('Y-m-d');
         
-     
-        //ASI DE LLAMA DATOS DE UNA TABLA CUANDO EXISTE LA MIGRACION
-       /*  $existe_registro = \App\tbAsistencia::select("tb_asistencias_miercoles.*")
-                   ->where("tb_asistencias_miercoles.user_registro",\Auth::user()->id)
-                   ->where("tb_asistencias_miercoles.fecha",$fecha_actual)
-                   ->first();*/
-            //ASI SE LLAMAN DATOS CUANDO NO HAY MIGRACION(AUN QUE SE PUEDE OCUPAR con migraciones)     
+         
             $existe_registro= DB::table('tb_asistencias_miercoles')
              ->where("tb_asistencias_miercoles.user_registro",\Auth::user()->id)
                    ->where("tb_asistencias_miercoles.fecha",$fecha_actual)
@@ -165,18 +167,7 @@ class HomeMiercolesController extends Controller
             }else{
                 $array_vecino = $request['vecino'];
             }
-            
-              
-        
-            
-            
-         //if($request['archivo']!=null){
-           // $imagen_nombre=rand(11111,99999).'.jpg';
-             //$destinationPath='uploads/imagenes_alcaldias';
-              //}else{
-             //$imagen_nombre=null;
-               
-              //}
+       
            
          }
 
@@ -209,9 +200,9 @@ class HomeMiercolesController extends Controller
                  ]);
                  
                  
-                // if($request['archivo']!=null){
-                // $request['archivo']->move($destinationPath,$imagen_nombre);
-            // }
+                 //if($request['archivo']!=null){
+                 //$request['archivo']->move($destinationPath,$imagen_nombre);
+            //}
 
             }else{
                 
@@ -236,7 +227,7 @@ class HomeMiercolesController extends Controller
                   'representante_alcaldia'=>'No se realizo',
                   'ins' => 'No se realizo',
                   'vecino' => 'No se realizo',
-                  //'archivo_imagen' => $imagen_nombre,
+                 // 'archivo_imagen' => $imagen_nombre,
                   'user_registro'=> \Auth::user()->id
                 
                
@@ -294,25 +285,11 @@ public function obtener_excel_miercoles(Request $request)
     {
       $fecha1=$request['fecha'];
       $fecha2=$request['fecha2'];
-      Excel::create(' Excel', function($excel) use($fecha1,$fecha2) {
-                  $excel->sheet('excel', function($sheet) use($fecha1,$fecha2) {
 
-                      $datos = DB::table('tb_asistencias_miercoles')->select ("tb_asistencias_miercoles.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias_miercoles.se_realizo","tb_asistencias_miercoles.no_motivo","tb_asistencias_miercoles.fecha","tb_asistencias_miercoles.hora_i","tb_asistencias_miercoles.hora_f","tb_asistencias_miercoles.jg","tb_asistencias_miercoles.mp","tb_asistencias_miercoles.jsp","tb_asistencias_miercoles.jspi","tb_asistencias_miercoles.jc","tb_asistencias_miercoles.ml","tb_asistencias_miercoles.otro",'tb_asistencias_miercoles.representante_alcaldia',"tb_asistencias_miercoles.ins","tb_asistencias_miercoles.vecino")
-                       ->leftjoin('users','users.id','=','tb_asistencias_miercoles.user_registro') 
-                      ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                      ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                      ->whereBetween('tb_asistencias_miercoles.fecha', [$fecha1,$fecha2])
-                     // ->distinct("cat_coord_territorials.ct2")
-                      ->orderBy('ct2','ASC')
-                     //->where("cat_coord_territorials.id_alcaldia",$id)
-                     ->get();
-                                         
-                      $data= json_decode( json_encode($datos), true);
-                                           $sheet->fromArray($data);
 
-                  });
-
-              })->export('xls');
+       return Excel::download(new Reporteperiodo_miercolesExport($fecha1, $fecha2), 'GV POR PERIÓDO.xlsx');
+         
+    
 
     }
 
@@ -341,34 +318,11 @@ public function obtener_excel_miercoles(Request $request)
         $fecha2=$request['fecha2'];
 
 
-         Excel::create(' Excel', function($excel) use($fecha1,$fecha2) {
 
-                  $excel->sheet('excel', function($sheet) use($fecha1,$fecha2) {
-              
 
-                    $datos = DB::table('tb_asistencias_miercoles')->select ("cat_coord_territorials.ct2")
-                    ->leftjoin('users','users.id','=','tb_asistencias_miercoles.user_registro') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                    ->whereBetween('tb_asistencias_miercoles.fecha', [$fecha1, $fecha2])
-                   ->get();
-                    
-                   $datos2= DB::table('catCoordTerritorial')->select  ("cat_coord_territorials.ct2")
-                   ->whereNotIn('cat_coord_territorials.ct2', $datos)
-                           ->get();
-     
-               $sheet->fromArray($datos2);
-
-                  });
-
-              })->export('xls');
-                   
-                   
-                   
-                   
-   
-
+        return Excel::download(new Faltantes_miercolesExport($fecha1, $fecha2), 'GV FALTANTES_MIERCOLES.xlsx');
        
+                        
     }
     
     
@@ -762,32 +716,9 @@ public function obtener_excel_miercoles(Request $request)
     
     public function excel_asistencias_miercoles()
     {   
-      
-            Excel::create(' Excel', function($excel) {
-
-                $excel->sheet('excel', function($sheet) {
-
-              
-
-                    $datos = DB::table('tb_asistencias_miercoles')->select("tb_asistencias_miercoles.id","cat_delegaciones.delegacion","cat_coord_territorials.ct2","cat_coord_territorials.sector","tb_asistencias_miercoles.se_realizo","tb_asistencias_miercoles.no_motivo","tb_asistencias_miercoles.fecha","tb_asistencias_miercoles.hora_i","tb_asistencias_miercoles.hora_f","tb_asistencias_miercoles.jg","tb_asistencias_miercoles.mp","tb_asistencias_miercoles.jsp","tb_asistencias_miercoles.jspi","tb_asistencias_miercoles.jc","tb_asistencias_miercoles.ml","tb_asistencias_miercoles.otro","tb_asistencias_miercoles.representante_alcaldia","tb_asistencias_miercoles.ins","tb_asistencias_miercoles.vecino")
-                    ->leftjoin('users','users.id','=','tb_asistencias_miercoles.user_registro') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                   ->where('tb_asistencias_miercoles.user_registro',\Auth::user()->id)
-                   
-                   ->get();
-                   
-                   $data= json_decode( json_encode($datos), true);
 
 
-
-                    $sheet->fromArray($data);
-
-                });
-
-            })->export('xls');
-
-
+            return Excel::download(new Asistencias_miercolesExport, 'asistencias_miercoles.xlsx');
 
         
     }
@@ -847,61 +778,54 @@ public function obtener_excel_miercoles(Request $request)
          
         return json_encode($array_general);
      }
-  
-     //ahora ya le pasamos parametros
+
     public function query_ejemplo($fecha1,$fecha2,$alc){
            
-           //esto es un pre query para hacer el barrido de todas las coord deacuerdo a la alc
+          
            $coordinaciones = DB::table('cat_delegaciones')
            ->select('cat_coord_territorials.ct2')
            ->leftjoin('cat_coord_territorials','cat_coord_territorials.id_alcaldia','=','cat_delegaciones.id')
            ->where('cat_delegaciones.delegacion',$alc)
            ->get();
         
-          //se crea un array para guardar las coordinaciones
+         
           $array1= array();//vecino
           
-          //otro array para guardar las coordinaciones
+          
            $array_coor=array();
          
-       //Se crea el loop o ciclo de las coordinaciones( es decir se seleccione AOB esa tiene 2 entonces solo dara dos recorridos si selecciona iztapalapa dara 9 recorridos)
+      
          foreach($coordinaciones as $coordinacion){
              
-           //por cada recorrido de coordinacion guardo el ct2 en el array
+          
          $array_coor[]=$coordinacion->ct2;
-            //aqui se guarda el query que hicimos abajo pero ya por coordinacion
-               //te muestra los vecinos pero tu necesitas contar(por ejemplo hay que contar los de la alc benito juarez paso a paso)
+           
         $array1[] = DB::table('tb_asistencias_miercoles')
-                 //->select('tb_asistencias_miercoles.vecino')
-                 
+               
                 
-                //estos join son mas o menos los que te xplique el viernes si
+              
                 ->leftjoin('users','users.id','=','tb_asistencias_miercoles.user_registro') 
                 ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                 ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                //especificamos fecha
+              
                 ->whereBetween('tb_asistencias_miercoles.fecha', [$fecha1,$fecha2])
-                //delegacion
+               
                 ->where('cat_delegaciones.delegacion',$alc)
-                //coordinacion
+               
                 ->where('cat_coord_territorials.ct2',$coordinacion->ct2)
-                //que campo va a sumar
-                //alli no se por que con sum como que los numeros los tomo como string "3" cuando debe ser numero 3 por eso mejor lo dejo en count( esto es un string "123" esto es numero 123 ok)
-                //yaa quedo revisa bien arrays
-                //->first('tb_asistencias_miercoles.vecino');
+               
                 ->sum('tb_asistencias_miercoles.vecino');
          }
          
-         //array temporal para la convercion a entero
+        
          $result_array = array();
-         //ciclo para recorrer el arrar de los valores 
+       
 
           foreach ($array1 as $each_number) {
               $result_array[] = (int) $each_number;
           }
          
-         //afuera ya del loop
-         //Remplazamos por el array convertido a entrero
+       
           $array_general=array( $array_coor,$result_array);
          
          return json_encode($array_general);
