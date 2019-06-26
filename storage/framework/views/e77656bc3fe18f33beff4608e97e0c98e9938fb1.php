@@ -38,41 +38,7 @@
 
 
 
-<!--
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Alcaldía:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="alcaldia" name="alcaldia" class="form-control">
 
-              <option value="">Selecciona...</option>
-              <?php $__currentLoopData = $alcaldias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alcaldia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <option value="<?php echo e($alcaldia->id); ?>"><?php echo e($alcaldia->delegacion); ?></option>
-
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-              
-            </select>
-
-             <?php if($errors->has('alcaldia')): ?> <p  style="color: red"><?php echo e($errors->first('alcaldia')); ?></p> 
-             <?php endif; ?>
-           
-
-          </div>
-        
-        </div>
-
-
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Coordinación Territorial:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="ct" name="ct" class="form-control"> 
-            </select>
-
-             <?php if($errors->has('ct')): ?> <p  style="color: red"><?php echo e($errors->first('ct')); ?></p> <?php endif; ?> 
-
-
-          </div>
-        
-        </div>-->
 
 
 
@@ -424,16 +390,6 @@
 
 
        
-          
-        <!--  <br>
-           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Temas Relevantes:</label>
-          <div class="col-sm-10">
-            
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
-          </div>
-        </div>-->
-
          
 
       
