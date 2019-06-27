@@ -219,7 +219,7 @@ class HomeController extends Controller
 
 
 
-                 $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+                 $mensaje = array('mensaje'=>'¡Asistencia Matutina Éxitosa!', 'color'=> 'success');
                  return Redirect::to('/home/')->with('mensaje', $mensaje);
          }
 
@@ -902,7 +902,7 @@ class HomeController extends Controller
 
 
 
-                 $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+                 $mensaje = array('mensaje'=>'Registro Éxitoso!', 'color'=> 'success');
                  return Redirect::to('/asistencia_admin/')->with('mensaje', $mensaje);
          }
          

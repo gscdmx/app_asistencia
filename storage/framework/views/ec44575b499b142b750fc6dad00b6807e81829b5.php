@@ -81,7 +81,7 @@
                       <th>Representante Alcaldia</th>
                       <th>Vecinos</th>
                       <th>Imagen</th>
-                    
+
                         
                     </tr>
                   </thead>
@@ -106,12 +106,41 @@
                       <td><?php echo e($asistencia->representante_alcaldia); ?></td>
                       <td><?php echo e($asistencia->vecino); ?></td>
                       
+                  
+                       <td>
+
+                       
+
+                      
+                        <?php if($asistencia->archivo_imagen==null || $asistencia->archivo_imagen==''): ?>
+
+                         SIN IMAGEN
+
+
+                        <?php else: ?>
+
+                         <!-- <a href="<?php echo e(url('/uploads/imagenes_alcaldias').'/'.$asistencia->archivo_imagen); ?>" class="btn btn-primary" role="button">VER IMAGEN</a>
+
+                          <br>-->
+
+
+
+                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen">
+                           VER IMAGEN
+                          </button>
+
+
+                        <?php endif; ?>
+                      </td>
                 
 
                     </tr>
 
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                   
+
+
+
+                  
                    <tbody>
                 </table>
               </div>
@@ -136,6 +165,40 @@
 
 
 
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Imagen subida</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+
+
+
+      <img src="" id="imagen_dinamica">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 <?php $__env->stopSection(); ?>
 
 
@@ -151,6 +214,26 @@
 
 
 <?php $__env->startSection('customjs'); ?>
+
+
+<script type="text/javascript">
+  
+
+  $( ".obtener_imagen" ).click(function() {
+
+    
+     var imagen_nombre = $(this).attr('data-imagen');
+
+     var ruta ="<?php echo e(url('/uploads/imagenes_alcaldias')); ?>"+"/"+imagen_nombre
+
+     $("#imagen_dinamica").attr('src',ruta);
+
+
+  //alert( ruta);
+});
+
+
+</script>
 
 
 

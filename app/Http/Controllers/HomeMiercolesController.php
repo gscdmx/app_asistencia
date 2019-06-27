@@ -168,6 +168,17 @@ class HomeMiercolesController extends Controller
                 $array_vecino = $request['vecino'];
             }
        
+            if($request['archivo']!=null){
+            $imagen_nombre=rand(11111,99999).'.jpg';
+            $destinationPath='uploads/imagenes_alcaldias';
+              }else{
+              $imagen_nombre=null;
+               
+              }
+
+
+
+
            
          }
 
@@ -194,15 +205,15 @@ class HomeMiercolesController extends Controller
                    'ins' => $array_ins,
                    'vecino' => $array_vecino,
                  
-                   //'archivo_imagen' => $imagen_nombre,
+                   'archivo_imagen' => $imagen_nombre,
                    'user_registro'=> \Auth::user()->id
                 
                  ]);
                  
                  
-                 //if($request['archivo']!=null){
-                 //$request['archivo']->move($destinationPath,$imagen_nombre);
-            //}
+                 if($request['archivo']!=null){
+                 $request['archivo']->move($destinationPath,$imagen_nombre);
+            }
 
             }else{
                 
@@ -227,7 +238,7 @@ class HomeMiercolesController extends Controller
                   'representante_alcaldia'=>'No se realizo',
                   'ins' => 'No se realizo',
                   'vecino' => 'No se realizo',
-                 // 'archivo_imagen' => $imagen_nombre,
+                  'archivo_imagen' => $imagen_nombre,
                   'user_registro'=> \Auth::user()->id
                 
                
@@ -240,7 +251,7 @@ class HomeMiercolesController extends Controller
 
          }
 
-                 $mensaje = array('mensaje'=>'Registro Éxitoso Vespertino!', 'color'=> 'success');
+                 $mensaje = array('mensaje'=>'Asistencia Vespertina Éxitosa !', 'color'=> 'success');
                  return Redirect::to('/asistencia_miercoles/')->with('mensaje', $mensaje);
 
 
@@ -991,7 +1002,7 @@ public function obtener_excel_miercoles(Request $request)
 
 
 
-                 $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+                 $mensaje = array('mensaje'=>'Asistencia Vespertina Éxitosa!', 'color'=> 'success');
                  return Redirect::to('/asistencia_admin_miercoles/')->with('mensaje', $mensaje);
          }
          

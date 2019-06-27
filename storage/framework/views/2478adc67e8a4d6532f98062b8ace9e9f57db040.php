@@ -157,14 +157,12 @@ if (isset(\Auth::user()->permisos)) {
              <?php endif?>
              
              
-             
-          
-          
-           <?php   $dia= date("w");
+             <?php   $dia= date("w");
             if($dia==4){?>
              <li><a href="<?php echo e(url('/asistencia_miercoles')); ?>"> <i class="icon-padnote"></i>Asistencia Miércoles</a></li>
             <?php } ?>
-        
+          
+          
         
        
         
