@@ -148,8 +148,7 @@ $( "#consultar" ).click(function() {
                        dataType: 'json'
                      });
                      request.done(function( msg ) {
-                     //essto es imporatnte aqui ves con el console.log lo que estas tralendo de la url en formato json
-                     //hasta aqui esta bien
+                     
                      console.log(msg);
                      
     Highcharts.chart('container', {
@@ -163,7 +162,7 @@ $( "#consultar" ).click(function() {
         text: 'CGSCPJ'
     },
     xAxis: {
-        //estamos obtenidoendo un array de un json nos importa la categoria la cual esta en el 0
+       
         categories: msg[0],
         crosshair: true
     },

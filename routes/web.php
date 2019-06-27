@@ -90,10 +90,7 @@ Route::get('/datosGrafica_miercoles/{fecha1}/{fecha2}', 'HomeMiercolesController
 Route::get('/alcaldiasGrafica_miercoles', 'HomeMiercolesController@grafica_alcaldia_miercoles');
 Route::get('/datosgraficasalc_miercoles/{fecha1}/{fecha2}/{alc}', 'HomeMiercolesController@datos_grafica_alc_miercoles');
 
-//Route::get('/alcaldiasGrafica_miercoles_vecino', 'HomeMiercolesController@grafica_alcaldia_miercoles_vecino');
-//Route::get('/datosgraficasalc_miercoles_vecino/{fecha1}/{fecha2}/{alc}', 'HomeMiercolesController@datos_grafica_alc_miercoles_vecino');
 
-//cuandos e pasa parametros se instancia aqui tambien si es GET solamente
 Route::get('/query/{var1}/{var2}/{var3}', 'HomeMiercolesController@query_ejemplo');
 
 Route::get('/alcaldiasGrafica_miercoles_vecino', 'HomeMiercolesController@grafica_alcaldia_miercoles_vecino');
@@ -108,3 +105,18 @@ Route::post('/guardar_admin_pdf', 'HomeController@guardar_pdf_admin');
 
 Route::get('/usuariopdfView', 'HomeController@usuario_pdf');
 Route::post('/guardar_usuario_pdf', 'HomeController@guardarUsuarioPdf');
+
+//mapa
+
+Route::get('/get_mapa', 'HomeController@get_mapa_file');
+Route::get('/mapaView', 'HomeController@mapa');
+Route::post('/guardar_mapa', 'HomeController@guardarmapa');
+
+
+//cuestionarios
+Route::get('/cuestionario', 'cuestionariosController@seguridad');
+Route::post('/guardar_cuestionario_Seguridad', 'cuestionariosController@save_cuestionario_seguridad');
+Route::get('/excel_cuestionario_seguridad', 'cuestionariosController@excel_cuestionarioseguridad');
+
+
+

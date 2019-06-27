@@ -38,47 +38,13 @@
 
 
 
-<!--
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Alcaldía:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="alcaldia" name="alcaldia" class="form-control">
 
-              <option value="">Selecciona...</option>
-              <?php $__currentLoopData = $alcaldias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alcaldia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <option value="<?php echo e($alcaldia->id); ?>"><?php echo e($alcaldia->delegacion); ?></option>
-
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-              
-            </select>
-
-             <?php if($errors->has('alcaldia')): ?> <p  style="color: red"><?php echo e($errors->first('alcaldia')); ?></p> 
-             <?php endif; ?>
-           
-
-          </div>
-        
-        </div>
-
-
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Coordinación Territorial:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="ct" name="ct" class="form-control"> 
-            </select>
-
-             <?php if($errors->has('ct')): ?> <p  style="color: red"><?php echo e($errors->first('ct')); ?></p> <?php endif; ?> 
-
-
-          </div>
-        
-        </div>-->
 
 
 
        
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Se realizó la Mesa de Trabajo?</label>
+          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Matutino?</label>
           <div class="col-sm-10 mb-3">
             <select name="se_realizo_mesa" id="se_realizo_mesa" class="form-control">
               <option value="">Selecciona...</option>
@@ -144,7 +110,7 @@
         </div>
   <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó la Mesa de Trabajo: </label>
+          <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó el Gabinete Matutino: </label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
             <textarea id="motivo" name="motivo" class="form-control" ></textarea>
@@ -396,13 +362,13 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Otro:</label>
+          <label class="col-sm-2 form-control-label">Otro Asistente:</label>
           <div class="col-sm-10">
            <div class="table-responsive">  
               <table class="table table-bordered" id="dynamic_field">  
                    <tr>  
                        <td><input type="text" name="otros[]" placeholder="Escribe aqui" class="form-control name_list" /></td>  
-                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Mas</button></td>  
+                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Mas Asistentes</button></td>  
                    </tr>  
                </table>  
                
@@ -424,16 +390,6 @@
 
 
        
-          
-        <!--  <br>
-           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Temas Relevantes:</label>
-          <div class="col-sm-10">
-            
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
-          </div>
-        </div>-->
-
          
 
       
@@ -443,7 +399,7 @@
         <div class="form-group row">
           <div class="col-sm-4 offset-sm-2">
             <!--<button type="submit" class="btn btn-secondary">Cancel</button>-->
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-primary">Guardar Asistencia </button>
           </div>
         </div>
       </form>
