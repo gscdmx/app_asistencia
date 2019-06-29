@@ -213,7 +213,7 @@ class HomeMiercolesController extends Controller
                  
                  if($request['archivo']!=null){
 
-                  
+                //subir archivo
                  $request['archivo']->move(public_path($destinationPath),$imagen_nombre);
 
 
