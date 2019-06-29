@@ -213,7 +213,7 @@ class HomeMiercolesController extends Controller
                  
                  if($request['archivo']!=null){
                  //$request['archivo']->move($destinationPath,$imagen_nombre); 
-                 $request['archivo']->move(base_path($destinationPath),$imagen_nombre);
+                 $request['archivo']->move(public_path($destinationPath),$imagen_nombre);
             }
 
             }else{
