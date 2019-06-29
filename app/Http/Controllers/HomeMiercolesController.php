@@ -170,7 +170,7 @@ class HomeMiercolesController extends Controller
        
             if($request['archivo']!=null){
             $imagen_nombre=rand(11111,99999).'.jpg';
-            $destinationPath='uploads_alcaldias/';
+            $destinationPath='alcaldias';
               }else{
               $imagen_nombre=null;
                
