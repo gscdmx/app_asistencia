@@ -123,52 +123,27 @@
 
                           <br>-->
 
-
-
                           <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen">
                            VER IMAGEN
                           </button>
-
-
                         @endif
-                      </td>
-                
-
+                      </td>           
                     </tr>
-
-                    @endforeach
-
-
-
-                  
+                    @endforeach                  
                    <tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-
-
       </form>
     </div>
   </div>
 </div>
 
-
-
-
  </div>
-          </div>
+ </div>
   </section>
-
-
-
-
-
-
-
-
-
   <!-- Modal -->
 <div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -180,10 +155,7 @@
         </button>
       </div>
       <div class="modal-body">
-       
-
-
-
+      
       <img src="" id="imagen_dinamica">
 
       </div>
@@ -195,23 +167,12 @@
   </div>
 </div>
 
-
-
-
-
 @endsection
-
-
-
 
 
 @section('js')  
  
 @endsection
-
-
-
-
 
 @section('customjs')
 
@@ -224,7 +185,7 @@
     
      var imagen_nombre = $(this).attr('data-imagen');
 
-     var ruta ="{{url('/uploads/imagenes_alcaldias')}}"+"/"+imagen_nombre
+     var ruta ="{{url('alcaldias')}}"+"/"+imagen_nombre
 
      $("#imagen_dinamica").attr('src',ruta);
 
