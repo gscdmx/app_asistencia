@@ -123,100 +123,62 @@
 
                           <br>-->
 
-
-
                           <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen">
                            VER IMAGEN
                           </button>
-
-
                         <?php endif; ?>
-                      </td>
-                
-
+                      </td>           
                     </tr>
-
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-
-
-                  
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                  
                    <tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-
-
       </form>
     </div>
   </div>
 </div>
 
-
-
-
  </div>
-          </div>
+ </div>
   </section>
-
-
-
-
-
-
-
-
-
   <!-- Modal -->
 <div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Imagen subida</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Imagen Gabinete Vespertino</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       
-
-
-
-      <img src="" id="imagen_dinamica">
-
+      
+      <div style="width: 800px; height: 500px;">
+      <img src="" id="imagen_dinamica"  style="width: 480px; height: 500px;"  >
+      </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
 <?php $__env->stopSection(); ?>
-
-
-
 
 
 <?php $__env->startSection('js'); ?>  
  
 <?php $__env->stopSection(); ?>
 
-
-
-
-
 <?php $__env->startSection('customjs'); ?>
 
 
-<script type="text/javascript">
+<script    type="text/javascript">
   
 
   $( ".obtener_imagen" ).click(function() {
@@ -224,7 +186,7 @@
     
      var imagen_nombre = $(this).attr('data-imagen');
 
-     var ruta ="<?php echo e(url('/uploads/imagenes_alcaldias')); ?>"+"/"+imagen_nombre
+     var ruta ="<?php echo e(url('alcaldias')); ?>"+"/"+imagen_nombre
 
      $("#imagen_dinamica").attr('src',ruta);
 
