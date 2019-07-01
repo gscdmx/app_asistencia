@@ -149,18 +149,19 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Imagen subida</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Imagen Gabinete Vespertino</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
       
-      <img src="" id="imagen_dinamica">
-
+      <div style="width: 800px; height: 500px;">
+      <img src="" id="imagen_dinamica"  style="width: 480px; height: 500px;"  >
+      </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       
       </div>
     </div>
@@ -177,7 +178,7 @@
 @section('customjs')
 
 
-<script type="text/javascript">
+<script    type="text/javascript">
   
 
   $( ".obtener_imagen" ).click(function() {
