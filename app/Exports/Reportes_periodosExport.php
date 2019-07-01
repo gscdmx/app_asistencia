@@ -58,8 +58,8 @@ class Reportes_periodosExport implements FromCollection, WithHeadings
             'OTRO PARTICIPANTE',
             'PDI DE INTELIGENCIA SOCIAL',
             'REPRESENTANTE DE ALCALDÍA',
-            'REUNIÓN CON JEFA DE GOBIERNO',
-            'FECHA REAL DE CAPTURA'
+            'REUNIÓN CON JEFA DE GOBIERNO'
+            
 
 
             
