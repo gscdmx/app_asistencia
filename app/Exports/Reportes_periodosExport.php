@@ -60,8 +60,6 @@ class Reportes_periodosExport implements FromCollection, WithHeadings
             'REPRESENTANTE DE ALCALDÍA',
             'REUNIÓN CON JEFA DE GOBIERNO',
             'FECHA REAL DE CAPTURA',
-            'created_at',
-            'updated_at'
 
 
             
