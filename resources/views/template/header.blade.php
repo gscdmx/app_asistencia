@@ -72,7 +72,8 @@ if (isset(\Auth::user()->permisos)) {
               <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>INCIDENCIA DELICTIVA 2019 MIS PDFS</a></li>
               
               
-             
+              <li><a href="{{url('/herramientas)}}"> <i class="icon-list"></i>MIS HERRAMIENTAS</a></li>
+              
           
              <?php if(in_array(1, $array_permisos)):?>
              <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>Usuarios </a>
