@@ -15,7 +15,7 @@ if (isset(\Auth::user()->permisos)) {
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CGSCPJ CDMX</title>
+    <title>CGGSCYPJ CDMX</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -69,7 +69,7 @@ if (isset(\Auth::user()->permisos)) {
             
             <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>CUESTIONARIO PARA VISITAS DOMICILIARIAS</a></li>
              
-              <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDFS</a></li>
+              <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>INCIDENCIA DELICTIVA 2019 MIS PDFS</a></li>
               
               
              
