@@ -64,6 +64,20 @@
         
         </div>
         
+            <div class="form-group row">
+          <label class="col-sm-3 form-control-label">Nombre:</label>
+          <div class="col-sm-9 mb-3">
+            <textarea class="form-control" id="nombre" name="nombre"></textarea>
+            
+             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
+          </div>
+        
+        </div>
+        
+
+
+
+
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">Colonia:</label>
           <div class="col-sm-9 mb-3">
@@ -92,7 +106,7 @@
         
         
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">2 - ¿Hace cuanto?:</label>
+          <label class="col-sm-3 form-control-label">2 - ¿Hace cuánto?:</label>
           <div class="col-sm-9 mb-3">
             <textarea class="form-control" id="hace_cuanto" name="hace_cuanto"></textarea>
             
@@ -116,7 +130,7 @@
         
         
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">4 - ¿Por que medio llamaste a la policía?</label>
+          <label class="col-sm-3 form-control-label">4 - ¿Por qué medio llamaste a la policía?</label>
           <div class="col-sm-9 mb-3">
             <select name="medio_llamo_policia" id="medio_llamo_policia" class="form-control">
               <option value="">Selecciona...</option>
@@ -148,7 +162,7 @@
         
         
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">6 - ¿Cuantas veces  tuviste que llamar para que te contestaran?</label>
+          <label class="col-sm-3 form-control-label">6 - ¿Cuántas veces  tuviste que llamar para que te contestaran?</label>
           <div class="col-sm-9 mb-3">
             <select name="veces_en_llamar" id="veces_en_llamar" class="form-control">
               <option value="">Selecciona...</option>
@@ -156,7 +170,7 @@
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="mas de 5 veces">mas de 5 veces</option>
+              <option value="mas de 5 veces">más de 5 veces</option>
             </select>
             
              @if ($errors->has('veces_en_llamar')) <p  style="color: red">{{ $errors->first('veces_en_llamar') }}</p> @endif 

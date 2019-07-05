@@ -65,7 +65,7 @@ if (isset(\Auth::user()->permisos)) {
           
             <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO                             </a></li>
             <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS</a></li>
-            <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS(MIERCOLES)</a></li>
+            <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
             <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>CUESTIONARIO PARA VISITAS DOMICILIARIAS</a></li>
              
@@ -73,6 +73,8 @@ if (isset(\Auth::user()->permisos)) {
               
               
           
+
+
               
           
              <?php if(in_array(1, $array_permisos)):?>
@@ -118,7 +120,7 @@ if (isset(\Auth::user()->permisos)) {
              <!--MODULO REPORTES DIARIOS-->
              <?php if(in_array(2, $array_permisos)):?>
              
-               <li><a href="#exampledropdownDropdown_DIARIO" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reporte Diarios </a>
+               <li><a href="#exampledropdownDropdown_DIARIO" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reporte Diario </a>
               <ul id="exampledropdownDropdown_DIARIO" class="collapse list-unstyled ">
                 <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Fecha</a></li>
                

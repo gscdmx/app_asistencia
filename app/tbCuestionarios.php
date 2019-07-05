@@ -27,6 +27,7 @@ class tbCuestionarios extends Model
             'califica_seguridad_calle',
             'realizo_denuncia',
             'descripcion_denuncia',
-            'comentarios'
+            'comentarios',
+            'nombre'
             ];
 }

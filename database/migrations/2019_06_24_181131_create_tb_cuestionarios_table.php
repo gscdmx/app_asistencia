@@ -35,6 +35,7 @@ class CreateTbCuestionariosTable extends Migration
             $table->string('realizo_denuncia')->nullable();
             $table->text('descripcion_denuncia')->nullable();
             $table->text('comentarios')->nullable();
+            $table->text('nombre')->nullable();
             $table->timestamps();
         });
     }
