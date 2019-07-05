@@ -54,7 +54,7 @@
                       
                       <td>{{$pdf->descripcion}}</td>
                       <td><a href="{{url('/uploads').'/'.$pdf->archivo_pdf}}" class="btn btn-primary" download>Descargar</a></td>
-                      <td><a href="{{url('/uploads').'/'.$pdf->archivo_pdf}}" class="btn btn-primary"  role="button">Ver</a></td>
+                    
                       
 
                     </tr>
