@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-body">
      
@@ -35,7 +35,7 @@
        <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de mis PDF</h4>
+              <h4>CGGSCYPJ  Listado de Incidencias Delictivas PDF'S</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -54,6 +54,7 @@
                       
                       <td>{{$pdf->descripcion}}</td>
                       <td><a href="{{url('/uploads').'/'.$pdf->archivo_pdf}}" class="btn btn-primary" download>Descargar</a></td>
+                    
                       
 
                     </tr>

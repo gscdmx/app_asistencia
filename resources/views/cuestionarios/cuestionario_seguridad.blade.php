@@ -64,15 +64,7 @@
         
         </div>
         
-            <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Nombre:</label>
-          <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="nombre" name="nombre"></textarea>
-            
-             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
-          </div>
-        
-        </div>
+           
         
 
 
@@ -304,6 +296,16 @@
             <textarea class="form-control" id="comentarios" name="comentarios"></textarea>
             
              @if ($errors->has('comentarios')) <p  style="color: red">{{ $errors->first('comentarios') }}</p> @endif 
+          </div>
+        
+        </div>
+
+         <div class="form-group row">
+          <label class="col-sm-3 form-control-label">Nombre:</label>
+          <div class="col-sm-9 mb-3">
+            <textarea class="form-control" id="nombre" name="nombre"></textarea>
+            
+             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
           </div>
         
         </div>

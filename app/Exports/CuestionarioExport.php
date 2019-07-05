@@ -40,7 +40,6 @@ public function headings(): array
             'CUADRANTE',
             'ID',                    
             'DIRECCIÓN',
-            'NOMBRE',
             'COLONIA',
             '1-¿HA SOLICITADO LOS SERVICIOS DE LA POLICÍA? SI/NO',
             '2-¿HACE CUÁNTO?',
@@ -58,6 +57,7 @@ public function headings(): array
             '14- SI SU RESPUESTA EN LA PREGUNTA 3 FUE UN "DELITO", RESPONDE LO SIGUIENTE, ¿REALIZÓ SU DENUNCIA?',
             'EN BASE A LA PREGUNTA 14, SI(¿CÓMO FUE LA ATENCIÓN EN EL MIISTERIO PÚBLICO?, NO(¿POR QUÉ?)',
             '15- COMENTARIOS:',
+            'NOMBRE',
             'FECHA DE CAPTURA',
             'FECHA DE ACTUALIZACIÓN'
            
