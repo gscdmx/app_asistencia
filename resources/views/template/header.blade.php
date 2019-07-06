@@ -15,7 +15,7 @@ if (isset(\Auth::user()->permisos)) {
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CGGSCYPJ CDMX</title>
+    <title>APP ASISTENCIA CGGSCYPJ</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -64,12 +64,12 @@ if (isset(\Auth::user()->permisos)) {
           <ul id="side-main-menu" class="side-menu list-unstyled">  
           
             <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO                             </a></li>
-            <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS</a></li>
+            <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS DIARIAS</a></li>
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
-            <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>CUESTIONARIO PARA VISITAS DOMICILIARIAS</a></li>
+            <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>
              
-              <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>INCIDENCIA DELICTIVA 2019 MIS PDFS</a></li>
+              <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDFS INCIDENCIA DELICTIVA 2019</a></li>
               
               
           
