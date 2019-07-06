@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>Cuestionario</h4>
+      <h4>Mis visitas </h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Seguridad') }}">
@@ -51,7 +51,15 @@
       
       </div>
       
-      
+      <div class="form-group row">
+          <label class="col-sm-3 form-control-label">Nombre:</label>
+          <div class="col-sm-9 mb-3">
+            <textarea class="form-control" id="nombre" name="nombre"></textarea>
+            
+             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
+          </div>
+        
+        </div>
       
       
        <div class="form-group row">
@@ -300,15 +308,7 @@
         
         </div>
 
-         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Nombre:</label>
-          <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="nombre" name="nombre"></textarea>
-            
-             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
-          </div>
-        
-        </div>
+         
         
         
         <div class="form-group row">
