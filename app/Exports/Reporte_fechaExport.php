@@ -37,6 +37,7 @@ class Reporte_fechaExport implements FromCollection, WithHeadings
                     //->whereBetween('tb_asistencias.fecha_actual')
                     ->whereBetween('tb_asistencias.fecha', [$this->year, $this->year])
                     ->distinct("cat_coord_territorials.ct2")
+                    ->orderBy('ct2','ASC')
                     ->get();
     }
 
@@ -53,7 +54,7 @@ class Reporte_fechaExport implements FromCollection, WithHeadings
             'FECHA',
             'HORA DE INICIO',
             'HORA DE TERMINO',
-            'REPRESENTANTE DE LA JEFA DE GOBIERNO',
+            'REPRESENTANTE DE LA JEFATURA DE GOBIERNO',
             'MINISTERIO PÚBLICO',
             'JEFE DE SECTOR DE POLICÍA',
             'PDI POLICÍA DE INVESTIGACIÓN',

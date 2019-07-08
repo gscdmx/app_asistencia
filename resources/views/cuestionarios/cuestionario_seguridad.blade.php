@@ -1,20 +1,13 @@
 @extends('template.header')
 
 @section('content')
-
-
-
   <section class="forms">
         <div class="container-fluid">
           
           <!--<header> 
             <h1 class="h3 display">Forms            </h1>
           </header>-->
-          <div class="row">
-         
-
-
-
+          <div class="row"> 
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
@@ -31,26 +24,22 @@
                        {{ Session::get('mensaje')['mensaje'] }}
                    </div>
       @endif
-
-
-
       <div class="form-group row">
         <label class="col-sm-3 form-control-label">Cuadrante: </label>
         <div class="col-sm-9 mb-3">
           <select name="id_cuadrante" id="id_cuadrante" class="form-control">
             <option value="">Selecciona...</option>
             @foreach($mis_cuadrantes as $mi_cuadrante)
-
             <option value="{{$mi_cuadrante->id}}">{{$mi_cuadrante->cuadrante}}</option>
             @endforeach
-            
+          
           </select>
           
            @if ($errors->has('id_cuadrante')) <p  style="color: red">{{ $errors->first('id_cuadrante') }}</p> @endif 
         </div>
       
       </div>
-      
+     
       <div class="form-group row">
           <label class="col-sm-3 form-control-label">Nombre:</label>
           <div class="col-sm-9 mb-3">
@@ -60,7 +49,7 @@
           </div>
         
         </div>
-      
+     
       
        <div class="form-group row">
           <label class="col-sm-3 form-control-label">Domicilio:</label>
@@ -71,12 +60,6 @@
           </div>
         
         </div>
-        
-           
-        
-
-
-
 
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">Colonia:</label>
@@ -87,9 +70,7 @@
           </div>
         
         </div>
-
-
-       
+     
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">1 - ¿Ha solicitado los servicios de la policía?</label>
           <div class="col-sm-9 mb-3">
@@ -103,8 +84,7 @@
           </div>
         
         </div>
-        
-        
+
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">2 - ¿Hace cuánto?:</label>
           <div class="col-sm-9 mb-3">
@@ -114,8 +94,7 @@
           </div>
         
         </div>
-        
-        
+
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">3 - ¿Por que motivo?:</label>
           <div class="col-sm-9 mb-3">
@@ -125,10 +104,7 @@
           </div>
         
         </div>
-        
-        
-        
-        
+      
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">4 - ¿Por qué medio llamaste a la policía?</label>
           <div class="col-sm-9 mb-3">
@@ -144,7 +120,7 @@
           </div>
         
         </div>
-        
+       
         
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">5 - ¿Te contestarón?</label>
@@ -159,8 +135,7 @@
           </div>
         
         </div>
-        
-        
+   
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">6 - ¿Cuántas veces  tuviste que llamar para que te contestaran?</label>
           <div class="col-sm-9 mb-3">
@@ -177,8 +152,7 @@
           </div>
         
         </div>
-        
-        
+     
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">7 - ¿Cuánto tiempo se tardarón en contestar?(minutos):</label>
           <div class="col-sm-9 mb-3">
@@ -216,8 +190,7 @@
           </div>
         
         </div>
-        
-        
+       
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">10 - ¿Resolvió el problema o la urgencia qué se presentó?:</label>
           <div class="col-sm-9 mb-3">
@@ -227,8 +200,7 @@
           </div>
         
         </div>
-        
-        
+      
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">11 - ¿Conoce el programa de cuadrantes?</label>
           <div class="col-sm-9 mb-3">
@@ -256,9 +228,7 @@
           </div>
         
         </div>
-        
-        
-        
+       
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">13 - ¿Cómo califica la seguridad entorno a su calle?:</label>
           <div class="col-sm-9 mb-3">
@@ -296,8 +266,7 @@
         </div>
         
         </div>
-        
-        
+       
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">15 - Comentarios:</label>
           <div class="col-sm-9 mb-3">
@@ -307,10 +276,7 @@
           </div>
         
         </div>
-
-         
-        
-        
+    
         <div class="form-group row">
           <div class="col-sm-6 offset-sm-6">
             <button type="submit" class="btn btn-primary">Registrar</button>
@@ -321,19 +287,13 @@
   </div>
 </div>
 
-
-
-
  </div>
           </div>
   </section>
 
 
 
-
-
 @endsection
-
 
 
 
