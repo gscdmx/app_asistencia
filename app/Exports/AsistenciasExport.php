@@ -25,7 +25,7 @@ class AsistenciasExport implements FromCollection, WithHeadings
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
                    ->where('tb_asistencias.user_registro',\Auth::user()->id)
-                   
+                    
                    ->get(); 
     }
 

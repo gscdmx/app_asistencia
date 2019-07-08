@@ -49,7 +49,7 @@ class Reportes_periodosExport implements FromCollection, WithHeadings
             'FECHA',
             'HORA DE INICIO',
             'HORA DE TERMINO',
-            'REPRESENTANTE DE LA JEFA DE GOBIERNO',
+            'REPRESENTANTE DE LA JEFATURA DE GOBIERNO',
             'MINISTERIO PÚBLICO',
             'JEFE DE SECTOR DE POLICÍA',
             'PDI POLICÍA DE INVESTIGACIÓN',
