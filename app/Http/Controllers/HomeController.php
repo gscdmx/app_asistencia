@@ -304,7 +304,7 @@ class HomeController extends Controller
     
     
     
-      public function fecha_real_captura()
+    /*  public function fecha_real_captura()
     {
         
         
@@ -324,7 +324,7 @@ class HomeController extends Controller
                     ->get();
         
         return json_encode($datos);
-    }
+    }*/
     
     
       public function reportes()
