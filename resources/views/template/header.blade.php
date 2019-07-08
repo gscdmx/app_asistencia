@@ -60,10 +60,10 @@ if (isset(\Auth::user()->permisos)) {
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
-          <h5 class="sidenav-heading">Menú</h5>
+          <h5 class="sidenav-heading">MENÚ</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">  
           
-            <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO                             </a></li>
+            <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO</a></li>
             <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS DIARIAS</a></li>
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
@@ -230,7 +230,7 @@ if (isset(\Auth::user()->permisos)) {
               <center><p>Plaza de la Constitución No. 2 &bull; Colonia Centro &bull; Delegación Cuauhtémoc &bull; C.P.   06068 &bull; México, CDMX  &bull; Conmutador: (55) 53458026</p></center>
             </div>
             <div class="col-sm-15 text-right">
-              <p><a href="https://bootstrapious.com" class="external">CDMX</a></p>
+              <p><a href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="external">CDMX</a></p>
         </div>
       </footer>
     </div>
