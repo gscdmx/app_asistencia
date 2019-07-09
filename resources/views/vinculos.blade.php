@@ -34,48 +34,30 @@
 </div>
 
  <div class=“row”>
-    <div class="col-sm-6 ">
+    <div class="col-sm-12 ">
         <H1>Mis Vinculos</H1>
-         <a class="btn btn-primary" href="https://www.gabinetedeseguridad.cdmx.gob.mx/" role="button">Gabinete de Seguridad Ciudadana CDMX</a>
-           <a class="btn btn-primary" href="https://correo.cdmx.gob.mx/" role="button">Mi correo institucional</a>
-         <a class="btn btn-primary" href="https://analisisseguridad.cdmx.gob.mx/tablero/" role="button">Tablero: Reporte de Incidencia</a>
-         <a class="btn btn-primary" href="https://top5.cdmx.gob.mx/backend/backend/auth/signin" role="button">Tablero: TOP-5</a>
-         <a class="btn btn-primary" href="http://www.infodf.org.mx/ava/acceso/" role="button">AVA: Cursos de Transparencia</a>
-         <a class="btn btn-primary" href="https://www.i4ch-capitalhumano.cdmx.gob.mx/" role="button">Capital Humano (Consulta tu recibo de nómina): </a>
-         <a class="btn btn-primary" href="https://declaraciones.cdmx.gob.mx/inicio.aspx" role="button">Declaración Patrimonial CDMX</a>
-         <a class="btn btn-primary" href="https://oficinavirtual.issste.gob.mx/" role="button">Oficina Virtual ISSSTE</a>
-         <a class="btn btn-primary" href="https://www.atencionciudadana.cdmx.gob.mx/" role="button">SUAC: Sistema Unificado de Atención Ciudadana </a>
-       
-       
-
-                            
-                            <br>
-                            
-                          
-                            
-                            
-                            <text>
 
 
-
+<text>
 <label>En esta sección encontrarás:<br><br>
-
-	Las páginas que necesitas para realizar tus diferentes tareas<br><br>
-
-   
+Las páginas que necesitas para realizar tus diferentes tareas<br><br>  
 </label>
+</text>
 
-                            </text>
-
-
+         <div class="btn-group-vertical" href="https://www.gabinetedeseguridad.cdmx.gob.mx/" role="button">Gabinete de Seguridad Ciudadana CDMX</div>
+         <div class="btn-group-vertical" href="https://correo.cdmx.gob.mx/" role="button">Mi correo institucional</div>
+         <div class="btn-group-vertical" href="https://analisisseguridad.cdmx.gob.mx/tablero/" role="button">Tablero: Reporte de Incidencia</div>
+         <div class="btn-group-vertical" href="https://top5.cdmx.gob.mx/backend/backend/auth/signin" role="button">Tablero: TOP-5</div>
+         <div class="btn-group-vertical" href="http://www.infodf.org.mx/ava/acceso/" role="button">AVA: Cursos de Transparencia</div>
+         <div class="btn-group-vertical" href="https://www.i4ch-capitalhumano.cdmx.gob.mx/" role="button">Capital Humano (Consulta tu recibo de nómina): </div>
+         <div class="btn-group-vertical" href="https://declaraciones.cdmx.gob.mx/inicio.aspx" role="button">Declaración Patrimonial CDMX</div>
+         <div class="btn-group-vertical" href="https://oficinavirtual.issste.gob.mx/" role="button">Oficina Virtual ISSSTE</div>
+         <div class="btn-group-vertical" href="https://www.atencionciudadana.cdmx.gob.mx/" role="button">SUAC: Sistema Unificado de Atención Ciudadana</div>
 
 </div>
 </div>
         
-        
-        
-      
-         
+  
 
     </div>
   </div>
