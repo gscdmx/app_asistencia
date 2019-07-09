@@ -33,8 +33,8 @@
  
 </div>
 
- <div class=“row”>
-    <div class="col-sm-6 ">
+
+ 
         <H1>Mis Vínculos</H1>
 
 
@@ -74,8 +74,8 @@ Las páginas que necesitas para realizar tus diferentes tareas<br><br>
          <a class="btn btn-primary" href="https://oficinavirtual.issste.gob.mx/" role="button">Oficina Virtual ISSSTE</a>
          <a class="btn btn-primary" href="https://www.atencionciudadana.cdmx.gob.mx/" role="button">SUAC: Sistema Unificado de Atención Ciudadana </a>-->
 
-</div>
-</div>
+
+
         
   
 
