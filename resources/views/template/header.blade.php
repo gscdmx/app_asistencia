@@ -15,7 +15,7 @@ if (isset(\Auth::user()->permisos)) {
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>.::APP ASISTENCIA CGGSCYPJ::.</title>
+    <title>APP ASISTENCIA CGGSCYPJ</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">

@@ -331,7 +331,7 @@ public function obtener_excel_miercoles(Request $request)
 
 
 
-        return Excel::download(new Faltantes_miercolesExport($fecha1, $fecha2), 'GV FALTANTES_MIERCOLES.xlsx');
+        return Excel::download(new Faltantes_miercolesExport($fecha1, $fecha2), 'REPORTE GV FALTANTES MIERCOLES.xlsx');
        
                         
     }
