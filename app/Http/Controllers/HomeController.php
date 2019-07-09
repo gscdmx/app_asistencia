@@ -262,7 +262,7 @@ class HomeController extends Controller
        $fecha_actual=$date->format('Y-m-d');
 
 
-          return Excel::download(new Reporte_fechaExport($fecha_actual), 'asistencias_diario.xlsx');
+          return Excel::download(new Reporte_fechaExport($fecha_actual), 'REPORTE DIARIO GM ASISTENCIA.xlsx');
     }
 
 
@@ -348,7 +348,7 @@ class HomeController extends Controller
       $fecha2=$request['fecha2'];
 
 
-         return Excel::download(new Reportes_periodosExport($fecha1, $fecha2), 'GM POR PERIÓDO.xlsx');
+         return Excel::download(new Reportes_periodosExport($fecha1, $fecha2), 'REPORTE GM POR PERIÓDO.xlsx');
 
     }
     
