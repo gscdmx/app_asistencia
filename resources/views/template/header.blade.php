@@ -59,7 +59,7 @@ if (isset(\Auth::user()->permisos)) {
           <div class="sidenav-header-logo"><a href="{{url('/home')}}" class="brand-small text-center"> <strong>CD</strong><strong class="text-primary">MX</strong></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
-        <div class="main-menu">
+          <div class="main-menu">
           <h5 class="sidenav-heading">MENÚ</h5>
           <ul id="side-main-menu" class="side-menu list-unstyled">  
           
@@ -69,7 +69,8 @@ if (isset(\Auth::user()->permisos)) {
             
             <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>
              
-              <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDFS INCIDENCIA DELICTIVA 2019</a></li>
+            <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDFS INCIDENCIA DELICTIVA 2019</a></li>
+            <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
               
               
           
