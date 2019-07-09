@@ -118,5 +118,7 @@ Route::get('/cuestionario', 'cuestionariosController@seguridad');
 Route::post('/guardar_cuestionario_Seguridad', 'cuestionariosController@save_cuestionario_seguridad');
 Route::get('/excel_cuestionario_seguridad', 'cuestionariosController@excel_cuestionarioseguridad');
 
+//mis vinculos
 
-
+Route::get('/vinculosView', 'HomeController@misvinculos');
+//Route::post('/guardar_mapa', 'HomeController@guardarmapa');

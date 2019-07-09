@@ -583,7 +583,7 @@ class HomeController extends Controller
         $fecha2=$request['fecha2'];
 
 
-         return Excel::download(new FaltantesExport($fecha1, $fecha2), 'GM_FALTANTES.xlsx');
+         return Excel::download(new FaltantesExport($fecha1, $fecha2), 'REPORTE GM FALTANTES.xlsx');
 
        
     }
@@ -1181,7 +1181,10 @@ public function guardar_pdf_admin(Request $request){
              return view('mapa');
     }
     
-       
+        public function misvinculos()
+    {   
+             return view('vinculos');
+    }
 
 
 }
