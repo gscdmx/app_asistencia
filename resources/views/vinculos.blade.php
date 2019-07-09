@@ -46,7 +46,13 @@ Las páginas que necesitas para realizar tus diferentes tareas<br><br>
 
 
 
-        <img src="recursos/img/gscypj.png" /> <a class="btn btn-primary" href="https://www.gabinetedeseguridad.cdmx.gob.mx/"     role="button">Gabinete de Seguridad Ciudadana CDMX</a>
+        <!--<img src="recursos/img/gscypj.png" /> <a class="btn btn-primary" href="https://www.gabinetedeseguridad.cdmx.gob.mx/"     role="button">Gabinete de Seguridad Ciudadana CDMX</a>-->
+
+
+        <img src="recursos/img/gscypj.png" /> <button type="submit">Gabinete de Seguridad Ciudadana CDMX</button>
+
+
+
         <!-- <a class="btn btn-primary" href="https://correo.cdmx.gob.mx/" role="button">Mi correo institucional</a>
          <a class="btn btn-primary" href="https://analisisseguridad.cdmx.gob.mx/tablero/" role="button">Tablero: Reporte de Incidencia</a>
          <a class="btn btn-primary" href="https://top5.cdmx.gob.mx/backend/backend/auth/signin" role="button">Tablero: TOP-5</a>
