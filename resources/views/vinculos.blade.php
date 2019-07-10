@@ -39,10 +39,10 @@
 
 
 <text>
-<label>En esta sección encontrarás:<br><br>
+<label>En esta sección encontrarás:<br>
 Las páginas que necesitas para realizar tus diferentes tareas<br><br>  
 </label>
-</text>
+</text><br><br> 
 
       
        
