@@ -40,14 +40,14 @@
 
 <text>
 <label>En esta sección encontrarás:<br>
-Las páginas que necesitas para realizar tus diferentes tareas<br><br>  
+Las páginas que necesitas para realizar tus diferentes tareas.<br><br>  
 </label>
 </text><br><br> 
 
       
        
 
-<a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Gabinete de Seguridad Ciudadana CDMX" ></a><br><br>
+<a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{('public/recursos/img/gabinete.JPG')}}    alt="Gabinete de Seguridad Ciudadana CDMX" ></a><br><br>
 <a href="https://correo.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Mi correo institucional" ></a><br><br>
 <a href="https://analisisseguridad.cdmx.gob.mx/tablero/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: Reporte de Incidencia" ></a><br><br>
 <a href="https://top5.cdmx.gob.mx/backend/backend/auth/signin"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: TOP-5"></a><br><br>
