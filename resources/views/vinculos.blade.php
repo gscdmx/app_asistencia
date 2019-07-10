@@ -44,19 +44,20 @@ Las páginas que necesitas para realizar tus diferentes tareas<br><br>
 </label>
 </text>
 
-         
+   <label>      
 
-          <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Gabinete de Seguridad Ciudadana CDMX" ></a>
+          <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Gabinete de Seguridad Ciudadana CDMX" ></a><br><br>
 
 
-<a href="https://correo.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Mi correo institucional" ></a>
-<a href="https://analisisseguridad.cdmx.gob.mx/tablero/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: Reporte de Incidencia" ></a>
-<a href="https://top5.cdmx.gob.mx/backend/backend/auth/signin"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: TOP-5"</a>
-<a href="http://www.infodf.org.mx/ava/acceso/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="AVA: Cursos de Transparencia" ></a>
-<a href="https://www.i4ch-capitalhumano.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Capital Humano (Consulta tu recibo de nómina)" ></a>
-<a href="https://declaraciones.cdmx.gob.mx/inicio.aspx"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Declaración Patrimonial CDMX" ></a>
-<a href="https://oficinavirtual.issste.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Oficina Virtual ISSSTE" ></a>
-<a href="https://www.atencionciudadana.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="SUAC: Sistema Unificado de Atención Ciudadana" ></a>
+<a href="https://correo.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Mi correo institucional" ></a><br><br>
+<a href="https://analisisseguridad.cdmx.gob.mx/tablero/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: Reporte de Incidencia" ></a><br><br>
+<a href="https://top5.cdmx.gob.mx/backend/backend/auth/signin"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: TOP-5"</a><br><br>
+<a href="http://www.infodf.org.mx/ava/acceso/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="AVA: Cursos de Transparencia" ></a><br><br>
+<a href="https://www.i4ch-capitalhumano.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Capital Humano (Consulta tu recibo de nómina)" ></a><br><br>
+<a href="https://declaraciones.cdmx.gob.mx/inicio.aspx"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Declaración Patrimonial CDMX" ></a><br><br>
+<a href="https://oficinavirtual.issste.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Oficina Virtual ISSSTE" ></a><br><br>
+<a href="https://www.atencionciudadana.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="SUAC: Sistema Unificado de Atención Ciudadana" ></a><br><br>
+</label>
             <!-- <a href="{{URL::to('/')}}"><img src={{asset('images/logo.png')}} alt="Logo"></a>-->
        <!-- <img src="recursos/img/gscypj.png" href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="btn btn-primary"  role="button">-->
 
