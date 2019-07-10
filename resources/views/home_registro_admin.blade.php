@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia_admin') }}">
@@ -145,7 +145,7 @@
 
 
         <div class="form-group row">
-         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefa de Gobierno?</label>
+         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefatura de Gobierno?</label>
          <div class="col-sm-10 mb-3">
            <!--<select name="account" class="form-control">
              <option value="">Selecciona...</option>

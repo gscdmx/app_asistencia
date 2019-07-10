@@ -130,7 +130,7 @@
 
 
         <div class="form-group row">
-         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefa de Gobierno?</label>
+         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefatura de Gobierno?</label>
          <div class="col-sm-10 mb-3">
            <!--<select name="account" class="form-control">
              <option value="">Selecciona...</option>

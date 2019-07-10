@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCPYJ CDMX</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="{{ url('/guardar_asistenciaMiercoles') }}">
@@ -86,7 +86,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó el Gabinete Vespertino:</label>
+          <label class="col-sm-2 form-control-label">Describa el Motivo por el cuál no se realizó el Gabinete Vespertino:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
             <textarea id="motivo" name="motivo" class="form-control" ></textarea>
@@ -124,7 +124,7 @@
 
 
         <div class="form-group row">
-         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefa de Gobierno?</label>
+         <label class="col-sm-2 form-control-label">¿Asistió la Representante de la Jefatura de Gobierno?</label>
          <div class="col-sm-10 mb-3">
            <!--<select name="account" class="form-control">
              <option value="">Selecciona...</option>
