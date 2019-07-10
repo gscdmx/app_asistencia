@@ -46,7 +46,7 @@ Las páginas que necesitas para realizar tus diferentes tareas<br><br>
 
          
 
-          <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{recursos('img/gscypj.png')}}   width="25" height="15"    alt="Gabinete de Seguridad Ciudadana CDMX" ></a>
+          <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Gabinete de Seguridad Ciudadana CDMX" ></a>
 
 
 
