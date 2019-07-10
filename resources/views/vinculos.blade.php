@@ -47,29 +47,10 @@ Las páginas que necesitas para realizar tus diferentes tareas.<br><br>
       
 
 
-<form action="https://www.gabinetedeseguridad.cdmx.gob.mx/" method="post">
-
-
-
-Gabinete de Seguridad Ciudadana CDMX: <input type="text" name="texto">
-
-
-
-<input type=image src="img/gabinete.JPG" width="25" height="15">
-
-
-
-</form>
-
-
-
-
-
-
 
        
 
-<a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src= "recursos/img/gabinete.JPG"   alt="Gabinete de Seguridad Ciudadana CDMX" ></a><br><br>
+<a href="https://www.gabinetedeseguridad.cdmx.gob.mx/"><img src= "img/gabinete.JPG"   alt="Gabinete de Seguridad Ciudadana CDMX" ></a><br><br>
 <a href="https://correo.cdmx.gob.mx/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Mi correo institucional" ></a><br><br>
 <a href="https://analisisseguridad.cdmx.gob.mx/tablero/"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: Reporte de Incidencia" ></a><br><br>
 <a href="https://top5.cdmx.gob.mx/backend/backend/auth/signin"><img src={{('recursos/img/gscypj.png')}}   width="25" height="15"    alt="Tablero: TOP-5"></a><br><br>
@@ -91,16 +72,6 @@ Gabinete de Seguridad Ciudadana CDMX: <input type="text" name="texto">
 
 
 
-
-
-         <a class="btn btn-primary" href="https://correo.cdmx.gob.mx/" role="button">Mi correo institucional</a>
-         <a class="btn btn-primary" href="https://analisisseguridad.cdmx.gob.mx/tablero/" role="button">Mi correo institucional</a>
-         <a class="btn btn-primary" href="https://top5.cdmx.gob.mx/backend/backend/auth/signin" role="button">Tablero: TOP-5</a>
-         <a class="btn btn-primary" href="http://www.infodf.org.mx/ava/acceso/" role="button">AVA: Cursos de Transparencia</a>
-         <a class="btn btn-primary" href="https://www.i4ch-capitalhumano.cdmx.gob.mx/" role="button">Capital Humano (Consulta tu recibo de nómina): </a>
-         <a class="btn btn-primary" href="https://declaraciones.cdmx.gob.mx/inicio.aspx" role="button">Declaración Patrimonial CDMX</a>
-         <a class="btn btn-primary" href="https://oficinavirtual.issste.gob.mx/" role="button">Oficina Virtual ISSSTE</a>
-         <a class="btn btn-primary" href="https://www.atencionciudadana.cdmx.gob.mx/" role="button">SUAC: Sistema Unificado de Atención Ciudadana </a>
 
 
 
