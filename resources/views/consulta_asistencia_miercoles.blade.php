@@ -156,7 +156,7 @@
       </div>
       <div class="modal-body">
       
-      <div style="width: 800px; height: 600px;">
+      <div style="width: 600px; height: 600px;">
       <img src="" id="imagen_dinamica"  style="width: 480px; height: 380px;"  >
       </div>
       </div>
