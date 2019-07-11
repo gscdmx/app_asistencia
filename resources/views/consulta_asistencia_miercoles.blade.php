@@ -149,7 +149,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">foto: Gabinete Vespertino CDMX</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Gabinete de Seguridad Vespertino CDMX</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -157,7 +157,7 @@
       <div class="modal-body">
       
       <div style="width: 800px; height: 500px;">
-      <img src="" id="imagen_dinamica"  style="width: 480px; height: 500px;"  >
+      <img src="" id="imagen_dinamica"  style="width: 580px; height: 600px;"  >
       </div>
       </div>
       <div class="modal-footer">
