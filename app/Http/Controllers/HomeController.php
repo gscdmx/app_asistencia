@@ -16,6 +16,18 @@ use App\Exports\Reporte_fechaExport;
 use App\Exports\FaltantesExport;
 use App\Exports\Reportes_periodosExport;
 
+use Maatwebsite\Excel\Concerns\WithDrawings;
+use Maatwebsite\Excel\Concerns\WithEvents;
+
+
+
+use PhpOffice\PhpSpreadsheet\Worksheet\BaseDrawing;
+
+
+
+
+
+
 class HomeController extends Controller
 {
     /**
