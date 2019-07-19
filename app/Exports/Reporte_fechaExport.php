@@ -5,12 +5,23 @@ namespace App\Exports;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithDrawings;
+use Maatwebsite\Excel\Concerns\WithEvents;
+use PhpOffice\PhpSpreadsheet\Worksheet\BaseDrawing;
+
+//interface WithDrawings
+
+
+
 
 //use App\tbAsistencia;
 
 use DB;
 
-class Reporte_fechaExport implements FromCollection, WithHeadings
+class Reporte_fechaExport implements WithDrawings, FromCollection, WithHeadings
+
+
+
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -22,7 +33,44 @@ class Reporte_fechaExport implements FromCollection, WithHeadings
             $this->year = $year;
         }
 
-   
+/**public function registerEvents(): array
+    {
+        return [
+            AfterSheet::class => function(AfterSheet $event) {
+                $drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
+                $drawing->setName('Logo');
+                $drawing->setDescription('Logo');
+                $drawing->setPath(public_path('img/logo.jpg'));
+                $drawing->setCoordinates('D1');
+
+                $drawing->setWorksheet($event->sheet->getDelegate());
+            },
+        ];
+    }*/
+
+
+
+   public function drawings()
+    {
+        $drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
+        $drawing->setName('LOGOCGGSCYPJ');
+        $drawing->setDescription('logo');
+        $drawing->setPath(public_path('/img/logo.jpg'));
+        $drawing->setCoordinates('A1');
+        $drawing->setHeight(150);
+       $drawing->mergeCells('A1:C1');
+
+        return $drawing;
+    }
+
+                //$drawing->setCoordinates('D1');
+
+                //$drawing->setWorksheet($event->sheet->getDelegate());
+
+
+
+
+
 
 
 
