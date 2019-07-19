@@ -5,12 +5,15 @@ namespace App\Exports;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithDrawings;
+use Maatwebsite\Excel\Concerns\WithEvents;
+use PhpOffice\PhpSpreadsheet\Worksheet\BaseDrawing;
 
 //use App\tbAsistencia;
 
 use DB;
 
-class Reportes_periodosExport implements FromCollection, WithHeadings
+class Reportes_periodosExport implements WithDrawings, FromCollection, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -21,7 +24,17 @@ class Reportes_periodosExport implements FromCollection, WithHeadings
              $this->fecha2 = $fecha2;
         }
 
+    public function drawings()
+    {
+        $drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
+        $drawing->setName('LOGOCGGSCYPJ');
+        $drawing->setDescription('logo');
+        $drawing->setPath(public_path('/img/logo.JPG'));
+        $drawing->setCoordinates('A1');
+        $drawing->setHeight(150);
 
+        return $drawing;
+    }
 
 
     public function collection()
