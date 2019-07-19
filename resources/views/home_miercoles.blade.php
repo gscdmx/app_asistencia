@@ -366,7 +366,7 @@
        <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Captura la foto del Gabinete Vespertino</label>
+          <label class="col-sm-2 form-control-label">Captura o busca en el celular la foto del Gabinete Vespertino</label>
           <div class="col-sm-10 mb-3">
    
        <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" />

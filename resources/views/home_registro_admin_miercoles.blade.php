@@ -21,7 +21,7 @@
       <h4>CGSCPJ CDMX</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia_admin_miercoles') }}">
+      <form class="form-horizontal"   enctype="multipart/form-data"   method="POST" action="{{ url('/guardar_asistencia_admin_miercoles') }}">
 
       {{ csrf_field() }}
 
@@ -387,7 +387,7 @@
 <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Captura la foto del Gabinete Vespertino</label>
+          <label class="col-sm-2 form-control-label">Captura o busca la foto del Gabinete Vespertino</label>
           <div class="col-sm-10 mb-3">
    
        <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" />
