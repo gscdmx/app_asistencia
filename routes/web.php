@@ -118,6 +118,16 @@ Route::get('/cuestionario', 'cuestionariosController@seguridad');
 Route::post('/guardar_cuestionario_Seguridad', 'cuestionariosController@save_cuestionario_seguridad');
 Route::get('/excel_cuestionario_seguridad', 'cuestionariosController@excel_cuestionarioseguridad');
 
+
+//preguntas
+Route::get('/preguntas', 'cuestionariosController@preguntas');
+Route::get('/preguntas_region', 'cuestionariosController@region');
+Route::post('/guardar_cuestionario_Preguntas', 'cuestionariosController@save_cuestionario_preguntas');
+Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuestionariopreguntas');
+
+
+
+
 //mis vinculos
 
 Route::get('/vinculosView', 'HomeController@misvinculos');
