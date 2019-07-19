@@ -55,10 +55,9 @@ class Reporte_fechaExport implements WithDrawings, FromCollection, WithHeadings
         $drawing = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
         $drawing->setName('LOGOCGGSCYPJ');
         $drawing->setDescription('logo');
-        $drawing->setPath(public_path('/img/logo.jpg'));
+        $drawing->setPath(public_path('/img/logo.JPG'));
         $drawing->setCoordinates('A1');
         $drawing->setHeight(150);
-       $drawing->mergeCells('A1:C1');
 
         return $drawing;
     }
