@@ -21,7 +21,7 @@
       <h4>CGSCPJ CDMX</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia_admin_miercoles') }}">
+      <form class="form-horizontal"   enctype="multipart/form-data"   method="POST" action="{{ url('/guardar_asistencia_admin_miercoles') }}">
 
       {{ csrf_field() }}
 

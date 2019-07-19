@@ -30,7 +30,7 @@ class CreateTbAsistenciasMiercolesTable extends Migration
             $table->text('representante_alcaldia')->nullable();
             $table->text('otro')->nullable();
             $table->text('ins')->nullable();
-             $table->text('vecino')->nullable();
+            $table->text('vecino')->nullable();
             $table->integer('user_registro')->nullable();
             
 
