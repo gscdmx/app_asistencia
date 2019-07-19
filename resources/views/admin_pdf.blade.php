@@ -15,111 +15,99 @@
 
 
 
-<div class="col-lg-12">
-  <div class="card">
-    <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
-    </div>
-    <div class="card-body">
-      <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ url('/guardar_admin_pdf') }}">
+       <div class="col-lg-12">
+       <div class="card">
+                                       <div class="card-header d-flex align-items-center">
+                                       <h4>CGGSCYPJ CDMX</h4>
+                                       </div>
+       <div class="card-body">
+       <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ url('/guardar_admin_pdf') }}">
 
-      {{ csrf_field() }}
-
-
+                                            {{ csrf_field() }}
 
 
-      @if( Session::has('mensaje') )
-                   <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       {{ Session::get('mensaje')['mensaje'] }}
-                   </div>
-      @endif
+
+
+                                        @if( Session::has('mensaje') )
+                                        <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        {{ Session::get('mensaje')['mensaje'] }}
+                                        </div>
+                                        @endif
       
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Enviar PDF a:</label>
-          <div class="col-sm-10 mb-3">
-            <select name="elegir_user" id="elegir_user" class="form-control">
-              <option value="">Selecciona...</option>
-              <option value="1">Alcaldia</option>
-              <option value="2">Usuario</option>
-            </select>
+                                          <div class="form-group row">
+                                          <label class="col-sm-2 form-control-label">Enviar PDF a:</label>
+                                          <div class="col-sm-10 mb-3">
+                                          <select name="elegir_user" id="elegir_user" class="form-control">
+                                          <option value="">Selecciona...</option>
+                                          <option value="1">Alcaldia</option>
+                                          <option value="2">Usuario</option>
+                                          </select>
             
-             @if ($errors->has('elegir_user')) <p  style="color: red">{{ $errors->first('elegir_user') }}</p> @endif 
-          </div>
+                                         @if ($errors->has('elegir_user')) <p  style="color: red">{{ $errors->first('elegir_user') }}</p> @endif 
+                                          </div>
         
-        </div>
+                                          </div>
       
       
-      <div  style="display:none;" id="show_alc">
+                                        <div  style="display:none;" id="show_alc">
           
-       <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona la Alcaldía para quien va el PDF:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="alcaldia" name="alcaldia" class="form-control">
+                                 <div class="form-group row">
+                                 <label class="col-sm-2 form-control-label">Selecciona la Alcaldía para quien va el PDF:</label>
+                                  <div class="col-sm-10 mb-3">
+                                 <select id="alcaldia" name="alcaldia" class="form-control">
 
-              <option value="">Selecciona...</option>
-              @foreach($alcaldias as $alcaldia)
-               <option value="{{$alcaldia->id}}">{{$alcaldia->delegacion}}</option>
+                                  <option value="">Selecciona...</option>
+                                   @foreach($alcaldias as $alcaldia)
+                                   <option value="{{$alcaldia->id}}">{{$alcaldia->delegacion}}</option>
 
-              @endforeach
+                                    @endforeach
               
-            </select>
+                                  </select>
 
-             @if ($errors->has('alcaldia')) <p  style="color: red">{{ $errors->first('alcaldia') }}</p> 
-             @endif
+                                   @if ($errors->has('alcaldia')) <p  style="color: red">{{ $errors->first('alcaldia') }}</p> 
+                                  @endif
            
 
-          </div>
+                                      </div>
         
-        </div>
-         </div>
+                                       </div>
+                                       </div>
 
-        <div  style="display:none;" id="show_user">
-         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Selecciona Usuario para quien va el PDF:</label>
-          <div class="col-sm-10 mb-3">
-            <select id="user" name="user" class="form-control"> 
+                                       <div  style="display:none;" id="show_user">
+                                       <div class="form-group row">
+                                       <label class="col-sm-2 form-control-label">Selecciona Usuario para quien va el PDF:</label>
+                                       <div class="col-sm-10 mb-3">
+                                       <select id="user" name="user" class="form-control"> 
             
-            <option value="">Selecciona...</option>
-              @foreach($users as $user)
-               <option value="{{$user->id}}">{{$user->email}}</option>
+                                      <option value="">Selecciona...</option>
+                                      @foreach($users as $user)
+                                      <option value="{{$user->id}}">{{$user->email}}</option>
 
-              @endforeach
+                                      @endforeach
               
               
-            </select>
+                                      </select>
             
             
 
-             @if ($errors->has('user')) <p  style="color: red">{{ $errors->first('user') }}</p> @endif 
+                                        @if ($errors->has('user')) <p  style="color: red">{{ $errors->first('user') }}</p> @endif 
 
 
-          </div>
+                                        </div>
         
-        </div>
-         </div>
+                                         </div>
+                                         </div>
 
 
-
-       
-      
-        
-        
-       
-         
-
-     
-
-
-
-        <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Descripción del Archivo:</label>
-          <div class="col-sm-10">
-            <!--<input type="text" class="form-control">-->
-            <textarea id="descripcion" name="descripcion" class="form-control" ></textarea>
-          </div>
-        </div>
+                                    <div class="line"></div>
+                                    <div class="form-group row">
+                                    <label class="col-sm-2 form-control-label">Descripción del Archivo:</label>
+                                    <div class="col-sm-10">
+                                        <!--<input type="text" class="form-control">-->
+                                       <textarea id="descripcion" name="descripcion" class="form-control" ></textarea>
+                                         </div>
+                                         </div>
 
    
 
@@ -127,16 +115,16 @@
 
 
 
-        <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-2 form-control-label">subir archivo</label>
-          <div class="col-sm-10">
-        <input type="file" id="archivo" name="archivo" accept="application/pdf"> 
-        <!--este es el mensaje de validacion-->
-            @if ($errors->has('archivo')) <p  style="color: red">{{ $errors->first('archivo') }}</p> @endif
+                                           <div class="line"></div>
+                                           <div class="form-group row">
+                                           <label class="col-sm-2 form-control-label">subir archivo</label>
+                                           <div class="col-sm-10">
+                                           <input type="file" id="archivo" name="archivo" accept="application/pdf"> 
+                                           <!--este es el mensaje de validacion-->
+                                           @if ($errors->has('archivo')) <p  style="color: red">{{ $errors->first('archivo') }}</p> @endif
 
-          </div>
-        </div>
+                                            </div>
+                                            </div>
 
 
 
@@ -145,26 +133,27 @@
     
 
 
-
+        </form>
         
         </div>
 
 
-       <div class="line"></div>
-        <div class="form-group row">
-          <div class="col-sm-4 offset-sm-2">
-            <!--<button type="submit" class="btn btn-secondary">Cancel</button>-->
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </div>
-        </div>
+                                                    <div class="line"></div>
+                                                    <div class="form-group row">
+                                                    <div class="col-sm-4 offset-sm-2">
+                                                    <!--<button type="submit" class="btn btn-secondary">Cancel</button>-->
+                                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>
+                                                     </div>
           
        
 
          
 
 
-      </form>
+      
     </div>
+
   </div>
 </div>
 
@@ -172,7 +161,7 @@
 
 
  </div>
-          </div>
+         
   </section>
 
 
