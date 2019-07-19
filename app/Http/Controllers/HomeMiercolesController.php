@@ -945,7 +945,15 @@ public function obtener_excel_miercoles(Request $request)
             }else{
                 $array_vecino = $request['vecino'];
             }
-  
+              
+              if($request['archivo']!=null){
+            $imagen_nombre=rand(11111,99999).'.jpg';
+            $destinationPath='alcaldias';
+              }else{
+              $imagen_nombre=null;
+               
+              }
+
           
             
             if ($request['se_realizo_mesa']=='si') {
@@ -970,8 +978,13 @@ public function obtener_excel_miercoles(Request $request)
                        'ins' => $array_ins,
                        'vecino' => $array_vecino,
                        //'reunionjg' => $array_reunionjg,
+                       'archivo_imagen' => $imagen_nombre,
                        'user_registro'=> $request['user']
                     ]); 
+
+            if($request['archivo']!=null){
+                 $request['archivo']->move($destinationPath,$imagen_nombre);
+            }
 
             }else{
                 DB::table('tb_asistencias_miercoles')->insert([  
@@ -994,6 +1007,7 @@ public function obtener_excel_miercoles(Request $request)
                         'ins' => 'No se realizo',
                         'vecino' => 'No se realizo',
                         //'reunionjg' => 'No se realizo',
+                        'archivo_imagen' => $imagen_nombre,
                         'user_registro'=> $request['user']
                      ]); 
 
