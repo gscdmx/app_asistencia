@@ -267,7 +267,7 @@
         </div>-->
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">TELEFONO:</label>
+          <label class="col-sm-3 form-control-label">Télefono:</label>
           <div class="col-sm-9 mb-3">
             <textarea class="form-control" id="telefono" name="telefono" required></textarea>
             
@@ -279,7 +279,7 @@
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">FIRMA:</label>
+          <label class="col-sm-3 form-control-label">FIRMA (RJG) INICIALES:</label>
           <div class="col-sm-9 mb-3">
             <textarea class="form-control" id="firma" name="firma" required></textarea>
             
@@ -292,7 +292,7 @@
         <div class="line"></div>
         <div class="form-group row">
           <div class="col-sm-6 offset-sm-6">
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="submit" class="btn btn-primary">Registrar </button>
           </div>
         </div>
       </form>
