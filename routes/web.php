@@ -124,7 +124,8 @@ Route::get('/preguntas', 'cuestionariosController@preguntas');
 Route::get('/preguntas_region', 'cuestionariosController@region');
 Route::post('/guardar_cuestionario_Preguntas', 'cuestionariosController@save_cuestionario_preguntas');
 Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuestionariopreguntas');
-
+Route::get('/getlistadopreguntas', 'cuestionariosController@view_listado_preguntas');
+Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 
 
 
@@ -132,3 +133,5 @@ Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuest
 
 Route::get('/vinculosView', 'HomeController@misvinculos');
 //Route::post('/guardar_mapa', 'HomeController@guardarmapa');
+
+

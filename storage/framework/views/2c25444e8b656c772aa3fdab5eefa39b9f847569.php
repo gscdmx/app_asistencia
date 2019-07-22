@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -21,19 +19,21 @@
                                        <h4>CGGSCYPJ CDMX</h4>
                                        </div>
        <div class="card-body">
-       <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ url('/guardar_admin_pdf') }}">
+       <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="<?php echo e(url('/guardar_admin_pdf')); ?>">
 
-                                            {{ csrf_field() }}
-
-
+                                            <?php echo e(csrf_field()); ?>
 
 
-                                        @if( Session::has('mensaje') )
-                                        <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+
+
+
+                                        <?php if( Session::has('mensaje') ): ?>
+                                        <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                        {{ Session::get('mensaje')['mensaje'] }}
+                                        <?php echo e(Session::get('mensaje')['mensaje']); ?>
+
                                         </div>
-                                        @endif
+                                        <?php endif; ?>
       
                                           <div class="form-group row">
                                           <label class="col-sm-2 form-control-label">Enviar PDF a:</label>
@@ -44,7 +44,7 @@
                                           <option value="2">Usuario</option>
                                           </select>
             
-                                         @if ($errors->has('elegir_user')) <p  style="color: red">{{ $errors->first('elegir_user') }}</p> @endif 
+                                         <?php if($errors->has('elegir_user')): ?> <p  style="color: red"><?php echo e($errors->first('elegir_user')); ?></p> <?php endif; ?> 
                                           </div>
         
                                           </div>
@@ -58,15 +58,15 @@
                                  <select id="alcaldia" name="alcaldia" class="form-control">
 
                                   <option value="">Selecciona...</option>
-                                   @foreach($alcaldias as $alcaldia)
-                                   <option value="{{$alcaldia->id}}">{{$alcaldia->delegacion}}</option>
+                                   <?php $__currentLoopData = $alcaldias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $alcaldia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                   <option value="<?php echo e($alcaldia->id); ?>"><?php echo e($alcaldia->delegacion); ?></option>
 
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               
                                   </select>
 
-                                   @if ($errors->has('alcaldia')) <p  style="color: red">{{ $errors->first('alcaldia') }}</p> 
-                                  @endif
+                                   <?php if($errors->has('alcaldia')): ?> <p  style="color: red"><?php echo e($errors->first('alcaldia')); ?></p> 
+                                  <?php endif; ?>
            
 
                                       </div>
@@ -81,17 +81,17 @@
                                        <select id="user" name="user" class="form-control"> 
             
                                       <option value="">Selecciona...</option>
-                                      @foreach($users as $user)
-                                      <option value="{{$user->id}}">{{$user->email}}</option>
+                                      <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                      <option value="<?php echo e($user->id); ?>"><?php echo e($user->email); ?></option>
 
-                                      @endforeach
+                                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               
               
                                       </select>
             
             
 
-                                        @if ($errors->has('user')) <p  style="color: red">{{ $errors->first('user') }}</p> @endif 
+                                        <?php if($errors->has('user')): ?> <p  style="color: red"><?php echo e($errors->first('user')); ?></p> <?php endif; ?> 
 
 
                                         </div>
@@ -121,7 +121,7 @@
                                            <div class="col-sm-10">
                                            <input type="file" id="archivo" name="archivo" accept="application/pdf"> 
                                            <!--este es el mensaje de validacion-->
-                                           @if ($errors->has('archivo')) <p  style="color: red">{{ $errors->first('archivo') }}</p> @endif
+                                           <?php if($errors->has('archivo')): ?> <p  style="color: red"><?php echo e($errors->first('archivo')); ?></p> <?php endif; ?>
 
                                             </div>
                                             </div>
@@ -167,21 +167,21 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
 <script type="text/javascript">
@@ -210,5 +210,7 @@
 
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -69,8 +69,9 @@ if (isset(\Auth::user()->permisos)) {
             
             <li><a href="<?php echo e(url('/cuestionario')); ?>"> <i class="icon-list"></i>MIS VISITAS</a></li>
             <li><a href="<?php echo e(url('/preguntas')); ?>"> <i class="icon-list"></i>FORMATO DE VISITAS</a></li>
+             <li><a href="<?php echo e(url('/getlistadopreguntas')); ?>"> <i class="icon-list"></i>VER MI FORMATO DE VISITAS</a></li>
              
-            <li><a href="<?php echo e(url('/usuariopdfView')); ?>"> <i class="icon-list"></i>MIS PDFS INCIDENCIA DELICTIVA 2019</a></li>
+            <li><a href="<?php echo e(url('/usuariopdfView')); ?>"> <i class="icon-list"></i>MIS PDF'S INCIDENCIA DELICTIVA 2019</a></li>
             <li><a href="<?php echo e(url('/vinculosView')); ?>"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
               
               
