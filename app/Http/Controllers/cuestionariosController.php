@@ -65,6 +65,7 @@ class cuestionariosController extends Controller
 
      public function preguntas(){
 
+
        $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
                         ->join('users','users.name','=','cat_cuadrantes.ct')
                         ->where('users.id',\Auth::user()->id)
