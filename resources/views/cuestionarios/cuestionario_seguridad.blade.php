@@ -27,7 +27,7 @@
       <div class="form-group row">
         <label class="col-sm-3 form-control-label">Cuadrante: </label>
         <div class="col-sm-9 mb-3">
-          <select name="id_cuadrante" id="id_cuadrante" class="form-control">
+          <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
             <option value="">Selecciona...</option>
             @foreach($mis_cuadrantes as $mi_cuadrante)
             <option value="{{$mi_cuadrante->id}}">{{$mi_cuadrante->cuadrante}}</option>
@@ -43,7 +43,7 @@
       <div class="form-group row">
           <label class="col-sm-3 form-control-label">Nombre:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="nombre" name="nombre"></textarea>
+            <textarea class="form-control" id="nombre" name="nombre" required></textarea>
             
              @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
           </div>
@@ -54,7 +54,7 @@
        <div class="form-group row">
           <label class="col-sm-3 form-control-label">Domicilio:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="direccion" name="direccion"></textarea>
+            <textarea class="form-control" id="direccion" name="direccion" required></textarea>
             
              @if ($errors->has('direccion')) <p  style="color: red">{{ $errors->first('direccion') }}</p> @endif 
           </div>
@@ -64,7 +64,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">Colonia:</label>
           <div class="col-sm-9 mb-3">
-             <input type="text" class="form-control" id="colonia" name="colonia"></input>
+             <input type="text" class="form-control" id="colonia" name="colonia" required></input>
             
              @if ($errors->has('colonia')) <p  style="color: red">{{ $errors->first('colonia') }}</p> @endif 
           </div>
@@ -74,7 +74,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">1 - ¿Ha solicitado los servicios de la policía?</label>
           <div class="col-sm-9 mb-3">
-            <select name="servicio_policia" id="servicio_policia" class="form-control">
+            <select name="servicio_policia" id="servicio_policia" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
@@ -88,7 +88,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">2 - ¿Hace cuánto?:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="hace_cuanto" name="hace_cuanto"></textarea>
+            <textarea class="form-control" id="hace_cuanto" name="hace_cuanto" required></textarea>
             
              @if ($errors->has('hace_cuanto')) <p  style="color: red">{{ $errors->first('hace_cuanto') }}</p> @endif 
           </div>
@@ -98,7 +98,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">3 - ¿Por que motivo?:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="motivo" name="motivo"></textarea>
+            <textarea class="form-control" id="motivo" name="motivo" required></textarea>
             
              @if ($errors->has('motivo')) <p  style="color: red">{{ $errors->first('motivo') }}</p> @endif 
           </div>
@@ -108,7 +108,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">4 - ¿Por qué medio llamaste a la policía?</label>
           <div class="col-sm-9 mb-3">
-            <select name="medio_llamo_policia" id="medio_llamo_policia" class="form-control">
+            <select name="medio_llamo_policia" id="medio_llamo_policia" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="911">911</option>
               <option value="App Mi Policia">App Mi Policia</option>
@@ -125,7 +125,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">5 - ¿Te contestarón?</label>
           <div class="col-sm-9 mb-3">
-            <select name="contestaron" id="contestaron" class="form-control">
+            <select name="contestaron" id="contestaron" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
@@ -139,7 +139,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">6 - ¿Cuántas veces  tuviste que llamar para que te contestaran?</label>
           <div class="col-sm-9 mb-3">
-            <select name="veces_en_llamar" id="veces_en_llamar" class="form-control">
+            <select name="veces_en_llamar" id="veces_en_llamar" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -156,7 +156,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">7 - ¿Cuánto tiempo se tardarón en contestar?(minutos):</label>
           <div class="col-sm-9 mb-3">
-             <input type="number" class="form-control" id="tiempo_contestar" name="tiempo_contestar"></input>
+             <input type="number" class="form-control" id="tiempo_contestar" name="tiempo_contestar" required></input>
             
              @if ($errors->has('tiempo_contestar')) <p  style="color: red">{{ $errors->first('tiempo_contestar') }}</p> @endif 
           </div>
@@ -166,7 +166,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">8 - ¿Cuánto tiempo llegó la policía?:</label>
           <div class="col-sm-9 mb-3">
-             <input type="text" class="form-control" id="tiempo_llegada" name="tiempo_llegada"></input>
+             <input type="text" class="form-control" id="tiempo_llegada" name="tiempo_llegada" required></input>
             
              @if ($errors->has('tiempo_llegada')) <p  style="color: red">{{ $errors->first('tiempo_llegada') }}</p> @endif 
           </div>
@@ -176,7 +176,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">9 - ¿La atención que recibiste fue?</label>
           <div class="col-sm-9 mb-3">
-            <select name="atencion" id="atencion" class="form-control">
+            <select name="atencion" id="atencion" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="Muy Buena">Muy Buena</option>
               <option value="Buena">Buena</option>
@@ -194,7 +194,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">10 - ¿Resolvió el problema o la urgencia qué se presentó?:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="resolvio_problema" name="resolvio_problema"></textarea>
+            <textarea class="form-control" id="resolvio_problema" name="resolvio_problema" required></textarea>
             
              @if ($errors->has('resolvio_problema')) <p  style="color: red">{{ $errors->first('resolvio_problema') }}</p> @endif 
           </div>
@@ -204,7 +204,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">11 - ¿Conoce el programa de cuadrantes?</label>
           <div class="col-sm-9 mb-3">
-            <select name="conoce_cuadrante" id="conoce_cuadrante" class="form-control">
+            <select name="conoce_cuadrante" id="conoce_cuadrante" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
@@ -218,7 +218,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">12 - ¿Conoce al jefe de cuadrante?</label>
           <div class="col-sm-9 mb-3">
-            <select name="conoce_jc" id="conoce_jc" class="form-control">
+            <select name="conoce_jc" id="conoce_jc" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
@@ -232,7 +232,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">13 - ¿Cómo califica la seguridad entorno a su calle?:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="califica_seguridad_calle" name="califica_seguridad_calle"></textarea>
+            <textarea class="form-control" id="califica_seguridad_calle" name="califica_seguridad_calle" required></textarea>
             
              @if ($errors->has('califica_seguridad_calle')) <p  style="color: red">{{ $errors->first('califica_seguridad_calle') }}</p> @endif 
           </div>
@@ -242,7 +242,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">14 - Si su respuesta en la pregunta 3 fue un "delito", responde lo siguiente, ¿Realizó su denuncia?</label>
           <div class="col-sm-9 mb-3">
-            <select name="realizo_denuncia" id="realizo_denuncia" class="form-control">
+            <select name="realizo_denuncia" id="realizo_denuncia" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
@@ -258,7 +258,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label" id="texto_delito"></label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="descripcion_denuncia" name="descripcion_denuncia"></textarea>
+            <textarea class="form-control" id="descripcion_denuncia" name="descripcion_denuncia" required></textarea>
             
              @if ($errors->has('descripcion_denuncia')) <p  style="color: red">{{ $errors->first('descripcion_denuncia') }}</p> @endif 
           </div>
@@ -270,7 +270,7 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">15 - Comentarios:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="comentarios" name="comentarios"></textarea>
+            <textarea class="form-control" id="comentarios" name="comentarios" required></textarea>
             
              @if ($errors->has('comentarios')) <p  style="color: red">{{ $errors->first('comentarios') }}</p> @endif 
           </div>
