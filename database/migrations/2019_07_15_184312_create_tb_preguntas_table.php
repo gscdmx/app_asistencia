@@ -35,7 +35,7 @@ class CreateTbPreguntasTable extends Migration
             $table->text('nombre')->nullable();
             $table->text('telefono')->nullable();
             $table->string('tiempo_llegada')->nullable();
-            $table->string('firma')->nullable();           
+            $table->string('firma')->nullable();         
             $table->timestamps();
            
         });

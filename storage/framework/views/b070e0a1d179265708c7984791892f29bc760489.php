@@ -16,7 +16,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX MI FORMATO DE VISITAS</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia')); ?>">
@@ -37,7 +37,7 @@
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Excel</a>
+            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Excel Formato de Visitas</a>
 </div>
 
 
@@ -45,53 +45,62 @@
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias</h4>
+              <h4>Listado de Vistas</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>Fecha de Captura</th>
-                      <th>Hora de Inicio</th>
-                      <th>Hora de Término</th>
-                      <th>Coordinación</th>
-                      <th>Se realizó Gabinte</th>
-                      <th>Motivo por el que no se realizo</th>
-                      <th>Jefa de Gobierno</th>
-                      <th>Ministerio Público</th>
-                      <th>Jefe de la Policía</th>
-                      <th>Policía Investigación</th>
-                      <th>Juez Cívico</th>
-                      <th>Médico Legista</th>
-                      <th>PDI Inteligencia Social</th>
-                      <th>Representante de Alcaldia</th>
-                      <th>Reunion con JG</th>
-                        
+                      
+                          <th>ALCALDIA</th>
+                          <th>REGION</th>
+                          <th>SECTOR</th>
+                          <th>COORDINACIÓN TERRITORIAL</th>
+                          <th>CUADRANTE</th>
+                          <th>ID</th>
+                          <th>NOMBRE DE RJG</th>
+                          <th>FECHA DE ALTA</th>
+                          <th>HORA DE INICIO</th>
+                          <th>HORA DE TERMINO</th>                
+                          <th>CALLE </th>
+                          <th>NÚMERO</th>
+                          <th>COLONIA</th>
+                          <th>¿ALGUNA VEZ HA SOLICITADO EL SERVICIO DE LA POLICÍA? </th>
+                          <th>¿ACUDIO? </th>
+                          <th>¿CONOCE A SU JEFE DE CUADRANTE? </th>
+                          <th>¿CONOCE LA APP MI POLICÍA? </th>
+                          <th>¿AL LLAMAR AL JEFE DE CUADRANTE EN TIEMPO REAL, ¿RESPONDIÓ?  </th>
+                          <th>¿ACUDIO JEFE DE CUADRANTE?</th>
+                          <th>¿EN CUÁNTO TIEMPO ACUDIÓ?</th>
+                          <th> NOMBRE</th>
+                          <th>NÚMERO DE TELEFONO</th>
+                          <th>FIRMA</th>
+                          <th>FECHA DE CAPTURA</th>
+                          <th>FECHA DE ACTUALIZACIÓN</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $__currentLoopData = $asistencias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $asistencia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = $pregunta; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $preguntas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     
                     <tr>
                         
-                                          <td><?php echo e($asistencia->id); ?></td>
-                                          <td><?php echo e($asistencia->fecha); ?></td>
-                                          <td><?php echo e($asistencia->hora_i); ?></td>
-                                          <td><?php echo e($asistencia->hora_f); ?></td>
-                                          <td><?php echo e($asistencia->ct2); ?> <?php echo e($asistencia->sector); ?></td>
-                                          <td><?php echo e($asistencia->se_realizo); ?></td>
-                                          <td><?php echo e($asistencia->no_motivo); ?></td>
-                                          <td><?php echo e($asistencia->jg); ?></td>
-                                          <td><?php echo e($asistencia->mp); ?></td>
-                                          <td><?php echo e($asistencia->jsp); ?></td>
-                                          <td><?php echo e($asistencia->jspi); ?></td>
-                                          <td><?php echo e($asistencia->jc); ?></td>
-                                          <td><?php echo e($asistencia->ml); ?></td>
-                                          <td><?php echo e($asistencia->ins); ?></td>
-                                          <td><?php echo e($asistencia->representante_alcaldia); ?></td>
-                                          <td><?php echo e($asistencia->reunionjg); ?></td>
+                                          <td><?php echo e($preguntas->id); ?></td>
+                                          <td><?php echo e($preguntas->fecha); ?></td>
+                                          <td><?php echo e($preguntas->hora_i); ?></td>
+                                          <td><?php echo e($preguntas->hora_f); ?></td>
+                                          <td><?php echo e($preguntas->ct2); ?> <?php echo e($preguntas->sector); ?></td>
+                                          <td><?php echo e($preguntas->se_realizo); ?></td>
+                                          <td><?php echo e($preguntas->no_motivo); ?></td>
+                                          <td><?php echo e($preguntas->jg); ?></td>
+                                          <td><?php echo e($preguntas->mp); ?></td>
+                                          <td><?php echo e($preguntas->jsp); ?></td>
+                                          <td><?php echo e($preguntas->jspi); ?></td>
+                                          <td><?php echo e($preguntas->jc); ?></td>
+                                          <td><?php echo e($preguntas->ml); ?></td>
+                                          <td><?php echo e($preguntas->ins); ?></td>
+                                          <td><?php echo e($preguntas->representante_alcaldia); ?></td>
+                                          <td><?php echo e($preguntas->reunionjg); ?></td>
      
                      
                       

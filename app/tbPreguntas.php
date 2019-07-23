@@ -27,7 +27,8 @@ class tbPreguntas extends Model
             'tiempo_acudio', //'tiempo_contestar',
             'nombre',
             'telefono', //'comentarios',
-            'firma'          //'califica_seguridad_calle',                                       
+            'firma'
+                  //'califica_seguridad_calle',                                       
             ];
 
 }
