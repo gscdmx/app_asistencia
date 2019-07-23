@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX MI FORMATO DE VISITAS</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia') }}">
@@ -37,7 +37,7 @@
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Excel</a>
+            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Excel Formato de Visitas</a>
 </div>
 
 
@@ -45,53 +45,62 @@
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias</h4>
+              <h4>Listado de Vistas</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>Fecha de Captura</th>
-                      <th>Hora de Inicio</th>
-                      <th>Hora de Término</th>
-                      <th>Coordinación</th>
-                      <th>Se realizó Gabinte</th>
-                      <th>Motivo por el que no se realizo</th>
-                      <th>Jefa de Gobierno</th>
-                      <th>Ministerio Público</th>
-                      <th>Jefe de la Policía</th>
-                      <th>Policía Investigación</th>
-                      <th>Juez Cívico</th>
-                      <th>Médico Legista</th>
-                      <th>PDI Inteligencia Social</th>
-                      <th>Representante de Alcaldia</th>
-                      <th>Reunion con JG</th>
-                        
+                      
+                          <th>ALCALDIA</th>
+                          <th>REGION</th>
+                          <th>SECTOR</th>
+                          <th>COORDINACIÓN TERRITORIAL</th>
+                          <th>CUADRANTE</th>
+                          <th>ID</th>
+                          <th>NOMBRE DE RJG</th>
+                          <th>FECHA DE ALTA</th>
+                          <th>HORA DE INICIO</th>
+                          <th>HORA DE TERMINO</th>                
+                          <th>CALLE </th>
+                          <th>NÚMERO</th>
+                          <th>COLONIA</th>
+                          <th>¿ALGUNA VEZ HA SOLICITADO EL SERVICIO DE LA POLICÍA? </th>
+                          <th>¿ACUDIO? </th>
+                          <th>¿CONOCE A SU JEFE DE CUADRANTE? </th>
+                          <th>¿CONOCE LA APP MI POLICÍA? </th>
+                          <th>¿AL LLAMAR AL JEFE DE CUADRANTE EN TIEMPO REAL, ¿RESPONDIÓ?  </th>
+                          <th>¿ACUDIO JEFE DE CUADRANTE?</th>
+                          <th>¿EN CUÁNTO TIEMPO ACUDIÓ?</th>
+                          <th> NOMBRE</th>
+                          <th>NÚMERO DE TELEFONO</th>
+                          <th>FIRMA</th>
+                          <th>FECHA DE CAPTURA</th>
+                          <th>FECHA DE ACTUALIZACIÓN</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($asistencias as $asistencia)
+                    @foreach($pregunta as $preguntas)
                     
                     <tr>
                         
-                                          <td>{{$asistencia->id}}</td>
-                                          <td>{{$asistencia->fecha}}</td>
-                                          <td>{{$asistencia->hora_i}}</td>
-                                          <td>{{$asistencia->hora_f}}</td>
-                                          <td>{{$asistencia->ct2}} {{$asistencia->sector}}</td>
-                                          <td>{{$asistencia->se_realizo}}</td>
-                                          <td>{{$asistencia->no_motivo}}</td>
-                                          <td>{{$asistencia->jg}}</td>
-                                          <td>{{$asistencia->mp}}</td>
-                                          <td>{{$asistencia->jsp}}</td>
-                                          <td>{{$asistencia->jspi}}</td>
-                                          <td>{{$asistencia->jc}}</td>
-                                          <td>{{$asistencia->ml}}</td>
-                                          <td>{{$asistencia->ins}}</td>
-                                          <td>{{$asistencia->representante_alcaldia}}</td>
-                                          <td>{{$asistencia->reunionjg}}</td>
+                                          <td>{{$preguntas->id}}</td>
+                                          <td>{{$preguntas->fecha}}</td>
+                                          <td>{{$preguntas->hora_i}}</td>
+                                          <td>{{$preguntas->hora_f}}</td>
+                                          <td>{{$preguntas->ct2}} {{$preguntas->sector}}</td>
+                                          <td>{{$preguntas->se_realizo}}</td>
+                                          <td>{{$preguntas->no_motivo}}</td>
+                                          <td>{{$preguntas->jg}}</td>
+                                          <td>{{$preguntas->mp}}</td>
+                                          <td>{{$preguntas->jsp}}</td>
+                                          <td>{{$preguntas->jspi}}</td>
+                                          <td>{{$preguntas->jc}}</td>
+                                          <td>{{$preguntas->ml}}</td>
+                                          <td>{{$preguntas->ins}}</td>
+                                          <td>{{$preguntas->representante_alcaldia}}</td>
+                                          <td>{{$preguntas->reunionjg}}</td>
      
                      
                       
