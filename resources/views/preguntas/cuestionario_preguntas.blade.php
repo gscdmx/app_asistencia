@@ -24,7 +24,7 @@
                        {{ Session::get('mensaje')['mensaje'] }}
                    </div>
       @endif
-      <div class="form-group row">
+     <div class="form-group row">
         <label class="col-sm-3 form-control-label">Cuadrante: </label>
         <div class="col-sm-9 mb-3">
           <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
@@ -39,6 +39,8 @@
         </div>
       
       </div>
+
+ 
 
          <div class="line"></div>
       <div class="form-group row">
@@ -70,36 +72,36 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">Nombre de la Representante de Jefatura de Gob:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="nombre_rjg" name="nombre_rjg" required></textarea>
+           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" required></input>
             
-             @if ($errors->has('nombre_rjg')) <p  style="color: red">{{ $errors->first('nombre_rjg') }}</p> @endif 
-          </div>
+               @if ($errors->has('nombre_rjg')) <p  style="color: red">{{ $errors->first('nombre_rjg') }}</p> @endif 
+                  </div>
         
-        </div> 
+             </div>
   
        
       <div class="line"></div>
        <div class="form-group row">
           <label class="col-sm-3 form-control-label">Calle:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="calle" name="calle" required></textarea>
+           <input type="text" class="form-control" id="calle" name="calle" required></input>
             
-             @if ($errors->has('calle')) <p  style="color: red">{{ $errors->first('calle') }}</p> @endif 
-          </div>
+               @if ($errors->has('calle')) <p  style="color: red">{{ $errors->first('calle') }}</p> @endif 
+                  </div>
         
-        </div>
+             </div>
 
           
          <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Numero:</label>
+          <label class="col-sm-3 form-control-label">Número:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="numero" name="numero" required></textarea>
+            <input type="text" class="form-control" id="numero" name="numero" required></input>
             
-             @if ($errors->has('numero')) <p  style="color: red">{{ $errors->first('numero') }}</p> @endif 
-          </div>
+               @if ($errors->has('numero')) <p  style="color: red">{{ $errors->first('numero') }}</p> @endif 
+                  </div>
         
-        </div>
+             </div>
 
            
             <div class="line"></div>
@@ -132,13 +134,14 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Acudio?:</label>
+          <label class="col-sm-3 form-control-label">¿Acudió?:</label>
           <div class="col-sm-9 mb-3">
 
              <select name="acudio" id="acudio" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
+              <option value="no">NO APLICA</option>
             </select>
             <!--<textarea class="form-control" id="acudio" name="acudio"></textarea>-->
             
@@ -167,7 +170,7 @@
 
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Conoce la App mi Policía?</label>
+          <label class="col-sm-3 form-control-label">¿Conoce la App mi Policía?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_app" id="conoce_app" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -183,12 +186,13 @@
            
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Al llamar al jefe de cuadrante en tiempo real, ¿respondió?</label>
+          <label class="col-sm-3 form-control-label">Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
           <div class="col-sm-9 mb-3">
             <select name="llamarjefe_respondio" id="llamarjefe_respondio" class="form-control" required>
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
+              <option value="no">NO SE LLAMÓ</option>
               
             </select>
             
@@ -200,12 +204,13 @@
 
         <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Acudio jefe de cuadrante?</label>
+          <label class="col-sm-3 form-control-label">¿Acudio Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="acudio_jefe" id="acudio_jefe" class="form-control" required>
                <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
+              <option value="no">NO APLICA</option>
               
             </select>
             
@@ -230,12 +235,12 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">Nombre:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="nombre" name="nombre" required></textarea>
+            <input type="text" class="form-control" id="nombre" name="nombre" required></input>
             
-             @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
-          </div>
+               @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
+                  </div>
         
-        </div>
+             </div>
      
         
         <!-- <div class="form-group row">
@@ -269,25 +274,28 @@
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">Télefono:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="telefono" name="telefono" required></textarea>
+            <input type="text" class="form-control" id="telefono" name="telefono" required></input>
             
-             @if ($errors->has('telefono')) <p  style="color: red">{{ $errors->first('telefono') }}</p> @endif 
-          </div>
+               @if ($errors->has('telefono')) <p  style="color: red">{{ $errors->first('telefono') }}</p> @endif 
+                  </div>
         
-        </div>
+             </div>
 
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">FIRMA (RJG) INICIALES:</label>
+          <label class="col-sm-3 form-control-label">¿El vecino acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="firma" name="firma" required></textarea>
+          <select name="firma" id="firma" class="form-control" required>
+              <option value="">Selecciona...</option>
+              <option value="si">SI</option>
+              <option value="no">NO</option>
+            </select>
             
              @if ($errors->has('firma')) <p  style="color: red">{{ $errors->first('firma') }}</p> @endif 
           </div>
         
         </div>
-
 
         <div class="line"></div>
         <div class="form-group row">

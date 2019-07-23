@@ -16,7 +16,7 @@ class PreguntasExport implements FromCollection,  WithHeadings
     {
         //
 
-        return DB::table('tb_preguntas')->select("cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.sector","cat_coord_territorials.ct2","cat_cuadrantes.cuadrante","tb_preguntas.id","tb_preguntas.nombre_rjg","tb_preguntas.fecha","tb_preguntas.hora_i","tb_preguntas.hora_f","tb_preguntas.calle","tb_preguntas.numero","tb_preguntas.colonia","tb_preguntas.servicio_policia","tb_preguntas.acudio","tb_preguntas.conoce_jc","tb_preguntas.conoce_app","tb_preguntas.llamarjefe_respondio","tb_preguntas.acudio_jefe","tb_preguntas.tiempo_acudio","tb_preguntas.nombre","tb_preguntas.telefono","tb_preguntas.firma","tb_preguntas.created_at","tb_preguntas.updated_at")
+        return DB::table('tb_preguntas')->select("cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.sector","cat_coord_territorials.ct2","cat_coord_territorials.id_cuadrante","tb_preguntas.id","tb_preguntas.nombre_rjg","tb_preguntas.fecha","tb_preguntas.hora_i","tb_preguntas.hora_f","tb_preguntas.calle","tb_preguntas.numero","tb_preguntas.colonia","tb_preguntas.servicio_policia","tb_preguntas.acudio","tb_preguntas.conoce_jc","tb_preguntas.conoce_app","tb_preguntas.llamarjefe_respondio","tb_preguntas.acudio_jefe","tb_preguntas.tiempo_acudio","tb_preguntas.nombre","tb_preguntas.telefono","tb_preguntas.firma","tb_preguntas.created_at","tb_preguntas.updated_at")
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
@@ -40,7 +40,6 @@ public function headings(): array
             'REGION',	
             'SECTOR',//
             'COORDINACIÓN TERRITORIAL',//
-            'CUADRANTE',//
             'ID',  //  
             'NOMBRE DE RJG',	
             'FECHA DE ALTA',	
@@ -59,8 +58,9 @@ public function headings(): array
             'NOMBRE',
             'NÚMERO DE TELEFONO',
             'FIRMA',
-             'FECHA DE CAPTURA',
+            'FECHA DE CAPTURA',
             'FECHA DE ACTUALIZACIÓN'
+           
             
         ];
     }

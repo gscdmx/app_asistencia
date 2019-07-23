@@ -85,11 +85,45 @@
                     
                     <tr>
                         
+                                          <td>{{$preguntas->delegacion}}</td>
+                                          <td>{{$preguntas->}</td>
+                                          <td>{{$preguntas->}}</td>
+                                          <td>{{$preguntas->}}</td>
+                                          <td>{{$preguntas->}}</td>
+                                           <td>{{$preguntas->}}</td>
+                                            <td>{{$preguntas->}}</td>
+                                             <td>{{$preguntas->}}</td>
+                                              <td>{{$preguntas->}}</td>
+                                               <td>{{$preguntas->}}</td>
+                                                <td>{{$preguntas->}}</td>
+                                                 <td>{{$preguntas->}}</td>
+                                                  <td>{{$preguntas->}}</td>
+                                                   <td>{{$preguntas->}}</td>
+                                                    <td>{{$preguntas->}}</td>
+                                                     <td>{{$preguntas->}}</td>
+                                                      <td>{{$preguntas->}}</td>
+                                                       <td>{{$preguntas->}}</td>
+                                                        <td>{{$preguntas->}}</td>
+                                                         <td>{{$preguntas->}}</td>
+                                                          <td>{{$preguntas->}}</td>
+                                                           <td>{{$preguntas->}}</td>
+                                                            <td>{{$preguntas->}}</td>
+                                                             <td>{{$preguntas->}}</td>
+                                                              <td>{{$preguntas->}}</td>
+
+                                          
+                     
+
+
+
+
+
+
                                           <td>{{$preguntas->id}}</td>
                                           <td>{{$preguntas->fecha}}</td>
                                           <td>{{$preguntas->hora_i}}</td>
                                           <td>{{$preguntas->hora_f}}</td>
-                                          <td>{{$preguntas->ct2}} {{$preguntas->sector}}</td>
+                                          <td>{{$preguntas->ct2}} {{$preguntas->sector}}</td>//coordinacion para el de cooordinacion
                                           <td>{{$preguntas->se_realizo}}</td>
                                           <td>{{$preguntas->no_motivo}}</td>
                                           <td>{{$preguntas->jg}}</td>
@@ -102,7 +136,6 @@
                                           <td>{{$preguntas->representante_alcaldia}}</td>
                                           <td>{{$preguntas->reunionjg}}</td>
      
-                     
                       
                       
 

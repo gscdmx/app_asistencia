@@ -67,7 +67,7 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS DIARIAS</a></li>
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
-            <li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>
+            <!--<li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>-->
             <li><a href="{{url('/preguntas')}}"> <i class="icon-list"></i>FORMATO DE VISITAS</a></li>
              <li><a href="{{url('/getlistadopreguntas')}}"> <i class="icon-list"></i>VER MI FORMATO DE VISITAS</a></li>
              
