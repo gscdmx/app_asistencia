@@ -18,6 +18,9 @@
     <div class="card-header d-flex align-items-center">
       <h4>CGSCPJ CDMX</h4>
     </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>GABINETE MATUTINO DE SEGURIDAD CIUDADANA </h4>
+    </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia')); ?>">
 

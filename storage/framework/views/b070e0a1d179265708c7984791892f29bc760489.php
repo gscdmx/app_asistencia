@@ -18,6 +18,9 @@
     <div class="card-header d-flex align-items-center">
       <h4>CGGSCYPJ CDMX MI FORMATO DE VISITAS</h4>
     </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>MI FORMATO DE VISITAS</h4>
+    </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia')); ?>">
 
@@ -85,11 +88,45 @@
                     
                     <tr>
                         
+                                          <td><?php echo e($preguntas->delegacion); ?></td>
+                                          <td><?php echo e($preguntas->}</td>
+                                          <td>{{$preguntas->); ?></td>
+                                          <td><?php echo e($preguntas->); ?></td>
+                                          <td><?php echo e($preguntas->); ?></td>
+                                           <td><?php echo e($preguntas->); ?></td>
+                                            <td><?php echo e($preguntas->); ?></td>
+                                             <td><?php echo e($preguntas->); ?></td>
+                                              <td><?php echo e($preguntas->); ?></td>
+                                               <td><?php echo e($preguntas->); ?></td>
+                                                <td><?php echo e($preguntas->); ?></td>
+                                                 <td><?php echo e($preguntas->); ?></td>
+                                                  <td><?php echo e($preguntas->); ?></td>
+                                                   <td><?php echo e($preguntas->); ?></td>
+                                                    <td><?php echo e($preguntas->); ?></td>
+                                                     <td><?php echo e($preguntas->); ?></td>
+                                                      <td><?php echo e($preguntas->); ?></td>
+                                                       <td><?php echo e($preguntas->); ?></td>
+                                                        <td><?php echo e($preguntas->); ?></td>
+                                                         <td><?php echo e($preguntas->); ?></td>
+                                                          <td><?php echo e($preguntas->); ?></td>
+                                                           <td><?php echo e($preguntas->); ?></td>
+                                                            <td><?php echo e($preguntas->); ?></td>
+                                                             <td><?php echo e($preguntas->); ?></td>
+                                                              <td><?php echo e($preguntas->); ?></td>
+
+                                          
+                     
+
+
+
+
+
+
                                           <td><?php echo e($preguntas->id); ?></td>
                                           <td><?php echo e($preguntas->fecha); ?></td>
                                           <td><?php echo e($preguntas->hora_i); ?></td>
                                           <td><?php echo e($preguntas->hora_f); ?></td>
-                                          <td><?php echo e($preguntas->ct2); ?> <?php echo e($preguntas->sector); ?></td>
+                                          <td><?php echo e($preguntas->ct2); ?> <?php echo e($preguntas->sector); ?></td>//coordinacion para el de cooordinacion
                                           <td><?php echo e($preguntas->se_realizo); ?></td>
                                           <td><?php echo e($preguntas->no_motivo); ?></td>
                                           <td><?php echo e($preguntas->jg); ?></td>
@@ -102,7 +139,6 @@
                                           <td><?php echo e($preguntas->representante_alcaldia); ?></td>
                                           <td><?php echo e($preguntas->reunionjg); ?></td>
      
-                     
                       
                       
 

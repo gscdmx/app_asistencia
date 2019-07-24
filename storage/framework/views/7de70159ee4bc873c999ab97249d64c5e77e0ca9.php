@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -22,12 +20,13 @@
     </div>
     <div class="card-body">
      
-      @if( Session::has('mensaje') )
-                   <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+      <?php if( Session::has('mensaje') ): ?>
+                   <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       {{ Session::get('mensaje')['mensaje'] }}
+                       <?php echo e(Session::get('mensaje')['mensaje']); ?>
+
                    </div>
-      @endif
+      <?php endif; ?>
       
       
       
@@ -48,18 +47,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($pdfs as $pdf)
+                    <?php $__currentLoopData = $pdfs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pdf): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     
                     <tr>
                       
-                      <td>{{$pdf->descripcion}}</td>
-                      <td><a href="{{url('/uploads').'/'.$pdf->archivo_pdf}}" class="btn btn-primary" download>Descargar</a></td>
+                      <td><?php echo e($pdf->descripcion); ?></td>
+                      <td><a href="<?php echo e(url('/uploads').'/'.$pdf->archivo_pdf); ?>" class="btn btn-primary" download>Descargar</a></td>
                     
                       
 
                     </tr>
 
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                    
                   </tbody>
                 </table>
@@ -91,22 +90,24 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

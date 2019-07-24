@@ -18,6 +18,9 @@
     <div class="card-header d-flex align-items-center">
       <h4>CGSCPJ CDMX</h4>
     </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>GABINETE VESPERTINO DE SEGURIDAD CIUDADANA </h4>
+    </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia_miercoles')); ?>">
 
@@ -50,7 +53,7 @@
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias Vespertino (Miercoles)</h4>
+              <h4>Listado de Asistencias Gabinete Vespertino</h4>
             </div>
             
             
