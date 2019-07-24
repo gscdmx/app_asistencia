@@ -57,7 +57,7 @@
         <label class="col-sm-2 form-control-label">Fecha de Captura:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="date" id="fecha" name="fecha" class="form-control" ></input>
+          <input type="date" id="fecha" name="fecha" class="form-control"  required></input>
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
@@ -65,14 +65,14 @@
         <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora1" name="hora1" class="form-control" ></input>
+          <input type="time" id="hora1" name="hora1" class="form-control"  required></input>
            @if ($errors->has('hora1')) <p  style="color: red">{{ $errors->first('hora1') }}</p> @endif
         </div>
 
          <label class="col-sm-2 form-control-label">Hora de Término:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora2" name="hora2" class="form-control" ></input>
+          <input type="time" id="hora2" name="hora2" class="form-control" required ></input>
            @if ($errors->has('hora2')) <p  style="color: red">{{ $errors->first('hora2') }}</p> @endif
         </div>
 
@@ -349,10 +349,10 @@
        <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Cuántos vecinos asistieron?</label>
+          <label class="col-sm-2 form-control-label">¿Cuántos vecinos asistieron? </label>
           <div class="col-sm-10 mb-3">
  
-       <input type="number" name="vecino" class="form-group row" />
+       <input type="number" name="vecino" class="form-group row" required />
 
           </div>
         
@@ -366,10 +366,10 @@
        <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Captura o busca en el celular la foto del Gabinete Vespertino</label>
+          <label class="col-sm-2 form-control-label">Captura o busca en Galeria la foto del Gabinete Vespertino</label>
           <div class="col-sm-10 mb-3">
    
-       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" />
+       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" required />
       
           </div>
         
