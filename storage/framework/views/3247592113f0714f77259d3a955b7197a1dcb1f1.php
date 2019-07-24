@@ -9,7 +9,10 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>Formato de Visitas</h4>
+      <h4>CGGSCyPJ CDMX </h4>
+    </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>FORMATO DE VISITAS</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_cuestionario_Preguntas')); ?>">
@@ -70,9 +73,9 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Nombre de la Representante de Jefatura de Gob:</label>
+          <label class="col-sm-3 form-control-label">1.- Nombre Representante de Jefatura de Gobierno:</label>
           <div class="col-sm-9 mb-3">
-           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" required></input>
+           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" placeholder="Nombre RJG"    required></input>
             
                <?php if($errors->has('nombre_rjg')): ?> <p  style="color: red"><?php echo e($errors->first('nombre_rjg')); ?></p> <?php endif; ?> 
                   </div>
@@ -82,9 +85,9 @@
        
       <div class="line"></div>
        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Calle:</label>
+          <label class="col-sm-3 form-control-label">2.- Calle:</label>
           <div class="col-sm-9 mb-3">
-           <input type="text" class="form-control" id="calle" name="calle" required></input>
+           <input type="text" class="form-control" id="calle" name="calle" placeholder="calle"    required></input>
             
                <?php if($errors->has('calle')): ?> <p  style="color: red"><?php echo e($errors->first('calle')); ?></p> <?php endif; ?> 
                   </div>
@@ -94,9 +97,9 @@
           
          <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Número:</label>
+          <label class="col-sm-3 form-control-label">3.- Número:</label>
           <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="numero" name="numero" required></input>
+            <input type="text" class="form-control" id="numero" name="numero"    placeholder="número"      required></input>
             
                <?php if($errors->has('numero')): ?> <p  style="color: red"><?php echo e($errors->first('numero')); ?></p> <?php endif; ?> 
                   </div>
@@ -106,9 +109,9 @@
            
             <div class="line"></div>
              <div class="form-group row">
-               <label class="col-sm-3 form-control-label">Colonia:</label>
+               <label class="col-sm-3 form-control-label">4.- Colonia:</label>
                <div class="col-sm-9 mb-3">
-               <input type="text" class="form-control" id="colonia" name="colonia" required></input>
+               <input type="text" class="form-control" id="colonia" name="colonia"   placeholder="colonia"   required></input>
             
                <?php if($errors->has('colonia')): ?> <p  style="color: red"><?php echo e($errors->first('colonia')); ?></p> <?php endif; ?> 
                   </div>
@@ -118,7 +121,7 @@
     
           <div class="line"></div>
            <div class="form-group row">
-             <label class="col-sm-3 form-control-label">¿Alguna vez ha solicitado el apoyo de la policía?:</label>
+             <label class="col-sm-3 form-control-label">5.- ¿Alguna vez ha solicitado el apoyo de la policía?:</label>
              <div class="col-sm-9 mb-3">
               <select name="servicio_policia" id="servicio_policia" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -134,7 +137,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Acudió?:</label>
+          <label class="col-sm-3 form-control-label">6.- ¿Acudió?:</label>
           <div class="col-sm-9 mb-3">
 
              <select name="acudio" id="acudio" class="form-control" required>
@@ -154,7 +157,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Conoce a su Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">7.- ¿Conoce a su Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_jc" id="conoce_jc" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -170,7 +173,7 @@
 
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Conoce la App mi Policía?:</label>
+          <label class="col-sm-3 form-control-label">8.- ¿Conoce la App mi Policía?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_app" id="conoce_app" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -186,7 +189,7 @@
            
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
+          <label class="col-sm-3 form-control-label">9.- Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
           <div class="col-sm-9 mb-3">
             <select name="llamarjefe_respondio" id="llamarjefe_respondio" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -204,7 +207,7 @@
 
         <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿Acudio Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">10.- ¿Acudio Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="acudio_jefe" id="acudio_jefe" class="form-control" required>
                <option value="">Selecciona...</option>
@@ -222,9 +225,9 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿En cuánto tiempo acudió(minutos)?:</label>
+          <label class="col-sm-3 form-control-label">11.- ¿En cuánto tiempo acudió(minutos)?:</label>
           <div class="col-sm-9 mb-3">
-             <input type="number" class="form-control" id="tiempo_acudio" name="tiempo_acudio" required></input>
+             <input type="number" class="form-control" id="tiempo_acudio" name="tiempo_acudio" placeholder="minutos" required></input>
             
              <?php if($errors->has('tiempo_acudio')): ?> <p  style="color: red"><?php echo e($errors->first('tiempo_acudio')); ?></p> <?php endif; ?> 
           </div>
@@ -233,9 +236,9 @@
        
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Nombre:</label>
+          <label class="col-sm-3 form-control-label">12.- Nombre:</label>
           <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="nombre" name="nombre" required></input>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
             
                <?php if($errors->has('nombre')): ?> <p  style="color: red"><?php echo e($errors->first('nombre')); ?></p> <?php endif; ?> 
                   </div>
@@ -272,9 +275,9 @@
         </div>-->
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">Télefono:</label>
+          <label class="col-sm-3 form-control-label">13.- Télefono:</label>
           <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="telefono" name="telefono" required></input>
+            <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" required></input>
             
                <?php if($errors->has('telefono')): ?> <p  style="color: red"><?php echo e($errors->first('telefono')); ?></p> <?php endif; ?> 
                   </div>
@@ -284,7 +287,7 @@
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">¿El vecino acepta ser parte de la Red Vecinal?:</label>
+          <label class="col-sm-3 form-control-label">14.- ¿El vecino acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
           <select name="firma" id="firma" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -300,7 +303,7 @@
         <div class="line"></div>
         <div class="form-group row">
           <div class="col-sm-6 offset-sm-6">
-            <button type="submit" class="btn btn-primary">Registrar </button>
+            <button type="submit" class="btn btn-primary"> Registrar </button>
           </div>
         </div>
       </form>

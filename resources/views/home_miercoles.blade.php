@@ -20,6 +20,9 @@
     <div class="card-header d-flex align-items-center">
       <h4>CGGSCPYJ CDMX</h4>
     </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>ASISTENCIA GABINETE VESPERTINO DE SEGURIDAD CIUDADANA Y PROCURACIÓN DE JUSTICIA </h4>
+    </div>
     <div class="card-body">
       <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="{{ url('/guardar_asistenciaMiercoles') }}">
          <!-- enctype="multipart/form-data"-->
@@ -359,7 +362,13 @@
         </div>
 
 
+ 
 
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">¡ATENCIÓN! POR MOTIVOS DE SEGURIDAD
+          RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LOS VECINOS QUE ASISTAN DE ESPALDA. MUCHAS GRACIAS :)</label>
+        
+        </div>
 
 
 

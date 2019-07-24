@@ -16,38 +16,31 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCPYJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA </h4>
+      <h4>ASISTENCIA GABINETE VESPERTINO DE SEGURIDAD CIUDADANA Y PROCURACIÓN DE JUSTICIA </h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia')); ?>">
+      <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="<?php echo e(url('/guardar_asistenciaMiercoles')); ?>">
+         <!-- enctype="multipart/form-data"-->
 
       <?php echo e(csrf_field()); ?>
 
 
 
+ <?php if( Session::has('mensaje') ): ?>
+                <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <?php echo e(Session::get('mensaje')['mensaje']); ?>
 
-
-      <?php if( Session::has('mensaje') ): ?>
-                   <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       <?php echo e(Session::get('mensaje')['mensaje']); ?>
-
-                   </div>
+                  </div>
       <?php endif; ?>
-
-
-
-
-
-
 
 
        
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Matutino?</label>
+          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Vespertino?</label>
           <div class="col-sm-10 mb-3">
             <select name="se_realizo_mesa" id="se_realizo_mesa" class="form-control">
               <option value="">Selecciona...</option>
@@ -64,10 +57,10 @@
         
              <div class="line"></div>
       <div class="form-group row">
-        <label class="col-sm-2 form-control-label">Fecha:</label>
+        <label class="col-sm-2 form-control-label">Fecha de Captura:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="date" id="fecha" name="fecha" class="form-control" ></input>
+          <input type="date" id="fecha" name="fecha" class="form-control"  required></input>
            <?php if($errors->has('fecha')): ?> <p  style="color: red"><?php echo e($errors->first('fecha')); ?></p> <?php endif; ?> 
         </div>
 
@@ -75,14 +68,14 @@
         <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora1" name="hora1" class="form-control" ></input>
+          <input type="time" id="hora1" name="hora1" class="form-control"  required></input>
            <?php if($errors->has('hora1')): ?> <p  style="color: red"><?php echo e($errors->first('hora1')); ?></p> <?php endif; ?>
         </div>
 
          <label class="col-sm-2 form-control-label">Hora de Término:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora2" name="hora2" class="form-control" ></input>
+          <input type="time" id="hora2" name="hora2" class="form-control" required ></input>
            <?php if($errors->has('hora2')): ?> <p  style="color: red"><?php echo e($errors->first('hora2')); ?></p> <?php endif; ?>
         </div>
 
@@ -94,31 +87,22 @@
 
 
 
-      
-        
-        
-        
-           
         <div class="line"></div>
         <div class="form-group row">
-          
-          
-          <label class="col-sm-2 form-control-label">Reunión de Alcaldía con Jefa de Gobierno</label>
-          <div class="col-sm-10 mb-3">
-          <input  type="checkbox" name="reunionjg"  value="Reunión con JG
-"  style="width:5%; height:110%"       class="form-group row" />
-          
-          
-          </div>
-        </div>
-  <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó el Gabinete Matutino: </label>
+          <label class="col-sm-2 form-control-label">Describe el motivo por el cuál no se realizó el Gabinete Vespertino:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
             <textarea id="motivo" name="motivo" class="form-control" ></textarea>
           </div>
         </div>
+
+         
+ 
+
+
+
+
+
 
 
 
@@ -127,6 +111,16 @@
 
 
 <div  style="display:none;" id="show_asistencia">
+
+
+
+ 
+
+    
+
+
+
+
 
 
        <div class="line"></div>
@@ -216,7 +210,7 @@
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió de la Policía de Investigación?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió de Policía de Investigación?</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -355,9 +349,43 @@
         </div>
 
 
+       <div class="line"></div>
+
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">¿Cuántos vecinos asistieron? </label>
+          <div class="col-sm-10 mb-3">
+ 
+       <input type="number" name="vecino" class="form-group row" required />
+
+          </div>
+        
+        </div>
 
 
-       
+ 
+
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">¡ATENCIÓN! POR MOTIVOS DE SEGURIDAD
+          RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LOS VECINOS QUE ASISTAN DE ESPALDA. MUCHAS GRACIAS :)</label>
+        
+        </div>
+
+
+
+       <div class="line"></div>
+
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">Captura o Busca en Galeria la foto del Gabinete Vespertino</label>
+          <div class="col-sm-10 mb-3">
+   
+       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" required />
+      
+          </div>
+        
+        </div>
+
+
+
 
 
 
@@ -380,29 +408,17 @@
           </div>
         </div>
 
-
-
-
-
-    
-
-
-
-        
         </div>
 
 
        
-         
-
       
-
-        
+         
         <div class="line"></div>
         <div class="form-group row">
           <div class="col-sm-4 offset-sm-2">
             <!--<button type="submit" class="btn btn-secondary">Cancel</button>-->
-            <button type="submit" class="btn btn-primary">Guardar Asistencia </button>
+            <button type="submit" class="btn btn-primary">Guardar Asistencia Vespertina</button>
           </div>
         </div>
       </form>
@@ -411,27 +427,19 @@
 </div>
 
 
-
-
  </div>
           </div>
   </section>
 
 
 
-
-
 <?php $__env->stopSection(); ?>
-
-
 
 
 
 <?php $__env->startSection('js'); ?>  
  
 <?php $__env->stopSection(); ?>
-
-
 
 
 

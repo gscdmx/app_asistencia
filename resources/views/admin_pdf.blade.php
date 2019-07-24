@@ -20,6 +20,9 @@
                                        <div class="card-header d-flex align-items-center">
                                        <h4>CGGSCYPJ CDMX</h4>
                                        </div>
+                                       <div class="card-header d-flex align-items-center">
+      <h4>INCIDENCIA DELICTIVA</h4>
+    </div>
        <div class="card-body">
        <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="{{ url('/guardar_admin_pdf') }}">
 

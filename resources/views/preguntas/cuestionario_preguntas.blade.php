@@ -11,7 +11,10 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCyPJ CDMX Formato de Visitas</h4>
+      <h4>CGGSCyPJ CDMX </h4>
+    </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>FORMATO DE VISITAS</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">

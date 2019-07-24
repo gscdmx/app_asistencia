@@ -20,6 +20,9 @@
     <div class="card-header d-flex align-items-center">
       <h4>CGSCPJ CDMX</h4>
     </div>
+    <div class="card-header d-flex align-items-center">
+      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA </h4>
+    </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia') }}">
 
