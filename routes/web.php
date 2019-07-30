@@ -134,4 +134,4 @@ Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 Route::get('/vinculosView', 'HomeController@misvinculos');
 //Route::post('/guardar_mapa', 'HomeController@guardarmapa');
 
-
+Route::get('/','MapController@index');
