@@ -2,7 +2,7 @@
 
 @section('content')
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
 
@@ -11,7 +11,7 @@
         height: 100%;
        /* z-index: -1000;*/
       }
-</style>
+</style>-->
   <section class="forms">
         <div class="container-fluid">
           
@@ -51,11 +51,11 @@
 
 
  
-      <div class="form-group row">
+      <!--<div class="form-group row">
         <div class="col-sm-6 offset-sm-6">
           <button type="button" id="ubicarme" class="btn btn-primary"> UBICARME </button>
         </div>
-      </div>
+      </div>-->
 
 
 
@@ -367,9 +367,9 @@
 
 @section('js')  
 
-   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ <!--  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-       crossorigin=""></script>
+       crossorigin=""></script>-->
  
 
 @endsection
@@ -380,7 +380,7 @@
 
 @section('customjs')
 
-<script  type="text/javascript">
+<!--<script  type="text/javascript">
 
 
 
@@ -419,7 +419,7 @@
 
 
 
-    </script>
+    </script>-->
 
 
 
