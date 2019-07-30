@@ -122,7 +122,7 @@ public function regiones(){
 
  public function view_listado_preguntas()
     {   
-        $pregunta = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
+        $pregunts = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                    ->where('tb_preguntas.id_user',\Auth::user()->id)
@@ -133,11 +133,11 @@ public function regiones(){
     }
 
 
-      public function excel_pregunta()
-    {   
+      //public function excel_pregunta()
+   // {   
 
-       return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
-    }
+    //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
+   // }
 
 
 

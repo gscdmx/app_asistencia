@@ -1,4 +1,15 @@
 <?php $__env->startSection('content'); ?>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+<style>
+      #map {
+        height: 50%;
+       /* z-index: -1000;*/
+      }
+</style>
   <section class="forms">
         <div class="container-fluid">
           
@@ -17,6 +28,15 @@
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_cuestionario_Preguntas')); ?>">
 
+
+
+
+
+         
+
+
+
+
       <?php echo e(csrf_field()); ?>
 
 
@@ -27,6 +47,18 @@
 
                    </div>
       <?php endif; ?>
+
+
+
+ <div id="map"></div>
+      <div class="form-group row">
+        <div class="col-sm-6 offset-sm-6">
+          <button type="button" id="ubicarme" class="btn btn-primary"> UBICARME </button>
+        </div>
+      </div>
+
+
+
      <div class="form-group row">
         <label class="col-sm-3 form-control-label">Cuadrante: </label>
         <div class="col-sm-9 mb-3">
@@ -41,9 +73,14 @@
            <?php if($errors->has('id_cuadrante')): ?> <p  style="color: red"><?php echo e($errors->first('id_cuadrante')); ?></p> <?php endif; ?> 
         </div>
       
-      </div>
+      </div> 
 
+
+     
  
+
+
+  
 
          <div class="line"></div>
       <div class="form-group row">
@@ -313,24 +350,78 @@
 
  </div>
           </div>
+
+
+
+
+
   </section>
 
 
 
-<?php $__env->stopSection(); ?>
 
+
+<?php $__env->stopSection(); ?>
 
 
 
 <?php $__env->startSection('js'); ?>  
+
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+       crossorigin=""></script>
  
+
 <?php $__env->stopSection(); ?>
 
 
 
 
 
-<!--<?php $__env->startSection('customjs'); ?>
+<?php $__env->startSection('customjs'); ?>
+
+<script  type="text/javascript">
+
+
+
+  
+
+  var map = L.map('map').setView([19.432663, -99.133277], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([19.432663, -99.133277]).addTo(map)
+      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+      .openPopup();
+
+
+
+
+      function getlatlong(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                console.log(position);
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+
+                console.log(lat+" "+lng);
+            });
+        }
+      }
+
+
+      $( "#ubicarme" ).click(function(event) {
+         event.preventDefault();
+        getlatlong();
+      });
+
+
+
+    </script>
+
+
 
 
     <!-- <script type="text/javascript">
@@ -359,9 +450,9 @@
 
       });
 
-       </script>
+       </script>-->
 
-<?php $__env->stopSection(); ?>-->
+<?php $__env->stopSection(); ?>
 
 
 <?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

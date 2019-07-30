@@ -18,10 +18,10 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX MI FORMATO DE VISITAS</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>mis visitas </h4>
+      <h4>MI FORMATO DE VISITAS</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">
@@ -38,30 +38,28 @@
 
 
 
-<div class="col-sm-4 offset-sm-2">
+<!--<div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Excel</a>
-</div>
-
-
-
+            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Excel Formato de Visitas</a>
+</div>-->
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias</h4>
+              <h4>Listado de Vistas</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
-                    <tr>
-                     
-                          <th>ID</th>
+                    <tr>         
                           <th>ALCALDIA</th>
-                          <th>CUADRANTE</th>
                           <th>REGION</th>
+                         <!-- <th>SECTOR</th>-->
+                          <th>COORDINACIÓN TERRITORIAL</th>
+                          <th>CUADRANTE</th>
+                          <th>ID</th>
                           <th>NOMBRE DE RJG</th>
-                          <th>FECHA CAPTURA</th>
+                          <th>FECHA DE ALTA</th>
                           <th>HORA DE INICIO</th>
                           <th>HORA DE TERMINO</th>                
                           <th>CALLE </th>
@@ -77,7 +75,7 @@
                           <th> NOMBRE</th>
                           <th>NÚMERO DE TELEFONO</th>
                           <th>VECINO ACEPTO SER PARTE DE RED VECINAL?</th>
-                        
+                          
                     </tr>
                   </thead>
                   <tbody>
@@ -85,31 +83,32 @@
                     
                     <tr>
                         
-                                          
-           <!-- <td>{{$pregunta->id}}</td>
-            <td>{{$pregunta->id_user}}</td>
-            <td>{{$pregunta->id_cuadrante}}</td>
-            <td>{{$pregunta->region}}</td>
-            <td>{{$pregunta->nombre_rjg}}</td>
-            <td>{{$pregunta->fecha}}</td>
-            <td>{{$pregunta->hora_i}}</td>
-            <td>{{$pregunta->hora_f}}</td>
-            <td>{{$pregunta->calle}}</td>
-            <td>{{$pregunta->numero}}</td>
-            <td>{{$pregunta->colonia}}</td> 
-            <td>{{$pregunta->servicio_policia}}</td>
-            <td>{{$pregunta->acudio}}</td>
-            <td>{{$pregunta->conoce_jc}}</td>
-            <td>{{$pregunta->conoce_app}}</td>         
-            <td>{{$pregunta->llamarjefe_respondio}}</td>
-            <td>{{$pregunta->acudio_jefe}}</td>
-            <td>{{$pregunta->tiempo_acudio}}</td>
-            <td>{{$pregunta->nombre}}</td>
-            <td>{{$pregunta->telefono}}</td>
-            <td>{{$pregunta->firma}}</td>     -->
+                                          <td>{{$pregunta->id_user}}</td>
+                                          <td>{{$pregunta->region}</td>
+                                          <td>{{$pregunta->ct2}} {{$pregunta->sector}}</td>
+                                          <td>{{$pregunta->id_cuadrante}}</td>
+                                          <td>{{$pregunta->id}}</td>
+                                          <td>{{$pregunta->nombre_rjg}}</td>
+                                          <td>{{$pregunta->fecha}}</td>
+                                          <td>{{$pregunta->hora_i}}</td>
+                                          <td>{{$pregunta->hora_f}}</td>
+                                          <td>{{$pregunta->calle}}</td>
+                                          <td>{{$pregunta->numero}}</td>
+                                          <td>{{$pregunta->colonia}}</td>
+                                          <td>{{$pregunta->servicio_policia}}</td>
+                                          <td>{{$pregunta->acudio}}</td>
+                                          <td>{{$pregunta->conoce_jc}}</td>
+                                          <td>{{$pregunta->conoce_app}}</td>
+                                          <td>{{$pregunta->llamarjefe_respondio}}</td>
+                                          <td>{{$pregunta->acudio_jefe}}</td>
+                                          <td>{{$pregunta->tiempo_acudio}}</td>
+                                          <td>{{$pregunta->nombre}}</td>
+                                          <td>{{$pregunta->telefono}}</td>
+                                          <td>{{$pregunta->firma}}</td>
+                                                   
 
-           
-          
+                 
+                     
                       
                       
 
@@ -163,9 +162,6 @@
 
 
 @endsection
-
-
-
 
 
 
