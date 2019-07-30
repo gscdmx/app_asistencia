@@ -365,20 +365,20 @@
 
 
 
-@section('js')  
+<!--@section('js')  -->
 
  <!--  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
        crossorigin=""></script>-->
  
 
-@endsection
+<!--@endsection-->
 
 
 
 
 
-@section('customjs')
+<!--@section('customjs')-->
 
 <!--<script  type="text/javascript">
 
@@ -452,5 +452,5 @@
 
        </script>-->
 
-@endsection
+<!--@endsection-->
 
