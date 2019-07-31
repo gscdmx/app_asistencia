@@ -122,14 +122,14 @@ public function regiones(){
 
  public function view_listado_preguntas()
     {   
-        $pregunts = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
+        $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                    ->where('tb_preguntas.id_user',\Auth::user()->id)
                    ->get();
 
-
-        return view('consulta_preguntas',compact('pregunta'));
+         // dd($consultas ); 
+        return view('consulta_preguntas',compact('consultas'));
     }
 
 

@@ -1,15 +1,15 @@
 <?php $__env->startSection('content'); ?>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
 
 <style>
       #map {
-        height: 50%;
+        height: 100%;
        /* z-index: -1000;*/
       }
-</style>
+</style>-->
   <section class="forms">
         <div class="container-fluid">
           
@@ -31,7 +31,7 @@
 
 
 
-
+          <div id="map"></div>
          
 
 
@@ -50,12 +50,12 @@
 
 
 
- <div id="map"></div>
-      <div class="form-group row">
+ 
+      <!--<div class="form-group row">
         <div class="col-sm-6 offset-sm-6">
           <button type="button" id="ubicarme" class="btn btn-primary"> UBICARME </button>
         </div>
-      </div>
+      </div>-->
 
 
 
@@ -91,14 +91,14 @@
            <?php if($errors->has('fecha')): ?> <p  style="color: red"><?php echo e($errors->first('fecha')); ?></p> <?php endif; ?> 
         </div>
 
-        <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevistas:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
            <?php if($errors->has('hora_i')): ?> <p  style="color: red"><?php echo e($errors->first('hora_i')); ?></p> <?php endif; ?>
         </div>
 
-         <label class="col-sm-2 form-control-label">Hora de Término:</label>
+         <label class="col-sm-2 form-control-label">Hora de Término de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
@@ -365,22 +365,22 @@
 
 
 
-<?php $__env->startSection('js'); ?>  
+<!--<?php $__env->startSection('js'); ?>  -->
 
-   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+ <!--  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-       crossorigin=""></script>
+       crossorigin=""></script>-->
  
 
-<?php $__env->stopSection(); ?>
+<!--<?php $__env->stopSection(); ?>-->
 
 
 
 
 
-<?php $__env->startSection('customjs'); ?>
+<!--<?php $__env->startSection('customjs'); ?>-->
 
-<script  type="text/javascript">
+<!--<script  type="text/javascript">
 
 
 
@@ -419,7 +419,7 @@
 
 
 
-    </script>
+    </script>-->
 
 
 
@@ -452,7 +452,7 @@
 
        </script>-->
 
-<?php $__env->stopSection(); ?>
+<!--<?php $__env->stopSection(); ?>-->
 
 
 <?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
