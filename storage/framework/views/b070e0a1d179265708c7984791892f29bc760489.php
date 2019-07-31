@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -18,23 +16,25 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCYPJ CDMX</h4>
+      <h4>CGGSCPYJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
       <h4>MIS VISTAS DOMICILIARIAS</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/save_cuestionario_preguntas') }}">
+      <form class="form-horizontal" method="POST" action="<?php echo e(url('/save_cuestionario_preguntas')); ?>">
 
-      {{ csrf_field() }}
+      <?php echo e(csrf_field()); ?>
 
 
-      @if( Session::has('mensaje') )
-                   <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+
+      <?php if( Session::has('mensaje') ): ?>
+                   <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       {{ Session::get('mensaje')['mensaje'] }}
+                       <?php echo e(Session::get('mensaje')['mensaje']); ?>
+
                    </div>
-      @endif
+      <?php endif; ?>
 
 
 
@@ -77,32 +77,32 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($consultas as $consulta)
+                    <?php $__currentLoopData = $consultas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $consulta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     
                     <tr>
                         
                                           
-            <td>{{$consulta->id}}</td>
-            <td>{{$consulta->id_user}}</td>
-            <td>{{$consulta->id_cuadrante}}</td>
-            <td>{{$consulta->region}}</td>
-            <td>{{$consulta->nombre_rjg}}</td>
-            <td>{{$consulta->fecha}}</td>
-            <td>{{$consulta->hora_i}}</td>
-            <td>{{$consulta->hora_f}}</td>
-            <td>{{$consulta->calle}}</td>
-            <td>{{$consulta->numero}}</td>
-            <td>{{$consulta->colonia}}</td> 
-            <td>{{$consulta->servicio_policia}}</td>
-            <td>{{$consulta->acudio}}</td>
-            <td>{{$consulta->conoce_jc}}</td>
-            <td>{{$consulta->conoce_app}}</td>         
-            <td>{{$consulta->llamarjefe_respondio}}</td>
-            <td>{{$consulta->acudio_jefe}}</td>
-            <td>{{$consulta->tiempo_acudio}}</td>
-            <td>{{$consulta->nombre}}</td>
-            <td>{{$consulta->telefono}}</td>
-            <td>{{$consulta->firma}}</td>    
+            <td><?php echo e($consulta->id); ?></td>
+            <td><?php echo e($consulta->id_user); ?></td>
+            <td><?php echo e($consulta->id_cuadrante); ?></td>
+            <td><?php echo e($consulta->region); ?></td>
+            <td><?php echo e($consulta->nombre_rjg); ?></td>
+            <td><?php echo e($consulta->fecha); ?></td>
+            <td><?php echo e($consulta->hora_i); ?></td>
+            <td><?php echo e($consulta->hora_f); ?></td>
+            <td><?php echo e($consulta->calle); ?></td>
+            <td><?php echo e($consulta->numero); ?></td>
+            <td><?php echo e($consulta->colonia); ?></td> 
+            <td><?php echo e($consulta->servicio_policia); ?></td>
+            <td><?php echo e($consulta->acudio); ?></td>
+            <td><?php echo e($consulta->conoce_jc); ?></td>
+            <td><?php echo e($consulta->conoce_app); ?></td>         
+            <td><?php echo e($consulta->llamarjefe_respondio); ?></td>
+            <td><?php echo e($consulta->acudio_jefe); ?></td>
+            <td><?php echo e($consulta->tiempo_acudio); ?></td>
+            <td><?php echo e($consulta->nombre); ?></td>
+            <td><?php echo e($consulta->telefono); ?></td>
+            <td><?php echo e($consulta->firma); ?></td>    
 
            
           
@@ -111,7 +111,7 @@
 
                     </tr>
 
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                    
                   </tbody>
                   
@@ -139,34 +139,36 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
 
 
-@endsection
-
-
-
-
-
+<?php $__env->stopSection(); ?>
 
 
 
 
 
 
+
+
+
+
+
+
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
