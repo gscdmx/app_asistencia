@@ -16,7 +16,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCPYJ CDMX</h4>
+      <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
       <h4>MIS VISTAS DOMICILIARIAS</h4>
