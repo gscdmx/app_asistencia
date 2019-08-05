@@ -132,7 +132,7 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
                 <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte Visitas</a></li>
-                <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Formato de Visitas</a></li>
+                <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Visitas (Red)</a></li>
               </ul>
             </li>
              <?php endif?>
