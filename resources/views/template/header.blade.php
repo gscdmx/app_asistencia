@@ -121,9 +121,7 @@ if (isset(\Auth::user()->permisos)) {
               <li><a href="{{url('/mapaView')}}"> <i class="icon-list"></i>Mapas</a></li>
                <?php endif?>
                
-                <?php if(in_array(11, $array_permisos)):?>
-              <li><a href="{{url('/ministerio')}}"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
-               <?php endif?>
+              
            
              
              <!--MODULO REPORTES DIARIOS-->
