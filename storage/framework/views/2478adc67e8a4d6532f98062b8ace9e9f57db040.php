@@ -77,7 +77,7 @@ if (isset(\Auth::user()->permisos)) {
               
               
            <?php if(in_array(11, $array_permisos)):?>
-              <li><a href="<?php echo e(url('/entrevistas')); ?>"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
+              <li><a href="<?php echo e(url('/entrevistas')); ?>"> <i class="icon-list"></i>MI ENTREVISTA AGENCIA DEL MP</a></li>
                <?php endif?>
 
 
