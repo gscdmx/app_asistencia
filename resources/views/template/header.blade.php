@@ -73,11 +73,11 @@ if (isset(\Auth::user()->permisos)) {
              
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
-            <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
+           <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MINISTERIO PÚBLICO</a></li>
               
               
            <?php if(in_array(11, $array_permisos)):?>
-              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA AGENCIA DEL MP</a></li>
+              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MINISTERIO PÚBLICO</a></li>
                <?php endif?>
 
 
