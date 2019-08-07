@@ -1,6 +1,19 @@
 <?php $__env->startSection('content'); ?>
 
 
+<style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+
+
+
 
   <section class="forms">
         <div class="container-fluid">
@@ -19,10 +32,10 @@
       <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>MIS VISTAS DOMICILIARIAS</h4>
+      <h4>MIS VISITAS DOMICILIARIAS CDMX</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="<?php echo e(url('/save_cuestionario_preguntas')); ?>">
+      <form class="form-horizontal" method="POST" action="<?php echo e(url('/getlistadopreguntas')); ?>">
 
       <?php echo e(csrf_field()); ?>
 
@@ -44,35 +57,39 @@
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>LISTADO DE RED DE CONTACTO CIUDADANO</h4>
+              <h4>LISTADO DE RED PARA CONTACTO CIUDADANO</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
                     <tr>
+                           
+
+                     <th>Alcaldia:</th>
+                     <th>Region:</th>                  
+                     <th>Coordinación Territorial/Sector:</th>
+                     <th>Cuadrante:</th>
+                     <th>Id</th>
+                     <th>Nombre de RJG:</th>
+                     <th>Fecha de alta:</th>
+                     <th>Hora de inicio de entrevista:</th>
+                     <th>Hora de término de entrevista:</th>
+                     <th>Calle:</th>
+                     <th>Número:</th>
+                     <th>Colonia:</th>
+                     <th>¿Alguna vez ha solicitado el servicio de la policía?:</th>
+                     <th>¿Acudio el policía?:</th>
+                     <th>¿Conoce a su jefe de cuadrante?:</th>
+                     <th>¿Conoce la APP Mi Policía?:</th>
+                     <th>¿Al llamar al jefe de cuadrante en tiempo real, respondió?:</th>
+                     <th>¿Acudió jefe de cuadrante?:</th>
+                     <th>¿En cuánto tiempo acudió?:</th>
+                     <th>Nombre del vecino entrevistado:</th>
+                     <th>Télefono del vecino entrevistado:</th>
+                     <th>>¿El vecino acepto ser parte de la red vecinal?:</th>
                      
-                          <th>ID</th>
-                          <th>ALCALDIA</th>
-                          <th>CUADRANTE</th>
-                          <th>REGION</th>
-                          <th>NOMBRE DE RJG</th>
-                          <th>FECHA CAPTURA</th>
-                          <th>HORA DE INICIO</th>
-                          <th>HORA DE TERMINO</th>                
-                          <th>CALLE </th>
-                          <th>NÚMERO</th>
-                          <th>COLONIA</th>
-                          <th>¿ALGUNA VEZ HA SOLICITADO EL SERVICIO DE LA POLICÍA? </th>
-                          <th>¿ACUDIO? </th>
-                          <th>¿CONOCE A SU JEFE DE CUADRANTE? </th>
-                          <th>¿CONOCE LA APP MI POLICÍA? </th>
-                          <th>¿AL LLAMAR AL JEFE DE CUADRANTE EN TIEMPO REAL, ¿RESPONDIÓ?  </th>
-                          <th>¿ACUDIO JEFE DE CUADRANTE?</th>
-                          <th>¿EN CUÁNTO TIEMPO ACUDIÓ?</th>
-                          <th> NOMBRE</th>
-                          <th>NÚMERO DE TELEFONO</th>
-                          <th>VECINO ACEPTO SER PARTE DE RED VECINAL?</th>
+                                        
                         
                     </tr>
                   </thead>
@@ -82,31 +99,32 @@
                     <tr>
                         
                                           
-            <td><?php echo e($consulta->id); ?></td>
-            <td><?php echo e($consulta->id_user); ?></td>
-            <td><?php echo e($consulta->id_cuadrante); ?></td>
-            <td><?php echo e($consulta->region); ?></td>
-            <td><?php echo e($consulta->nombre_rjg); ?></td>
-            <td><?php echo e($consulta->fecha); ?></td>
-            <td><?php echo e($consulta->hora_i); ?></td>
-            <td><?php echo e($consulta->hora_f); ?></td>
-            <td><?php echo e($consulta->calle); ?></td>
-            <td><?php echo e($consulta->numero); ?></td>
-            <td><?php echo e($consulta->colonia); ?></td> 
-            <td><?php echo e($consulta->servicio_policia); ?></td>
-            <td><?php echo e($consulta->acudio); ?></td>
-            <td><?php echo e($consulta->conoce_jc); ?></td>
-            <td><?php echo e($consulta->conoce_app); ?></td>         
-            <td><?php echo e($consulta->llamarjefe_respondio); ?></td>
-            <td><?php echo e($consulta->acudio_jefe); ?></td>
-            <td><?php echo e($consulta->tiempo_acudio); ?></td>
-            <td><?php echo e($consulta->nombre); ?></td>
-            <td><?php echo e($consulta->telefono); ?></td>
-            <td><?php echo e($consulta->firma); ?></td>    
+                     <td><?php echo e($consulta->delegacion); ?></td>
+                     <td><?php echo e($consulta->region); ?></td>                 
+                     <td><?php echo e($consulta->ct2); ?> <?php echo e($consulta->sector); ?></td>
+                     <td><?php echo e($consulta->cuadrante); ?></td>
+                     <td><?php echo e($consulta->id); ?></td>
+                     <td><?php echo e($consulta->nombre_rjg); ?></td>
+                     <td><?php echo e($consulta->fecha); ?></td>
+                     <td><?php echo e($consulta->hora_i); ?></td>
+                     <td><?php echo e($consulta->hora_f); ?></td>
+                     <td><?php echo e($consulta->calle); ?></td>
+                     <td><?php echo e($consulta->numero); ?></td>
+                     <td><?php echo e($consulta->colonia); ?></td>
+                     <td><?php echo e($consulta->servicio_policia); ?></td>
+                     <td><?php echo e($consulta->acudio); ?></td>
+                     <td><?php echo e($consulta->conoce_jc); ?></td>
+                     <td><?php echo e($consulta->conoce_app); ?></td>
+                     <td><?php echo e($consulta->llamarjefe_respondio); ?></td>
+                     <td><?php echo e($consulta->acudio_jefe); ?></td>
+                     <td><?php echo e($consulta->tiempo_acudio); ?></td>
+                     <td><?php echo e($consulta->nombre); ?></td>
+                     <td><?php echo e($consulta->telefono); ?></td>
+                     <td><?php echo e($consulta->firma); ?></td> 
 
-           
           
-                      
+       
+
                       
 
                     </tr>

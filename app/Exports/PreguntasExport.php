@@ -64,24 +64,24 @@ public function headings(): array
             'CUADRANTE',
             'ID',  //  
             'NOMBRE DE RJG',	
-            'FECHA DE ALTA',	
-            'HORA DE INICIO',	
-            'HORA DE TERMINO',	                
+            'FECHA DE CAPTURA',	
+            'HORA DE INICIO DE ENTREVISTA',	
+            'HORA DE TÉRMINO DE ENTREVISTA',	                
             'CALLE',	
             'NÚMERO',	
             'COLONIA',	
             '¿ALGUNA VEZ HA SOLICITADO EL SERVICIO DE LA POLICÍA?',	
-            '¿ACUDIO?',	
+            '¿ACUDIÓ?',	
             '¿CONOCE A SU JEFE DE CUADRANTE?',	
             '¿CONOCE LA APP MI POLICÍA?',	
             '¿AL LLAMAR AL JEFE DE CUADRANTE EN TIEMPO REAL, ¿RESPONDIÓ?',	
             '¿ACUDIO JEFE DE CUADRANTE?',	
             '¿EN CUÁNTO TIEMPO ACUDIÓ?',
-            'NOMBRE',
-            'NÚMERO DE TELEFONO',
-            'VECINO ES PARTE DE LA RED VECINAL',
-            'FECHA DE CAPTURA',
-            'FECHA DE ACTUALIZACIÓN'
+            'NOMBRE DEL VECINO ENTREVISTADO',
+            'TÉLEFONO DEL VECINO',
+            '¿EL VECINO ACEPTO SER PARTE DE LA RED VECINAL?',
+            'FECHA DE CAPTURA REAL',
+            'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
            
             
         ];
