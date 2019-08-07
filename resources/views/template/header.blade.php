@@ -73,9 +73,12 @@ if (isset(\Auth::user()->permisos)) {
              
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
+            <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
               
               
-          
+           <?php if(in_array(11, $array_permisos)):?>
+              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
+               <?php endif?>
 
 
               
@@ -118,6 +121,9 @@ if (isset(\Auth::user()->permisos)) {
               <li><a href="{{url('/mapaView')}}"> <i class="icon-list"></i>Mapas</a></li>
                <?php endif?>
                
+                <?php if(in_array(11, $array_permisos)):?>
+              <li><a href="{{url('/ministerio')}}"> <i class="icon-list"></i>Mi Entrevista MP</a></li>
+               <?php endif?>
            
              
              <!--MODULO REPORTES DIARIOS-->

@@ -127,6 +127,12 @@ Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuest
 Route::get('/getlistadopreguntas', 'cuestionariosController@view_listado_preguntas');
 Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 
+//visitasmp
+Route::get('/entrevistas', 'cuestionariosController@entrevistas');
+//Route::get('/preguntas_region', 'cuestionariosController@region');
+Route::post('/guardar_cuestionario_Entrevistas', 'cuestionariosController@save_cuestionario_entrevistas');
+Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuestionarioentrevistas');
+Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 
 
 //mis vinculos

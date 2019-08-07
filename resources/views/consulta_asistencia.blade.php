@@ -2,6 +2,15 @@
 
 @section('content')
 
+<style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 
 
   <section class="forms">
@@ -59,7 +68,7 @@
                       <th>Fecha de Captura</th>
                       <th>Hora de Inicio</th>
                       <th>Hora de Término</th>
-                      <th>Coordinación</th>
+                      <th>Coordinación Territorial</th>
                       <th>Se realizó Gabinte</th>
                       <th>Motivo por el que no se realizo</th>
                       <th>Jefa de Gobierno</th>

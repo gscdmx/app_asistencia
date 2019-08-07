@@ -2,6 +2,15 @@
 
 @section('content')
 
+<style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 
 
   <section class="forms">

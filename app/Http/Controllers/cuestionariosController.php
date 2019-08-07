@@ -110,7 +110,7 @@ public function regiones(){
     public function excel_cuestionariopreguntas(){
         
         
-        return Excel::download(new  PreguntasExport, 'FORMATO DE VISITAS.xlsx');
+        return Excel::download(new  PreguntasExport, 'FORMATO DE RED DE CONTACTO CIUDADANO.xlsx');
       
         
     }
@@ -123,8 +123,11 @@ public function regiones(){
  public function view_listado_preguntas()
     {   
         $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
+        //,"cat_cuadrantes.ct","cat_cuadrantes.cuadrante","cat_delegaciones.delegacion","cat_delegaciones.region"
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                    ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
+                    ->leftjoin('cat_delegaciones','cat_delegaciones.delegacion','=','users.name')
                    ->where('tb_preguntas.id_user',\Auth::user()->id)
                    ->get();
 
@@ -140,7 +143,49 @@ public function regiones(){
    // }
 
 
+ public function entrevistas(){
 
+
+       $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
+                        ->join('users','users.name','=','cat_cuadrantes.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('entrevistamp.cuestionario_mp',compact('mis_cuadrantes'));
+       
+
+       
+    }
+
+
+
+ public function save_cuestionario_entrevistas(Request $request){
+        
+        $entrevistas =$request->except('_token');
+        
+        $entrevistas['id_user']=\Auth::user()->id;
+        
+        \App\tbMinisterio::create($entrevistas);
+        
+          $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+          return Redirect::to('/entrevistas')->with('mensaje', $mensaje);
+        
+    }
+
+
+
+public function excel_cuestionarioentrevistas(){
+        
+        
+        return Excel::download(new  EntrevistasMpExport, 'FORMATO DE Entrevistas MP.xlsx');
+      
+        
+    }
     
+
+
+
+
 
 }
