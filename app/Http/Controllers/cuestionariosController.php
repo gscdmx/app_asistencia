@@ -123,18 +123,26 @@ public function regiones(){
 
  public function view_listado_preguntas()
     {   
-        $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
+       /* $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_delegaciones.delegacion")
         //,"cat_cuadrantes.ct","cat_cuadrantes.cuadrante","cat_delegaciones.delegacion","cat_delegaciones.region"
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                    ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
+                   // ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
                     ->leftjoin('cat_delegaciones','cat_delegaciones.delegacion','=','users.name')
                    ->where('tb_preguntas.id_user',\Auth::user()->id)
-                   ->get();
+                   ->get();*/
+
+         $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
+                    ->leftjoin('users','users.id','=','tb_preguntas.id_user',"cat_coord_territorials.ct2")
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                    ->where('tb_preguntas.id_user',\Auth::user()->id)
+                    ->get();
 
          // dd($consultas );
-         //Return json_encode($consultas); 
-        return view('consulta_preguntas',compact('consultas'));
+      // return json_encode($consultas); 
+      return view('consulta_preguntas',compact('consultas'));
     }
 
 
@@ -178,7 +186,7 @@ public function regiones(){
 
 
 public function excel_cuestionarioentrevistas(){
-        
+      
         
         return Excel::download(new  EntrevistasMpExport, 'ENTREVISTA MP.xlsx');
       
