@@ -50,20 +50,20 @@ class EntrevistasMpExport implements WithDrawings, FromCollection, WithHeadings
         return [
             
           
-            'COORDINACIÓN TERRITORIAL',//
-            'ID',  //  
-            'Agencia del Ministerio Público a Visitar',	
-            'FECHA DE CAPTURA',	
-            'HORA DE INICIO DE ENTREVISTA MP',	
-            'HORA DE TÉRMINO DE ENTREVISTA MP',	                
-            '¿Hay ciudadanos esperando ser atendidos?',
-            '¿Cuántos?',
-            '¿Cuánto tiempo ha esperado cada ciudadano en ser atendido?',
-            '¿Te percataste si había policía imaginaria desalentando la denuncia?',
-            '¿Te percataste si alguna persona o servidor público desalentó la denuncia de los ciudadanos?',
-            'Según tu visita, ¿el trato a los ciudadanos es?',
-            'FECHA DE CAPTURA REAL',
-            'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
+            'Responsable de captura',
+            'Id', 
+            'Agencia Visitada del Ministerio Público',	
+            'Fecha de la Visita',	
+            'Hora de Inicio de la Visita',	
+            'Hora de Termino de la Visita',	                
+            'Ciudadanos en espera de ser Atendidos',
+            'Cantidad de Ciudadanos',
+            'Tiempo de Espera',
+            'Hay policía Imaginaria',
+            'Persona o servidor público desalentando denuncia',
+            'El trato a los ciudadanos es',
+            'Fecha real de captura',
+            'Fecha de actualización'
            
             
         ];

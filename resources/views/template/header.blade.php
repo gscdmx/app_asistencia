@@ -69,7 +69,7 @@ if (isset(\Auth::user()->permisos)) {
             
             <!--<li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>-->
             <li><a href="{{url('/preguntas')}}"> <i class="icon-list"></i>MI RED DE CONTACTO CIUDADANO</a></li>
-            <li><a href="{{url('/getlistadopreguntas')}}"> <i class="icon-list"></i>VER MI FORMATO DE RED DE CONTACTO CIUDADANO</a></li>
+            <li><a href="{{url('/getlistadopreguntas')}}"> <i class="icon-list"></i>VER MI RED DE CONTACTO CIUDADANO</a></li>
              
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
@@ -135,9 +135,9 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="{{url('/reporteGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Asistencia</a></li>
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
-                <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte Visitas</a></li>
+                <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte de Visitas</a></li>
                 <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
-                <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista en MP</a></li>
+                <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
               </ul>
             </li>
              <?php endif?>
