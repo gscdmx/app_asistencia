@@ -131,7 +131,7 @@ Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 Route::get('/entrevistas', 'cuestionariosController@entrevistas');
 //Route::get('/preguntas_region', 'cuestionariosController@region');
 Route::post('/guardar_cuestionario_Entrevistas', 'cuestionariosController@save_cuestionario_entrevistas');
-Route::get('/excel_cuestionario_preguntas', 'cuestionariosController@excel_cuestionarioentrevistas');
+Route::get('/excel_cuestionario_entrevistas', 'cuestionariosController@excel_cuestionarioentrevistas');
 Route::get('/getexcel_pregunta', 'cuestionariosController@excel_pregunta');
 
 
