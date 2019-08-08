@@ -13,6 +13,7 @@ use Excel;
 
 use App\Exports\CuestionarioExport;
 use App\Exports\PreguntasExport;
+use App\Exports\EntrevistasMpExport;
 
 class cuestionariosController extends Controller
 {
@@ -61,7 +62,7 @@ class cuestionariosController extends Controller
         
     }
     
-    ////////////////
+    ///////////////////////////////////////////////PREGUNTAS///////////////////////////////////////////////////////////////////////////////////////
 
      public function preguntas(){
 
@@ -110,7 +111,7 @@ public function regiones(){
     public function excel_cuestionariopreguntas(){
         
         
-        return Excel::download(new  PreguntasExport, 'FORMATO DE RED DE CONTACTO CIUDADANO.xlsx');
+        return Excel::download(new  PreguntasExport, 'RED DE CONTACTO CIUDADANO.xlsx');
       
         
     }
@@ -131,7 +132,8 @@ public function regiones(){
                    ->where('tb_preguntas.id_user',\Auth::user()->id)
                    ->get();
 
-         // dd($consultas ); 
+         // dd($consultas );
+         //Return json_encode($consultas); 
         return view('consulta_preguntas',compact('consultas'));
     }
 
@@ -142,7 +144,7 @@ public function regiones(){
     //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
    // }
 
-
+//////////////////////////////////////////////////ENTREVISTAS///////////////////////////////////////////////////////////////////////////////////////////////
  public function entrevistas(){
 
 
@@ -178,7 +180,7 @@ public function regiones(){
 public function excel_cuestionarioentrevistas(){
         
         
-        return Excel::download(new  EntrevistasMpExport, 'FORMATO DE Entrevistas MP.xlsx');
+        return Excel::download(new  EntrevistasMpExport, 'ENTREVISTA MP.xlsx');
       
         
     }

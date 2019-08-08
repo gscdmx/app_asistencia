@@ -68,16 +68,16 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
             <!--<li><a href="{{url('/cuestionario')}}"> <i class="icon-list"></i>MIS VISITAS</a></li>-->
-            <li><a href="{{url('/preguntas')}}"> <i class="icon-list"></i>FORMATO DE VISITAS RED CIUDADANA</a></li>
-            <li><a href="{{url('/getlistadopreguntas')}}"> <i class="icon-list"></i>VER MI FORMATO DE VISITAS</a></li>
+            <li><a href="{{url('/preguntas')}}"> <i class="icon-list"></i>MI RED DE CONTACTO CIUDADANO</a></li>
+            <li><a href="{{url('/getlistadopreguntas')}}"> <i class="icon-list"></i>VER MI FORMATO DE RED DE CONTACTO CIUDADANO</a></li>
              
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
-           <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MINISTERIO PÚBLICO</a></li>
+           <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>
               
               
            <?php if(in_array(11, $array_permisos)):?>
-              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MINISTERIO PÚBLICO</a></li>
+              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>
                <?php endif?>
 
 
@@ -136,7 +136,8 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
                 <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte Visitas</a></li>
-                <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Visitas (Red)</a></li>
+                <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
+                <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista en MP</a></li>
               </ul>
             </li>
              <?php endif?>
