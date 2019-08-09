@@ -151,14 +151,14 @@
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
-        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevista MP:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de Visita MP:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
            @if ($errors->has('hora_i')) <p  style="color: red">{{ $errors->first('hora_i') }}</p> @endif
         </div>
 
-         <label class="col-sm-2 form-control-label">Hora de Término de Entrevista MP:</label>
+         <label class="col-sm-2 form-control-label">Hora de Término de Visita MP:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
@@ -250,10 +250,12 @@
           <div class="col-sm-9 mb-3">
             <select name="desalentado_servidor" id="desalentado_servidor" class="form-control" required>
               <option value="">Selecciona...</option>
+              <option value="MAO">MAO(Módulo de atención oportuna)</option>
               <option value="MP">MP</option>
               <option value="SSC">SSC</option>
               <option value="PA">PA</option>
               <option value="PDI">PDI</option>
+              <option value="ABOGADAS DE MUJERES">ABOGADAS DE MUJERES</option>
               <option value="PARTICULAR">PARTICULAR</option>
               <option value="NO APLICA">NO APLICA</option>
 
