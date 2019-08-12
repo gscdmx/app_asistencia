@@ -34,7 +34,7 @@ table, th, td {
       <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>MIS VISITAS DOMICILIARIAS CDMX</h4>
+      <h4>RED DE CONTACTO CIUDADANO CDMX</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/getlistadopreguntas') }}">
