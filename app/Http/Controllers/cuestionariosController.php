@@ -136,7 +136,8 @@ public function regiones(){
                     ->leftjoin('users','users.id','=','tb_preguntas.id_user',"cat_coord_territorials.ct2")
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                      ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
-                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_preguntas.id_cuadrante')
+                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
                     ->where('tb_preguntas.id_user',\Auth::user()->id)
                     ->get();
 
