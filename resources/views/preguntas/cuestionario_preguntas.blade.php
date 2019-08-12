@@ -25,7 +25,7 @@
       <h4>CGGSCyPJ CDMX </h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>FORMATO DE VISITAS</h4>
+      <h4>FORMATO DE RED DE CONTACTO CIUDADANO</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">
@@ -324,7 +324,7 @@
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">14.- ¿El vecino acepta ser parte de la Red Vecinal?:</label>
+          <label class="col-sm-3 form-control-label">14.- ¿El ciudadano acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
           <select name="firma" id="firma" class="form-control" required>
               <option value="">Selecciona...</option>
