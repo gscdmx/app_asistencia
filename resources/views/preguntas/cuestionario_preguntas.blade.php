@@ -59,28 +59,7 @@
 
 
 
-     <div class="form-group row">
-        <label class="col-sm-3 form-control-label">Cuadrante: </label>
-        <div class="col-sm-9 mb-3">
-          <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
-            <option value="">Selecciona...</option>
-            @foreach($mis_cuadrantes as $mi_cuadrante)
-            <option value="{{$mi_cuadrante->id}}">{{$mi_cuadrante->cuadrante}}</option>
-            @endforeach
-          
-          </select>
-          
-           @if ($errors->has('id_cuadrante')) <p  style="color: red">{{ $errors->first('id_cuadrante') }}</p> @endif 
-        </div>
-      
-      </div> 
 
-
-     
- 
-
-
-  
 
          <div class="line"></div>
       <div class="form-group row">
@@ -108,21 +87,34 @@
 
       </div>
 
-        <div class="line"></div>
+ <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">1.- Nombre Representante de Jefatura de Gobierno:</label>
+          <label class="col-sm-3 form-control-label">1.- Nombre del Ciudadano Entrevistado:</label>
           <div class="col-sm-9 mb-3">
-           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" placeholder="Nombre RJG"    required></input>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
             
-               @if ($errors->has('nombre_rjg')) <p  style="color: red">{{ $errors->first('nombre_rjg') }}</p> @endif 
+               @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
                   </div>
         
              </div>
-  
-       
-      <div class="line"></div>
+
+
+
+ <div class="line"></div>
+         <div class="form-group row">
+          <label class="col-sm-3 form-control-label">2.- Télefono:</label>
+          <div class="col-sm-9 mb-3">
+            <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" required></input>
+            
+               @if ($errors->has('telefono')) <p  style="color: red">{{ $errors->first('telefono') }}</p> @endif 
+                  </div>
+        
+             </div>
+
+
+ <div class="line"></div>
        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">2.- Calle:</label>
+          <label class="col-sm-3 form-control-label">3.- Calle:</label>
           <div class="col-sm-9 mb-3">
            <input type="text" class="form-control" id="calle" name="calle" placeholder="calle"    required></input>
             
@@ -134,7 +126,7 @@
           
          <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">3.- Número:</label>
+          <label class="col-sm-3 form-control-label">4.- Número:</label>
           <div class="col-sm-9 mb-3">
             <input type="text" class="form-control" id="numero" name="numero"    placeholder="número"      required></input>
             
@@ -146,7 +138,7 @@
            
             <div class="line"></div>
              <div class="form-group row">
-               <label class="col-sm-3 form-control-label">4.- Colonia:</label>
+               <label class="col-sm-3 form-control-label">5.- Colonia o Barrio:</label>
                <div class="col-sm-9 mb-3">
                <input type="text" class="form-control" id="colonia" name="colonia"   placeholder="colonia"   required></input>
             
@@ -155,10 +147,46 @@
         
              </div>
 
+
+
+     <div class="form-group row">
+        <label class="col-sm-3 form-control-label">6.- Cuadrante: </label>
+        <div class="col-sm-9 mb-3">
+          <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
+            <option value="">Selecciona...</option>
+            @foreach($mis_cuadrantes as $mi_cuadrante)
+            <option value="{{$mi_cuadrante->id}}">{{$mi_cuadrante->cuadrante}}</option>
+            @endforeach
+          
+          </select>
+          
+           @if ($errors->has('id_cuadrante')) <p  style="color: red">{{ $errors->first('id_cuadrante') }}</p> @endif 
+        </div>
+      
+      </div> 
+
+
+     
+      
+
+        <div class="line"></div>
+        <div class="form-group row">
+          <label class="col-sm-3 form-control-label">7.- Nombre Representante de Jefatura de Gobierno:</label>
+          <div class="col-sm-9 mb-3">
+           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" placeholder="Nombre RJG"    required></input>
+            
+               @if ($errors->has('nombre_rjg')) <p  style="color: red">{{ $errors->first('nombre_rjg') }}</p> @endif 
+                  </div>
+        
+             </div>
+  
+       
+     
+
     
           <div class="line"></div>
            <div class="form-group row">
-             <label class="col-sm-3 form-control-label">5.- ¿Alguna vez ha solicitado el apoyo de la policía?:</label>
+             <label class="col-sm-3 form-control-label">8.- ¿Alguna vez ha solicitado el apoyo de la policía?:</label>
              <div class="col-sm-9 mb-3">
               <select name="servicio_policia" id="servicio_policia" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -174,7 +202,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">6.- ¿Acudió?:</label>
+          <label class="col-sm-3 form-control-label">9.- ¿Acudió?:</label>
           <div class="col-sm-9 mb-3">
 
              <select name="acudio" id="acudio" class="form-control" required>
@@ -194,7 +222,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">7.- ¿Conoce a su Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">10.- ¿Conoce a su Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_jc" id="conoce_jc" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -210,7 +238,7 @@
 
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">8.- ¿Conoce la App mi Policía?:</label>
+          <label class="col-sm-3 form-control-label">11.- ¿Conoce la App mi Policía?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_app" id="conoce_app" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -226,7 +254,7 @@
            
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">9.- Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
+          <label class="col-sm-3 form-control-label">12.- Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
           <div class="col-sm-9 mb-3">
             <select name="llamarjefe_respondio" id="llamarjefe_respondio" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -244,7 +272,7 @@
 
         <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">10.- ¿Acudio Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">13.- ¿Acudio Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="acudio_jefe" id="acudio_jefe" class="form-control" required>
                <option value="">Selecciona...</option>
@@ -262,7 +290,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">11.- ¿En cuánto tiempo acudió(minutos)?:</label>
+          <label class="col-sm-3 form-control-label">14.- ¿En cuánto tiempo acudió(minutos)?:</label>
           <div class="col-sm-9 mb-3">
              <input type="number" class="form-control" id="tiempo_acudio" name="tiempo_acudio" placeholder="minutos" required></input>
             
@@ -271,16 +299,7 @@
         
         </div>
        
-        <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">12.- Nombre del Ciudadano Entrevistado:</label>
-          <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
-            
-               @if ($errors->has('nombre')) <p  style="color: red">{{ $errors->first('nombre') }}</p> @endif 
-                  </div>
-        
-             </div>
+       
      
         
         <!-- <div class="form-group row">
@@ -310,21 +329,12 @@
         </div>
         
         </div>-->
-        <div class="line"></div>
-         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">13.- Télefono:</label>
-          <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" required></input>
-            
-               @if ($errors->has('telefono')) <p  style="color: red">{{ $errors->first('telefono') }}</p> @endif 
-                  </div>
-        
-             </div>
+       
 
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">14.- ¿El ciudadano acepta ser parte de la Red Vecinal?:</label>
+          <label class="col-sm-3 form-control-label">15.- ¿El ciudadano acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
           <select name="firma" id="firma" class="form-control" required>
               <option value="">Selecciona...</option>
