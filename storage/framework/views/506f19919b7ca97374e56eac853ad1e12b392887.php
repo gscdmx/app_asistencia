@@ -60,7 +60,6 @@
              <div class="col-sm-9 mb-3">
               <select name="mp_visitado" id="mp_visitado" class="form-control" required>
               <option value="">Selecciona...</option>
-              <option value="NO APLICA">NO APLICA</option>
               <option value="AOB-1">AOB-1</option>
               <option value="AOB-2">AOB-2</option>
               <option value="AOB-3">AOB-3</option>
@@ -152,14 +151,14 @@
            <?php if($errors->has('fecha')): ?> <p  style="color: red"><?php echo e($errors->first('fecha')); ?></p> <?php endif; ?> 
         </div>
 
-        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevista MP:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de Visita MP:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
            <?php if($errors->has('hora_i')): ?> <p  style="color: red"><?php echo e($errors->first('hora_i')); ?></p> <?php endif; ?>
         </div>
 
-         <label class="col-sm-2 form-control-label">Hora de Término de Entrevista MP:</label>
+         <label class="col-sm-2 form-control-label">Hora de Término de Visita MP:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
@@ -180,7 +179,6 @@
               <option value="">Selecciona...</option>
               <option value="SI">SI</option>
               <option value="NO">NO</option>
-              <option value="NO APLICA">NO APLICA</option>
             </select>
             
              <?php if($errors->has('ciudadanos_esperando')): ?> <p  style="color: red"><?php echo e($errors->first('ciudadanos_esperando')); ?></p> <?php endif; ?> 
@@ -252,11 +250,13 @@
           <div class="col-sm-9 mb-3">
             <select name="desalentado_servidor" id="desalentado_servidor" class="form-control" required>
               <option value="">Selecciona...</option>
+              <option value="MAO">MAO(Módulo de atención oportuna)</option>
               <option value="MP">MP</option>
               <option value="SSC">SSC</option>
               <option value="PA">PA</option>
               <option value="PDI">PDI</option>
-              <option value="Particular">Particular</option>
+              <option value="ABOGADAS DE MUJERES">ABOGADAS DE MUJERES</option>
+              <option value="PARTICULAR">PARTICULAR</option>
               <option value="NO APLICA">NO APLICA</option>
 
             </select>
@@ -276,6 +276,7 @@
               <option value="BUENO">BUENO</option>
               <option value="REGULAR">REGULAR</option>
               <option value="MALO">MALO</option>
+              <option value="NO APLICA">NO APLICA</option>
               
             </select>
             
@@ -291,7 +292,7 @@
         <div class="line"></div>
         <div class="form-group row">
           <div class="col-sm-6 offset-sm-6">
-            <button type="submit" class="btn btn-primary"> Registrar </button>
+            <button type="submit" class="btn btn-primary">Registrar</button>
           </div>
         </div>
       </form>
