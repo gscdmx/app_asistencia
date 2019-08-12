@@ -78,7 +78,7 @@ public function headings(): array
             '¿AL LLAMAR AL JEFE DE CUADRANTE EN TIEMPO REAL, ¿RESPONDIÓ?',	
             '¿ACUDIO JEFE DE CUADRANTE?',	
             '¿EN CUÁNTO TIEMPO ACUDIÓ?',
-            'NOMBRE DEL VECINO ENTREVISTADO',
+            'NOMBRE DEL CIUDADANO ENTREVISTADO',
             'TÉLEFONO DEL VECINO',
             '¿EL VECINO ACEPTO SER PARTE DE LA RED VECINAL?',
             'FECHA DE CAPTURA REAL',

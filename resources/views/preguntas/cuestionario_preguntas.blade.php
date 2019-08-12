@@ -91,7 +91,7 @@
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
-        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevistas:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
@@ -273,7 +273,7 @@
        
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">12.- Nombre:</label>
+          <label class="col-sm-3 form-control-label">12.- Nombre del Ciudadano Entrevistado:</label>
           <div class="col-sm-9 mb-3">
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
             
