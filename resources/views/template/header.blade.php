@@ -74,6 +74,8 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
             <!--<li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>-->
+            <li><a href="{{url('/mapasView')}}"> <i class="icon-list"></i>MIS MAPAS INCIDENCIA DELICTIVA Y RED VECINAL</a></li>
+
               
               
            <?php if(in_array(11, $array_permisos)):?>
@@ -128,7 +130,7 @@ if (isset(\Auth::user()->permisos)) {
              <?php if(in_array(2, $array_permisos)):?>
              
                <li><a href="#exampledropdownDropdown_DIARIO" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reporte Diario </a>
-              <ul id="exampledropdownDropdown_DIARIO" class="collapse list-unstyled ">
+               <ul id="exampledropdownDropdown_DIARIO" class="collapse list-unstyled ">
                 <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Fecha</a></li>
                
                <!--<li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Faltantes por Fecha Miércoles</a></li>-->

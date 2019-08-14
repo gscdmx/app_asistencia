@@ -1198,5 +1198,13 @@ public function guardar_pdf_admin(Request $request){
              return view('vinculos');
     }
 
+     public function mismapas()
+    {   
+             return view('mapas');
+    }
+
+
+
+
 
 }
