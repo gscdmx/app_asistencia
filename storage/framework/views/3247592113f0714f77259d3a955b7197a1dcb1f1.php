@@ -23,7 +23,7 @@
       <h4>CGGSCyPJ CDMX </h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>FORMATO DE VISITAS</h4>
+      <h4>FORMATO DE RED DE CONTACTO CIUDADANO</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_cuestionario_Preguntas')); ?>">
@@ -59,28 +59,7 @@
 
 
 
-     <div class="form-group row">
-        <label class="col-sm-3 form-control-label">Cuadrante: </label>
-        <div class="col-sm-9 mb-3">
-          <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
-            <option value="">Selecciona...</option>
-            <?php $__currentLoopData = $mis_cuadrantes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $mi_cuadrante): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <option value="<?php echo e($mi_cuadrante->id); ?>"><?php echo e($mi_cuadrante->cuadrante); ?></option>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-          
-          </select>
-          
-           <?php if($errors->has('id_cuadrante')): ?> <p  style="color: red"><?php echo e($errors->first('id_cuadrante')); ?></p> <?php endif; ?> 
-        </div>
-      
-      </div> 
 
-
-     
- 
-
-
-  
 
          <div class="line"></div>
       <div class="form-group row">
@@ -91,7 +70,7 @@
            <?php if($errors->has('fecha')): ?> <p  style="color: red"><?php echo e($errors->first('fecha')); ?></p> <?php endif; ?> 
         </div>
 
-        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevistas:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
@@ -108,21 +87,34 @@
 
       </div>
 
-        <div class="line"></div>
+ <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">1.- Nombre Representante de Jefatura de Gobierno:</label>
+          <label class="col-sm-3 form-control-label">1.- Nombre del Ciudadano Entrevistado:</label>
           <div class="col-sm-9 mb-3">
-           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" placeholder="Nombre RJG"    required></input>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
             
-               <?php if($errors->has('nombre_rjg')): ?> <p  style="color: red"><?php echo e($errors->first('nombre_rjg')); ?></p> <?php endif; ?> 
+               <?php if($errors->has('nombre')): ?> <p  style="color: red"><?php echo e($errors->first('nombre')); ?></p> <?php endif; ?> 
                   </div>
         
              </div>
-  
-       
-      <div class="line"></div>
+
+
+
+ <div class="line"></div>
+         <div class="form-group row">
+          <label class="col-sm-3 form-control-label">2.- Télefono:</label>
+          <div class="col-sm-9 mb-3">
+            <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" required></input>
+            
+               <?php if($errors->has('telefono')): ?> <p  style="color: red"><?php echo e($errors->first('telefono')); ?></p> <?php endif; ?> 
+                  </div>
+        
+             </div>
+
+
+ <div class="line"></div>
        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">2.- Calle:</label>
+          <label class="col-sm-3 form-control-label">3.- Calle:</label>
           <div class="col-sm-9 mb-3">
            <input type="text" class="form-control" id="calle" name="calle" placeholder="calle"    required></input>
             
@@ -134,7 +126,7 @@
           
          <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">3.- Número:</label>
+          <label class="col-sm-3 form-control-label">4.- Número:</label>
           <div class="col-sm-9 mb-3">
             <input type="text" class="form-control" id="numero" name="numero"    placeholder="número"      required></input>
             
@@ -146,7 +138,7 @@
            
             <div class="line"></div>
              <div class="form-group row">
-               <label class="col-sm-3 form-control-label">4.- Colonia:</label>
+               <label class="col-sm-3 form-control-label">5.- Colonia o Barrio:</label>
                <div class="col-sm-9 mb-3">
                <input type="text" class="form-control" id="colonia" name="colonia"   placeholder="colonia"   required></input>
             
@@ -155,10 +147,46 @@
         
              </div>
 
+
+
+     <div class="form-group row">
+        <label class="col-sm-3 form-control-label">6.- Cuadrante: </label>
+        <div class="col-sm-9 mb-3">
+          <select name="id_cuadrante" id="id_cuadrante" class="form-control" required>
+            <option value="">Selecciona...</option>
+            <?php $__currentLoopData = $mis_cuadrantes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $mi_cuadrante): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($mi_cuadrante->id); ?>"><?php echo e($mi_cuadrante->cuadrante); ?></option>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          
+          </select>
+          
+           <?php if($errors->has('id_cuadrante')): ?> <p  style="color: red"><?php echo e($errors->first('id_cuadrante')); ?></p> <?php endif; ?> 
+        </div>
+      
+      </div> 
+
+
+     
+      
+
+        <div class="line"></div>
+        <div class="form-group row">
+          <label class="col-sm-3 form-control-label">7.- Nombre Representante de Jefatura de Gobierno:</label>
+          <div class="col-sm-9 mb-3">
+           <input type="text" class="form-control" id="nombre_rjg" name="nombre_rjg" placeholder="Nombre RJG"    required></input>
+            
+               <?php if($errors->has('nombre_rjg')): ?> <p  style="color: red"><?php echo e($errors->first('nombre_rjg')); ?></p> <?php endif; ?> 
+                  </div>
+        
+             </div>
+  
+       
+     
+
     
           <div class="line"></div>
            <div class="form-group row">
-             <label class="col-sm-3 form-control-label">5.- ¿Alguna vez ha solicitado el apoyo de la policía?:</label>
+             <label class="col-sm-3 form-control-label">8.- ¿Alguna vez ha solicitado el apoyo de la policía?:</label>
              <div class="col-sm-9 mb-3">
               <select name="servicio_policia" id="servicio_policia" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -174,7 +202,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">6.- ¿Acudió?:</label>
+          <label class="col-sm-3 form-control-label">9.- ¿Acudió?:</label>
           <div class="col-sm-9 mb-3">
 
              <select name="acudio" id="acudio" class="form-control" required>
@@ -194,7 +222,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">7.- ¿Conoce a su Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">10.- ¿Conoce a su Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_jc" id="conoce_jc" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -210,7 +238,7 @@
 
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">8.- ¿Conoce la App mi Policía?:</label>
+          <label class="col-sm-3 form-control-label">11.- ¿Conoce la App mi Policía?:</label>
           <div class="col-sm-9 mb-3">
             <select name="conoce_app" id="conoce_app" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -226,7 +254,7 @@
            
         <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">9.- Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
+          <label class="col-sm-3 form-control-label">12.- Al llamar al Jefe de Cuadrante en tiempo real, ¿respondió?:</label>
           <div class="col-sm-9 mb-3">
             <select name="llamarjefe_respondio" id="llamarjefe_respondio" class="form-control" required>
               <option value="">Selecciona...</option>
@@ -244,7 +272,7 @@
 
         <div class="line"></div>
           <div class="form-group row">
-          <label class="col-sm-3 form-control-label">10.- ¿Acudio Jefe de Cuadrante?:</label>
+          <label class="col-sm-3 form-control-label">13.- ¿Acudio Jefe de Cuadrante?:</label>
           <div class="col-sm-9 mb-3">
             <select name="acudio_jefe" id="acudio_jefe" class="form-control" required>
                <option value="">Selecciona...</option>
@@ -262,7 +290,7 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">11.- ¿En cuánto tiempo acudió(minutos)?:</label>
+          <label class="col-sm-3 form-control-label">14.- ¿En cuánto tiempo acudió(minutos)?:</label>
           <div class="col-sm-9 mb-3">
              <input type="number" class="form-control" id="tiempo_acudio" name="tiempo_acudio" placeholder="minutos" required></input>
             
@@ -271,16 +299,7 @@
         
         </div>
        
-        <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">12.- Nombre:</label>
-          <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="nombre del vecino"required></input>
-            
-               <?php if($errors->has('nombre')): ?> <p  style="color: red"><?php echo e($errors->first('nombre')); ?></p> <?php endif; ?> 
-                  </div>
-        
-             </div>
+       
      
         
         <!-- <div class="form-group row">
@@ -310,21 +329,12 @@
         </div>
         
         </div>-->
-        <div class="line"></div>
-         <div class="form-group row">
-          <label class="col-sm-3 form-control-label">13.- Télefono:</label>
-          <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="telefono" required></input>
-            
-               <?php if($errors->has('telefono')): ?> <p  style="color: red"><?php echo e($errors->first('telefono')); ?></p> <?php endif; ?> 
-                  </div>
-        
-             </div>
+       
 
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">14.- ¿El vecino acepta ser parte de la Red Vecinal?:</label>
+          <label class="col-sm-3 form-control-label">15.- ¿El ciudadano acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
           <select name="firma" id="firma" class="form-control" required>
               <option value="">Selecciona...</option>

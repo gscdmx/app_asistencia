@@ -141,3 +141,11 @@ Route::get('/vinculosView', 'HomeController@misvinculos');
 //Route::post('/guardar_mapa', 'HomeController@guardarmapa');
 
 //Route::get('/','MapController@index');
+
+
+
+//MISmapa
+
+//Route::get('/get_mapa', 'HomeController@get_mapa_file');
+Route::get('/mapasView', 'HomeController@mismapas');
+//Route::post('/guardar_mapa', 'HomeController@guardarmapa');
