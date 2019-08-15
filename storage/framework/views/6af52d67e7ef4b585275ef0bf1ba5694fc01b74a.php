@@ -34,6 +34,8 @@
   
 </div>
 
+
+
  <div class=“row”>
     <div class="col-sm-6 ">
         <H1>Mapas para la Red Vecinal</H1><br>
@@ -78,6 +80,10 @@ Tampoco debe localizarse forzosamente un contacto dentro de la zonas más confli
 
 </label>
 </text>
+
+
+
+
           <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ/AOB-1_REDVEC_2019-07-21.html')); ?>" role="button">AOB-1 RED VECINAL</a><br><br>
           <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ/AOB-2_REDVEC_2019-07-21.html')); ?>" role="button">AOB-2 RED VECINAL</a><br><br>
           <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ/AOB-3_REDVEC_2019-07-21.html')); ?>" role="button">AOB-3 RED VECINAL</a><br><br>
@@ -149,6 +155,10 @@ Tampoco debe localizarse forzosamente un contacto dentro de la zonas más confli
           <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ/XOC-1_REDVEC_2019-07-21.html')); ?>" role="button">XOC-1 RED VECINAL</a><br><br>
           <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ/XOC-2_REDVEC_2019-07-21.html')); ?>" role="button">XOC-2 RED VECINAL</a><br><br>
 
+
+
+
+          
                             
   
 
