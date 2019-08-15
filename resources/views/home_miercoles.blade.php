@@ -60,7 +60,7 @@
         <label class="col-sm-2 form-control-label">Fecha de Captura:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="date" id="fecha" name="fecha" class="form-control"  required></input>
+          <input type="date" id="fecha" name="fecha" class="form-control"  ></input>
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
@@ -68,14 +68,14 @@
         <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora1" name="hora1" class="form-control"  required></input>
+          <input type="time" id="hora1" name="hora1" class="form-control"  ></input>
            @if ($errors->has('hora1')) <p  style="color: red">{{ $errors->first('hora1') }}</p> @endif
         </div>
 
          <label class="col-sm-2 form-control-label">Hora de Término:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora2" name="hora2" class="form-control" required ></input>
+          <input type="time" id="hora2" name="hora2" class="form-control"  ></input>
            @if ($errors->has('hora2')) <p  style="color: red">{{ $errors->first('hora2') }}</p> @endif
         </div>
 
@@ -355,7 +355,7 @@
           <label class="col-sm-2 form-control-label">¿Cuántos vecinos asistieron? </label>
           <div class="col-sm-10 mb-3">
  
-       <input type="number" name="vecino" class="form-group row" required />
+       <input type="number" name="vecino" class="form-group row"  />
 
           </div>
         
