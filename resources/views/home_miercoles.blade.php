@@ -378,7 +378,7 @@
           <label class="col-sm-2 form-control-label">Captura o Busca en Galeria la foto del Gabinete Vespertino</label>
           <div class="col-sm-10 mb-3">
    
-       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row" required />
+       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
       
           </div>
         
