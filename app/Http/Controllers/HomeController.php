@@ -1200,7 +1200,9 @@ public function guardar_pdf_admin(Request $request){
 
      public function mismapas()
     {   
-             return view('mapas');
+             
+              $coord=DB::table('cat_coord_territorials')->select('cat_coord_territorials.ct2')->get();
+             return view('mapas',compact('coord'));
     }
 
 
