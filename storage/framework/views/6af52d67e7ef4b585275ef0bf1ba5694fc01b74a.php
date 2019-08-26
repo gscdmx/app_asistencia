@@ -16,7 +16,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCyPJ CDMX</h4>
+      <h4>Metodologías</h4>
     </div>
     <div class="card-body">
   
@@ -30,9 +30,9 @@ Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<
 </label>
 </text>
 
-              <H4>Metodologías.</H1><br>
-                <li><a href="<?php echo e(url('/uploads/GSCYPJ/mapasred.pdf')); ?>"><i class="icon-list"></i> Metodología MAPA -RED VECINAL</a></li> <br>
-                <li><a href="<?php echo e(url('/uploads/GSCYPJ/mapascrimen.pdf')); ?>"><i class="icon-list"></i> Metodología MAPA -ANÁLISIS DEL CRIMEN</a></li>  <br>
+               <!-- <h4>Metodologías</h4>-->
+                <li><a href="<?php echo e(url('/uploads/GSCYPJ/mapasred.pdf')); ?>"><i class="icon-list"></i>RED VECINAL</a></li> <br>
+                <li><a href="<?php echo e(url('/uploads/GSCYPJ/mapascrimen.pdf')); ?>"><i class="icon-list"></i>ANÁLISIS DEL CRIMEN</a></li>  <br>
              <!-- <H4>Mapas.</H1><br>-->
                                         
                                   
@@ -84,14 +84,13 @@ Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<
      <?php if(Auth::user()->name==$cor->ct2): ?>
       <div class=“row”>
          <div class="col-sm-6 ">
-           <H4>Mapa Guía para la Red Vecinal 2019.</H1><br>
+           <h4>Mapas Análisis del Crimen 5 de Diciembre 2018 al 04 de Agosto 2019.</h4><br>
                                         
              
              <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ').'/'.$cor->ct2.'_REDVEC_2019-07-21.html'); ?>" role="button"> MAPA -RED VECINAL <?php echo e($cor->ct2); ?></a><br><br>
          </div>
 
          <div class="col-sm-6 ">
-             <H4>Mapa Análisis del Crimen 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
              <a class="btn btn-primary" href="<?php echo e(url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'); ?>" role="button"> MAPA -ANÁLISIS DEL CRIMEN <?php echo e($cor->ct2); ?></a><br><br>
          </div>
 
