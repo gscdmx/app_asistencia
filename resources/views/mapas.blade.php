@@ -26,14 +26,14 @@
    <div class="row">
      <div class="col-sm-6 ">
 
-              <H1>Mapas para la Red Vecinal</H1><br>
-              <H1>Selecciona tu mapa de acuardo a tu Coordinación Territorial</H1><br>
+              <H4>Mapa de tu Red Vecinal.</H1><br>
+              <H4>Mapa -Análisis del Crimen por Coordinación Territorial del 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
                                         
                                   
                                 
                                   
                                   
-      <text>
+     <!-- <text>
 
 
 
@@ -66,7 +66,7 @@
 
 
 
-      </label>
+      </label>-->
        
      </div>
 
@@ -79,57 +79,30 @@
      @if(Auth::user()->name==$cor->ct2)
       <div class=“row”>
          <div class="col-sm-6 ">
-             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_REDVEC_2019-07-21.html'}}" role="button"> RED VECINAL {{$cor->ct2}}</a>
+             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapasred')}}" role="button">Metodología para comprender el mapa Red Vecinal</a><br><br>
+             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_REDVEC_2019-07-21.html'}}" role="button"> MAPA- RED VECINAL {{$cor->ct2}}</a><br><br>
          </div>
 
          <div class="col-sm-6 ">
-             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'}}" role="button"> INCIDENCIA DELICTIVA 01 01 AL 04 08 2019 {{$cor->ct2}}</a>
+              <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapascrimen')}}" role="button">Metodología para comprender el mapa Análisis del Crimen</a><br><br>
+             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'}}" role="button"> MAPA- ANÁLISIS DEL CRIMEN {{$cor->ct2}}</a><br><br>
          </div>
 
-       </div>
+         </div>
 
        @endif
          @endforeach
        
 
-     </div>
+        </div>
 
 
-
-
-
-   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
 
 
     </div>
   </div>
 </div>
-
-
 
 
  </div>
@@ -138,12 +111,7 @@
 
 
 
-
-
 @endsection
-
-
-
 
 
 @section('js')  
@@ -151,16 +119,10 @@
 @endsection
 
 
-
-
-
 @section('customjs')
 
 
 @endsection
-
-
-
 
 
 
