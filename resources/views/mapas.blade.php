@@ -26,14 +26,19 @@
    <div class="row">
      <div class="col-sm-6 ">
 
-              <H4>Metodologías</H1><br>
-                <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}" role="button">Metodología Mapa Red Vecinal</a><br><br>    
-                 <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}" role="button">Metodología Mapa Análisis del Crimen</a><br><br>
-              <H4>Mapas -Análisis del Crimen por Coordinación Territorial del 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
+      <text>
+<label>En esta sección encontrarás:<br>
+Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<br>
+</label>
+</text><br>
+
+              <H4>Metodologías.</H1><br><br>
+                <li><a href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}"><i class="icon-list"></i> Metodología MAPA -RED VECINAL</a></li> <br>
+                <li><a href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}"><i class="icon-list"></i> Metodología MAPA -ANÁLISIS DEL CRIMEN</a></li>  <br>
+             <!-- <H4>Mapas.</H1><br>-->
                                         
                                   
                                 
-                                  
                                   
      <!-- <text>
 
@@ -81,12 +86,14 @@
      @if(Auth::user()->name==$cor->ct2)
       <div class=“row”>
          <div class="col-sm-6 ">
+           <H4>Mapa Guía para la Red Vecinal 2019.</H1><br>
+                                        
              
              <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_REDVEC_2019-07-21.html'}}" role="button"> MAPA -RED VECINAL {{$cor->ct2}}</a><br><br>
          </div>
 
          <div class="col-sm-6 ">
-             
+             <H4>Mapa Análisis del Crimen 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
              <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'}}" role="button"> MAPA -ANÁLISIS DEL CRIMEN {{$cor->ct2}}</a><br><br>
          </div>
 
