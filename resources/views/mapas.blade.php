@@ -33,8 +33,8 @@ Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<
 </text>
 
                <!-- <h4>Metodologías</h4>-->
-                <li><a href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}"><i class="icon-list"></i>RED VECINAL</a></li> <br>
-                <li><a href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}"><i class="icon-list"></i>ANÁLISIS DEL CRIMEN</a></li>  <br>
+                <li><a href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}"><i class="icon-list"></i>RED VECINAL</a></li><br>
+                <li><a href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}"><i class="icon-list"></i>ANÁLISIS DEL CRIMEN</a></li><br>
              <!-- <H4>Mapas.</H1><br>-->
                                         
                                   
