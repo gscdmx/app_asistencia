@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
   <section class="forms">
@@ -69,7 +67,7 @@ Las páginas que necesitas para realizar tus diferentes tareas.<br><br>
 
 
 
-            <!-- <a href="{{URL::to('/')}}"><img src={{asset('images/logo.png')}} alt="Logo"></a>-->
+            <!-- <a href="<?php echo e(URL::to('/')); ?>"><img src=<?php echo e(asset('images/logo.png')); ?> alt="Logo"></a>-->
        <!-- <img src="recursos/img/gscypj.png" href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="btn btn-primary"  role="button">-->
 
          
@@ -102,30 +100,30 @@ Las páginas que necesitas para realizar tus diferentes tareas.<br><br>
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
 
 
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
 <script>
 
      $.ajax({
                 type: "GET",
-                //url: "{{url('/get_mapa')}}",
+                //url: "<?php echo e(url('/get_mapa')); ?>",
                 dataType: "html",
                 success: function(result) {
                 
@@ -147,4 +145,5 @@ Las páginas que necesitas para realizar tus diferentes tareas.<br><br>
 </script>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
