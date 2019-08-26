@@ -26,9 +26,9 @@
 
       <text>
 <label>En esta sección encontrarás:<br>
-Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<br>
+Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<br><br>
 </label>
-</text><br>
+</text>
 
               <H4>Metodologías.</H1><br>
                 <li><a href="<?php echo e(url('/uploads/GSCYPJ/mapasred.pdf')); ?>"><i class="icon-list"></i> Metodología MAPA -RED VECINAL</a></li> <br>
