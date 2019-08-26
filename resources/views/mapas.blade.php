@@ -26,11 +26,10 @@
    <div class="row">
      <div class="col-sm-6 ">
 
-              <H4>Mapa de tu Red Vecinal.</H1><br>
-                <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}" role="button">Metodología Mapa Red Vecinal</a><br><br>
-              <H4>Mapa -Análisis del Crimen por Coordinación Territorial del 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
+              <H4>Metodologías</H1><br>
+                <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}" role="button">Metodología Mapa Red Vecinal</a><br><br>    
                  <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}" role="button">Metodología Mapa Análisis del Crimen</a><br><br>
-              <H4>Mapas</H1><br>
+              <H4>Mapas -Análisis del Crimen por Coordinación Territorial del 5 de Diciembre 2018 al 04 de Agosto 2019.</H1><br>
                                         
                                   
                                 
