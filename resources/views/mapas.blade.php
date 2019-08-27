@@ -34,7 +34,7 @@ Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<
 
                <!-- <h4>Metodologías</h4>-->
                 <li><a href="{{url('/uploads/GSCYPJ/mapasred.pdf')}}"><i class="icon-list"></i>RED VECINAL</a></li><br>
-                <li><a href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}"><i class="icon-list"></i>ANÁLISIS DEL CRIMEN</a></li><br>
+                <li><a href="{{url('/uploads/GSCYPJ/mapascrimen.pdf')}}"><i class="icon-list"></i>ANÁLISIS DELICTIVO</a></li><br>
              <!-- <H4>Mapas.</H1><br>-->
                                         
                                   
@@ -86,14 +86,14 @@ Los mapas de red vecinal e incidencia delictiva con su respectiva descripción.<
      @if(Auth::user()->name==$cor->ct2)
       <div class=“row”>
          <div class="col-sm-6 ">
-           <h4>Mapas Análisis del Crimen 5 de Diciembre 2018 al 04 de Agosto 2019.</h4><br>
+           <h4>Mapa de Análisis Delictivo periódo 5 de Diciembre 2018 al 04 de Agosto 2019.</h4><br>
                                         
              
              <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_REDVEC_2019-07-21.html'}}" role="button"> MAPA -RED VECINAL {{$cor->ct2}}</a><br><br>
          </div>
 
          <div class="col-sm-6 ">
-             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'}}" role="button"> MAPA -ANÁLISIS DEL CRIMEN {{$cor->ct2}}</a><br><br>
+             <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ').'/'.$cor->ct2.'_2019-01-012019-08-04.html'}}" role="button"> MAPA -ANÁLISIS DELICTIVO {{$cor->ct2}}</a><br><br>
          </div>
 
          </div>
