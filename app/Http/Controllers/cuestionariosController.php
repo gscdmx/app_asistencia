@@ -14,6 +14,7 @@ use Excel;
 use App\Exports\CuestionarioExport;
 use App\Exports\PreguntasExport;
 use App\Exports\EntrevistasMpExport;
+use App\Exports\AgendaExport;
 
 class cuestionariosController extends Controller
 {
@@ -194,6 +195,94 @@ public function excel_cuestionarioentrevistas(){
         
     }
     
+
+
+/////////////////////////////////////////////////////AGENDA RJG ///////////////////////////////////////////////////////////////////
+
+
+
+
+  public function agenda(){
+
+
+       $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
+                        ->join('users','users.name','=','cat_cuadrantes.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('agenda.cuestionario_agenda',compact('mis_cuadrantes'));
+       
+
+       
+    }
+    
+  
+public function regioness(){
+
+       $mis_regiones= \App\catDelegaciones::select('cat_delegaciones.delegacion','cat_delegaciones.region')
+                        ->join('cat_coord_territorials','cat_coord_territorials.id_alcaldia','=','cat_delegaciones.ct')
+                        ->join('users','users.name','=','cat_delegaciones.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('agenda.cuestionario_agenda',compact('mis_regiones'));
+       
+
+       
+    }
+       
+
+       
+
+
+    public function save_cuestionario_agenda(Request $request){
+        
+        $agenda =$request->except('_token');
+        
+        $agenda['id_user']=\Auth::user()->id;
+        
+        \App\tbAgenda::create($agenda);
+        
+          $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+          return Redirect::to('/agenda')->with('mensaje', $mensaje);
+        
+    }
+    
+    public function excel_cuestionarioagenda(){
+        
+        
+        return Excel::download(new  AgendaExport, 'AGENDA DE LAS RJG.xlsx');
+      
+        
+    }
+    
+
+
+    
+
+
+ public function view_listado_agendas()
+    {   
+      
+
+
+ $consultas = \App\tbAgenda::select("tb_agendas.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
+                    ->leftjoin('users','users.id','=','tb_agendas.id_user',"cat_coord_territorials.ct2")
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_preguntas.id_cuadrante')
+                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                    ->where('tb_agendas.id_user',\Auth::user()->id)
+                    ->get();
+
+         // dd($consultas );
+      // return json_encode($consultas); 
+      return view('consulta_agenda',compact('consultas'));
+
+}
+
 
 
 

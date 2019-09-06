@@ -68,13 +68,15 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="<?php echo e(url('/getlistadoasistencias_miercoles')); ?>"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
             <!--<li><a href="<?php echo e(url('/cuestionario')); ?>"> <i class="icon-list"></i>MIS VISITAS</a></li>-->
-            <li><a href="<?php echo e(url('/preguntas')); ?>"> <i class="icon-list"></i>MI RED DE CONTACTO CIUDADANO</a></li>
+            <li><a href="<?php echo e(url('/preguntas')); ?>"> <i class="icon-list"></i>RED DE CONTACTO CIUDADANO</a></li>
             <li><a href="<?php echo e(url('/getlistadopreguntas')); ?>"> <i class="icon-list"></i>VER MI RED DE CONTACTO CIUDADANO</a></li>
              
             <li><a href="<?php echo e(url('/usuariopdfView')); ?>"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="<?php echo e(url('/vinculosView')); ?>"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
             <!--<li><a href="<?php echo e(url('/entrevistas')); ?>"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>-->
             <li><a href="<?php echo e(url('/mapasView')); ?>"> <i class="icon-list"></i>MIS MAPAS INCIDENCIA DELICTIVA Y RED VECINAL</a></li>
+            <li><a href="<?php echo e(url('/agenda')); ?>"> <i class="icon-list"></i>MI AGENDA</a></li>
+            <li><a href="<?php echo e(url('/getlistadoagenda')); ?>"> <i class="icon-list"></i>VER MI AGENDA SEMANAL</a></li>
 
               
               
@@ -139,6 +141,7 @@ if (isset(\Auth::user()->permisos)) {
                 
                 <li><a href="<?php echo e(url('/excel_cuestionario_seguridad')); ?>"> <i class="icon-list"></i>Reporte de Visitas</a></li>
                 <li><a href="<?php echo e(url('/excel_cuestionario_preguntas')); ?>"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
+                <li><a href="<?php echo e(url('/excel_cuestionario_agenda')); ?>"> <i class="icon-list"></i>Reporte de Agenda RJG</a></li>
                 <li><a href="<?php echo e(url('/excel_cuestionario_entrevistas')); ?>"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
               </ul>
             </li>
