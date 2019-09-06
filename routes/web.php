@@ -149,3 +149,11 @@ Route::get('/vinculosView', 'HomeController@misvinculos');
 //Route::get('/get_mapa', 'HomeController@get_mapa_file');
 Route::get('/mapasView', 'HomeController@mismapas');
 //Route::post('/guardar_mapa', 'HomeController@guardarmapa');
+
+//Agenda
+Route::get('/agenda', 'cuestionariosController@agenda');
+Route::get('/preguntas_region', 'cuestionariosController@region');
+Route::post('/guardar_cuestionario_Agenda', 'cuestionariosController@save_cuestionario_agenda');
+Route::get('/excel_cuestionario_agenda', 'cuestionariosController@excel_cuestionarioagenda');
+Route::get('/getlistadoagenda', 'cuestionariosController@view_listado_agendas');
+Route::get('/getexcel_agenda', 'cuestionariosController@excel_agenda');

@@ -34,10 +34,10 @@ table, th, td {
       <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>RED DE CONTACTO CIUDADANO CDMX</h4>
+      <h4>ACTIVIDADES SEMANALES</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/getlistadopreguntas') }}">
+      <form class="form-horizontal" method="POST" action="{{ url('/getlistadoagenda') }}">
 
       {{ csrf_field() }}
 
@@ -57,7 +57,7 @@ table, th, td {
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>LISTADO DE RED PARA CONTACTO CIUDADANO</h4>
+              <h4>LISTADO DE MIS ACTIVIDADES SEMANALES</h4>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -71,26 +71,14 @@ table, th, td {
                      <th>Coordinación Territorial/Sector:</th>
                      <th>Cuadrante:</th>
                      <th>Id</th>
-                     <th>Nombre de RJG:</th>
-                     <th>Fecha de alta:</th>
-                     <th>Hora de inicio de entrevista:</th>
-                     <th>Hora de término de entrevista:</th>
-                     <th>Calle:</th>
-                     <th>Número:</th>
-                     <th>Colonia:</th>
-                     <th>¿Alguna vez ha solicitado el servicio de la policía?:</th>
-                     <th>¿Acudio el policía?:</th>
-                     <th>¿Conoce a su jefe de cuadrante?:</th>
-                     <th>¿Conoce la APP Mi Policía?:</th>
-                     <th>¿Al llamar al jefe de cuadrante en tiempo real, respondió?:</th>
-                     <th>¿Acudió jefe de cuadrante?:</th>
-                     <th>¿En cuánto tiempo acudió?:</th>
-                     <th>Nombre del vecino entrevistado:</th>
-                     <th>Télefono del vecino entrevistado:</th>
-                     <th>¿El vecino acepto ser parte de la red vecinal?:</th>
+                     <th>Fecha de Mi Actividad o Evento:</th>
+                     <th>Hora de inicio de la Actividad o Evento:</th>
+                     <th>Hora de término de la Actividad o Evento:</th>
+                     <th>Duración Estimada</th>
+                     <th>Actividad o Evento realizado</th>
                      
-                                        
-                        
+                     
+                             
                     </tr>
                   </thead>
                   <tbody>
@@ -104,29 +92,13 @@ table, th, td {
                      <td>{{$consulta->ct2}} {{$consulta->sector}}</td>
                      <td>{{$consulta->cuadrante}}</td>
                      <td>{{$consulta->id}}</td>
-                     <td>{{$consulta->nombre_rjg}}</td>
                      <td>{{$consulta->fecha}}</td>
                      <td>{{$consulta->hora_i}}</td>
                      <td>{{$consulta->hora_f}}</td>
-                     <td>{{$consulta->calle}}</td>
-                     <td>{{$consulta->numero}}</td>
-                     <td>{{$consulta->colonia}}</td>
-                     <td>{{$consulta->servicio_policia}}</td>
-                     <td>{{$consulta->acudio}}</td>
-                     <td>{{$consulta->conoce_jc}}</td>
-                     <td>{{$consulta->conoce_app}}</td>
-                     <td>{{$consulta->llamarjefe_respondio}}</td>
-                     <td>{{$consulta->acudio_jefe}}</td>
-                     <td>{{$consulta->tiempo_acudio}}</td>
-                     <td>{{$consulta->nombre}}</td>
-                     <td>{{$consulta->telefono}}</td>
-                     <td>{{$consulta->firma}}</td> 
-
-          
-       
-
+                     <td>{{$consulta->duracion}}</td>
+                     <td>{{$consulta->nombre_activad}}</td>
+                     
                       
-
                     </tr>
 
                     @endforeach

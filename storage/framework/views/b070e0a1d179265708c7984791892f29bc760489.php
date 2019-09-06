@@ -32,7 +32,7 @@ table, th, td {
       <h4>CGGSCYPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>MIS VISITAS DOMICILIARIAS CDMX</h4>
+      <h4>RED DE CONTACTO CIUDADANO CDMX</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/getlistadopreguntas')); ?>">
@@ -87,7 +87,7 @@ table, th, td {
                      <th>¿En cuánto tiempo acudió?:</th>
                      <th>Nombre del vecino entrevistado:</th>
                      <th>Télefono del vecino entrevistado:</th>
-                     <th>>¿El vecino acepto ser parte de la red vecinal?:</th>
+                     <th>¿El vecino acepto ser parte de la red vecinal?:</th>
                      
                                         
                         
