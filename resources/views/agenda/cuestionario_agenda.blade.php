@@ -107,9 +107,9 @@
 
          <div class="line"></div>
          <div class="form-group row">
-          <label class="col-sm-3 form-control-label">2.- Actividad o Evento realizado:</label>
+          <label class="col-sm-3 form-control-label">2.- Actividad o Evento que se realizará:</label>
           <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="nombre_activad" name="nombre_activad"  placeholder="Nombre de la Actividad o Evento realizado" required></input>
+            <input type="text" class="form-control" id="nombre_activad" name="nombre_activad"  placeholder="Nombre de la Actividad o Evento " required></input>
             
                @if ($errors->has('nombre_activad')) <p  style="color: red">{{ $errors->first('nombre_activad') }}</p> @endif 
                   </div>
@@ -122,7 +122,7 @@
         <div class="form-group row">
           <label class="col-sm-3 form-control-label">3.- Duración Estimada:</label>
           <div class="col-sm-9 mb-3">
-            <input type="text" class="form-control" id="duracion" name="duracion" placeholder="duracion de la actividad"required></input>
+            <input type="text" class="form-control" id="duracion" name="duracion" placeholder="duracion de la actividad" required></input>
             
                @if ($errors->has('duracion')) <p  style="color: red">{{ $errors->first('duracion') }}</p> @endif 
                   </div>
