@@ -199,33 +199,7 @@
 
      
         
-        <!-- <div class="form-group row">
-          <label class="col-sm-3 form-control-label">14 - Si su respuesta en la pregunta 3 fue un "delito", responde lo siguiente, ¿Realizó su denuncia?</label>
-          <div class="col-sm-9 mb-3">
-            <select name="realizo_denuncia" id="realizo_denuncia" class="form-control">
-              <option value="">Selecciona...</option>
-              <option value="si">SI</option>
-              <option value="no">NO</option>
-            </select>
-            
-             @if ($errors->has('realizo_denuncia')) <p  style="color: red">{{ $errors->first('realizo_denuncia') }}</p> @endif 
-          </div>
         
-        </div>
-        
-        <div  style="display:none;" id="show_delito">
-        
-        <div class="form-group row">
-          <label class="col-sm-3 form-control-label" id="texto_delito"></label>
-          <div class="col-sm-9 mb-3">
-            <textarea class="form-control" id="descripcion_denuncia" name="descripcion_denuncia"></textarea>
-            
-             @if ($errors->has('descripcion_denuncia')) <p  style="color: red">{{ $errors->first('descripcion_denuncia') }}</p> @endif 
-          </div>
-        
-        </div>
-        
-        </div>-->
        
 
 

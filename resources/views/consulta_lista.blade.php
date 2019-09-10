@@ -110,7 +110,7 @@ table, th, td {
                        
 
                       
-                        @if($asistencia->archivo_imagen==null || $asistencia->archivo_imagen=='')
+                        @if($consulta->archivo_imagen==null || $consulta->archivo_imagen=='')
 
                          SIN IMAGEN
 
@@ -121,7 +121,7 @@ table, th, td {
 
                           <br>-->
 
-                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen">
+                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$consulta->archivo_imagen}}" data-target="#modal_imagen">
                            VER IMAGEN
                           </button>
                         @endif
