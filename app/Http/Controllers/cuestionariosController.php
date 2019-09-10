@@ -296,7 +296,7 @@ public function regioness(){
                         ->get();
 
         
-        return view('preguntas.cuestionario_preguntas',compact('mis_cuadrantes'));
+        return view('lista.cuestionario_lista',compact('mis_cuadrantes'));
        
 
        
