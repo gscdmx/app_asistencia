@@ -284,6 +284,103 @@ public function regioness(){
 }
 
 
+//////////////////////////////////////////////////////LISTA//////////////////////////////////////////////////////////////////
+
+    public function lista(){
+
+
+       $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
+                        ->join('users','users.name','=','cat_cuadrantes.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('preguntas.cuestionario_preguntas',compact('mis_cuadrantes'));
+       
+
+       
+    }
+    
+  
+public function regionest(){
+
+       $mis_regiones= \App\catDelegaciones::select('cat_delegaciones.delegacion','cat_delegaciones.region')
+                        ->join('cat_coord_territorials','cat_coord_territorials.id_alcaldia','=','cat_delegaciones.ct')
+                        ->join('users','users.name','=','cat_delegaciones.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('lista.cuestionario_lista',compact('mis_regiones'));
+       
+
+       
+    }
+
+    public function save_cuestionario_lista(Request $request){
+        
+        $lista =$request->except('_token');
+        
+        $lista['id_user']=\Auth::user()->id;
+        
+        \App\tbLista::create($lista);
+        
+          $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+          return Redirect::to('/lista')->with('mensaje', $mensaje);
+        
+    }
+    
+    public function excel_cuestionariolista(){
+        
+        
+        return Excel::download(new  ListaExport, 'PASE DE LISTA SSC.xlsx');
+      
+        
+    }
+    
+
+
+    
+
+
+ public function view_listado_lista()
+    {   
+       /* $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_delegaciones.delegacion")
+        //,"cat_cuadrantes.ct","cat_cuadrantes.cuadrante","cat_delegaciones.delegacion","cat_delegaciones.region"
+                    ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                   // ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
+                    ->leftjoin('cat_delegaciones','cat_delegaciones.delegacion','=','users.name')
+                   ->where('tb_preguntas.id_user',\Auth::user()->id)
+                   ->get();*/
+
+         $consultas = \App\tbLista::select("tb_listas.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
+                    ->leftjoin('users','users.id','=','tb_listas.id_user',"cat_coord_territorials.ct2")
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_listas.id_cuadrante')
+                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                    ->where('tb_listas.id_user',\Auth::user()->id)
+                    ->get();
+
+         // dd($consultas );
+      // return json_encode($consultas); 
+      return view('consulta_lista',compact('consultas'));
+    }
+
+
+      //public function excel_pregunta()
+   // {   
+
+    //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
+   // }
+
+
+
+
+
+
+
 
 
 

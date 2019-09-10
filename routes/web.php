@@ -157,3 +157,16 @@ Route::post('/guardar_cuestionario_Agenda', 'cuestionariosController@save_cuesti
 Route::get('/excel_cuestionario_agenda', 'cuestionariosController@excel_cuestionarioagenda');
 Route::get('/getlistadoagenda', 'cuestionariosController@view_listado_agendas');
 Route::get('/getexcel_agenda', 'cuestionariosController@excel_agenda');
+
+
+
+//LISTAS DEL PASE DE LISTA SCC
+Route::get('/lista', 'cuestionariosController@lista');
+Route::get('/preguntas_region', 'cuestionariosController@region');
+Route::post('/guardar_cuestionario_Lista', 'cuestionariosController@save_cuestionario_lista');
+Route::get('/excel_cuestionario_lista', 'cuestionariosController@excel_cuestionariolista');
+Route::get('/getlistadolista', 'cuestionariosController@view_listado_lista');
+Route::get('/getexcel_lista', 'cuestionariosController@excel_lista');
+
+
+
