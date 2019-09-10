@@ -78,7 +78,7 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="{{url('/agenda')}}"> <i class="icon-list"></i>MI AGENDA</a></li>
             <li><a href="{{url('/getlistadoagenda')}}"> <i class="icon-list"></i>VER MI AGENDA SEMANAL</a></li>
             <li><a href="{{url('/lista')}}"> <i class="icon-list"></i>MI PASE DE LISTA SSC</a></li>
-             <li><a href="{{url('/getlistadolista')}}"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>
+             <!--<li><a href="{{url('/getlistadolista')}}"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>-->
 
               
               
