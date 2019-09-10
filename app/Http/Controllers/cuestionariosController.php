@@ -15,6 +15,7 @@ use App\Exports\CuestionarioExport;
 use App\Exports\PreguntasExport;
 use App\Exports\EntrevistasMpExport;
 use App\Exports\AgendaExport;
+use App\Exports\ListaExport;
 
 class cuestionariosController extends Controller
 {
