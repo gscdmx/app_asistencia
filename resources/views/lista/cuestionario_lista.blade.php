@@ -57,7 +57,21 @@
         </div>
       </div>-->
 
-
+       <div class="line"></div>
+        <div class="form-group row">
+          <label class="col-sm-3 form-control-label">1.- Turno 1, 2 o 3:</label>
+          <div class="col-sm-9 mb-3">
+            <select name="turno" id="turno" class="form-control" required>
+              <option value="">Selecciona...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            
+             @if ($errors->has('turno')) <p  style="color: red">{{ $errors->first('turno') }}</p> @endif 
+          </div>
+        
+        </div>
 
 
 
@@ -109,6 +123,8 @@
         </div>
        
          
+
+         <div class="line"></div>
         <div class="form-group row">
         <label class="col-sm-3 form-control-label">4.- Cuadrante: </label>
         <div class="col-sm-9 mb-3">
@@ -139,7 +155,6 @@
               <option value="">Selecciona...</option>
               <option value="si">SI</option>
               <option value="no">NO</option>
-              <option value="no aplica">NO APLICA</option>
             </select>
             <!--<textarea class="form-control" id="acudio" name="acudio"></textarea>-->
             
@@ -149,25 +164,39 @@
         </div>
 
 
+         <div class="line"></div>
 
-        <div class="line"></div>
-        <div class="form-group row">
-          <label class="col-sm-3 form-control-label">6.- Total de Jefes de Cuadrantes en la Formación:</label>
-          <div class="col-sm-9 mb-3">
-            <select name="jefe_cuadrante" id="jefe_cuadrante" class="form-control" required>
-              <option value="">Selecciona...</option>
-              <option value="si">SI</option>
-              <option value="no">NO</option>
-            </select>
-            
-             @if ($errors->has('jefe_cuadrante')) <p  style="color: red">{{ $errors->first('jefe_cuadrante') }}</p> @endif 
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">6.- Total de Jefes de Cuadrantes en la Formación:</label>
+          <div class="col-sm-10 mb-3">
+ 
+          <input type="number" name="jefe_cuadrante" class="form-group row" />
+
           </div>
         
         </div>
+        
+
+
+
+
+
 
 
       
-       
+       <div class="line"></div>
+
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">Captura o Busca en Galeria la foto del Pase de Lista-SSC:</label>
+          <div class="col-sm-10 mb-3">
+   
+       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
+      
+          </div>
+        
+        </div>
+     
+
      
         
         <!-- <div class="form-group row">
