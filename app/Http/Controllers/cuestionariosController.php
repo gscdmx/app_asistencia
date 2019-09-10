@@ -17,6 +17,10 @@ use App\Exports\EntrevistasMpExport;
 use App\Exports\AgendaExport;
 use App\Exports\ListaExport;
 
+use Image;
+
+use Input;
+
 class cuestionariosController extends Controller
 {
     /**
@@ -323,6 +327,9 @@ public function regionest(){
         $lista =$request->except('_token');
         
         $lista['id_user']=\Auth::user()->id;
+
+
+        $asistencia =
         
         \App\tbLista::create($lista);
         
@@ -378,10 +385,61 @@ public function regionest(){
 
 
 
+public function store(Request $request)
+{
 
 
 
 
+  // ruta de las imagenes guardadas
+  //$ruta = public_path().'/paselista/';
+
+  // recogida del form
+  //$imagenOriginal = $request->file('avatar');
+
+  // crear instancia de imagen
+  //$imagen = Image::make($imagenOriginal);
+
+  // generar un nombre aleatorio para la imagen
+  //$temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
+
+  //$imagen->resize(300,300);
+
+  // guardar imagen
+  // save( [ruta], [calidad])
+  //$imagen->save($ruta . $temp_name, 100);
+
+
+  //$personaje = new Personaje;
+  //$personaje->filename = $temp_name;
+  //$personaje->save();
+
+  ///return redirect('personajes/create');
+
+
+
+  $file = Input::file('archivo');
+  $image = \Image::make(\Input::file('archivo'));
+  $path = public_path().'/paselista/';
+  $image->save(path.$file->getClientOriginalName());
+  $image->resize(200,200);
+  $image->save($path.'pase_lista_'.$file->getClientOriginalName());
+
+}
+
+
+//protected function random_string()
+//{
+  //  $key = '';
+    //$keys = array_merge( range('a','z'), range(0,9) );
+
+   //for($i=0; $i<10; $i++)
+    //{
+      //  $key .= $keys[array_rand($keys)];
+   // }
+
+    //return $key;
+//}
 
 
 
