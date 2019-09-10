@@ -145,6 +145,7 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
                 <li><a href="{{url('/excel_cuestionario_agenda')}}"> <i class="icon-list"></i>Reporte de Agenda RJG</a></li>
                 <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
+                <li><a href="{{url('/excel_cuestionario_lista')}}"> <i class="icon-list"></i>Reporte Pase de Lista-SSC</a></li>
               </ul>
             </li>
              <?php endif?>
