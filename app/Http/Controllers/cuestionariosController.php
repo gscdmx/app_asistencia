@@ -35,6 +35,30 @@ class cuestionariosController extends Controller
         $this->middleware('auth');
     }
     
+
+
+
+
+     public function index()
+    {   
+        
+        
+        $timezone = new \DateTimeZone('America/Mexico_City');
+        $date = new \DateTime();
+        $date->setTimeZone($timezone); 
+        $fecha_actual=$date->format('Y-m-d');
+        
+         
+            $existe_registro= DB::table('tb_listas')
+             ->where("tb_listas.user_registro",\Auth::user()->id)
+                   ->where("tb_listas.fecha",$fecha_actual)
+                   ->first();
+      
+
+  
+      
+               
+    }
     
     public function seguridad(){
 
@@ -323,6 +347,32 @@ public function regionest(){
 
        
     }
+
+
+
+     public function fecha_real_captura()
+    {
+        
+        
+        $timezone = new \DateTimeZone('America/Mexico_City');
+        $date = new \DateTime();
+        $date->setTimeZone($timezone); 
+        $fecha_actual=$date->format('Y-m-d');
+        
+       
+        
+        
+                 $datos = \App\tbLista::select(
+                 DB::raw('DATE_ADD(tb_listas.created_at, INTERVAL -6 HOUR) as fecha_real')
+                 
+                 ,"tb_listas.created_at as fecha_servidor")
+                 ->whereBetween('tb_listas.fecha', [$fecha_actual, $fecha_actual])
+                    ->get();
+                 
+        
+        return json_encode($datos);
+    }
+    
 
     public function save_cuestionario_lista(Request $request){
         
