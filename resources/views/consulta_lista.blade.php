@@ -162,7 +162,7 @@ table, th, td {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Foto: Pase de Lista SSCPRUEBASSSSSSSSSSSSSS</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Pase de Lista SSC-CDMX</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -208,7 +208,7 @@ table, th, td {
     
      var imagen_nombre = $(this).attr('data-imagen');
 
-     var ruta ="{{url('paselista')}}"+"/"+imagen_nombre
+     var ruta ="{{url('uploads')}}"+"/"+imagen_nombre
 
      $("#imagen_dinamica").attr('src',ruta);
 
