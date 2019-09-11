@@ -78,7 +78,7 @@ table, th, td {
                      <th>Número de patrullas en la formación:</th>
                      <th>¿Estuvo presente el Jefe de sector en la formación?:</th>
                      <th>Total de Jefes de Cuadrantes en la formación:</th>
-                     <th>Fotografía:</th>
+                     <th>Imagen:</th>
                      
                      
                                         
@@ -117,9 +117,7 @@ table, th, td {
 
                         @else
 
-                         <!-- <a href="{{url('/uploads/imagenes_alcaldias').'/'.$asistencia->archivo_imagen}}" class="btn btn-primary" role="button">VER IMAGEN</a>
-
-                          <br>-->
+                      
 
                           <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$consulta->archivo_imagen}}" data-target="#modal_imagen">
                            VER IMAGEN
@@ -164,7 +162,7 @@ table, th, td {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Foto: Pase de Lista SSC</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Pase de Lista SSCPRUEBASSSSSSSSSSSSSS</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
