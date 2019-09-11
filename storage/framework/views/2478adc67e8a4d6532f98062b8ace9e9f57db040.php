@@ -142,10 +142,11 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="<?php echo e(url('/alcaldiasGrafica')); ?>"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
                 <li><a href="<?php echo e(url('/excel_cuestionario_seguridad')); ?>"> <i class="icon-list"></i>Reporte de Visitas</a></li>
+                <li><a href="<?php echo e(url('/excel_cuestionario_lista')); ?>"> <i class="icon-list"></i>Reporte Pase de Lista-SSC</a></li>
                 <li><a href="<?php echo e(url('/excel_cuestionario_preguntas')); ?>"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
                 <li><a href="<?php echo e(url('/excel_cuestionario_agenda')); ?>"> <i class="icon-list"></i>Reporte de Agenda RJG</a></li>
                 <li><a href="<?php echo e(url('/excel_cuestionario_entrevistas')); ?>"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
-                <li><a href="<?php echo e(url('/excel_cuestionario_lista')); ?>"> <i class="icon-list"></i>Reporte Pase de Lista-SSC</a></li>
+                
               </ul>
             </li>
              <?php endif?>
