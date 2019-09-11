@@ -326,19 +326,146 @@ public function regionest(){
 
     public function save_cuestionario_lista(Request $request){
         
-        $lista =$request->except('_token');
+        //$lista =$request->except('_token');
         
-        $lista['id_user']=\Auth::user()->id;
+        //$lista['id_user']=\Auth::user()->id;
 
 
-        $asistencia =
+        //$asistencia =
         
-        \App\tbLista::create($lista);
+        //\App\tbLista::create($lista);
         
-          $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+        /* $validator = Validator::make($request->all(), [
+                 'archivo' => 'required'
+             ]);
+
+        if ($validator->fails()) {
+
+           $messages = $validator->messages();
+        
+           return Redirect::to('/lista')->withInput()->withErrors($validator);
+
+         }else if ($validator->passes()){*/
+            
+       
+
+         if($request['archivo']!=null){
+        //$extension_archivo = $request['archivo']->getClientOriginalExtension(); // getting image extension
+        $jpg_nombre = rand(11111,99999).'.jpg'; // renameing image
+        $destinationPath = 'uploads/';//
+        }else{
+        $jpg_nombre=null;
+
+        }
+        /*fin existe el documento*/
+             
+               DB::table('tb_listas')->insert([
+
+                 'id_user' =>\Auth::user()->id,
+                 'id_cuadrante' => $request['id_cuadrante'],
+                 'turno' => $request['turno'], 
+                 'fecha' => $request['fecha'],
+                 'hora_i' => $request['hora_i'],
+                 'num_elementos' => $request['num_elementos'],
+                 'num_patrullas' => $request['num_patrullas'],         
+                 'jefe_sector' => $request['jefe_sector'],
+                 'jefe_cuadrante' => $request['jefe_cuadrante'],                                                                          
+                 'archivo_imagen' => $jpg_nombre
+               ]);
+
+
+
+        
+        //GUARDAR ARCHIVO SI EXISTE  
+        $destinationPath = 'uploads/';     
+        if($request['archivo']!=null){
+            $request['archivo']->move($destinationPath,$jpg_nombre);
+        }
+               
+               
+                  $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
           return Redirect::to('/lista')->with('mensaje', $mensaje);
         
-    }
+         
+             
+         
+}
+  
+public function guardar_pdf_admin(Request $request){
+       
+    //validaciones
+     $validator = Validator::make($request->all(), [
+                 'archivo' => 'required'
+             ]);
+
+        if ($validator->fails()) {
+
+           $messages = $validator->messages();
+        
+           return Redirect::to('/adminpdfView')->withInput()->withErrors($validator);
+
+         }else if ($validator->passes()){
+            
+         
+            
+         /*si existe el documento*/
+        if($request['archivo']!=null){
+        //$extension_archivo = $request['archivo']->getClientOriginalExtension(); // getting image extension
+        $pdf_nombre = rand(11111,99999).'.pdf'; // renameing image
+        $destinationPath = 'uploads/';//
+        }else{
+        $pdf_nombre=null;
+
+        }
+        /*fin existe el documento*/
+             
+               DB::table('tb_pdf')->insert([
+                 'id_user' => $request['user'],
+                 'id_alc' => $request['alcaldia'],
+                 'descripcion' => $request['descripcion'],
+                 'archivo_pdf' => $pdf_nombre
+               ]);
+        
+        //GUARDAR ARCHIVO SI EXISTE       
+        if($request['archivo']!=null){
+            $request['archivo']->move($destinationPath,$pdf_nombre);
+        }
+               
+               
+                  $mensaje = array('mensaje'=>'Envio de Archivo Éxitoso!', 'color'=> 'success');
+                 return Redirect::to('/adminpdfView/')->with('mensaje', $mensaje);
+         
+             
+         }
+         
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     public function excel_cuestionariolista(){
         
@@ -387,11 +514,11 @@ public function regionest(){
 
 
 
-public function store(Request $request)
-{
+//public function store(Request $request)
+//{
 
 
-
+///////////1
 
   // ruta de las imagenes guardadas
   //$ruta = public_path().'/paselista/';
@@ -418,16 +545,23 @@ public function store(Request $request)
 
   ///return redirect('personajes/create');
 
+/////////////////////2
 
-
-  $file = Input::file('archivo');
+ /* $file = Input::file('archivo');
   $image = \Image::make(\Input::file('archivo'));
   $path = public_path().'/paselista/';
   $image->save(path.$file->getClientOriginalName());
   $image->resize(200,200);
-  $image->save($path.'pase_lista_'.$file->getClientOriginalName());
+  $image->save($path.'pase_lista_'.$file->getClientOriginalName());*/
 
-}
+
+
+
+  /////////////////////3
+
+  //$img = $request->file('urlImg')
+
+//}
 
 
 //protected function random_string()
@@ -442,6 +576,9 @@ public function store(Request $request)
 
     //return $key;
 //}
+
+
+
 
 
 

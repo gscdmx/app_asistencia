@@ -26,7 +26,7 @@
       <h4>PASE DE LISTA DE SSC</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="<?php echo e(url('/guardar_cuestionario_Lista')); ?>">
+      <form class="form-horizontal" method="POST" enctype="multipart/form-data"  action="<?php echo e(url('/guardar_cuestionario_Lista')); ?>">
 
 
 
@@ -142,8 +142,7 @@
       </div> 
 
           
-
-       
+    
 
 
         <div class="line"></div>
@@ -175,35 +174,19 @@
           </div>
         
         </div>
-        
-
-
-
-
-
-
-
-      
+              
        <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Captura o Busca en Galeria la foto del Pase de Lista-SSC:</label>
+          <label class="col-sm-2 form-control-label">Captura la foto o Busca en Galería el Pase de Lista-SSC:</label>
           <div class="col-sm-10 mb-3">
    
-       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
-      
+       <input type="file" id="archivo" name="archivo" accept="image/x-png,image/gif,image/jpeg">
+           <?php if($errors->has('archivo')): ?> <p  style="color: red"><?php echo e($errors->first('archivo')); ?></p> <?php endif; ?>
           </div>
         
         </div>
-     
-
-     
-        
-        
-       
-
-
-         
+                         
 
         <div class="line"></div>
         <div class="form-group row">
