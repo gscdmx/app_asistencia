@@ -44,13 +44,7 @@ return [
     'disks' => [
 
 
-        //'imgLista' => [
-          //  'driver' => 'local',
-            //'root' => public_path('imgLista'),
-        //],
-
-
-
+       
 
 
         'local' => [

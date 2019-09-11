@@ -21,6 +21,8 @@ use Image;
 
 use Input;
 
+use Storage;
+
 class cuestionariosController extends Controller
 {
     /**
