@@ -76,7 +76,7 @@ table, th, td {
                      <th>Hora de término de la Actividad o Evento:</th>
                      <th>Duración Estimada</th>
                      <th>Actividad o Evento realizado</th>
-                     
+                     <th>Imagen</th>
                      
                              
                     </tr>
@@ -98,6 +98,28 @@ table, th, td {
                      <td>{{$consulta->duracion}}</td>
                      <td>{{$consulta->nombre_activad}}</td>
                      
+
+                      <td>
+
+                       
+
+                      
+                        @if($consulta->archivo_imagen==null || $consulta->archivo_imagen=='')
+
+                         SIN IMAGEN
+
+
+                        @else
+
+                         <!-- <a href="{{url('/uploads/imagenes_alcaldias').'/'.$consulta->archivo_imagen}}" class="btn btn-primary" role="button">VER IMAGEN</a>
+
+                          <br>-->
+
+                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$consulta->archivo_imagen}}" data-target="#modal_imagen">
+                           VER IMAGEN
+                          </button>
+                        @endif
+                      </td>         
                       
                     </tr>
 
@@ -125,7 +147,28 @@ table, th, td {
           </div>
   </section>
 
-
+<div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Pase de Lista SSC</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+      <div style="width: 500px; height: 400px;">
+      <img src="" id="imagen_dinamica"  style="width: 480px; height: 380px;"  >
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -145,7 +188,24 @@ table, th, td {
 
 @section('customjs')
 
+<script    type="text/javascript">
+  
 
+  $( ".obtener_imagen" ).click(function() {
+
+    
+     var imagen_nombre = $(this).attr('data-imagen');
+
+     var ruta ="{{url('uploads')}}"+"/"+imagen_nombre
+
+     $("#imagen_dinamica").attr('src',ruta);
+
+
+  //alert( ruta);
+});
+
+
+</script>
 
 
 @endsection
