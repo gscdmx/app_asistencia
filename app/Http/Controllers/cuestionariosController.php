@@ -409,7 +409,7 @@ public function regionest(){
         }
         /*fin existe el documento*/
              
-               DB::table('tb_listas')->insert([
+               $inserto = \App\tbLista::create([ 
 
                  'id_user' =>\Auth::user()->id,
                  'id_cuadrante' => $request['id_cuadrante'],
@@ -441,6 +441,43 @@ public function regionest(){
          
 }
   
+/*$inserto = \App\tbAsistencia::create([  
+                        'id_ct' => $request['ct'],
+                        'se_realizo' => $request['se_realizo_mesa'], 
+                        'no_motivo' => $request['motivo'],
+                        
+                        'fecha' => $request['fecha'],
+                        'hora_i' => $request['hora1'],
+                        'hora_f' => $request['hora2'],
+                       
+                        'jg' => 'Reunión con JG',
+                        'mp' => 'Reunión con JG',
+                        'jsp' => 'Reunión con JG',
+                        'jspi' => 'Reunión con JG',
+                        'jc' => 'Reunión con JG',
+                        'ml' => 'Reunión con JG',
+                        'otro' => 'Reunión con JG',
+                        'representante_alcaldia'=>'Reunión con JG',
+                        'ins' => 'Reunión con JG',
+                        'reunionjg' => 'Reunión con JG',
+                        'user_registro'=> \Auth::user()->id
+                     ]); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public function guardar_pdf_admin(Request $request){
        
     //validaciones
