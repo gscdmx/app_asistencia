@@ -69,13 +69,14 @@ table, th, td {
                      <th>Alcaldia:</th>
                      <th>Region:</th>                  
                      <th>Coordinación Territorial/Sector:</th>
-                     <th>Cuadrante:</th>
-                     <th>Id</th>
+                     <th>Id:</th>
                      <th>Turno:</th>
                      <th>Fecha del Hecho:</th>
-                     <th>Duración de la Formación:</th>
-                     <th>Número de elementos en formación:</th>
-                     <th>Número de patrullas en la formación:</th>
+                     <th>Hora de Inicio de la Formación:</th>
+                     <th>Hora de Término de la Formación:</th>
+                     <th>Dirección de la Formación:</th>
+                     <th>Número de Elementos en formación:</th>
+                     <th>Número de Patrullas en la formación:</th>
                      <th>¿Estuvo presente el Jefe de sector en la formación?:</th>
                      <th>Total de Jefes de Cuadrantes en la formación:</th>
                      <th>Imagen:</th>
@@ -94,11 +95,12 @@ table, th, td {
                      <td>{{$consulta->delegacion}}</td>
                      <td>{{$consulta->region}}</td>                 
                      <td>{{$consulta->ct2}} {{$consulta->sector}}</td>
-                     <td>{{$consulta->cuadrante}}</td>
                      <td>{{$consulta->id}}</td>
                      <td>{{$consulta->turno}}</td>
                      <td>{{$consulta->fecha}}</td>
                      <td>{{$consulta->hora_i}}</td>
+                     <td>{{$consulta->hora_f}}</td>
+                     <td>{{$consulta->direccion}}</td>
                      <td>{{$consulta->num_elementos}}</td>
                      <td>{{$consulta->num_patrullas}}</td>
                      <td>{{$consulta->jefe_sector}}</td>
