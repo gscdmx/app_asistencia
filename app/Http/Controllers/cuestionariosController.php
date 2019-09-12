@@ -419,7 +419,9 @@ public function regionest(){
                  'num_elementos' => $request['num_elementos'],
                  'num_patrullas' => $request['num_patrullas'],         
                  'jefe_sector' => $request['jefe_sector'],
-                 'jefe_cuadrante' => $request['jefe_cuadrante'],                                                                          
+                 'jefe_cuadrante' => $request['jefe_cuadrante'],                                                                                  
+                 'hora_f' => $request['hora_f'],
+                 'direccion' => $request['direccion'],
                  'archivo_imagen' => $jpg_nombre
                ]);
 

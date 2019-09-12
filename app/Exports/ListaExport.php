@@ -31,11 +31,11 @@ class ListaExport implements WithDrawings, FromCollection, WithHeadings
     public function collection()
     {
         
-     return DB::table('tb_listas')->select("cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.sector","cat_coord_territorials.ct2","cat_cuadrantes.cuadrante","tb_listas.id","tb_listas.turno","tb_listas.fecha","tb_listas.hora_i","tb_listas.num_elementos","tb_listas.num_patrullas","tb_listas.jefe_sector","tb_listas.jefe_cuadrante","tb_listas.archivo_imagen","tb_listas.created_at","tb_listas.updated_at")
+     return DB::table('tb_listas')->select("cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.sector","cat_coord_territorials.ct2","tb_listas.id","tb_listas.turno","tb_listas.fecha","tb_listas.hora_i","tb_listas.hora_f","tb_listas.direccion","tb_listas.num_elementos","tb_listas.num_patrullas","tb_listas.jefe_sector","tb_listas.jefe_cuadrante","tb_listas.archivo_imagen","tb_listas.created_at","tb_listas.updated_at")
                     ->leftjoin('users','users.id','=','tb_listas.id_user') 
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
-                    ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_listas.id_cuadrante')
+                    //->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_listas.id_cuadrante')
                     ->get();
 
     }
@@ -50,11 +50,12 @@ class ListaExport implements WithDrawings, FromCollection, WithHeadings
             'REGIÓN',	
             'SECTOR',//
             'COORDINACIÓN TERRITORIAL',//
-            'CUADRANTE',
             'ID',  //  
             'TURNO',	
             'FECHA DEL HECHO',	
-            'DURACIÓN DE LA FORMACIÓN',	                
+            'HORA DE INICIO DE LA FORMACIÓN',	
+            'HORA DE TÉRMINO DE LA FORMACIÓN',
+            'DIRECCIÓN',                
             'NÚMERO DE ELEMENTOS EN FORMACIÓN',	
             'NÚMERO DE PATRULLAS EN FORMACIÓN',	
             '¿ESTUVO PRESENTE EL JEFE DE SECTOR EN LA FORMACIÓN?',	
