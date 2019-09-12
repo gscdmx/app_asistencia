@@ -19,7 +19,9 @@ class tbLista extends Model
             'num_patrullas',///
             'jefe_sector',  ///            
             'jefe_cuadrante', //
-            'archivo_imagen'
+            'archivo_imagen',
+            'hora_f',
+            'direccion'
                                          
             ];
 

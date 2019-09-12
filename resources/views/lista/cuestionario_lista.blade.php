@@ -84,21 +84,39 @@
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
-        <label class="col-sm-2 form-control-label">1.- Duración de la Formación:</label>
+        <label class="col-sm-2 form-control-label">Hora de Inicio de la Formación:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
            @if ($errors->has('hora_i')) <p  style="color: red">{{ $errors->first('hora_i') }}</p> @endif
-        </div>      
+        </div>     
 
+         <label class="col-sm-2 form-control-label">Hora de Término de la Formación:</label>
+        <div class="col-sm-2">
+          <!--<input type="text" class="form-control">-->
+          <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
+           @if ($errors->has('hora_f')) <p  style="color: red">{{ $errors->first('hora_f') }}</p> @endif
+        </div>
 
       </div>
+           
 
+
+            <div class="line"></div>
+             <div class="form-group row">
+               <label class="col-sm-3 form-control-label">2.- Dirección:</label>
+               <div class="col-sm-9 mb-3">
+               <input type="text" class="form-control" id="direccion" name="direccion"   placeholder="Dirección Colonia, Calle"   required></input>
+            
+               @if ($errors->has('direccion')) <p  style="color: red">{{ $errors->first('direccion') }}</p> @endif 
+                  </div>
+        
+             </div>
 
          <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">2.- Número de elementos en Formación:</label>
+          <label class="col-sm-2 form-control-label">3.- Número de elementos en Formación:</label>
           <div class="col-sm-10 mb-3">
  
           <input type="number" name="num_elementos" class="form-group row" />
@@ -113,7 +131,7 @@
           <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">3.- Número de patrullas en Formación:</label>
+          <label class="col-sm-2 form-control-label">4.- Número de patrullas en Formación:</label>
           <div class="col-sm-10 mb-3">
  
           <input type="number" name="num_patrullas" class="form-group row" />
@@ -124,7 +142,7 @@
        
          
 
-         <div class="line"></div>
+        <!-- <div class="line"></div>
         <div class="form-group row">
         <label class="col-sm-3 form-control-label">4.- Cuadrante: </label>
         <div class="col-sm-9 mb-3">
@@ -139,7 +157,7 @@
            @if ($errors->has('id_cuadrante')) <p  style="color: red">{{ $errors->first('id_cuadrante') }}</p> @endif 
         </div>
       
-      </div> 
+      </div> -->
 
           
     
@@ -174,11 +192,14 @@
           </div>
         
         </div>
+
+
+
               
        <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Captura la foto o Busca en Galería el Pase de Lista-SSC:</label>
+          <label class="col-sm-2 form-control-label">Captura la foto del Pase de Lista-SSC:</label>
           <div class="col-sm-10 mb-3">
    
        <input type="file" id="archivo" name="archivo" accept="image/x-png,image/gif,image/jpeg">

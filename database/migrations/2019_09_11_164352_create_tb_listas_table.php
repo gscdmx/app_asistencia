@@ -26,6 +26,8 @@ class CreateTbListasTable extends Migration
             $table->string('jefe_sector')->nullable();
             $table->text('jefe_cuadrante')->nullable(); 
             $table->text('archivo_imagen')->nullable(); 
+            $table->time('hora_f')->nullable();
+            $table->string('direccion')->nullable(); 
             $table->timestamps();
         });
     }
