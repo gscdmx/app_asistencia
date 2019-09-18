@@ -68,7 +68,7 @@ public function headings(): array
             'SECTOR',
             'SE REALIZÓ GABINETE',
             'NO MOTIVO',
-            'FECHA',
+            'FECHA GV',
             'HORA DE INICIO',
             'HORA DE TERMINO',
             'REPRESENTANTE DE LA JEFATURA DE GOBIERNO',

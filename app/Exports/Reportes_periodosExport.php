@@ -59,7 +59,7 @@ class Reportes_periodosExport implements WithDrawings, FromCollection, WithHeadi
             'SECTOR',
             'SE REALIZÓ GABINETE',
             'NO MOTIVO',
-            'FECHA',
+            'FECHA GM',
             'HORA DE INICIO',
             'HORA DE TERMINO',
             'REPRESENTANTE DE LA JEFATURA DE GOBIERNO',
