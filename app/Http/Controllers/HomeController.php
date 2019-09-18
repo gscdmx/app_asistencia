@@ -915,7 +915,7 @@ class HomeController extends Controller
 
 
                  $mensaje = array('mensaje'=>'Registro Éxitoso!', 'color'=> 'success');
-                 return Redirect::to('/asistencia_admin/')->with('mensaje', $mensaje);
+                 return Redirect::to('/guardar_asistencia_admin')->with('mensaje', $mensaje);
          }
          
  }
