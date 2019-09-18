@@ -35,7 +35,7 @@ class Asistencias_miercolesExport implements FromCollection, WithHeadings
             'SECTOR',
             'SE REALIZÓ GABINETE',
             'NO MOTIVO',
-            'FECHA',
+            'FECHA GV',
             'HORA DE INICIO',
             'HORA DE TERMINO',
             'REPRESENTANTE DE LA JEFA DE GOBIERNO',

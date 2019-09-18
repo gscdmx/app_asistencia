@@ -40,7 +40,7 @@ class AsistenciasExport implements FromCollection, WithHeadings
             'SECTOR',
             'SE REALIZÓ GABINETE',
             'NO MOTIVO',
-            'FECHA',
+            'FECHA GM',
             'HORA DE INICIO',
             'HORA DE TERMINO',
             'REPRESENTANTE DE LA JEFA DE GOBIERNO',
