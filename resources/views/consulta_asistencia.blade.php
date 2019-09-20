@@ -176,8 +176,17 @@ table, th, td {
         
        
         "language":{
-              "url":"{{ url('/recursos/IdiomaDatatables')}}/Spanish.json"
+        "search":       "Buscar:",
+        
+        "paginate": {
+          "first":      "Primera",
+          "last":       "Última",
+          "next":       "Siguiente",
+          "previous":     "Anterior"
+        }
             }
+
+          }
 } );
 
 </script>
