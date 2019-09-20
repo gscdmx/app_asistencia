@@ -77,14 +77,11 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="{{url('/mapasView')}}"> <i class="icon-list"></i>MIS MAPAS INCIDENCIA DELICTIVA Y RED VECINAL</a></li>
             <li><a href="{{url('/agenda')}}"> <i class="icon-list"></i>MI AGENDA</a></li>
             <li><a href="{{url('/getlistadoagenda')}}"> <i class="icon-list"></i>VER MI AGENDA SEMANAL</a></li>
-            <li><a href="{{url('/lista')}}"> <i class="icon-list"></i>MI PASE DE LISTA SSC</a></li>
-            <li><a href="{{url('/getlistadolista')}}"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>
+            <!--<li><a href="{{url('/lista')}}"> <i class="icon-list"></i>MI PASE DE LISTA SSC</a></li>-->
+            <!--<li><a href="{{url('/getlistadolista')}}"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>-->
 
               
-              
-           <?php if(in_array(11, $array_permisos)):?>
-              <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>
-               <?php endif?>
+          
 
 
               
@@ -103,19 +100,19 @@ if (isset(\Auth::user()->permisos)) {
              
              
               <?php if(in_array(4, $array_permisos)):?>
-            <li><a href="{{url('/reporte_fecha')}}"> <i class="icon-list"></i>Reporte de Asistencia por Día</a></li>
+            <li><a href="{{url('/reporte_fecha')}}"> <i class="icon-list"></i>Reporte Asistencia Diario GM</a></li>
              <?php endif?>
              
              <?php if(in_array(5, $array_permisos)):?>
-             <li><a href="{{url('/faltantesView')}}"> <i class="icon-list"></i>Faltantes por Fecha</a></li>
+             <li><a href="{{url('/faltantesView')}}"> <i class="icon-list"></i>Reporte Faltantes GM</a></li>
              <?php endif?>
              
              <?php if(in_array(6, $array_permisos)):?>
-             <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Fecha</a></li>
+             <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reporte por Periódo GM</a></li>
              <?php endif?>
              
               <?php if(in_array(7, $array_permisos)):?>
-             <li><a href="{{url('/adminpdfView')}}"> <i class="icon-list"></i>Administrador PDF</a></li>
+             <li><a href="{{url('/adminpdfView')}}"> <i class="icon-list"></i>Administrador de PDF´S</a></li>
               <?php endif?>
              
                <?php if(in_array(8, $array_permisos)):?>
@@ -128,24 +125,52 @@ if (isset(\Auth::user()->permisos)) {
                <?php endif?>
                
               
-           
+               
+           <?php if(in_array(11, $array_permisos)):?>
+              <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte de Visitas</a></li>
+               <?php endif?>
+
+            
+
+             <?php if(in_array(12, $array_permisos)):?>
+              <li><a href="{{url('/excel_cuestionario_lista')}}"> <i class="icon-list"></i>Reporte Pase de Lista-SSC</a></li>
+               <?php endif?>
              
+
+              <?php if(in_array(13, $array_permisos)):?>
+              <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
+               <?php endif?>
+              
+
+              <?php if(in_array(14, $array_permisos)):?>
+              <li><a href="{{url('/excel_cuestionario_agenda')}}"> <i class="icon-list"></i>Reporte de Agenda RJG</a></li>
+               <?php endif?>
+             
+
+              <?php if(in_array(15, $array_permisos)):?>
+              <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
+               <?php endif?>
+
+
+
+
+
              <!--MODULO REPORTES DIARIOS-->
              <?php if(in_array(2, $array_permisos)):?>
              
                <li><a href="#exampledropdownDropdown_DIARIO" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reporte Diario </a>
                <ul id="exampledropdownDropdown_DIARIO" class="collapse list-unstyled ">
-                <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Fecha</a></li>
+                <li><a href="{{url('/reportesExcel')}}"> <i class="icon-list"></i>Reportes por Periódo GM</a></li>
                
                <!--<li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Faltantes por Fecha Miércoles</a></li>-->
                 <li><a href="{{url('/reporteGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Asistencia</a></li>
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
-                <li><a href="{{url('/excel_cuestionario_seguridad')}}"> <i class="icon-list"></i>Reporte de Visitas</a></li>
-                <li><a href="{{url('/excel_cuestionario_lista')}}"> <i class="icon-list"></i>Reporte Pase de Lista-SSC</a></li>
-                <li><a href="{{url('/excel_cuestionario_preguntas')}}"> <i class="icon-list"></i>Reporte Red De Contacto Ciudadano</a></li>
-                <li><a href="{{url('/excel_cuestionario_agenda')}}"> <i class="icon-list"></i>Reporte de Agenda RJG</a></li>
-                <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
+                
+                
+                
+                
+                
                 
               </ul>
             </li>
@@ -167,8 +192,8 @@ if (isset(\Auth::user()->permisos)) {
              
                <li><a href="#exampledropdownDropdown_MIERCOLES" aria-expanded="false" data-toggle="collapse"> <i class="icon-list"></i>Reportes Miercoles </a>
               <ul id="exampledropdownDropdown_MIERCOLES" class="collapse list-unstyled ">
-                <li><a href="{{url('/reportesExcel_miercoles')}}"><i class="icon-list"></i>Reportes por Fecha Miércoles</a></li>
-              <li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Faltantes por Fecha Miércoles</a></li>
+                <li><a href="{{url('/reportesExcel_miercoles')}}"><i class="icon-list"></i>Reportes por Periódo Miércoles</a></li>
+              <li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Reporte Faltantes Miércoles GV</a></li>
                 <li><a href="{{url('/reporteGrafica_miercoles')}}"><i class="fa fa-bar-chart"></i>Gráfica de Asistencia Miércoles</a></li>
                 <li><a href="{{url('/alcaldiasGrafica_miercoles')}}"><i class="fa fa-bar-chart"></i>Gráfica de Alcaldía Miércoles</a></li>
                 <li><a href="{{url('/alcaldiasGrafica_miercoles_vecino')}}"><i class="fa fa-bar-chart"></i>Gráfica de Alcaldía Vecinos Miércoles</a></li>
