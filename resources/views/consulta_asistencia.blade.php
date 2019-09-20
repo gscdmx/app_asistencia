@@ -172,8 +172,21 @@ table, th, td {
   
 
   $(document).ready( function () {
-    $('#tabla_de_asistenciagm').DataTable();
-} );
+    $('#tabla_de_asistenciagm').DataTable({
+        
+    
+       
+
+
+
+        //variable para cambiar el lenguaje del datatable     
+        "language":{
+              "url":"{{ url('/recursos/IdiomaDatatables')}}/Spanish.json"
+            },
+        //creamos un ajax para obtener los datos deacuerdo a la seleccion   
+        
+
+          }); 
 
 </script>
 
@@ -182,6 +195,9 @@ table, th, td {
 
 
 @endsection
+
+
+
 
 
 
