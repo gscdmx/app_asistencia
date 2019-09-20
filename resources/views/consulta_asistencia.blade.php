@@ -152,7 +152,7 @@ table, th, td {
 @section('js')  
 
 
-   
+    
 
 
  
@@ -172,21 +172,7 @@ table, th, td {
   
 
   $(document).ready( function () {
-    $('#tabla_de_asistenciagm').DataTable({
-        
-       
-        "language":{
-        "search":       "Buscar:",
-        
-        "paginate": {
-          "first":      "Primera",
-          "last":       "Última",
-          "next":       "Siguiente",
-          "previous":     "Anterior"
-        }
-            }
-
-          }
+    $('#tabla_de_asistenciagm').DataTable();
 } );
 
 </script>
