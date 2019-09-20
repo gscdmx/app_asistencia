@@ -65,7 +65,7 @@ table, th, td {
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-striped" id="archivoslist">
+                <table class="table table-striped" id="tabla_de_asistenciagm">
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -150,6 +150,15 @@ table, th, td {
 
 
 @section('js')  
+
+
+    <script src="{{ url('/recursos') }}/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+
+
+
  
 @endsection
 
@@ -167,7 +176,12 @@ table, th, td {
   
 
   $(document).ready( function () {
-    $('#archivoslist').DataTable();
+    $('#tabla_de_asistenciagm').DataTable({
+        
+       
+        "language":{
+              "url":"{{ url('/recursos/IdiomaDatatables')}}/Spanish.json"
+            }
 } );
 
 </script>
