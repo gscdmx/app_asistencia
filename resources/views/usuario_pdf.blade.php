@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.css"/>
 
   <section class="forms">
         <div class="container-fluid">
@@ -39,7 +39,7 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-striped">
+                 <table class="table table-striped" id="tabla_de_incidenciadelictiva_pdfs">
                   <thead>
                     <tr>
                       <th>Descripcion</th>
@@ -106,6 +106,20 @@
 
 
 @section('customjs')
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.js"></script>
+
+<script type="text/javascript">
+  
+
+  $(document).ready( function () {
+    $('#tabla_de_incidenciadelictiva_pdfs').DataTable();
+} );
+
+</script>
+
+
 
 
 @endsection
