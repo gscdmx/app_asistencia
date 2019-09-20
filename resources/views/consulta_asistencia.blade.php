@@ -186,7 +186,7 @@ table, th, td {
         //variable para cambiar el lenguaje del datatable     
         "language":{
               "url":"{{ url('/recursos/IdiomaDatatables')}}/Spanish.json"
-            }
+            },
         //creamos un ajax para obtener los datos deacuerdo a la seleccion   
         
 
