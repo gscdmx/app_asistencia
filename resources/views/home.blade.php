@@ -21,7 +21,7 @@
       <h4>CGSCPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA </h4>
+      <h4>ASISTENCIA GABINETE DE SEGURIDAD CIUDADANA </h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia') }}">
@@ -103,7 +103,7 @@
         <div class="form-group row">
           
           
-          <label class="col-sm-2 form-control-label">Reunión de Alcaldía con Jefa de Gobierno</label>
+          <label class="col-sm-2 form-control-label">Reunión de Alcaldía con Jefa de Gobierno:</label>
           <div class="col-sm-10 mb-3">
           <input  type="checkbox" name="reunionjg"  value="Reunión con JG
 "  style="width:5%; height:110%"       class="form-group row" />
@@ -133,7 +133,7 @@
 
 
         <div class="form-group row">
-         <label class="col-sm-2 form-control-label">¿Asistió la Representante de Jefatura de Gobierno?</label>
+         <label class="col-sm-2 form-control-label">¿Asistió la Representante de Jefatura de Gobierno?:</label>
          <div class="col-sm-10 mb-3">
            <!--<select name="account" class="form-control">
              <option value="">Selecciona...</option>
@@ -162,7 +162,7 @@
 
 
          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió de la Agencia del Ministerio Público?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió de la Agencia del Ministerio Público?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -189,7 +189,7 @@
          <div class="line"></div>
 
          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió del Jefe de Sector de la Policía?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió del Jefe de Sector de la Policía?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -216,7 +216,7 @@
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió de la Policía de Investigación?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió de la Policía de Investigación?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -246,7 +246,7 @@
 
 
          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió del Juzgado Cívico?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió del Juzgado Cívico?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -272,7 +272,7 @@
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió del Médico Legista?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió del Médico Legista?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -301,7 +301,7 @@
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió del Representante de Alcaldía?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió del Representante de Alcaldía?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
@@ -330,7 +330,7 @@
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Quién asistió de PDI Inteligencia Social?</label>
+          <label class="col-sm-2 form-control-label">¿Quién asistió de PDI Inteligencia Social?:</label>
           <div class="col-sm-10 mb-3">
             <!--<select name="account" class="form-control">
               <option value="">Selecciona...</option>
