@@ -152,11 +152,7 @@ table, th, td {
 @section('js')  
 
 
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.responsive.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
-
+   
 
 
  
