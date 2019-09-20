@@ -151,11 +151,7 @@ table, th, td {
 
 @section('js')  
 
-<script src="{{ url('/recursos') }}/js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.responsive.js"></script>
-    <script src="{{ url('/recursos') }}/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
-    
+
     
 
 
@@ -176,21 +172,8 @@ table, th, td {
   
 
   $(document).ready( function () {
-    $('#tabla_de_asistenciagm').DataTable({
-        
-    
-       
-
-
-
-        //variable para cambiar el lenguaje del datatable     
-        "language":{
-              "url":"{{ url('/recursos/IdiomaDatatables')}}/Spanish.json"
-            },
-        //creamos un ajax para obtener los datos deacuerdo a la seleccion   
-        
-
-          }); 
+    $('#tabla_de_asistenciagm').DataTable();
+} );
 
 </script>
 
