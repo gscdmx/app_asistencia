@@ -65,17 +65,17 @@ table, th, td {
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-striped  id="archivoslist">
+                <table class="table table-striped" id="archivoslist">
                   <thead>
                     <tr>
-                      <th>id</th>
-                      <th>Fecha de Captura</th>
+                      <th>ID</th>
+                      <th>Fecha de Captura GM</th>
                       <th>Hora de Inicio</th>
                       <th>Hora de Término</th>
-                      <th>Coordinación Territorial</th>
+                      <th>Coordinación Territorial/Sector</th>
                       <th>Se realizó Gabinte</th>
                       <th>Motivo por el que no se realizo</th>
-                      <th>Jefa de Gobierno</th>
+                      <th>R.Jefatura de Gobierno</th>
                       <th>Ministerio Público</th>
                       <th>Jefe de la Policía</th>
                       <th>Policía Investigación</th>
@@ -83,7 +83,7 @@ table, th, td {
                       <th>Médico Legista</th>
                       <th>PDI Inteligencia Social</th>
                       <th>Representante de Alcaldia</th>
-                      <th>Reunion con JG</th>
+                      <th>Reunion con Jefa G</th>
                         
                     </tr>
                   </thead>
@@ -159,6 +159,8 @@ table, th, td {
 
 @section('customjs')
 
+
+
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.js"></script>
 
 <script type="text/javascript">
@@ -169,6 +171,9 @@ table, th, td {
 } );
 
 </script>
+
+
+
 
 
 @endsection
