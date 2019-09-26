@@ -21,7 +21,7 @@
       <h4>CGSCPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4><br><br> 
+      <!--<h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4><br><br> -->
 
       <H1>Preguntas más frecuentes</H1>
          <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">FAQ</a>
