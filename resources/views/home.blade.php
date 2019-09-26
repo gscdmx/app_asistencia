@@ -21,7 +21,12 @@
       <h4>CGSCPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE DE SEGURIDAD CIUDADANA </h4>
+      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4>
+
+      <H1>Preguntas más frecuentes</H1>
+         <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">FAQ</a>
+
+
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia') }}">
