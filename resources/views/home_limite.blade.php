@@ -26,7 +26,8 @@
       {{ csrf_field() }}
 
 
-
+               <H1>Preguntas más frecuentes (AYUDAS)</H1>
+         <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a>
 
 
                    <div class="alert alert-success alert-dismissable">
