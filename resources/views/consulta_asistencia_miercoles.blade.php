@@ -29,7 +29,7 @@ table, th, td {
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
       <h4>GABINETE VESPERTINO DE SEGURIDAD CIUDADANA </h4>

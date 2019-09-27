@@ -18,11 +18,11 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGSCPJ CDMX</h4>
+      <h4>CGGSCPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
       <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4>
-      <!--<H1>Preguntas más frecuentes (AYUDAS)</H1>
+      <!--<H4>Preguntas más frecuentes (AYUDAS)</H4>
          <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>-->
     </div>
     <div class="card-body">
