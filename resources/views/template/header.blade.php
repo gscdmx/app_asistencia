@@ -234,8 +234,8 @@ if (isset(\Auth::user()->permisos)) {
 
 
 
-                <H4>Preguntas más frecuentes (AYUDAS)</H4>
-                   <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>
+      
+                   <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">AYUDAS</a>
 
 
 
