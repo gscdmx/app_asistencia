@@ -19,9 +19,6 @@
   <div class="card">
     <div class="card-header d-flex align-items-center">
       <h4>CGGSCyPJ CDMX</h4>
-       <H1>Preguntas más frecuentes (AYUDAS)</H1>
-         <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>
-
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="">
