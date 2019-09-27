@@ -230,6 +230,18 @@ if (isset(\Auth::user()->permisos)) {
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 
                 
+
+
+
+
+                <H4>Preguntas más frecuentes (AYUDAS)</H4>
+                   <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>
+
+
+
+
+
+
                 <!-- Log out-->
                 <li class="nav-item"><a href="{{ route('logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" class="nav-link logout"> <span class="d-none d-sm-inline-block">Salir</span><i class="fa fa-sign-out"></i></a>

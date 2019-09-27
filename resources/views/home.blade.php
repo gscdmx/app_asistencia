@@ -43,8 +43,8 @@
 
 
 
-<H4>Preguntas más frecuentes (AYUDAS)</H4>
-         <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>
+ <!--<H4>Preguntas más frecuentes (AYUDAS)</H4>
+         <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>-->
 
 
 
