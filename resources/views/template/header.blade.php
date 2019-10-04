@@ -248,33 +248,33 @@ if (isset(\Auth::user()->permisos)) {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">PREGUNTAS FRECUENTES </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         
-        FAQ
+        <h1>FAQ</h1><br><br>
 
-¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?<br>
+<h1>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h1><br><br>>
 Si, la asistencia que registras es la de los servidores públicos. En caso de que se instale el gabinete, deberás tomar la asistencia de los miembros y en la parte de vecinos deberás colocar 0 (cero).<br>
 
 
-¿Por qué mi registro no aparece?<br>
+<h1>¿Por qué mi registro no aparece?</h1><br><br>
 
 Los registros no se guardan como un consecutivo, por lo que deberás buscarlo en todo el listado o en su caso, descargar el archivo Excel y buscarlo con la función ctrl + b o bien, ordenando el archivo según las fechas. <br>
 
 
-¿Puedo descargar mis bases en Excel?<br>
+<h1>¿Puedo descargar mis bases en Excel?</h1><br><br>
 
 Si, puedes descargar las bases de todos los módulos que tengan la opción a excepción de los módulos que aparecen según la actividad encomendada como VISITAS AL MP y la de VISITAS/RED DE VECINOS.<br>
 
-¿En dónde puedo encontrar mis Informes?<br>
+<h1>¿En dónde puedo encontrar mis Informes?</h1><br><br>
 
-La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.<br>
+La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.<br><br>
 
-¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?<br>
+<h1>¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?</h1><br><br>
 
 1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “APP Asistencia” en el que se deberá especificar lo siguiente:<br>
 a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
@@ -293,33 +293,30 @@ g)  Anexos: Si incluye anexos que deberán adjuntarse al registro, como document
 
 
 3.  En caso de que su cambio no haya sido realizado, podrán darle seguimiento con este número.<br>
-4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.<br>
+4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.<br><br>
 
 
 
-¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?<br>
+<h1>¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?</h1><br><br>
 
 1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “BAJA RED VECINAL”, en el que se deberá especificar lo siguiente:<br>
 a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
 b)  ID: proporcionar el folio asignado por el sistema (identificador ID).<br>
 c)  Nombre del Vecino: para corroborar que corresponde al ID.<br>
 2.  Es importante mencionar que este cambio deberá ser validado previamente por el área de Evaluación y Seguimiento, quien, en caso de ser necesario, se comunicará con la representante antes de autorizar la eliminación.<br>
-3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br>
+3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br><br>
 
 
-Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).<br>
+Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).<br><br>
 
 Cabe hacer mención que ese grupo es únicamente para seguimiento de TICKETS y todas aquellas preguntas que no estén relacionadas a ello serán borradas sin excepción.
-<br>
+<br><br>
 
 **NOTA** Se irán añadiendo más preguntas y respuestas conforme sea necesario.
 
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+     
     </div>
   </div>
 </div>
