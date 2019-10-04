@@ -255,26 +255,26 @@ if (isset(\Auth::user()->permisos)) {
       </div>
       <div class="modal-body">
         
-        <h5>FAQ</h5><br><br>
+        <h5>FAQ</h5><br>
 
-<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5><br><br>>
+<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5><br>
 Si, la asistencia que registras es la de los servidores públicos. En caso de que se instale el gabinete, deberás tomar la asistencia de los miembros y en la parte de vecinos deberás colocar 0 (cero).<br>
 
 
-<h5>¿Por qué mi registro no aparece?</h5><br><br>
+<h5>¿Por qué mi registro no aparece?</h5><br>
 
 Los registros no se guardan como un consecutivo, por lo que deberás buscarlo en todo el listado o en su caso, descargar el archivo Excel y buscarlo con la función ctrl + b o bien, ordenando el archivo según las fechas. <br>
 
 
-<h5>¿Puedo descargar mis bases en Excel?</h5><br><br>
+<h5>¿Puedo descargar mis bases en Excel?</h5><br>
 
 Si, puedes descargar las bases de todos los módulos que tengan la opción a excepción de los módulos que aparecen según la actividad encomendada como VISITAS AL MP y la de VISITAS/RED DE VECINOS.<br>
 
-<h5>¿En dónde puedo encontrar mis Informes?</h5><br><br>
+<h5>¿En dónde puedo encontrar mis Informes?</h5><br>
 
-La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.<br><br>
+La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.<br>
 
-<h5>¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?</h5><br><br>
+<h5>¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?</h5><br>
 
 1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “APP Asistencia” en el que se deberá especificar lo siguiente:<br>
 a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
@@ -293,24 +293,24 @@ g)  Anexos: Si incluye anexos que deberán adjuntarse al registro, como document
 
 
 3.  En caso de que su cambio no haya sido realizado, podrán darle seguimiento con este número.<br>
-4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.<br><br>
+4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.<br>
 
 
 
-<h5>¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?</h5><br><br>
+<h5>¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?</h5><br>
 
 1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “BAJA RED VECINAL”, en el que se deberá especificar lo siguiente:<br>
 a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
 b)  ID: proporcionar el folio asignado por el sistema (identificador ID).<br>
 c)  Nombre del Vecino: para corroborar que corresponde al ID.<br>
 2.  Es importante mencionar que este cambio deberá ser validado previamente por el área de Evaluación y Seguimiento, quien, en caso de ser necesario, se comunicará con la representante antes de autorizar la eliminación.<br>
-3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br><br>
+3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br>
 
 
-Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).<br><br>
+Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).<br>
 
 Cabe hacer mención que ese grupo es únicamente para seguimiento de TICKETS y todas aquellas preguntas que no estén relacionadas a ello serán borradas sin excepción.
-<br><br>
+<br>
 
 <h5>**NOTA** Se irán añadiendo más preguntas y respuestas conforme sea necesario.</h5>
 
