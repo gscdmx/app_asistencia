@@ -255,9 +255,9 @@ if (isset(\Auth::user()->permisos)) {
       </div>
       <div class="modal-body">
         
-        <h5>FAQ</h5><br>
+        <h5 align="center">FAQ</h5><br>
 
-<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5><br>
+<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5>
 Si, la asistencia que registras es la de los servidores públicos. En caso de que se instale el gabinete, deberás tomar la asistencia de los miembros y en la parte de vecinos deberás colocar 0 (cero).<br>
 
 
@@ -266,7 +266,7 @@ Si, la asistencia que registras es la de los servidores públicos. En caso de qu
 Los registros no se guardan como un consecutivo, por lo que deberás buscarlo en todo el listado o en su caso, descargar el archivo Excel y buscarlo con la función ctrl + b o bien, ordenando el archivo según las fechas. <br>
 
 
-<h5>¿Puedo descargar mis bases en Excel?</h5><br>
+<h5>¿Puedo descargar mis bases en Excel?</h5>
 
 Si, puedes descargar las bases de todos los módulos que tengan la opción a excepción de los módulos que aparecen según la actividad encomendada como VISITAS AL MP y la de VISITAS/RED DE VECINOS.<br>
 
