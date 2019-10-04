@@ -257,7 +257,7 @@ if (isset(\Auth::user()->permisos)) {
         
         <h5 align="center">FAQ</h5><br>
 
-<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5>
+<h5>¿Debo registrar Mi Asistencia Vespertina si no acuden vecinos?</h5><br>
 Si, la asistencia que registras es la de los servidores públicos. En caso de que se instale el gabinete, deberás tomar la asistencia de los miembros y en la parte de vecinos deberás colocar 0 (cero).<br>
 
 
@@ -266,48 +266,48 @@ Si, la asistencia que registras es la de los servidores públicos. En caso de qu
 Los registros no se guardan como un consecutivo, por lo que deberás buscarlo en todo el listado o en su caso, descargar el archivo Excel y buscarlo con la función ctrl + b o bien, ordenando el archivo según las fechas. <br>
 
 
-<h5>¿Puedo descargar mis bases en Excel?</h5>
+<h5>¿Puedo descargar mis bases en Excel?</h5><br>
 
 Si, puedes descargar las bases de todos los módulos que tengan la opción a excepción de los módulos que aparecen según la actividad encomendada como VISITAS AL MP y la de VISITAS/RED DE VECINOS.<br>
 
-<h5>¿En dónde puedo encontrar mis Informes?</h5>
+<h5>¿En dónde puedo encontrar mis Informes?</h5><br>
 
-La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.
+La aplicación tiene un módulo llamado “MIS PDF’S” en el cual se subirán los informes correspondientes a tu coordinación o alcaldía.<br>
 
-<h5>¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?</h5>
+<h5>¿Qué debo hacer en caso de requerir altas, modificaciones o eliminar alguno de mis registros en la APP de Asistencia?</h5><br>
 
-1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “APP Asistencia” en el que se deberá especificar lo siguiente:
-a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.
-b)  Módulo: el módulo del cual se está solicitando la modificación del registro (ejemplo: Asistencia Matutina, Asistencia Vespertina, Agenda, etc.)
-c)  Tipo de Solicitud: especificar según sea el caso: 
-1.  Alta (cuando se quiere realizar un registro nuevo, sólo para módulos de asistencia).
-2.  Modificación (si un registro ya realizado requiere de un cambio).
-3.  Eliminación (para registros duplicados o mal capturados).
-4.  Contraseña (cambio o asignación de clave de acceso, este se validará con su superior jerárquico antes de realizarse).
-d)  ID: en caso de modificaciones o eliminaciones, para proceder al registro, deberán proporcionar el folio asignado por el sistema (identificador ID).
-e)  Fecha: en caso de modificaciones o eliminaciones, para proceder al registro, deberán proporcionar la fecha en que se realizó el registro.
-f)  Descripción: detallar el cambio solicitado, ejemplo si se requiere la captura de alguna asistencia, deberán especificar si es Titular, suplente, etc., sin poner nombres de los funcionarios, en el caso del campo “Otros”, se deberá especificar nombre y cargo. Si es una modificación, especificar como aparece y como debería aparecer, ejemplo: en el campo colonia dice: EL PEDREGAL, debe decir: EL PEDREGAL SAN ÁNGEL.
-g)  Anexos: Si incluye anexos que deberán adjuntarse al registro, como documentos, fotografías, etc.
-2.  Una vez recibida la solicitud, les será asignado un número de folio, que les será enviado por correo electrónico una vez que esté realizado.
-
-
-
-3.  En caso de que su cambio no haya sido realizado, podrán darle seguimiento con este número.
-4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.
+1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “APP Asistencia” en el que se deberá especificar lo siguiente:<br>
+a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
+b)  Módulo: el módulo del cual se está solicitando la modificación del registro (ejemplo: Asistencia Matutina, Asistencia Vespertina, Agenda, etc.)<br>
+c)  Tipo de Solicitud: especificar según sea el caso: <br>
+1.  Alta (cuando se quiere realizar un registro nuevo, sólo para módulos de asistencia).<br>
+2.  Modificación (si un registro ya realizado requiere de un cambio).<br>
+3.  Eliminación (para registros duplicados o mal capturados).<br>
+4.  Contraseña (cambio o asignación de clave de acceso, este se validará con su superior jerárquico antes de realizarse).<br>
+d)  ID: en caso de modificaciones o eliminaciones, para proceder al registro, deberán proporcionar el folio asignado por el sistema (identificador ID).<br>
+e)  Fecha: en caso de modificaciones o eliminaciones, para proceder al registro, deberán proporcionar la fecha en que se realizó el registro.<br>
+f)  Descripción: detallar el cambio solicitado, ejemplo si se requiere la captura de alguna asistencia, deberán especificar si es Titular, suplente, etc., sin poner nombres de los funcionarios, en el caso del campo “Otros”, se deberá especificar nombre y cargo. Si es una modificación, especificar como aparece y como debería aparecer, ejemplo: en el campo colonia dice: EL PEDREGAL, debe decir: EL PEDREGAL SAN ÁNGEL.<br>
+g)  Anexos: Si incluye anexos que deberán adjuntarse al registro, como documentos, fotografías, etc.<br>
+2.  Una vez recibida la solicitud, les será asignado un número de folio, que les será enviado por correo electrónico una vez que esté realizado.<br>
 
 
 
-<h5>¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?</h5>
-
-1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “BAJA RED VECINAL”, en el que se deberá especificar lo siguiente:
-a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.
-b)  ID: proporcionar el folio asignado por el sistema (identificador ID).
-c)  Nombre del Vecino: para corroborar que corresponde al ID.
-2.  Es importante mencionar que este cambio deberá ser validado previamente por el área de Evaluación y Seguimiento, quien, en caso de ser necesario, se comunicará con la representante antes de autorizar la eliminación.
-3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.
+3.  En caso de que su cambio no haya sido realizado, podrán darle seguimiento con este número.<br>
+4.  Las solicitudes que no se reciban por el medio especificado o bien, carezcan de alguno de los elementos requeridos, no serán atendidos.<br>
 
 
-Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).
+
+<h5>¿Qué debo hacer en caso de que un vecino registrado en la RED DE VECINOS ya no quiera formar parte del programa?</h5><br>
+
+1.  Enviar un correo electrónico a maria.rosas@cdmx.gob.mx con el asunto “BAJA RED VECINAL”, en el que se deberá especificar lo siguiente:<br>
+a)  Nombre y CT: Especificar nombre completo de la RJG y la Coordinación Territorial a la que pertenece.<br>
+b)  ID: proporcionar el folio asignado por el sistema (identificador ID).<br>
+c)  Nombre del Vecino: para corroborar que corresponde al ID.<br>
+2.  Es importante mencionar que este cambio deberá ser validado previamente por el área de Evaluación y Seguimiento, quien, en caso de ser necesario, se comunicará con la representante antes de autorizar la eliminación.<br>
+3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br>
+
+
+Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g (darle click y en automático te redirigirá al canal).<br>
 
 Cabe hacer mención que ese grupo es únicamente para seguimiento de TICKETS y todas aquellas preguntas que no estén relacionadas a ello serán borradas sin excepción.
 <br>
