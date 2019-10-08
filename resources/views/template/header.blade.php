@@ -307,7 +307,7 @@ c)  Nombre del Vecino: para corroborar que corresponde al ID.<br>
 3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br>
 
 
-Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: <li><a href="https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g"> <p style="color:#0096d2";>darle click y en automático te redirigirá al canal.</p></a></li> 
+Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: <li><a href="https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g"> <p style="color:#0096d2";>(darle click y en automático te redirigirá al canal) TICKETS CGGSCyPJ.</p></a></li> 
   <br>
 
 Cabe hacer mención que ese grupo es únicamente para seguimiento de TICKETS y todas aquellas preguntas que no estén relacionadas a ello serán borradas sin excepción.
