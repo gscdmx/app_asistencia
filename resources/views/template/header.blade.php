@@ -307,7 +307,7 @@ c)  Nombre del Vecino: para corroborar que corresponde al ID.<br>
 3.  Una vez autorizado, se procederá a la eliminación del registro y se enviará por correo electrónico el ticket correspondiente.<br>
 
 
-Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: <li><a href="https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g">(darle click y en automático te redirigirá al canal).</a></li> <br>
+Dudas y comentarios, enviar un mensaje via TELEGRAM al siguiente grupo: <li><a href="https://t.me/joinchat/AAAAAFHI8FMMsNwLycJy8g"> <p style="color:#FF0000";>darle click y en automático te redirigirá al canal.</p></a></li> <br>
   <br>
 
 Cabe hacer mención que ese grupo es únicamente para seguimiento de TICKETS y todas aquellas preguntas que no estén relacionadas a ello serán borradas sin excepción.
