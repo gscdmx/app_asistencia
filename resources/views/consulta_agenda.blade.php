@@ -52,7 +52,10 @@ table, th, td {
       @endif
 
 
-
+     <div class="col-sm-4 offset-sm-2">
+           
+            <a href="{{ url('/getexcel_agenda') }}" class="btn btn-primary">Descargar Agenda</a>
+     </div>
 
 
 
