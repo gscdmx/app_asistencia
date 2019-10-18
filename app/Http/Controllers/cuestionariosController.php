@@ -16,6 +16,9 @@ use App\Exports\PreguntasExport;
 use App\Exports\EntrevistasMpExport;
 use App\Exports\AgendaExport;
 use App\Exports\ListaExport;
+use App\Exports\MiAgendaExport;
+
+
 
 use Image;
 
@@ -290,8 +293,7 @@ public function regioness(){
     }
     
 
-
-    
+ 
 
 
  public function view_listado_agendas()
@@ -313,6 +315,16 @@ public function regioness(){
       return view('consulta_agenda',compact('consultas'));
 
 }
+
+
+public function excel_agenda(){
+        
+        
+        return Excel::download(new  MiAgendaExport, 'MI AGENDA.xlsx');
+      
+        
+    }
+    
 
 
 //////////////////////////////////////////////////////LISTA//////////////////////////////////////////////////////////////////
