@@ -89,6 +89,12 @@ class HomeController extends Controller
     public function guardarAsistencia(Request $request){
 
 
+      $hora_i_compuesta=$request['hora_inicio'].":".$request['minutos_i'].":00";
+      $hora_f_compuesta=$request['hora_termino'].":".$request['minutos_t'].":00";
+
+     // dd( $hora_i_compuesta);
+
+
         $validator = Validator::make($request->all(), [
                  'fecha' => 'required',
                  'hora_inicio' => 'required',
@@ -194,10 +200,10 @@ class HomeController extends Controller
                        'no_motivo' => $request['motivo'],
 
                        'fecha' => $request['fecha'],
-                       'hora_inicio' => $request['hora_inicio'],
-                       'minutos_i' => $request['minutos_i'],
-                       'hora_termino' => $request['hora_termino'],
-                       'minutos_t' => $request['minutos_t'],
+                       'hora_i' =>$hora_i_compuesta,
+                      // 'minutos_i' => $request['minutos_i'],
+                       'hora_t' => $hora_f_compuesta,
+                     //  'minutos_t' => $request['minutos_t'],
                        
                        'jg' => $array_jg,
                        'mp' => $array_mp,
@@ -220,10 +226,10 @@ class HomeController extends Controller
                         'no_motivo' => $request['motivo'],
                         
                         'fecha' => $request['fecha'],
-                        'hora_inicio' => $request['hora_inicio'],
-                        'minutos_i' => $request['minutos_i'],
-                        'hora_termino' => $request['hora_termino'],
-                        'minutos_t' => $request['minutos_t'],
+                        'hora_i' =>$hora_i_compuesta,
+                        //'minutos_i' => $request['minutos_i'],
+                        'hora_t' => $hora_f_compuesta,
+                        //'minutos_t' => $request['minutos_t'],
                        
                         'jg' => 'Reunión con JG',
                         'mp' => 'Reunión con JG',
