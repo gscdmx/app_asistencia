@@ -21,7 +21,7 @@
       <h4>CGGSCyPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4>
+      <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA CDMX</h4>
       <!--<H4>Preguntas más frecuentes (AYUDAS)</H4>
          <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>-->
     </div>
@@ -95,6 +95,7 @@
 
               <select name="minutos_i" id="minutos_i" class="form-control">
               <option value="">Selecciona Minutos...</option>
+              <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -158,7 +159,7 @@
               <option value="57">57</option>
               <option value="58">58</option>
               <option value="59">59</option>
-              <option value="60">60</option>
+              
 
              
             </select>
@@ -187,6 +188,7 @@
 
               <select name="minutos_t" id="minutos_t" class="form-control">
               <option value="">Selecciona Minutos...</option>
+              <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -250,7 +252,7 @@
               <option value="57">57</option>
               <option value="58">58</option>
               <option value="59">59</option>
-              <option value="60">60</option>
+              
 
             </select>
             
