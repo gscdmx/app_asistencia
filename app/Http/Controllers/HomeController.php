@@ -200,9 +200,9 @@ class HomeController extends Controller
                        'no_motivo' => $request['motivo'],
 
                        'fecha' => $request['fecha'],
-                       'hora_i' =>$hora_i_compuesta,
+                       'hora_inicio' =>$hora_i_compuesta,
                       // 'minutos_i' => $request['minutos_i'],
-                       'hora_t' => $hora_f_compuesta,
+                       'hora_termino' => $hora_f_compuesta,
                      //  'minutos_t' => $request['minutos_t'],
                        
                        'jg' => $array_jg,
@@ -226,9 +226,9 @@ class HomeController extends Controller
                         'no_motivo' => $request['motivo'],
                         
                         'fecha' => $request['fecha'],
-                        'hora_i' =>$hora_i_compuesta,
+                        'hora_inicio' =>$hora_i_compuesta,
                         //'minutos_i' => $request['minutos_i'],
-                        'hora_t' => $hora_f_compuesta,
+                        'hora_termino' => $hora_f_compuesta,
                         //'minutos_t' => $request['minutos_t'],
                        
                         'jg' => 'Reunión con JG',
