@@ -75,6 +75,10 @@
         </div>
 
 
+
+
+
+
         <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
