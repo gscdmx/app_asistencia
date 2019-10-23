@@ -18,7 +18,7 @@
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCPJ CDMX</h4>
+      <h4>CGGSCyPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
       <h4>ASISTENCIA GABINETE MATUTINO DE SEGURIDAD CIUDADANA</h4>
@@ -50,7 +50,7 @@
 
        
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Matutino?</label>
+          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Matutino?:</label>
           <div class="col-sm-10 mb-3">
             <select name="se_realizo_mesa" id="se_realizo_mesa" class="form-control">
               <option value="">Selecciona...</option>
@@ -65,7 +65,7 @@
         
         
         
-             <div class="line"></div>
+    <div class="line"></div>
       <div class="form-group row">
         <label class="col-sm-2 form-control-label">Fecha:</label>
         <div class="col-sm-2">
@@ -78,15 +78,181 @@
         <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora1" name="hora1" class="form-control" ></input>
-           @if ($errors->has('hora1')) <p  style="color: red">{{ $errors->first('hora1') }}</p> @endif
+          
+           <select name="hora_inicio" id="hora_inicio" class="form-control">
+              <option value="">Selecciona Hora...</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+
+            </select>
+            
+             @if ($errors->has('hora_inicio')) <p  style="color: red">{{ $errors->first('hora_inicio') }}</p> @endif 
+
+
+              <select name="minutos_i" id="minutos_i" class="form-control">
+              <option value="">Selecciona Minutos...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+              <option value="60">60</option>
+
+             
+            </select>
+            
+             @if ($errors->has('minutos_i')) <p  style="color: red">{{ $errors->first('minutos_i') }}</p> @endif 
+
+
+
         </div>
 
          <label class="col-sm-2 form-control-label">Hora de Término:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora2" name="hora2" class="form-control" ></input>
-           @if ($errors->has('hora2')) <p  style="color: red">{{ $errors->first('hora2') }}</p> @endif
+          
+
+              <select name="hora_termino" id="hora_termino" class="form-control">
+              <option value="">Selecciona Hora...</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              </select>
+            
+             @if ($errors->has('hora_termino')) <p  style="color: red">{{ $errors->first('hora_termino') }}</p> @endif 
+
+
+              <select name="minutos_t" id="minutos_t" class="form-control">
+              <option value="">Selecciona Minutos...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+              <option value="60">60</option>
+
+            </select>
+            
+             @if ($errors->has('minutos_t')) <p  style="color: red">{{ $errors->first('minutos_t') }}</p> @endif 
+
+
         </div>
 
 
@@ -96,9 +262,41 @@
      <div  style="display:none;" id="show_descripcion">
 
 
+       
 
+
+
+
+ <!-- <div class="line"></div>
+      <div class="form-group row">
+        <label class="col-sm-2 form-control-label">Fecha:</label>
+        <div class="col-sm-2">
+          <!--<input type="text" class="form-control">
+          <input type="date" id="fecha" name="fecha" class="form-control" ></input>
+           @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
+        </div>
+
+
+        <label class="col-sm-2 form-control-label">Hora de Inicio:</label>
+        <div class="col-sm-2">
+          <!--<input type="text" class="form-control">
+          <input type="time" id="hora1" name="hora1" class="form-control" ></input>
+           @if ($errors->has('hora1')) <p  style="color: red">{{ $errors->first('hora1') }}</p> @endif
+        </div>
+
+         <label class="col-sm-2 form-control-label">Hora de Término:</label>
+        <div class="col-sm-2">
+          <!--<input type="text" class="form-control">
+          <input type="time" id="hora2" name="hora2" class="form-control" ></input>
+           @if ($errors->has('hora2')) <p  style="color: red">{{ $errors->first('hora2') }}</p> @endif
+        </div>
+
+
+      </div>-->
+         
+
+   
       
-        
         
         
            

@@ -91,8 +91,10 @@ class HomeController extends Controller
 
         $validator = Validator::make($request->all(), [
                  'fecha' => 'required',
-                 'hora1' => 'required',
-                 'hora2' => 'required',
+                 'hora_inicio' => 'required',
+                 'minutos_i' => 'required',
+                 'hora_termino' => 'required',
+                 'minutos_t' => 'required',
                  'se_realizo_mesa' => 'required'
              ]);
 
@@ -178,7 +180,12 @@ class HomeController extends Controller
                 $array_reunionjg = $request['reunionjg'];
                 
             }
-        
+            
+
+            
+
+
+
             
             if ($request['se_realizo_mesa']=='si') {
                $inserto = \App\tbAsistencia::create([  
@@ -187,8 +194,10 @@ class HomeController extends Controller
                        'no_motivo' => $request['motivo'],
 
                        'fecha' => $request['fecha'],
-                       'hora_i' => $request['hora1'],
-                       'hora_f' => $request['hora2'],
+                       'hora_inicio' => $request['hora_inicio'],
+                       'minutos_i' => $request['minutos_i'],
+                       'hora_termino' => $request['hora_termino'],
+                       'minutos_t' => $request['minutos_t'],
                        
                        'jg' => $array_jg,
                        'mp' => $array_mp,
@@ -200,6 +209,7 @@ class HomeController extends Controller
                        'representante_alcaldia'=>$array_ra,
                        'ins' => $array_ins,
                        'reunionjg' => $array_reunionjg,
+                      // 'hora_inicio'=> $array_hora_inicio,
                        'user_registro'=> \Auth::user()->id
                     ]); 
 
@@ -210,8 +220,10 @@ class HomeController extends Controller
                         'no_motivo' => $request['motivo'],
                         
                         'fecha' => $request['fecha'],
-                        'hora_i' => $request['hora1'],
-                        'hora_f' => $request['hora2'],
+                        'hora_inicio' => $request['hora_inicio'],
+                        'minutos_i' => $request['minutos_i'],
+                        'hora_termino' => $request['hora_termino'],
+                        'minutos_t' => $request['minutos_t'],
                        
                         'jg' => 'Reunión con JG',
                         'mp' => 'Reunión con JG',
@@ -223,6 +235,7 @@ class HomeController extends Controller
                         'representante_alcaldia'=>'Reunión con JG',
                         'ins' => 'Reunión con JG',
                         'reunionjg' => 'Reunión con JG',
+                        //'hora_inicio' => 'Reunión con JG',
                         'user_registro'=> \Auth::user()->id
                      ]); 
 
