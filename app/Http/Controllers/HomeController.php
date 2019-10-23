@@ -97,10 +97,10 @@ class HomeController extends Controller
 
         $validator = Validator::make($request->all(), [
                  'fecha' => 'required',
-                 'hora_inicio' => 'required',
-                 'minutos_i' => 'required',
-                 'hora_termino' => 'required',
-                 'minutos_t' => 'required',
+                 'Hora_de_inicio' => 'required',
+                 'minutos' => 'required',
+                 'Hora_de_termino' => 'required',
+                 'minutos' => 'required',
                  'se_realizo_mesa' => 'required'
              ]);
 
@@ -200,9 +200,9 @@ class HomeController extends Controller
                        'no_motivo' => $request['motivo'],
 
                        'fecha' => $request['fecha'],
-                       'hora_inicio' =>$hora_i_compuesta,
+                       'hora_i' =>$hora_i_compuesta,
                       // 'minutos_i' => $request['minutos_i'],
-                       'hora_termino' => $hora_f_compuesta,
+                       'hora_t' => $hora_f_compuesta,
                      //  'minutos_t' => $request['minutos_t'],
                        
                        'jg' => $array_jg,
@@ -226,9 +226,9 @@ class HomeController extends Controller
                         'no_motivo' => $request['motivo'],
                         
                         'fecha' => $request['fecha'],
-                        'hora_inicio' =>$hora_i_compuesta,
+                        'hora_i' =>$hora_i_compuesta,
                         //'minutos_i' => $request['minutos_i'],
-                        'hora_termino' => $hora_f_compuesta,
+                        'hora_t' => $hora_f_compuesta,
                         //'minutos_t' => $request['minutos_t'],
                        
                         'jg' => 'Reunión con JG',
