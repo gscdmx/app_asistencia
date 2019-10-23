@@ -97,10 +97,10 @@ class HomeController extends Controller
 
         $validator = Validator::make($request->all(), [
                  'fecha' => 'required',
-                 'Hora_de_inicio' => 'required',
-                 'minutos' => 'required',
-                 'Hora_de_termino' => 'required',
-                 'minutos' => 'required',
+                 'hora_inicio' => 'required',
+                 'minutos_i' => 'required',
+                 'hora_termino' => 'required',
+                 'minutos_t' => 'required',
                  'se_realizo_mesa' => 'required'
              ]);
 
