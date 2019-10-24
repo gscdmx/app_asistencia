@@ -36,7 +36,7 @@
           <div class="form-inner">
             <div class="logo text-uppercase">
                
-                <img src="{{url('recursos/img/cdmx.png')}}" height="60%" width="60%">
+                <img src="{{url('recursos/img/cdmx.JPG')}}" height="60%" width="60%">
                  <span></span><strong class="text-primary">CGGSCYPJ</strong>
             </div>
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->

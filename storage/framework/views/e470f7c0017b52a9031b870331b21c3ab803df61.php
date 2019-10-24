@@ -36,7 +36,7 @@
           <div class="form-inner">
             <div class="logo text-uppercase">
                
-                <img src="<?php echo e(url('recursos/img/cdmx.png')); ?>" height="60%" width="60%">
+                <img src="<?php echo e(url('recursos/img/cdmx.JPG')); ?>" height="60%" width="60%">
                  <span></span><strong class="text-primary">CGGSCYPJ</strong>
             </div>
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->
@@ -71,10 +71,10 @@
               </div>
             </form><!--<a href="#" class="forgot-pass">olvide mi contraseña</a><small>Crear cuenta </small><a href="register.html" class="signup">Signup</a>-->
           </div>
-          <div class="copyrights text-center">
+          <!-- <div class="copyrights text-center">
             <p>  <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="external">CDMX Gabinetes Vespertinos></p>
-            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-          </div>
+             Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)
+          </div>-->
         </div>
       </div>
     </div>
