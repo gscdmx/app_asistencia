@@ -70,10 +70,10 @@
               </div>
             </form><!--<a href="#" class="forgot-pass">olvide mi contraseña</a><small>Crear cuenta </small><a href="register.html" class="signup">Signup</a>-->
           </div>
-          <div class="copyrights text-center">
+          <!-- <div class="copyrights text-center">
             <p>  <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="external">CDMX Gabinetes Vespertinos></p>
-            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-          </div>
+             Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)
+          </div>-->
         </div>
       </div>
     </div>
