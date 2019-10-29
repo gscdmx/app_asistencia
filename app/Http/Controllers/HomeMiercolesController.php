@@ -80,12 +80,20 @@ class HomeMiercolesController extends Controller
     }
 
     public function guardar_asistencia_miercoles(Request $request){
+      
+
+
+      $hora_i_compuesta=$request['hora_inicio'].":".$request['minutos_i'];
+      $hora_f_compuesta=$request['hora_termino'].":".$request['minutos_t'];
+
 
 
         $validator = Validator::make($request->all(), [
                  'fecha' => 'required',
-                 'hora1' => 'required',
-                 'hora2' => 'required',
+                 'hora_inicio' => 'required',
+                 'minutos_i' => 'required',
+                 'hora_termino' => 'required',
+                 'minutos_t' => 'required',
                  'se_realizo_mesa' => 'required'
              ]);
 
@@ -191,8 +199,10 @@ class HomeMiercolesController extends Controller
                  'no_motivo' => $request['motivo'],
 
                  'fecha' => $request['fecha'],
-                 'hora_i' => $request['hora1'],
-                 'hora_f' => $request['hora2'],
+                 'hora_i' =>$hora_i_compuesta,
+                 'hora_f' => $hora_f_compuesta,
+                 //'hora_i' => $request['hora1'],
+                 //'hora_f' => $request['hora2'],
                        
                    'jg' => $array_jg,
                    'mp' => $array_mp,
@@ -225,8 +235,11 @@ class HomeMiercolesController extends Controller
                  'no_motivo' => $request['motivo'],
 
                  'fecha' => $request['fecha'],
-                 'hora_i' => $request['hora1'],
-                 'hora_f' => $request['hora2'],
+                 'hora_i' =>$hora_i_compuesta,
+                        //'minutos_i' => $request['minutos_i'],
+                 'hora_f' => $hora_f_compuesta,
+                 //'hora_i' => $request['hora1'],
+                 //'hora_f' => $request['hora2'],
                        
                   'jg' => 'No se realizo',
                   'mp' => 'No se realizo',
