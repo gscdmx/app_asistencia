@@ -22,7 +22,7 @@ class CreateTbAgendasTable extends Migration
             $table->time('hora_i')->nullable();
             $table->time('hora_f')->nullable();
             $table->string('duracion')->nullable();      
-            $table->string('nombre_activad')->nullable();                  
+            $table->string('nombre_activad')->nullable();        
             $table->timestamps();
         });
     }

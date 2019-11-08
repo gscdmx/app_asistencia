@@ -150,13 +150,22 @@ Route::get('/vinculosView', 'HomeController@misvinculos');
 Route::get('/mapasView', 'HomeController@mismapas');
 //Route::post('/guardar_mapa', 'HomeController@guardarmapa');
 
-//Agenda
+//AGENDA RJG
 Route::get('/agenda', 'cuestionariosController@agenda');
 Route::get('/preguntas_region', 'cuestionariosController@region');
 Route::post('/guardar_cuestionario_Agenda', 'cuestionariosController@save_cuestionario_agenda');
 Route::get('/excel_cuestionario_agenda', 'cuestionariosController@excel_cuestionarioagenda');
 Route::get('/getlistadoagenda', 'cuestionariosController@view_listado_agendas');
 Route::get('/getexcel_agenda', 'cuestionariosController@excel_agenda');
+
+//Route::get('/update/agenda/{id}', 'cuestionariosController@consulta')->name('agenda.cuestionario_agenda');
+
+
+Route::post('/elimiar_registro_agenda', 'cuestionariosController@eliminar_registroAgenda');
+Route::get('/elimiar_registro_agenda2daopcion/{id}', 'cuestionariosController@eliminar_registroAgenda2opcion');
+
+//Route::get('/update/{id}','cuestionariosController@update');ste
+
 
 
 

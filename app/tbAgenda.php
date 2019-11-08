@@ -15,7 +15,8 @@ class tbAgenda extends Model
             'hora_i',///
             'hora_f',///
             'duracion',
-            'nombre_activad'
+            'nombre_activad',
+            'status'
 
                                                   
             ];
