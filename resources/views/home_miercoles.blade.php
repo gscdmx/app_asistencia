@@ -489,7 +489,7 @@
             <input id="checkboxCustom0000000" type="checkbox" name="representante_alcaldia[]" value="titular" class="form-control-custom">
             <label for="checkboxCustom0000000">Titular</label>
 
-
+ 
             <input id="checkboxCustom00000001" type="checkbox" name="representante_alcaldia[]" value="suplente" class="form-control-custom">
             <label for="checkboxCustom00000001">Suplente</label>
 
@@ -549,7 +549,7 @@
 
           <div class="form-group row">
           <label class="col-sm-2 form-control-label">¡ATENCIÓN! POR MOTIVOS DE SEGURIDAD
-          RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LOS VECINOS QUE ASISTAN DE ESPALDA. MUCHAS GRACIAS :)</label>
+          RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LOS VECINOS QUE ASISTAN DE ESPALDA. MUCHAS GRACIAS</label>
         
         </div>
 

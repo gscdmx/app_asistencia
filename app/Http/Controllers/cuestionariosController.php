@@ -97,7 +97,7 @@ class cuestionariosController extends Controller
         
     }
     
-    ///////////////////////////////////////////////PREGUNTAS///////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////PREGUNTAS///////////////////////////
 
      public function preguntas(){
 
@@ -188,7 +188,7 @@ public function regiones(){
     //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
    // }
 
-//////////////////////////////////////////////////ENTREVISTAS///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////ENTREVISTAS////////////////////////////////////////
  public function entrevistas(){
 
 
@@ -231,7 +231,7 @@ public function excel_cuestionarioentrevistas(){
     
 
 
-/////////////////////////////////////////////////////AGENDA RJG ///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////AGENDA RJG /////////////////////////////////////
 
 
 
@@ -307,6 +307,7 @@ public function regioness(){
                      ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
                      ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_agendas.id_cuadrante')
                      //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                     ->where("tb_agendas.status",true)
                     ->where('tb_agendas.id_user',\Auth::user()->id)
                     ->get();
 
@@ -327,7 +328,58 @@ public function excel_agenda(){
     
 
 
-//////////////////////////////////////////////////////LISTA//////////////////////////////////////////////////////////////////
+    public function update_tabla_agenda($id) {
+    $update_tabla_agenda = update_tabla_agenda::find($id);
+    $update_tabla_agenda->delete();
+
+     return view('/agenda');  
+}
+
+
+
+
+public function update($id) {
+    
+    cuestionario::destroy($id);
+     return view('/agenda');
+}
+
+
+
+  //primera forma
+  public function eliminar_registroAgenda(Request $request){
+
+  //dd($request['id_registro']);
+
+  /////////////////////////////////////////AQUI HACES EL UPDATE
+
+    \App\tbAgenda::where('id', $request['id_registro'])
+              ->update(['status' => false]);
+
+
+  $mensaje = array('mensaje'=>'Eliminaciòn con Éxito!', 'color'=> 'success');
+  return Redirect::to('/getlistadoagenda')->with('mensaje', $mensaje);
+
+  }
+
+
+//segunda forma
+
+  public function eliminar_registroAgenda2opcion($id){
+
+  //dd($id);
+
+  /////////////////////////////////////////AQUI HACES EL UPDATE
+
+    //UPDATE
+
+  $mensaje = array('mensaje'=>'Eliminaciòn con Éxito!', 'color'=> 'success');
+  return Redirect::to('/getlistadoagenda')->with('mensaje', $mensaje);
+
+  }
+
+
+//////////////////////////////////////////PASE DE////////////LISTA///////////////////////////////////////////////
 
     public function lista(){
 

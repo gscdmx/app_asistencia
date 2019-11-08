@@ -26,6 +26,7 @@ class MiAgendaExport implements FromCollection, WithHeadings
                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia') 
                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','tb_agendas.id_cuadrante')
+                    ->where("tb_agendas.status",true)
                     ->where('tb_agendas.id_user',\Auth::user()->id)
                     ->get();
 
@@ -50,6 +51,7 @@ class MiAgendaExport implements FromCollection, WithHeadings
             'NOMBRE DE ACTIVIDAD O EVENTO',
             'FECHA DE CAPTURA REAL',
             'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
+
            
             
         ];
