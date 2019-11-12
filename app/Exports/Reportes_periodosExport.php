@@ -57,7 +57,7 @@ class Reportes_periodosExport implements WithDrawings, FromCollection, WithHeadi
             'ALCALDÍA',
             'C.T',
             'SECTOR',
-            'SE REALIZÓ GABINETE',
+            'SE REALIZÓ GABINETE MATUTINO',
             'NO MOTIVO',
             'FECHA GM',
             'HORA DE INICIO',

@@ -66,7 +66,7 @@ public function headings(): array
             'ALCALDÍA',
             'C.T',
             'SECTOR',
-            'SE REALIZÓ GABINETE',
+            'SE REALIZÓ GABINETE VESPERTINO',
             'NO MOTIVO',
             'FECHA GV',
             'HORA DE INICIO',

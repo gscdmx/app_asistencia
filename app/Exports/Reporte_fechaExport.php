@@ -96,7 +96,7 @@ class Reporte_fechaExport implements WithDrawings, FromCollection, WithHeadings
             'ALCALDÍA',
             'C.T',
             'SECTOR',
-            'SE REALIZÓ GABINETE',
+            'SE REALIZÓ GABINETE MATUTINO',
             'NO MOTIVO',
             'FECHA',
             'HORA DE INICIO',
