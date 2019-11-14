@@ -31,7 +31,9 @@ class CreateTbAsistenciasMiercolesTable extends Migration
             $table->text('otro')->nullable();
             $table->text('ins')->nullable();
             $table->text('vecino')->nullable();
+            $table->text('calle')->nullable();
             $table->integer('user_registro')->nullable();
+
             
 
             $table->timestamps();
