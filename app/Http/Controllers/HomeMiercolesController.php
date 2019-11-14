@@ -175,7 +175,17 @@ class HomeMiercolesController extends Controller
             }else{
                 $array_vecino = $request['vecino'];
             }
-       
+            
+
+            if($request['calle']==null){
+                $array_calle="SIN DATO";
+            }else{
+                $array_calle = $request['calle'];
+            }
+
+
+
+
             if($request['archivo']!=null){
             $imagen_nombre=rand(11111,99999).'.jpg';
             $destinationPath='alcaldias';
@@ -193,7 +203,7 @@ class HomeMiercolesController extends Controller
             
             if ($request['se_realizo_mesa']=='si') {
               DB::table('tb_asistencias_miercoles')->insert([
-                 
+                 'id' => 105,
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
                  'no_motivo' => $request['motivo'],
@@ -216,6 +226,7 @@ class HomeMiercolesController extends Controller
                    'vecino' => $array_vecino,
                  
                    'archivo_imagen' => $imagen_nombre,
+                   'calle' => $array_calle,
                    'user_registro'=> \Auth::user()->id
                 
                  ]);
@@ -229,7 +240,7 @@ class HomeMiercolesController extends Controller
                 
                 
                 DB::table('tb_asistencias_miercoles')->insert([
-              
+                 'id' => 105,
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
                  'no_motivo' => $request['motivo'],
@@ -252,6 +263,7 @@ class HomeMiercolesController extends Controller
                   'ins' => 'No se realizo',
                   'vecino' => 'No se realizo',
                   'archivo_imagen' => $imagen_nombre,
+                  'calle' => 'No se realizo',
                   'user_registro'=> \Auth::user()->id
                 
                

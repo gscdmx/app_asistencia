@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
 
@@ -24,18 +22,20 @@
       <h4>ASISTENCIA GABINETE VESPERTINO DE SEGURIDAD CIUDADANA Y PROCURACIÓN DE JUSTICIA </h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="{{ url('/guardar_asistenciaMiercoles') }}">
+      <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="<?php echo e(url('/guardar_asistenciaMiercoles')); ?>">
          <!-- enctype="multipart/form-data"-->
 
-      {{ csrf_field() }}
+      <?php echo e(csrf_field()); ?>
 
 
- @if( Session::has('mensaje') )
-                <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+
+ <?php if( Session::has('mensaje') ): ?>
+                <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    {{ Session::get('mensaje')['mensaje'] }}
+                    <?php echo e(Session::get('mensaje')['mensaje']); ?>
+
                   </div>
-      @endif
+      <?php endif; ?>
 
 
        
@@ -48,7 +48,7 @@
               <option value="no">NO</option>
             </select>
             
-             @if ($errors->has('se_realizo_mesa')) <p  style="color: red">{{ $errors->first('se_realizo_mesa') }}</p> @endif 
+             <?php if($errors->has('se_realizo_mesa')): ?> <p  style="color: red"><?php echo e($errors->first('se_realizo_mesa')); ?></p> <?php endif; ?> 
           </div>
         
         </div>
@@ -61,7 +61,7 @@
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
           <input type="date" id="fecha" name="fecha" class="form-control"  ></input>
-           @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
+           <?php if($errors->has('fecha')): ?> <p  style="color: red"><?php echo e($errors->first('fecha')); ?></p> <?php endif; ?> 
         </div>
 
 
@@ -79,7 +79,7 @@
 
             </select>
             
-             @if ($errors->has('hora_inicio')) <p  style="color: red">{{ $errors->first('hora_inicio') }}</p> @endif 
+             <?php if($errors->has('hora_inicio')): ?> <p  style="color: red"><?php echo e($errors->first('hora_inicio')); ?></p> <?php endif; ?> 
 
 
               <select name="minutos_i" id="minutos_i" class="form-control">
@@ -153,7 +153,7 @@
              
             </select>
             
-             @if ($errors->has('minutos_i')) <p  style="color: red">{{ $errors->first('minutos_i') }}</p> @endif 
+             <?php if($errors->has('minutos_i')): ?> <p  style="color: red"><?php echo e($errors->first('minutos_i')); ?></p> <?php endif; ?> 
 
 
 
@@ -172,7 +172,7 @@
              
               </select>
             
-             @if ($errors->has('hora_termino')) <p  style="color: red">{{ $errors->first('hora_termino') }}</p> @endif 
+             <?php if($errors->has('hora_termino')): ?> <p  style="color: red"><?php echo e($errors->first('hora_termino')); ?></p> <?php endif; ?> 
 
 
               <select name="minutos_t" id="minutos_t" class="form-control">
@@ -245,7 +245,7 @@
 
             </select>
             
-             @if ($errors->has('minutos_t')) <p  style="color: red">{{ $errors->first('minutos_t') }}</p> @endif 
+             <?php if($errors->has('minutos_t')): ?> <p  style="color: red"><?php echo e($errors->first('minutos_t')); ?></p> <?php endif; ?> 
 
 
         </div>
@@ -655,17 +655,17 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
 <script type="text/javascript">
@@ -707,7 +707,7 @@
 
 
   function selected_dependiente(elemento, id){
-      var url = "{{ url('/get_ct_x_alcaldia')}}"+"/"+id;
+      var url = "<?php echo e(url('/get_ct_x_alcaldia')); ?>"+"/"+id;
       var request = $.ajax({
         url: url,
         method: 'GET',
@@ -750,7 +750,7 @@ var i=1;
 
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
@@ -759,3 +759,5 @@ var i=1;
 
 
 
+
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
