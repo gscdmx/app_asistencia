@@ -203,7 +203,7 @@ class HomeMiercolesController extends Controller
             
             if ($request['se_realizo_mesa']=='si') {
               DB::table('tb_asistencias_miercoles')->insert([
-                 'id' => 105,
+             
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
                  'no_motivo' => $request['motivo'],
@@ -240,7 +240,7 @@ class HomeMiercolesController extends Controller
                 
                 
                 DB::table('tb_asistencias_miercoles')->insert([
-                 'id' => 105,
+               
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
                  'no_motivo' => $request['motivo'],
