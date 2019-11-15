@@ -94,7 +94,7 @@ table, th, td {
                       <th>Inteligencia Social</th>
                       <th>Representante Alcaldia</th>
                       <th>Vecinos</th>
-                      <th>Imagen</th>
+                      <th>MI Imagen GV</th>
 
                         
                     </tr>
@@ -119,6 +119,7 @@ table, th, td {
                       <td>{{$asistencia->ins}}</td>
                       <td>{{$asistencia->representante_alcaldia}}</td>
                       <td>{{$asistencia->vecino}}</td>
+                      <td>{{$asistencia->calle}}</td>
                       
                   
                        <td>
