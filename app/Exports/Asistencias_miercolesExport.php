@@ -47,7 +47,7 @@ class Asistencias_miercolesExport implements FromCollection, WithHeadings
             'OTRO PARTICIPANTE',
             'PDI DE INTELIGENCIA SOCIAL',
             'REPRESENTANTE DE ALCALDÍA',
-            'NÚMERO DE VECINOS'
+            'NÚMERO DE VECINOS',
             'PRESENTA IMAGEN',
             '¿LA REUNIÓN FUE DEL PROGRAMA MI CALLE?'
             
