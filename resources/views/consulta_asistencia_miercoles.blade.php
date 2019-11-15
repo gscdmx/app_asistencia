@@ -94,7 +94,8 @@ table, th, td {
                       <th>Inteligencia Social</th>
                       <th>Representante Alcaldia</th>
                       <th>Vecinos</th>
-                      <th>MI Imagen GV</th>
+                      <th>Imagen GV</th>
+                      <th>Programa Mi C911e</th>
 
                         
                     </tr>
