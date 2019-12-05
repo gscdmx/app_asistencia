@@ -37,10 +37,11 @@
             <div class="logo text-uppercase">
                
                 <img src="{{url('recursos/img/cdmx.JPG')}}" height="60%" width="60%">
-                 <span></span><strong class="text-primary">ASISTENCIA CGGSCYPJ</strong>
+                 <span></span><strong class="text-primary">ASISTENCIA CGGSCYPJ </strong>
+                 <span></span><strong class="text-primary">DISCULPA LAS MOLESTIAS POR EL MOMENTO NO HAY ACCESOS!!</strong>
             </div>
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->
-            <form method="POST" action="{{ route('login') }}" class="text-left form-validate">
+            <!--<form method="POST" action="{{ route('login') }}" class="text-left form-validate">
               {{ csrf_field() }}
                <div class="form-group-material">
                 <input id="email" type="text" name="email" required data-msg="Por favor ingresa tu usuario" class="input-material">
@@ -68,7 +69,7 @@
                 <button class="btn btn-primary" >Ingresar</button>
                 <!-- This should be submit button but I replaced it with <a> for demo purposes-->
               </div>
-            </form><!--<a href="#" class="forgot-pass">olvide mi contraseña</a><small>Crear cuenta </small><a href="register.html" class="signup">Signup</a>-->
+            </form>--><!--<a href="#" class="forgot-pass">olvide mi contraseña</a><small>Crear cuenta </small><a href="register.html" class="signup">Signup</a>-->
           </div>
           <!-- <div class="copyrights text-center">
             <p>  <a href="https://www.gabinetedeseguridad.cdmx.gob.mx/" class="external">CDMX Gabinetes Vespertinos></p>
