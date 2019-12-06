@@ -41,7 +41,7 @@ table, th, td {
       <h4>POR EL MOMENTO NO ESTAN DISPONIBLES, PUEDES SEGUIR CAPTURANDO</h4>
     </div>
     <div class="card-body">
-       <form class="form-horizontal" method="POST" action="{{ url('/getlistadopreguntas') }}">
+       <!--<form class="form-horizontal" method="POST" action="{{ url('/getlistadopreguntas') }}">
 
       {{ csrf_field() }}
 
@@ -145,7 +145,7 @@ table, th, td {
         </div>
 
 
-      </form>
+      </form>-->
     </div>
   </div>
 </div>
