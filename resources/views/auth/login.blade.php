@@ -38,10 +38,10 @@
                
                 <img src="{{url('recursos/img/cdmx.JPG')}}" height="60%" width="60%">
                  <span></span><strong class="text-primary">ASISTENCIA CGGSCYPJ </strong>
-                 <span></span><strong class="text-primary">DISCULPA LAS MOLESTIAS POR EL MOMENTO NO HAY ACCESOS!!</strong>
+                 <!--<span></span><strong class="text-primary">DISCULPA LAS MOLESTIAS POR EL MOMENTO NO HAY ACCESOS!!</strong>-->
             </div>
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->
-            <!--<form method="POST" action="{{ route('login') }}" class="text-left form-validate">
+            <form method="POST" action="{{ route('login') }}" class="text-left form-validate">
               {{ csrf_field() }}
                <div class="form-group-material">
                 <input id="email" type="text" name="email" required data-msg="Por favor ingresa tu usuario" class="input-material">
