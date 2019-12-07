@@ -29,7 +29,7 @@
       <h4>DISCULPA LAS MOLESTIAS, POR EL MOMENTO NO ESTA DISPONIBLE, EN BREVE SE REANUDARA</h4>
     </div>
     <div class="card-body">
-      <!--<form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">
+      <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">
 
 
 
@@ -62,26 +62,26 @@
 
 
 
-        <!-- <div class="line"></div>
+        <div class="line"></div>
       <div class="form-group row">
         <label class="col-sm-2 form-control-label">Fecha:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-         <!-- <input type="date" id="fecha" name="fecha" class="form-control" required></input>
+          <input type="date" id="fecha" name="fecha" class="form-control" required></input>
            @if ($errors->has('fecha')) <p  style="color: red">{{ $errors->first('fecha') }}</p> @endif 
         </div>
 
         <label class="col-sm-2 form-control-label">Hora de Inicio de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-         <!-- <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
+          <input type="time" id="hora_i" name="hora_i" class="form-control" required></input>
            @if ($errors->has('hora_i')) <p  style="color: red">{{ $errors->first('hora_i') }}</p> @endif
         </div>
 
          <label class="col-sm-2 form-control-label">Hora de Término de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-         <!-- <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
+         <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
            @if ($errors->has('hora_f')) <p  style="color: red">{{ $errors->first('hora_f') }}</p> @endif
         </div>
 
@@ -214,8 +214,8 @@
             </select>
             <!--<textarea class="form-control" id="acudio" name="acudio"></textarea>-->
             
-            <!-- @if ($errors->has('acudio')) <p  style="color: red">{{ $errors->first('acudio') }}</p> @endif 
-         <!-- </div>
+             @if ($errors->has('acudio')) <p  style="color: red">{{ $errors->first('acudio') }}</p> @endif 
+          </div>
         
         </div>
 
@@ -333,7 +333,7 @@
        
 
 
-         <!--<div class="line"></div>
+         <div class="line"></div>
          <div class="form-group row">
           <label class="col-sm-3 form-control-label">15.- ¿El ciudadano acepta ser parte de la Red Vecinal?:</label>
           <div class="col-sm-9 mb-3">
@@ -354,7 +354,7 @@
             <button type="submit" class="btn btn-primary"> Registrar </button>
           </div>
         </div>
-      </form>-->
+      </form>
     </div>
   </div>
 </div>
