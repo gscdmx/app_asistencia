@@ -204,7 +204,7 @@ if (isset(\Auth::user()->permisos)) {
              
              
              <?php   $dia= date("w");
-            if($dia==4){?>
+            if($dia==6){?>
              <li><a href="{{url('/asistencia_miercoles')}}"> <i class="icon-padnote"></i>Asistencia Miércoles</a></li>
             <?php } ?>
           
