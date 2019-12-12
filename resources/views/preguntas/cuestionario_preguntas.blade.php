@@ -25,7 +25,7 @@
       <h4>CGGSCyPJ CDMX </h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>FORMATO DE RED DE CONTACTO CIUDA
+      <h4>FORMATO DE RED DE CONTACTO CIUDADANO
       
     </div>
     <div class="card-body">
