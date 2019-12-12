@@ -36,7 +36,7 @@
           <div class="form-inner">
             <div class="logo text-uppercase">
                
-                <img src="{{url('recursos/img/cdmx.JPG')}}" height="60%" width="60%">
+                <img src="{{url('recursos/img/logooficial.jpg')}}" height="60%" width="60%">
                  <span></span><strong class="text-primary">ASISTENCIA CGGSCYPJ </strong>
                  <!--<span></span><strong class="text-primary">DISCULPA LAS MOLESTIAS POR EL MOMENTO NO HAY ACCESOS!!</strong>-->
             </div>
