@@ -25,8 +25,8 @@
       <h4>CGGSCyPJ CDMX </h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <!--<h4>FORMATO DE RED DE CONTACTO CIUDADANO</h4>-->
-      <h4>DISCULPA LAS MOLESTIAS, POR EL MOMENTO NO ESTA DISPONIBLE, EN BREVE SE REANUDARA</h4>
+      <h4>FORMATO DE RED DE CONTACTO CIUDA
+      
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_cuestionario_Preguntas') }}">
