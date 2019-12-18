@@ -23,7 +23,8 @@
       <h4>CGGSCyPJ CDMX </h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>FORMATO DE RED DE CONTACTO CIUDADANO</h4>
+      <h4>FORMATO DE RED DE CONTACTO CIUDADANO
+      
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_cuestionario_Preguntas')); ?>">
@@ -61,7 +62,7 @@
 
 
 
-         <div class="line"></div>
+        <div class="line"></div>
       <div class="form-group row">
         <label class="col-sm-2 form-control-label">Fecha:</label>
         <div class="col-sm-2">
@@ -80,7 +81,7 @@
          <label class="col-sm-2 form-control-label">Hora de Término de Entrevista:</label>
         <div class="col-sm-2">
           <!--<input type="text" class="form-control">-->
-          <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
+         <input type="time" id="hora_f" name="hora_f" class="form-control" required></input>
            <?php if($errors->has('hora_f')): ?> <p  style="color: red"><?php echo e($errors->first('hora_f')); ?></p> <?php endif; ?>
         </div>
 

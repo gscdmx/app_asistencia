@@ -36,9 +36,12 @@
           <div class="form-inner">
             <div class="logo text-uppercase">
                
-                <img src="<?php echo e(url('recursos/img/logooficial.jpg')); ?>" height="60%" width="60%">
-                 <span></span><strong class="text-primary">ASISTENCIA CGGSCYPJ </strong>
-                 <!--<span></span><strong class="text-primary">DISCULPA LAS MOLESTIAS POR EL MOMENTO NO HAY ACCESOS!!</strong>-->
+                <img src="<?php echo e(url('recursos/img/logooficial.jpg')); ?>" height="7%" width="50%">
+                <span></span><p><strong  class="text-primary" >ASISTENCIA</strong></p>
+                 <p><strong  align="center"  class="text-secundary"  style="color:#000000"; >CGGSCYPJ</strong></p>
+                 
+                <!-- <span></span><strong class="text-primary">REPOSITORIO</strong>
+                 <strong class="text-secundary">GSCYPJ</strong>-->
             </div>
             <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>-->
             <form method="POST" action="<?php echo e(route('login')); ?>" class="text-left form-validate">

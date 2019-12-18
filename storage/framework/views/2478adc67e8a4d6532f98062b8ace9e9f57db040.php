@@ -77,8 +77,8 @@ if (isset(\Auth::user()->permisos)) {
             <li><a href="<?php echo e(url('/mapasView')); ?>"> <i class="icon-list"></i>MIS MAPAS INCIDENCIA DELICTIVA Y RED VECINAL</a></li>
             <li><a href="<?php echo e(url('/agenda')); ?>"> <i class="icon-list"></i>MI AGENDA</a></li>
             <li><a href="<?php echo e(url('/getlistadoagenda')); ?>"> <i class="icon-list"></i>VER MI AGENDA SEMANAL</a></li>
-            <!--<li><a href="<?php echo e(url('/lista')); ?>"> <i class="icon-list"></i>MI PASE DE LISTA SSC</a></li>-->
-            <!--<li><a href="<?php echo e(url('/getlistadolista')); ?>"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>-->
+            <li><a href="<?php echo e(url('/lista')); ?>"> <i class="icon-list"></i>MI PASE DE LISTA-SSC</a></li>
+            <li><a href="<?php echo e(url('/getlistadolista')); ?>"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>
 
               
           
@@ -205,7 +205,7 @@ if (isset(\Auth::user()->permisos)) {
              
              <?php   $dia= date("w");
             if($dia==4){?>
-             <li><a href="<?php echo e(url('/asistencia_miercoles')); ?>"> <i class="icon-padnote"></i>Asistencia Miércoles</a></li>
+             <li><a href="<?php echo e(url('/asistencia_miercoles')); ?>"> <i class="icon-padnote"></i>ASISTENCIA VESPERTINA</a></li>
             <?php } ?>
           
           
