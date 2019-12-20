@@ -119,7 +119,7 @@
           <label class="col-sm-2 form-control-label">3.- Número de elementos en Formación:</label>
           <div class="col-sm-10 mb-3">
  
-          <input type="number" name="num_elementos" class="form-group row" />
+          <input type="number" name="num_elementos" class="form-group row" required></input>
 
           </div>
         
@@ -134,7 +134,7 @@
           <label class="col-sm-2 form-control-label">4.- Número de patrullas en Formación:</label>
           <div class="col-sm-10 mb-3">
  
-          <input type="number" name="num_patrullas" class="form-group row" />
+          <input type="number" name="num_patrullas" class="form-group row" required></input>
 
           </div>
         
@@ -187,7 +187,7 @@
           <label class="col-sm-2 form-control-label">6.- Total de Jefes de Cuadrantes en la Formación:</label>
           <div class="col-sm-10 mb-3">
  
-          <input type="number" name="jefe_cuadrante" class="form-group row" />
+          <input type="number" name="jefe_cuadrante" class="form-group row" required></input>
 
           </div>
         
@@ -202,7 +202,7 @@
           <label class="col-sm-2 form-control-label">Captura la foto del Pase de Lista-SSC:</label>
           <div class="col-sm-10 mb-3">
    
-       <input type="file" id="archivo" name="archivo" accept="image/x-png,image/gif,image/jpeg">
+       <input type="file" id="archivo" name="archivo" accept="image/x-png,image/gif,image/jpeg" required></input>
            @if ($errors->has('archivo')) <p  style="color: red">{{ $errors->first('archivo') }}</p> @endif
           </div>
         
