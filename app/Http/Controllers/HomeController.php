@@ -187,7 +187,14 @@ class HomeController extends Controller
             }
             
 
-            
+            if($request['archivo']!=null){
+            $imagen_nombre=rand(11111,99999).'.jpg';
+            $destinationPath='alcaldias';
+              }else{
+              $imagen_nombre=null;
+               
+              }
+
 
 
 
@@ -216,12 +223,13 @@ class HomeController extends Controller
                        'ins' => $array_ins,
                        'reunionjg' => $array_reunionjg,
                       // 'hora_inicio'=> $array_hora_inicio,
+                       'archivo_imagen' => $imagen_nombre,
                        'user_registro'=> \Auth::user()->id
                     ]); 
 
             }else{
                 $inserto = \App\tbAsistencia::create([  
-                       // 'id' => 100, 
+                        //'id' => 100, 
                         'id_ct' => $request['ct'],
                         'se_realizo' => $request['se_realizo_mesa'], 
                         'no_motivo' => $request['motivo'],
@@ -243,6 +251,7 @@ class HomeController extends Controller
                         'ins' => 'Reunión con JG',
                         'reunionjg' => 'Reunión con JG',
                         //'hora_inicio' => 'Reunión con JG',
+                        'archivo_imagen' => $imagen_nombre,
                         'user_registro'=> \Auth::user()->id
                      ]); 
 
