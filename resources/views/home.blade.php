@@ -26,7 +26,7 @@
          <a class="btn btn-primary" href="{{url('/uploads/GSCYPJ/preguntas.docx')}}" role="button">F A Q</a><br><br>-->
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia') }}">
+      <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="{{ url('/guardar_asistencia') }}">
 
       {{ csrf_field() }}
 
@@ -589,7 +589,16 @@
 
 
 
-
+          <div class="line"></div>
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">Captura o Busca en GalerÍa:</label>
+          <div class="col-sm-10 mb-3">
+  
+       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
+      
+          </div>
+        
+        </div>
 
     
 
