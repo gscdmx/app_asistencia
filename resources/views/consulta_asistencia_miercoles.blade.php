@@ -52,7 +52,7 @@ table, th, td {
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcelmiercoles') }}" class="btn btn-primary">Descargar Excel Asistencias Miércoles</a>
+            <a href="{{ url('/getexcelmiercoles') }}" class="btn btn-primary">Descargar Asistencias Vespertinas</a>
             
             
             
