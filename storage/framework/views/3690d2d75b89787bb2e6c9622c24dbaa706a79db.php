@@ -53,7 +53,7 @@ table, th, td {
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Excel</a>
+            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Excel Asistencias GM</a>
 </div>
 
 
@@ -84,6 +84,7 @@ table, th, td {
                       <th>PDI Inteligencia Social</th>
                       <th>Representante de Alcaldia</th>
                       <th>Reunion con Jefa G</th>
+                      <th>Imagen del Gabinete Matutino</th>
                         
                     </tr>
                   </thead>
@@ -108,7 +109,27 @@ table, th, td {
                                           <td><?php echo e($asistencia->ins); ?></td>
                                           <td><?php echo e($asistencia->representante_alcaldia); ?></td>
                                           <td><?php echo e($asistencia->reunionjg); ?></td>
-     
+                     <td>
+
+                       
+
+                      
+                        <?php if($asistencia->archivo_imagen==null || $asistencia->archivo_imagen==''): ?>
+
+                         SIN IMAGEN
+
+
+                        <?php else: ?>
+
+                         <!-- <a href="<?php echo e(url('/uploads/imagenes_alcaldias').'/'.$asistencia->archivo_imagen); ?>" class="btn btn-primary" role="button">VER IMAGEN</a>
+
+                          <br>-->
+
+                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen">
+                           VER IMAGEN
+                          </button>
+                        <?php endif; ?>
+                      </td> 
                      
                       
                       
@@ -139,30 +160,66 @@ table, th, td {
           </div>
   </section>
 
-
-
+<!-- Modal -->
+<div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Gabinete de Seguridad CDMX</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+      <div style="width: 500px; height: 400px;">
+      <img src="" id="imagen_dinamica"  style="width: 480px; height: 380px;"  >
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php $__env->stopSection(); ?>
 
-
-
-
-
 <?php $__env->startSection('js'); ?>  
-
-
-    
-
-
  
 <?php $__env->stopSection(); ?>
 
-
-
-
-
 <?php $__env->startSection('customjs'); ?>
+
+
+<script    type="text/javascript">
+  
+
+  $( ".obtener_imagen" ).click(function() {
+
+    
+     var imagen_nombre = $(this).attr('data-imagen');
+
+     var ruta ="<?php echo e(url('uploads')); ?>"+"/"+imagen_nombre
+
+     $("#imagen_dinamica").attr('src',ruta);
+
+
+  //alert( ruta);
+});
+
+
+</script>
+
+
+
+
+
+
+
+
 
 
 
@@ -176,10 +233,6 @@ table, th, td {
 } );
 
 </script>
-
-
-
-
 
 <?php $__env->stopSection(); ?>
 
