@@ -125,7 +125,7 @@ table, th, td {
 
                           <br>-->
 
-                          <button type="button" class="btn btn-primary obteneer_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen_matutino">
+                          <button type="button" class="btn btn-primary obten_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen_matutino">
                            VER IMAGEN
                           </button>
                         @endif
@@ -173,7 +173,7 @@ table, th, td {
       <div class="modal-body">
       
       <div style="width: 500px; height: 400px;">
-      <img src="" id="imagen_dinamic"  style="width: 480px; height: 380px;"  >
+      <img src="" id="imagen_dinamica"  style="width: 480px; height: 380px;"  >
       </div>
       </div>
       <div class="modal-footer">
@@ -197,14 +197,14 @@ table, th, td {
 <script    type="text/javascript">
   
 
-  $( ".obteneer_imagen" ).click(function() {
+  $( ".obten_imagen" ).click(function() {
 
     
-     var imagen_nombre = $(this).attr('data-imagen');
+     var imagen_nombres = $(this).attr('data-imagen');
 
-     var ruta ="{{url('matutinos')}}"+"/"+imagen_nombre
+     var ruta ="{{url('matutinos')}}"+"/"+imagen_nombres
 
-     $("#imagen_dinamic").attr('src',ruta);
+     $("#imagen_dinamica").attr('src',ruta);
 
 
   //alert( ruta);

@@ -53,7 +53,7 @@ table, th, td {
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Excel Asistencias GM</a>
+            <a href="<?php echo e(url('/getexcel')); ?>" class="btn btn-primary">Descargar Asistencias Matutinas</a>
 </div>
 
 
@@ -125,7 +125,7 @@ table, th, td {
 
                           <br>-->
 
-                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen">
+                          <button type="button" class="btn btn-primary obten_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen_matutino">
                            VER IMAGEN
                           </button>
                         <?php endif; ?>
@@ -161,7 +161,7 @@ table, th, td {
   </section>
 
 <!-- Modal -->
-<div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_imagen_matutino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -197,12 +197,12 @@ table, th, td {
 <script    type="text/javascript">
   
 
-  $( ".obtener_imagen" ).click(function() {
+  $( ".obten_imagen" ).click(function() {
 
     
-     var imagen_nombre = $(this).attr('data-imagen');
+     var imagen_nombres = $(this).attr('data-imagen');
 
-     var ruta ="<?php echo e(url('uploads')); ?>"+"/"+imagen_nombre
+     var ruta ="<?php echo e(url('matutinos')); ?>"+"/"+imagen_nombres
 
      $("#imagen_dinamica").attr('src',ruta);
 

@@ -188,12 +188,23 @@ class HomeController extends Controller
             
 
             if($request['archivo']!=null){
-            $imagen_nombre=rand(11111,99999).'.jpg';
-            $destinationPath='alcaldias';
+            $imagen_nombres=rand(11111,99999).'.jpg';
+            $destinationPath='matutinos/';
               }else{
-              $imagen_nombre=null;
+              $imagen_nombres=null;
                
               }
+
+
+
+
+        
+     
+               
+
+
+
+
 
 
 
@@ -201,7 +212,7 @@ class HomeController extends Controller
             
             if ($request['se_realizo_mesa']=='si') {
                $inserto = \App\tbAsistencia::create([ 
-                     //'id' => 100, 
+                     'id' => 100, 
                        'id_ct' => $request['ct'],
                        'se_realizo' => $request['se_realizo_mesa'], 
                        'no_motivo' => $request['motivo'],
@@ -223,13 +234,14 @@ class HomeController extends Controller
                        'ins' => $array_ins,
                        'reunionjg' => $array_reunionjg,
                       // 'hora_inicio'=> $array_hora_inicio,
-                       'archivo_imagen' => $imagen_nombre,
+                       'archivo_imagen' => $imagen_nombres,
                        'user_registro'=> \Auth::user()->id
                     ]); 
 
+           
             }else{
                 $inserto = \App\tbAsistencia::create([  
-                      //'id' => 100, 
+                      'id' => 100, 
                         'id_ct' => $request['ct'],
                         'se_realizo' => $request['se_realizo_mesa'], 
                         'no_motivo' => $request['motivo'],
@@ -251,7 +263,7 @@ class HomeController extends Controller
                         'ins' => 'Reunión con JG',
                         'reunionjg' => 'Reunión con JG',
                         //'hora_inicio' => 'Reunión con JG',
-                        'archivo_imagen' => $imagen_nombre,
+                        'archivo_imagen' => $imagen_nombres,
                         'user_registro'=> \Auth::user()->id
                      ]); 
 
@@ -260,8 +272,21 @@ class HomeController extends Controller
 
 
 
+
+              if($request['archivo']!=null){
+                 $request['archivo']->move($destinationPath,$imagen_nombres); 
+
+            }
+
+
+
+
+
+
+
+
                  $mensaje = array('mensaje'=>'¡Asistencia Matutina Éxitosa!', 'color'=> 'success');
-                 return Redirect::to('/home/')->with('mensaje', $mensaje);
+                return Redirect::to('/home/')->with('mensaje', $mensaje);
          }
 
 
