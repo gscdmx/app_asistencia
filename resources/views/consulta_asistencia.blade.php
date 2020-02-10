@@ -53,7 +53,7 @@ table, th, td {
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Excel Asistencias GM</a>
+            <a href="{{ url('/getexcel') }}" class="btn btn-primary">Descargar Asistencias Matutinas</a>
 </div>
 
 
@@ -125,7 +125,7 @@ table, th, td {
 
                           <br>-->
 
-                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen">
+                          <button type="button" class="btn btn-primary obteneer_imagen" data-toggle="modal"  data-imagen="{{$asistencia->archivo_imagen}}" data-target="#modal_imagen_matutino">
                            VER IMAGEN
                           </button>
                         @endif
@@ -161,7 +161,7 @@ table, th, td {
   </section>
 
 <!-- Modal -->
-<div class="modal fade" id="modal_imagen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_imagen_matutino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -173,7 +173,7 @@ table, th, td {
       <div class="modal-body">
       
       <div style="width: 500px; height: 400px;">
-      <img src="" id="imagen_dinamica"  style="width: 480px; height: 380px;"  >
+      <img src="" id="imagen_dinamic"  style="width: 480px; height: 380px;"  >
       </div>
       </div>
       <div class="modal-footer">
@@ -197,14 +197,14 @@ table, th, td {
 <script    type="text/javascript">
   
 
-  $( ".obtener_imagen" ).click(function() {
+  $( ".obteneer_imagen" ).click(function() {
 
     
      var imagen_nombre = $(this).attr('data-imagen');
 
-     var ruta ="{{url('uploads')}}"+"/"+imagen_nombre
+     var ruta ="{{url('matutinos')}}"+"/"+imagen_nombre
 
-     $("#imagen_dinamica").attr('src',ruta);
+     $("#imagen_dinamic").attr('src',ruta);
 
 
   //alert( ruta);
