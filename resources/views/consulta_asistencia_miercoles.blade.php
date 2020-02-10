@@ -29,10 +29,10 @@ table, th, td {
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
-      <h4>CGGSCPJ CDMX</h4>
+      <h4>CGGSCyPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>GABINETE VESPERTINO DE SEGURIDAD CIUDADANA </h4>
+      <h4>GABINETE VESPERTINO DE SEGURIDAD CIUDADANA CDMX</h4>
     </div>
     <div class="card-body">
       <form class="form-horizontal" method="POST" action="{{ url('/guardar_asistencia_miercoles') }}">
@@ -52,7 +52,7 @@ table, th, td {
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcelmiercoles') }}" class="btn btn-primary">Descargar Excel</a>
+            <a href="{{ url('/getexcelmiercoles') }}" class="btn btn-primary">Descargar Excel Asistencias Miércoles</a>
             
             
             
@@ -64,7 +64,7 @@ table, th, td {
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias Gabinete Vespertino</h4>
+              <h4>Listado de Asistencias en Gabinetes Vespertinos</h4>
             </div>
             
             
@@ -95,7 +95,7 @@ table, th, td {
                       <th>Representante Alcaldia</th>
                       <th>Vecinos</th>
                       <th>Programa Mi C911e</th>
-                      <th>Imagen GV</th>
+                      <th>Imagen del Gabinete Vespertino</th>
                       
 
                         
