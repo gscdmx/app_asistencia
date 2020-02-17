@@ -212,7 +212,7 @@ class HomeController extends Controller
             
             if ($request['se_realizo_mesa']=='si') {
                $inserto = \App\tbAsistencia::create([ 
-                     'id' => 100, 
+                     //'id' => 100, 
                        'id_ct' => $request['ct'],
                        'se_realizo' => $request['se_realizo_mesa'], 
                        'no_motivo' => $request['motivo'],
@@ -241,7 +241,7 @@ class HomeController extends Controller
            
             }else{
                 $inserto = \App\tbAsistencia::create([  
-                      'id' => 100, 
+                     // 'id' => 100, 
                         'id_ct' => $request['ct'],
                         'se_realizo' => $request['se_realizo_mesa'], 
                         'no_motivo' => $request['motivo'],
