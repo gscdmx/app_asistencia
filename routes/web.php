@@ -183,4 +183,4 @@ Route::get('/region_sendero', 'cuestionariosController@region_sendero');
 Route::post('/guardar_cuestionario_sendero', 'cuestionariosController@save_cuestionario_sendero');
 Route::get('/excel_cuestionario_sendero', 'cuestionariosController@excel_cuestionariosendero');
 Route::get('/getlistadosendero', 'cuestionariosController@view_listado_sendero');
-Route::get('/getexcel_sendero', 'cuestionariosController@excel_sendero');
+Route::get('/getexcel_sendero', 'cuestionariosController@excel_sendero');/////buena

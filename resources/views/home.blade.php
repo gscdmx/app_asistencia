@@ -325,7 +325,7 @@
           <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó el Gabinete Matutino: </label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
+            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
           </div>
         </div>
 
