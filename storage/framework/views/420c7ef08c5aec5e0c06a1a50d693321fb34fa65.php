@@ -12,7 +12,6 @@
          
 
 
-
 <div class="col-lg-12">
   <div class="card">
     <div class="card-header d-flex align-items-center">
@@ -73,8 +72,11 @@
           
            <select name="hora_inicio" id="hora_inicio" class="form-control">
               <option value="">Selecciona Hora...</option>
+              <option value="4">4</option>
               <option value="5">5</option>
               <option value="6">6</option>
+              <option value="7">7</option>
+              
               
 
             </select>
@@ -166,6 +168,8 @@
 
               <select name="hora_termino" id="hora_termino" class="form-control">
               <option value="">Selecciona Hora...</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
@@ -262,7 +266,7 @@
           <label class="col-sm-2 form-control-label">Describe el motivo por el cuál NO se realizó el Gabinete Sendero Seguro:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
+            <textarea id="motivo" name="motivo" class="form-control"></textarea>
           </div>
         </div>
 
