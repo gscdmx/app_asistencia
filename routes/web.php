@@ -177,5 +177,10 @@ Route::get('/excel_cuestionario_lista', 'cuestionariosController@excel_cuestiona
 Route::get('/getlistadolista', 'cuestionariosController@view_listado_lista');
 Route::get('/getexcel_lista', 'cuestionariosController@excel_lista');
 
-
-
+//SENDERO SEGURO RJG VESPERTINO
+Route::get('/sendero', 'cuestionariosController@sendero');
+Route::get('/region_sendero', 'cuestionariosController@region_sendero');
+Route::post('/guardar_cuestionario_sendero', 'cuestionariosController@save_cuestionario_sendero');
+Route::get('/excel_cuestionario_sendero', 'cuestionariosController@excel_cuestionariosendero');
+Route::get('/getlistadosendero', 'cuestionariosController@view_listado_sendero');
+Route::get('/getexcel_sendero', 'cuestionariosController@excel_sendero');

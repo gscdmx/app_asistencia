@@ -312,18 +312,20 @@
           
           <label class="col-sm-2 form-control-label">Reunión de Alcaldía con Jefa de Gobierno:</label>
           <div class="col-sm-10 mb-3">
-          <input  type="checkbox" name="reunionjg"  value="Reunión con JG
-"  style="width:5%; height:110%"       class="form-group row" />
+          <input  type="checkbox" name="reunionjg"  value="Reunión con JG"  style="width:5%; height:110%"       class="form-group row" />
           
           
           </div>
         </div>
-  <div class="line"></div>
+
+
+        
+        <div class="line"></div>
         <div class="form-group row">
           <label class="col-sm-2 form-control-label">Describa el Motivo por el cual no se realizó el Gabinete Matutino: </label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
+            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
           </div>
         </div>
 

@@ -17,6 +17,8 @@ use App\Exports\EntrevistasMpExport;
 use App\Exports\AgendaExport;
 use App\Exports\ListaExport;
 use App\Exports\MiAgendaExport;
+use App\Exports\SenderosExport;
+use App\Exports\SenderoSeguroExport;
 
 
 
@@ -594,31 +596,6 @@ public function guardar_pdf_admin(Request $request){
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     public function excel_cuestionariolista(){
         
@@ -729,7 +706,329 @@ public function guardar_pdf_admin(Request $request){
 
     //return $key;
 //}
+/////////////////////////////////////////////////SENDERO SEGURO VESPERTINO ////////////////////////////////////////////
 
+public function sendero(){
+
+
+       $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
+                        ->join('users','users.name','=','cat_cuadrantes.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('sendero.cuestionario_sendero',compact('mis_cuadrantes'));
+       
+
+       
+    }
+    
+  
+public function regiones_sendero(){
+
+       $mis_regiones= \App\catDelegaciones::select('cat_delegaciones.delegacion','cat_delegaciones.region')
+                        ->join('cat_coord_territorials','cat_coord_territorials.id_alcaldia','=','cat_delegaciones.ct')
+                        ->join('users','users.name','=','cat_delegaciones.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('sendero.cuestionario_sendero',compact('mis_regiones'));
+       
+
+       
+    }
+
+   /*public function save_cuestionario_sendero(Request $request){
+        
+        $sendero =$request->except('_token');
+        
+        $sendero['id_user']=\Auth::user()->id;
+        
+        \App\senderos::create($sendero);
+        
+          $mensaje = array('mensaje'=>'Registro Sendero Éxitoso!', 'color'=> 'success');
+          return Redirect::to('/senderos')->with('mensaje', $mensaje);
+        
+    }
+    
+    public function excel_cuestionariosendero(){
+        
+        
+        return Excel::download(new  SenderosExport, 'SENDERO SEGURO RJG.xlsx');
+      
+        
+    }*/
+    public function save_cuestionario_sendero(Request $request){
+    
+  $hora_i_compuesta=$request['hora_inicio'].":".$request['minutos_i'];
+      $hora_f_compuesta=$request['hora_termino'].":".$request['minutos_t'];
+
+
+
+        $validator = Validator::make($request->all(), [
+                 'fecha' => 'required',
+                 'hora_inicio' => 'required',
+                 'minutos_i' => 'required',
+                 'hora_termino' => 'required',
+                 'minutos_t' => 'required',
+                 'se_realizo_mesa' => 'required'
+             ]);
+
+
+
+        if ($validator->fails()) {
+
+           $messages = $validator->messages();
+           return Redirect::to('/sendero')->withInput()->withErrors($validator);
+
+         }else if ($validator->passes()){
+
+            if($request['jg']==null){
+                $array_jg="SIN DATO";
+            }else{
+                $array_jg = implode(",",$request['jg']);
+            }
+
+
+            if($request['mp']==null){
+                $array_mp="SIN DATO";
+            }else{
+                $array_mp = implode(",",$request['mp']);
+            }
+
+
+
+            if($request['jsp']==null){
+                $array_jsp="SIN DATO";
+            }else{
+                $array_jsp = implode(",",$request['jsp']);
+            }
+
+
+
+            if($request['jspi']==null){
+                $array_jspi="SIN DATO";
+            }else{
+                $array_jspi = implode(",",$request['jspi']);
+            }
+
+
+
+            if($request['jc']==null){
+                $array_jc="SIN DATO";
+            }else{
+                $array_jc = implode(",",$request['jc']);
+            }
+
+             if($request['ml']==null){
+                $array_ml="SIN DATO";
+            }else{
+                $array_ml = implode(",",$request['ml']);
+            }
+
+
+
+            if($request['otros']==null){
+                $array_ot="SIN DATO";
+            }else{
+                $array_ot = implode(",",$request['otros']);
+            }
+            
+            
+             if($request['representante_alcaldia']==null){
+                $array_ra="SIN DATO";
+            }else{
+                $array_ra = implode(",",$request['representante_alcaldia']);
+            }
+
+               if($request['ins']==null){
+                $array_ins="SIN DATO";
+            }else{
+                $array_ins = implode(",",$request['ins']);
+            }
+            
+            if($request['vecino']==null){
+                $array_vecino="SIN DATO";
+            }else{
+                $array_vecino = $request['vecino'];
+            }
+            
+
+            if($request['calle']==null){
+                $array_calle="SIN DATO";
+            }else{
+                $array_calle = $request['calle'];
+            }
+            
+
+            if($request['senderoseguro']==null){
+                $array_senderoseguro="SIN DATO";
+            }else{
+                $array_senderoseguro = $request['senderoseguro'];
+            }
+
+
+
+            if($request['archivo']!=null){
+            $imagen_nombre=rand(11111,99999).'.jpg';
+            $destinationPath='alcaldias';
+              }else{
+              $imagen_nombre=null;
+               
+              }
+
+
+
+
+           
+         }
+
+            
+            if ($request['se_realizo_mesa']=='si') {
+              DB::table('senderos')->insert([
+             
+                 'id_ct' => $request['ct'],
+                 'se_realizo' => $request['se_realizo_mesa'], 
+                 'no_motivo' => $request['motivo'],
+
+                 'fecha' => $request['fecha'],
+                 'hora_i' =>$hora_i_compuesta,
+                 'hora_f' => $hora_f_compuesta,
+                 //'hora_i' => $request['hora1'],
+                 //'hora_f' => $request['hora2'],
+                       
+                   'jg' => $array_jg,
+                   'mp' => $array_mp,
+                   'jsp' => $array_jsp,
+                   'jspi' => $array_jspi,
+                   'jc' => $array_jc,
+                   'ml' => $array_ml,
+                   'otro' => $array_ot,
+                   'representante_alcaldia'=>$array_ra,
+                   'ins' => $array_ins,
+                   'vecino' => $array_vecino,
+                 
+                   'archivo_imagen' => $imagen_nombre,
+                   'calle' => $array_calle,
+                   'senderoseguro' => $array_senderoseguro,
+                   'user_registro'=> \Auth::user()->id
+                
+                 ]);
+                 
+                 
+                 if($request['archivo']!=null){
+                 $request['archivo']->move($destinationPath,$imagen_nombre);
+            }
+
+            }else{
+                
+                
+                DB::table('senderos')->insert([
+               
+                 'id_ct' => $request['ct'],
+                 'se_realizo' => $request['se_realizo_mesa'], 
+                 'no_motivo' => $request['motivo'],
+
+                 'fecha' => $request['fecha'],
+                 'hora_i' =>$hora_i_compuesta,
+                        //'minutos_i' => $request['minutos_i'],
+                 'hora_f' => $hora_f_compuesta,
+                 //'hora_i' => $request['hora1'],
+                 //'hora_f' => $request['hora2'],
+                       
+                  'jg' => 'No se realizo',
+                  'mp' => 'No se realizo',
+                  'jsp' => 'No se realizo',
+                  'jspi' => 'No se realizo',
+                  'jc' => 'No se realizo',
+                  'ml' => 'No se realizo',
+                  'otro' => 'No se realizo',
+                  'representante_alcaldia'=>'No se realizo',
+                  'ins' => 'No se realizo',
+                  'vecino' => 'No se realizo',
+                  'archivo_imagen' => $imagen_nombre,
+                  'calle' => 'No se realizo',
+                  'senderoseguro' => 'No se realizo',
+                  'user_registro'=> \Auth::user()->id
+                
+               
+             ]);
+             
+                        
+          
+
+         }
+
+                 $mensaje = array('mensaje'=>'Asistencia Sendero Seguro Éxitosa !', 'color'=> 'success');
+                 return Redirect::to('/sendero')->with('mensaje', $mensaje);
+
+    }
+
+    
+/* public function view_listado_sendero()
+    {   
+       /* $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_delegaciones.delegacion")
+        //,"cat_cuadrantes.ct","cat_cuadrantes.cuadrante","cat_delegaciones.delegacion","cat_delegaciones.region"
+                    ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                   // ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
+                    ->leftjoin('cat_delegaciones','cat_delegaciones.delegacion','=','users.name')
+                   ->where('tb_preguntas.id_user',\Auth::user()->id)
+                   ->get();*/
+
+         /*$senderos = \App\senderos::select("senderos.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
+                    ->leftjoin('users','users.id','=','senderos.id_user',"cat_coord_territorials.ct2")
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','senderos.id_cuadrante')
+                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                    ->where('senderos.id_user',\Auth::user()->id)
+                    ->get();
+
+         // dd($senderos );
+      // return json_encode($senderos); 
+      return view('consulta_sendero',compact('senderos'));
+    }
+
+
+      //public function excel_pregunta()
+   // {   
+
+    //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
+   // }*/
+
+
+ public function view_listado_sendero()
+    {   
+        $senderos = DB::table('senderos')->select("senderos.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
+                    ->leftjoin('users','users.id','=','senderos.user_registro') 
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                   ->where('senderos.user_registro',\Auth::user()->id)
+                   ->get();
+
+
+        return view('consulta_sendero',compact('senderos'));
+    }
+    
+
+
+
+public function excel_sendero()
+   {   
+
+      return Excel::download(new SenderosExport, 'SENDEROS SEGUROS RJG.xlsx');
+    }
+
+
+
+ public function excel_cuestionariosendero(){
+        
+        
+        return Excel::download(new  SenderoSeguroExport, 'SENDERO SEGURO EN CDMX.xlsx');
+      
+        
+    }
 
 
 

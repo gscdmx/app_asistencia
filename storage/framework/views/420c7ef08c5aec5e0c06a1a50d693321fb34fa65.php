@@ -19,10 +19,10 @@
       <h4>CGGSCPYJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>ASISTENCIA GABINETE VESPERTINO DE SEGURIDAD CIUDADANA Y PROCURACIÓN DE JUSTICIA </h4>
+      <h4>ASISTENCIA SENDERO SEGURO</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="<?php echo e(url('/guardar_asistenciaMiercoles')); ?>">
+      <form class="form-horizontal"  enctype="multipart/form-data"  method="POST" action="<?php echo e(url('/guardar_cuestionario_sendero')); ?>">
          <!-- enctype="multipart/form-data"-->
 
       <?php echo e(csrf_field()); ?>
@@ -40,7 +40,7 @@
 
        
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Vespertino?</label>
+          <label class="col-sm-2 form-control-label">¿Se realizó el Gabinete Sendero Seguro?</label>
           <div class="col-sm-10 mb-3">
             <select name="se_realizo_mesa" id="se_realizo_mesa" class="form-control">
               <option value="">Selecciona...</option>
@@ -169,6 +169,7 @@
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
+              <option value="9">9</option>
              
               </select>
             
@@ -256,58 +257,23 @@
 
      <div  style="display:none;" id="show_descripcion">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Describe el motivo por el cuál no se realizó el Gabinete Vespertino:</label>
+          <label class="col-sm-2 form-control-label">Describe el motivo por el cuál NO se realizó el Gabinete Sendero Seguro:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" ></textarea>
+            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
           </div>
         </div>
 
          
- 
-
-
-
-
-
-
-
-
 
       </div>
 
 
 <div  style="display:none;" id="show_asistencia">
 
-
-
- 
-
-    
-
-
-
-
-
-
        <div class="line"></div>
-
 
         <div class="form-group row">
          <label class="col-sm-2 form-control-label">¿Asistió la Representante de Jefatura de Gobierno?</label>
@@ -531,53 +497,7 @@
         
         </div>
 
-
-       <div class="line"></div>
-
-          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Cuántos vecinos asistieron? </label>
-          <div class="col-sm-10 mb-3">
- 
-       <input type="number" name="vecino" class="form-group row"  />
-
-          </div>
-        
-        </div>
-
-
-
-
-
-       <!-- <div class="line"></div>
-          <div class="form-group row">         
-          <label class="col-sm-2 form-control-label">Reunión de Alcaldía con Jefa de Gobierno:</label>
-          <div class="col-sm-10 mb-3">
-          <input  type="checkbox" name="reunionjg"  value="Reunión con JG"  style="width:5%; height:110%"  class="form-group row" />    
-          </div>
-        </div>-->
-
-
-       <div class="line"></div>
-
-
-          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿La reunión fue del programa Mi C911e?</label>
-          <div class="col-sm-10 mb-3">
-           
-
-            
-
-            <input id="checkboxCustom00000011" type="checkbox" name="calle" value="SI" style="width:15%; height:110%" class="form-control-custom">
-            <label for="checkboxCustom00000011">SI</label>
-
-
-             <input id="checkboxCustom00000012" type="checkbox" name="calle" value="NO" style="width:15%; height:110%" class="form-control-custom">
-            <label for="checkboxCustom00000012">N0</label>
-
-
-          </div>
-        
-        </div>
+    
 
 
         <div class="line"></div>
@@ -598,14 +518,13 @@
         </div>
  
 
-
         <div class="line"></div>
 
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">POR MOTIVOS DE SEGURIDAD RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LOS VECINOS DE ESPALDA</label>
+          <label class="col-sm-2 form-control-label">POR MOTIVOS DE SEGURIDAD RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LAS PERSONAS DE ESPALDA</label>
         
-        </div>
+          </div>
 
          <div class="line"></div>
 
@@ -615,21 +534,28 @@
           <label class="col-sm-2 form-control-label">Captura o Busca en GalerÍa</label>
           <div class="col-sm-10 mb-3">
    
-       <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
-      
+          <input type="file" name="archivo" accept="image/x-png,image/gif,image/jpeg" class="form-group row"  />
+        
           </div>
         
-        </div>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="form-group row">
+          <label class="col-sm-2 form-control-label">¿Cuántos asistieron? </label>
+          <div class="col-sm-10 mb-3">
+ 
+          <input type="number" name="vecino" class="form-group row"  />
+
+          </div>
+        
+          </div>
 
 
 
 
-
-
-
-
-       
-
+     
         </div>
 
 
@@ -640,7 +566,7 @@
         <div class="form-group row">
           <div class="col-sm-4 offset-sm-2">
             <!--<button type="submit" class="btn btn-secondary">Cancel</button>-->
-            <button type="submit" class="btn btn-primary">Guardar Asistencia Vespertina</button>
+            <button type="submit" class="btn btn-primary">Registrar Asistencia Sendero</button>
           </div>
         </div>
       </form>
