@@ -73,8 +73,11 @@
           
            <select name="hora_inicio" id="hora_inicio" class="form-control">
               <option value="">Selecciona Hora...</option>
+              <option value="4">4</option>
               <option value="5">5</option>
               <option value="6">6</option>
+              <option value="7">7</option>
+              
               
 
             </select>
@@ -166,6 +169,8 @@
 
               <select name="hora_termino" id="hora_termino" class="form-control">
               <option value="">Selecciona Hora...</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
               <option value="6">6</option>
               <option value="7">7</option>
               <option value="8">8</option>
