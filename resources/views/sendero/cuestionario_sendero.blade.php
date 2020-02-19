@@ -266,7 +266,7 @@
           <label class="col-sm-2 form-control-label">Describe el motivo por el cuál NO se realizó el Gabinete Sendero Seguro:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
+            <textarea id="motivo" name="motivo" class="form-control"></textarea>
           </div>
         </div>
 
