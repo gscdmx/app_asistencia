@@ -1,4 +1,6 @@
-<?php $__env->startSection('content'); ?>
+@extends('template.header')
+
+@section('content')
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.css"/>
 
@@ -30,31 +32,27 @@ table, th, td {
       <h4>CGGSCyPJ CDMX</h4>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h4>GABINETE VESPERTINO DE SEGURIDAD CIUDADANA CDMX</h4>
+      <h4>SENDERO SEGURO EN CDMX</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="<?php echo e(url('/guardar_asistencia_miercoles')); ?>">
+      <form class="form-horizontal" method="POST" action="{{ url('/getlistadosendero') }}">
 
-      <?php echo e(csrf_field()); ?>
+      {{ csrf_field() }}
 
 
-
-      <?php if( Session::has('mensaje') ): ?>
-                   <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
+      @if( Session::has('mensaje') )
+                   <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       <?php echo e(Session::get('mensaje')['mensaje']); ?>
-
+                       {{ Session::get('mensaje')['mensaje'] }}
                    </div>
-      <?php endif; ?>
+      @endif
 
-
-                      
+                     
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="<?php echo e(url('/getexcelmiercoles')); ?>" class="btn btn-primary">Descargar Asistencias Vespertinas</a>
-            
-            
+            <a href="{{ url('/getexcel_sendero') }}" class="btn btn-primary">Descargar Sendero Seguro CDMX</a>
+        
             
 </div>     
 
@@ -64,26 +62,20 @@ table, th, td {
         <div class="col-lg-20">
           <div class="card">
             <div class="card-header">
-              <h4>Listado de Asistencias en Gabinetes Vespertinos</h4>
+              <h4>Listado de Senderos Seguros en CDMX</h4>
             </div>
-            
-            
-            
-            
-            
-            
-            
+                    
             
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-striped" id="tabla_de_asistenciagv">
+                <table class="table table-striped" id="tabla_de_senderos">
                   <thead>
                     <tr>
                       <th>Fecha de Captura</th>
                       <th>Hora de Inicio</th>
                       <th>Hora de Término</th>
                       <th>Coordinación Territorial</th>
-                      <th>Se realizó</th>
+                      <th>Se realizó Sendero Seguro</th>
                       <th>Motivo por el que no se realizo</th>
                       <th>Jefa de Gobierno</th>
                       <th>Ministerio Público</th>
@@ -93,8 +85,6 @@ table, th, td {
                       <th>Médico Legista</th>
                       <th>Inteligencia Social</th>
                       <th>Representante Alcaldia</th>
-                      <th>Vecinos</th>
-                      <th>Programa Mi C911e</th>
                       <th>Imagen del Gabinete Vespertino</th>
                       
 
@@ -102,26 +92,25 @@ table, th, td {
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $__currentLoopData = $asistencias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $asistencia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    @foreach($senderos as $sendero)
                     
                     <tr>
                       
-                      <td><?php echo e($asistencia->fecha); ?></td>
-                      <td><?php echo e($asistencia->hora_i); ?></td>
-                      <td><?php echo e($asistencia->hora_f); ?></td>
-                      <td><?php echo e($asistencia->ct2); ?> <?php echo e($asistencia->sector); ?></td>
-                      <td><?php echo e($asistencia->se_realizo); ?></td>
-                      <td><?php echo e($asistencia->no_motivo); ?></td>
-                      <td><?php echo e($asistencia->jg); ?></td>
-                      <td><?php echo e($asistencia->mp); ?></td>
-                      <td><?php echo e($asistencia->jsp); ?></td>
-                      <td><?php echo e($asistencia->jspi); ?></td>
-                      <td><?php echo e($asistencia->jc); ?></td>
-                      <td><?php echo e($asistencia->ml); ?></td>
-                      <td><?php echo e($asistencia->ins); ?></td>
-                      <td><?php echo e($asistencia->representante_alcaldia); ?></td>
-                      <td><?php echo e($asistencia->vecino); ?></td>
-                      <td><?php echo e($asistencia->calle); ?></td>
+                      <td>{{$sendero->fecha}}</td>
+                      <td>{{$sendero->hora_i}}</td>
+                      <td>{{$sendero->hora_f}}</td>
+                      <td>{{$sendero->ct2}} {{$sendero->sector}}</td>
+                      <td>{{$sendero->se_realizo}}</td>
+                      <td>{{$sendero->no_motivo}}</td>
+                      <td>{{$sendero->jg}}</td>
+                      <td>{{$sendero->mp}}</td>
+                      <td>{{$sendero->jsp}}</td>
+                      <td>{{$sendero->jspi}}</td>
+                      <td>{{$sendero->jc}}</td>
+                      <td>{{$sendero->ml}}</td>
+                      <td>{{$sendero->ins}}</td>
+                      <td>{{$sendero->representante_alcaldia}}</td>
+                     
                       
                   
                        <td>
@@ -129,24 +118,24 @@ table, th, td {
                        
 
                       
-                        <?php if($asistencia->archivo_imagen==null || $asistencia->archivo_imagen==''): ?>
+                        @if($sendero->archivo_imagen==null || $sendero->archivo_imagen=='')
 
                          SIN IMAGEN
 
 
-                        <?php else: ?>
+                        @else
 
-                         <!-- <a href="<?php echo e(url('/uploads/imagenes_alcaldias').'/'.$asistencia->archivo_imagen); ?>" class="btn btn-primary" role="button">VER IMAGEN</a>
+                         <!-- <a href="{{url('/uploads/imagenes_alcaldias').'/'.$sendero->archivo_imagen}}" class="btn btn-primary" role="button">VER IMAGEN</a>
 
                           <br>-->
 
-                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="<?php echo e($asistencia->archivo_imagen); ?>" data-target="#modal_imagen">
+                          <button type="button" class="btn btn-primary obtener_imagen" data-toggle="modal"  data-imagen="{{$sendero->archivo_imagen}}" data-target="#modal_imagen">
                            VER IMAGEN
                           </button>
-                        <?php endif; ?>
+                        @endif
                       </td>           
                     </tr>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>                  
+                    @endforeach                  
                    <tbody>
                 </table>
               </div>
@@ -166,7 +155,7 @@ table, th, td {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Foto: Gabinete de Seguridad Vespertino CDMX</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Foto: Sendero Seguro CDMX</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -185,14 +174,14 @@ table, th, td {
   </div>
 </div>
 
-<?php $__env->stopSection(); ?>
+@endsection
 
 
-<?php $__env->startSection('js'); ?>  
+@section('js')  
  
-<?php $__env->stopSection(); ?>
+@endsection
 
-<?php $__env->startSection('customjs'); ?>
+@section('customjs')
 
 
 <script    type="text/javascript">
@@ -203,7 +192,7 @@ table, th, td {
     
      var imagen_nombre = $(this).attr('data-imagen');
 
-     var ruta ="<?php echo e(url('alcaldias')); ?>"+"/"+imagen_nombre
+     var ruta ="{{url('alcaldias')}}"+"/"+imagen_nombre
 
      $("#imagen_dinamica").attr('src',ruta);
 
@@ -221,7 +210,7 @@ table, th, td {
   
 
   $(document).ready( function () {
-    $('#tabla_de_asistenciagv').DataTable();
+    $('#tabla_de_senderos').DataTable();
 } );
 
 </script>
@@ -229,8 +218,6 @@ table, th, td {
 
 
 
-<?php $__env->stopSection(); ?>
+@endsection
 
 
-
-<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

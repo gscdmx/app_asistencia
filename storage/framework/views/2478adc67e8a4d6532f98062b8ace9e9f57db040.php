@@ -80,7 +80,8 @@ if (isset(\Auth::user()->permisos)) {
             <!--<li><a href="<?php echo e(url('/lista')); ?>"> <i class="icon-list"></i>MI PASE DE LISTA-SSC</a></li>-->
             <li><a href="<?php echo e(url('/getlistadolista')); ?>"> <i class="icon-list"></i>VER MI PASE DE LISTA-SSC</a></li>
 
-              
+            <li><a href="<?php echo e(url('/sendero')); ?>"> <i class="icon-list"></i>ASISTENCIA SENDERO SEGURO</a></li>
+            <li><a href="<?php echo e(url('/getlistadosendero')); ?>"> <i class="icon-list"></i>VER MI ASISTENCIA SENDERO SEGURO</a></li>
           
 
 
@@ -150,7 +151,10 @@ if (isset(\Auth::user()->permisos)) {
               <?php if(in_array(15, $array_permisos)):?>
               <li><a href="<?php echo e(url('/excel_cuestionario_entrevistas')); ?>"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
                <?php endif?>
-
+              
+               <?php if(in_array(16, $array_permisos)):?>
+              <li><a href="<?php echo e(url('/excel_cuestionario_sendero')); ?>"> <i class="icon-list"></i>Reporte de Sendero Seguro</a></li>
+               <?php endif?>
 
 
 
@@ -206,6 +210,7 @@ if (isset(\Auth::user()->permisos)) {
              <?php   $dia= date("w");
             if($dia==4){?>
              <li><a href="<?php echo e(url('/asistencia_miercoles')); ?>"> <i class="icon-padnote"></i>ASISTENCIA VESPERTINA</a></li>
+
             <?php } ?>
           
           
