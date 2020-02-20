@@ -511,7 +511,7 @@
            <div class="table-responsive">  
               <table class="table table-bordered" id="dynamic_field">  
                    <tr>  
-                       <td><input type="text" name="otros[]" placeholder="Escribe aqui" class="form-control name_list" /></td>  
+                       <td><input type="text" name="otros[]" placeholder="Escribe la escuela" class="form-control name_list" /></td>  
                        <td><button type="button" name="add" id="add" class="btn btn-success">Agregar más Escuelas Participantes</button></td>  
                    </tr>  
                </table>  
@@ -537,7 +537,7 @@
           <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Cuántos asistieron? </label>
+          <label class="col-sm-2 form-control-label">¿Cuántos asistentes? </label>
           <div class="col-sm-10 mb-3">
  
           <input type="number" name="vecino" class="form-group row"  />
