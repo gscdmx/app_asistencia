@@ -506,13 +506,13 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Otro Asistente:</label>
+          <label class="col-sm-2 form-control-label">Escuela Participante:</label>
           <div class="col-sm-10">
            <div class="table-responsive">  
               <table class="table table-bordered" id="dynamic_field">  
                    <tr>  
                        <td><input type="text" name="otros[]" placeholder="Escribe aqui" class="form-control name_list" /></td>  
-                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Mas Asistentes</button></td>  
+                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar más Escuelas Participantes</button></td>  
                    </tr>  
                </table>  
                
@@ -522,17 +522,7 @@
         </div>
  
 
-        <div class="line"></div>
-
-
-          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">POR MOTIVOS DE SEGURIDAD RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LAS PERSONAS DE ESPALDA</label>
-        
-          </div>
-
-         <div class="line"></div>
-
-         <div class="line"></div>
+               <div class="line"></div>
 
           <div class="form-group row">
           <label class="col-sm-2 form-control-label">Captura o Busca en GalerÍa</label>
