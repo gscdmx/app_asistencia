@@ -429,7 +429,7 @@ public function regionest(){
         
         
                  $datos = \App\tbLista::select(
-                 DB::raw('DATE_ADD(tb_listas.created_at, INTERVAL -6 HOUR) as fecha_real')
+                 DB::raw('DATE_ADD(tb_listas.created_at, INTERVAL -1 HOUR) as fecha_real')
                  
                  ,"tb_listas.created_at as fecha_servidor")
                  ->whereBetween('tb_listas.fecha', [$fecha_actual, $fecha_actual])
@@ -738,27 +738,8 @@ public function regiones_sendero(){
 
        
     }
-
-   /*public function save_cuestionario_sendero(Request $request){
-        
-        $sendero =$request->except('_token');
-        
-        $sendero['id_user']=\Auth::user()->id;
-        
-        \App\senderos::create($sendero);
-        
-          $mensaje = array('mensaje'=>'Registro Sendero Éxitoso!', 'color'=> 'success');
-          return Redirect::to('/senderos')->with('mensaje', $mensaje);
-        
-    }
-    
-    public function excel_cuestionariosendero(){
-        
-        
-        return Excel::download(new  SenderosExport, 'SENDERO SEGURO RJG.xlsx');
-      
-        
-    }*/
+          
+   
     public function save_cuestionario_sendero(Request $request){
     
   $hora_i_compuesta=$request['hora_inicio'].":".$request['minutos_i'];
@@ -878,15 +859,12 @@ public function regiones_sendero(){
                
               }
 
-
-
-
            
          }
 
             
             if ($request['se_realizo_mesa']=='si') {
-              DB::table('senderos')->insert([
+              $inserto = \App\sendero::create([ 
              
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
@@ -924,7 +902,7 @@ public function regiones_sendero(){
             }else{
                 
                 
-                DB::table('senderos')->insert([
+              $inserto = \App\sendero::create([
                
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
@@ -953,9 +931,8 @@ public function regiones_sendero(){
                   'user_registro'=> \Auth::user()->id
                 
                
-             ]);
-             
-                        
+             ]);          
+                      
           
 
          }
@@ -965,41 +942,8 @@ public function regiones_sendero(){
 
     }
 
-    
-/* public function view_listado_sendero()
-    {   
-       /* $consultas = \App\tbPreguntas::select("tb_preguntas.*","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_delegaciones.delegacion")
-        //,"cat_cuadrantes.ct","cat_cuadrantes.cuadrante","cat_delegaciones.delegacion","cat_delegaciones.region"
-                    ->leftjoin('users','users.id','=','tb_preguntas.id_user') 
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                   // ->leftjoin('cat_cuadrantes','cat_cuadrantes.cuadrante','=','users.name')
-                    ->leftjoin('cat_delegaciones','cat_delegaciones.delegacion','=','users.name')
-                   ->where('tb_preguntas.id_user',\Auth::user()->id)
-                   ->get();*/
 
-         /*$senderos = \App\senderos::select("senderos.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
-                    ->leftjoin('users','users.id','=','senderos.id_user',"cat_coord_territorials.ct2")
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
-                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
-                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','senderos.id_cuadrante')
-                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
-                    ->where('senderos.id_user',\Auth::user()->id)
-                    ->get();
-
-         // dd($senderos );
-      // return json_encode($senderos); 
-      return view('consulta_sendero',compact('senderos'));
-    }
-
-
-      //public function excel_pregunta()
-   // {   
-
-    //   return Excel::download(new MiformatodevisitasExport, 'Mi Formato de Visitas.xlsx');
-   // }*/
-
-
- public function view_listado_sendero()
+    public function view_listado_sendero()
     {   
         $senderos = DB::table('senderos')->select("senderos.*","cat_coord_territorials.ct2","cat_coord_territorials.sector")
                     ->leftjoin('users','users.id','=','senderos.user_registro') 
@@ -1010,11 +954,11 @@ public function regiones_sendero(){
 
         return view('consulta_sendero',compact('senderos'));
     }
-    
+  
 
 
 
-public function excel_sendero()
+      public function excel_sendero()
    {   
 
       return Excel::download(new SenderosExport, 'SENDEROS SEGUROS RJG.xlsx');
