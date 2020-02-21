@@ -72,10 +72,11 @@
           
            <select name="hora_inicio" id="hora_inicio" class="form-control">
               <option value="">Selecciona Hora...</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="1">1</option>
+             
               
               
 
@@ -168,12 +169,14 @@
 
               <select name="hora_termino" id="hora_termino" class="form-control">
               <option value="">Selecciona Hora...</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
              
               </select>
             
@@ -473,7 +476,7 @@
         </div>
 
 
-<div class="line"></div>
+        <div class="line"></div>
 
 
           <div class="form-group row">
@@ -506,13 +509,13 @@
 
         <div class="line"></div>
         <div class="form-group row">
-          <label class="col-sm-2 form-control-label">Otro Asistente:</label>
+          <label class="col-sm-2 form-control-label">Escuela Participante:</label>
           <div class="col-sm-10">
            <div class="table-responsive">  
               <table class="table table-bordered" id="dynamic_field">  
                    <tr>  
-                       <td><input type="text" name="otros[]" placeholder="Escribe aqui" class="form-control name_list" /></td>  
-                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Mas Asistentes</button></td>  
+                       <td><input type="text" name="otros[]" placeholder="Escribe la escuela participante" class="form-control name_list" /></td>  
+                       <td><button type="button" name="add" id="add" class="btn btn-success">Agregar más Escuelas Participantes</button></td>  
                    </tr>  
                </table>  
                
@@ -522,17 +525,7 @@
         </div>
  
 
-        <div class="line"></div>
-
-
-          <div class="form-group row">
-          <label class="col-sm-2 form-control-label">POR MOTIVOS DE SEGURIDAD RECUERDA QUE LA FOTO QUE SUBAS DEBERA MOSTRAR A LAS PERSONAS DE ESPALDA</label>
-        
-          </div>
-
-         <div class="line"></div>
-
-         <div class="line"></div>
+               <div class="line"></div>
 
           <div class="form-group row">
           <label class="col-sm-2 form-control-label">Captura o Busca en GalerÍa</label>
@@ -547,7 +540,7 @@
           <div class="line"></div>
 
           <div class="form-group row">
-          <label class="col-sm-2 form-control-label">¿Cuántos asistieron? </label>
+          <label class="col-sm-2 form-control-label">¿Cuántos asistentes? </label>
           <div class="col-sm-10 mb-3">
  
           <input type="number" name="vecino" class="form-group row"  />
@@ -664,7 +657,7 @@ var i=1;
 
     $('#add').click(function(){  
               i++;  
-              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="otros[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="otros[]" placeholder="Escribe la Escuela Participante" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
          });  
 
 
