@@ -442,27 +442,7 @@ public function regionest(){
 
     public function save_cuestionario_lista(Request $request){
         
-        //$lista =$request->except('_token');
-        
-        //$lista['id_user']=\Auth::user()->id;
-
-
-        //$asistencia =
-        
-        //\App\tbLista::create($lista);
-        
-        /* $validator = Validator::make($request->all(), [
-                 'archivo' => 'required'
-             ]);
-
-        if ($validator->fails()) {
-
-           $messages = $validator->messages();
-        
-           return Redirect::to('/lista')->withInput()->withErrors($validator);
-
-         }else if ($validator->passes()){*/
-            
+       
        
 
          if($request['archivo']!=null){
@@ -509,41 +489,6 @@ public function regionest(){
          
 }
   
-/*$inserto = \App\tbAsistencia::create([  
-                        'id_ct' => $request['ct'],
-                        'se_realizo' => $request['se_realizo_mesa'], 
-                        'no_motivo' => $request['motivo'],
-                        
-                        'fecha' => $request['fecha'],
-                        'hora_i' => $request['hora1'],
-                        'hora_f' => $request['hora2'],
-                       
-                        'jg' => 'Reunión con JG',
-                        'mp' => 'Reunión con JG',
-                        'jsp' => 'Reunión con JG',
-                        'jspi' => 'Reunión con JG',
-                        'jc' => 'Reunión con JG',
-                        'ml' => 'Reunión con JG',
-                        'otro' => 'Reunión con JG',
-                        'representante_alcaldia'=>'Reunión con JG',
-                        'ins' => 'Reunión con JG',
-                        'reunionjg' => 'Reunión con JG',
-                        'user_registro'=> \Auth::user()->id
-                     ]); */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 public function guardar_pdf_admin(Request $request){

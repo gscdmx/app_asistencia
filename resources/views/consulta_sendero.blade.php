@@ -87,7 +87,7 @@ table, th, td {
                       <th>Inteligencia Social</th>
                       <th>Representante Alcaldia</th>
                       <th>Escuelas Participantes</th>
-                      <th>Imagen del Gabinete Vespertino</th>
+                      <th>Imagen del Gabinete Sendero Seguro</th>
                       
 
                         
