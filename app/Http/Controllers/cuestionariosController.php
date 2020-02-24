@@ -19,6 +19,7 @@ use App\Exports\ListaExport;
 use App\Exports\MiAgendaExport;
 use App\Exports\SenderosExport;
 use App\Exports\SenderoSeguroExport;
+use App\Exports\VisitaCoordinacionExport;
 
 
 
@@ -920,6 +921,97 @@ public function regiones_sendero(){
     }
 
 
+/////////////////////////VISISTAS EN COORDINACIÓN
+
+     public function visista_coordinador(){
+
+
+       $mis_cuadrantes= \App\catCuadrantes::select('cat_cuadrantes.id','cat_cuadrantes.cuadrante')
+                        ->join('users','users.name','=','cat_cuadrantes.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('asiscoordinador.cuestionario_asistenciacoordinador',compact('mis_cuadrantes'));
+       
+
+       
+    }
+    
+  
+public function regionn(){
+
+       $mis_regiones= \App\catDelegaciones::select('cat_delegaciones.delegacion','cat_delegaciones.region')
+                        ->join('cat_coord_territorials','cat_coord_territorials.id_alcaldia','=','cat_delegaciones.ct')
+                        ->join('users','users.name','=','cat_delegaciones.ct')
+                        ->where('users.id',\Auth::user()->id)
+                        ->get();
+
+        
+        return view('asiscoordinador.cuestionario_asistenciacoordinador',compact('mis_regiones'));
+       
+
+       
+    }
+       
+
+       
+
+
+    public function save_cuestionario_visitas_coordinador(Request $request){
+        
+        $visitas =$request->except('_token');
+        
+        $visitas['id_user']=\Auth::user()->id;
+        
+        \App\pasecoordinador::create($visitas);
+        
+          $mensaje = array('mensaje'=>'Registro  Éxitoso!', 'color'=> 'success');
+          return Redirect::to('/visitas_coordinador')->with('mensaje', $mensaje);
+        
+    }
+    
+    public function excel_cuestionariovisitas_coordinador(){
+        
+        
+        return Excel::download(new  AgendaExport, 'AGENDA DE LAS RJG.xlsx');
+      
+        
+    }
+    
+
+ 
+
+
+ public function view_listado_visitas_coordinador()
+    {   
+      
+ $visitas = \App\pasecoordinador::select("pasecoordinadors.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
+                    ->leftjoin('users','users.id','=','pasecoordinadors.id_user',"cat_coord_territorials.ct2")
+                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
+                     ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','pasecoordinadors.id_cuadrante')
+                     //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
+                    ->where('pasecoordinadors.id_user',\Auth::user()->id)
+                    ->get();
+
+         // dd($visitas );
+      // return json_encode($visitas); 
+      return view('consulta_visistacoordinacion',compact('visitas'));
+
+ 
+
+    }
+
+
+public function excel_visitas_coordinador(){
+        
+        
+        return Excel::download(new  VisitaCoordinacionExport, 'VISITAS EN CGGSCyPJ.xlsx');
+      
+        
+    }
+    
 
 
 
