@@ -296,7 +296,7 @@ class HomeMiercolesController extends Controller
         
         
                  $datos = \App\tbAsistencia::select(
-                 DB::raw('DATE_ADD(tb_asistencias_miercoles.created_at, INTERVAL -6 HOUR) as fecha_real')
+                 DB::raw('DATE_ADD(tb_asistencias_miercoles.created_at, INTERVAL -1 HOUR) as fecha_real')
                  
                  ,"tb_asistencias.created_at as fecha_servidor")
                  ->whereBetween('tb_asistencias_miercoles.fecha', [$fecha_actual, $fecha_actual])

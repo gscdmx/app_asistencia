@@ -184,3 +184,13 @@ Route::post('/guardar_cuestionario_sendero', 'cuestionariosController@save_cuest
 Route::get('/excel_cuestionario_sendero', 'cuestionariosController@excel_cuestionariosendero');
 Route::get('/getlistadosendero', 'cuestionariosController@view_listado_sendero');
 Route::get('/getexcel_sendero', 'cuestionariosController@excel_sendero');
+
+
+//VISITAS-COORDINADOR
+
+Route::get('/visitas_coordinador', 'cuestionariosController@visista_coordinador');
+Route::get('/visitas_region', 'cuestionariosController@regionn');
+Route::post('/guardar_cuestionario_visitas_coordinador', 'cuestionariosController@save_cuestionario_visitas_coordinador');
+Route::get('/excel_cuestionario_visitas_coordinador', 'cuestionariosController@excel_cuestionariovisitas_coordinador');
+Route::get('/getlistadovisitas_coordinador', 'cuestionariosController@view_listado_visitas_coordinador');
+Route::get('/getexcel_visitas_coordinador', 'cuestionariosController@excel_visitas_coordinador');//excelusuario

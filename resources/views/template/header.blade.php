@@ -155,6 +155,9 @@ if (isset(\Auth::user()->permisos)) {
                <?php endif?>
 
 
+               
+
+
 
 
              <!--MODULO REPORTES DIARIOS-->
@@ -168,8 +171,7 @@ if (isset(\Auth::user()->permisos)) {
                 <li><a href="{{url('/reporteGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Asistencia</a></li>
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
                 
-                
-                
+                         
                 
                 
                 
@@ -179,8 +181,16 @@ if (isset(\Auth::user()->permisos)) {
              <?php endif?>
              
              
-             <!--MODULO MAPAS-->
-             
+         <?php if(in_array(17, $array_permisos)):?>
+             <li><a href="#exampledropdownDropdown_visitas" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>COORDINACIÓN GENERAL</a>
+              <ul id="exampledropdownDropdown_visitas" class="collapse list-unstyled ">
+                <li><a href="{{url('/visitas_coordinador')}}">Visitas Coordinación General CDMX</a></li>
+                <li><a href="{{url('/getlistadovisitas_coordinador')}}"> <i class="icon-list"></i>Ver las visitas</a></li>
+                <li><a href="{{url('/getexcel_visitas_coordinador')}}">Descarga Excel de Visitas</a></li>
+                
+              </ul>
+            </li>
+             <?php endif?>
              
         
         
