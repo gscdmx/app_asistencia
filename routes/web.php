@@ -194,3 +194,15 @@ Route::post('/guardar_cuestionario_visitas_coordinador', 'cuestionariosControlle
 Route::get('/excel_cuestionario_visitas_coordinador', 'cuestionariosController@excel_cuestionariovisitas_coordinador');
 Route::get('/getlistadovisitas_coordinador', 'cuestionariosController@view_listado_visitas_coordinador');
 Route::get('/getexcel_visitas_coordinador', 'cuestionariosController@excel_visitas_coordinador');//excelusuario
+
+
+//COORDGM
+
+Route::get('/get_mapa_asistencia', 'HomeController@get_mapa_file_asistencia');
+Route::get('/mapasView_asistencia', 'HomeController@lugar_map');
+Route::post('/guardar_mapa_asistencia', 'HomeController@guardarmapa_asistencia');
+Route::get('/excel_mapgm', 'HomeController@excel_mapagm');
+
+
+
+

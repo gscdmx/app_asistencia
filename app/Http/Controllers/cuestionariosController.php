@@ -23,6 +23,7 @@ use App\Exports\VisitaCoordinacionExport;
 
 
 
+
 use Image;
 
 use Input;
@@ -987,13 +988,13 @@ public function regionn(){
     {   
       
  $visitas = \App\pasecoordinador::select("pasecoordinadors.*","cat_delegaciones.delegacion","cat_delegaciones.region","cat_coord_territorials.ct2","cat_coord_territorials.sector","cat_cuadrantes.cuadrante")
-                    ->leftjoin('users','users.id','=','pasecoordinadors.id_user',"cat_coord_territorials.ct2")
-                    ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
+                     ->leftjoin('users','users.id','=','pasecoordinadors.id_user',"cat_coord_territorials.ct2")
+                     ->leftjoin('cat_coord_territorials','cat_coord_territorials.ct2','=','users.name')
                      ->leftjoin('cat_delegaciones','cat_delegaciones.id','=','cat_coord_territorials.id_alcaldia')
                      ->leftjoin('cat_cuadrantes','cat_cuadrantes.id','=','pasecoordinadors.id_cuadrante')
                      //->leftjoin('cat_cuadrantes','cat_cuadrantes.ct','=','cat_coord_territorials.ct2')
-                    ->where('pasecoordinadors.id_user',\Auth::user()->id)
-                    ->get();
+                     ->where('pasecoordinadors.id_user',\Auth::user()->id)
+                     ->get();
 
          // dd($visitas );
       // return json_encode($visitas); 
@@ -1012,8 +1013,6 @@ public function excel_visitas_coordinador(){
         
     }
     
-
-
 
 
 }

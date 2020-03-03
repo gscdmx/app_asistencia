@@ -80,6 +80,7 @@ if (isset(\Auth::user()->permisos)) {
 
             <li><a href="<?php echo e(url('/sendero')); ?>"> <i class="icon-list"></i>ASISTENCIA SENDERO SEGURO</a></li>
             <li><a href="<?php echo e(url('/getlistadosendero')); ?>"> <i class="icon-list"></i>VER MI ASISTENCIA SENDERO SEGURO</a></li>
+            <li><a href="<?php echo e(url('/mapasView_asistencia')); ?>"> <i class="icon-list"></i>MI UBICACION EN LA C.T GABINETE MATUTINO</a></li>
           
 
 
@@ -150,11 +151,14 @@ if (isset(\Auth::user()->permisos)) {
               <li><a href="<?php echo e(url('/excel_cuestionario_entrevistas')); ?>"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
                <?php endif?>
               
-               <?php if(in_array(16, $array_permisos)):?>
+               <!--<?php if(in_array(16, $array_permisos)):?>
               <li><a href="<?php echo e(url('/excel_cuestionario_sendero')); ?>"> <i class="icon-list"></i>Reporte de Sendero Seguro</a></li>
+               <?php endif?>-->
+
+              
+              <?php if(in_array(18, $array_permisos)):?>
+              <li><a href="<?php echo e(url('/excel_mapgm')); ?>"> <i class="icon-list"></i>Reporte de ubicaciones Gabinetes Matutinos</a></li>
                <?php endif?>
-
-
                
 
 

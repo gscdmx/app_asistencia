@@ -76,6 +76,7 @@ table, th, td {
                       <th>Hora de Término</th>
                       <th>Coordinación Territorial</th>
                       <th>Se realizó Sendero Seguro</th>
+                      <th>ID</th>
                       <th>Motivo por el que no se realizo</th>
                       <th>Jefa de Gobierno</th>
                       <th>Ministerio Público</th>
@@ -85,7 +86,8 @@ table, th, td {
                       <th>Médico Legista</th>
                       <th>Inteligencia Social</th>
                       <th>Representante Alcaldia</th>
-                      <th>Imagen del Gabinete Vespertino</th>
+                      <th>Escuelas Participantes</th>
+                      <th>Imagen del Gabinete Sendero Seguro</th>
                       
 
                         
@@ -101,6 +103,7 @@ table, th, td {
                       <td><?php echo e($sendero->hora_f); ?></td>
                       <td><?php echo e($sendero->ct2); ?> <?php echo e($sendero->sector); ?></td>
                       <td><?php echo e($sendero->se_realizo); ?></td>
+                      <td><?php echo e($sendero->id); ?></td>
                       <td><?php echo e($sendero->no_motivo); ?></td>
                       <td><?php echo e($sendero->jg); ?></td>
                       <td><?php echo e($sendero->mp); ?></td>
@@ -110,6 +113,7 @@ table, th, td {
                       <td><?php echo e($sendero->ml); ?></td>
                       <td><?php echo e($sendero->ins); ?></td>
                       <td><?php echo e($sendero->representante_alcaldia); ?></td>
+                      <td><?php echo e($sendero->otro); ?></td>
                      
                       
                   
