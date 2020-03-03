@@ -35,7 +35,7 @@ class SenderosExport implements FromCollection, WithHeadings
             'SECTOR',
             'SE REALIZÓ REUNIÓN SENDERO SEGURO',
             'NO MOTIVO',
-            'FECHA GV',
+            'FECHA REUNIÓN SENDERO SEGURO',
             'HORA DE INICIO',
             'HORA DE TERMINO',
             'REPRESENTANTE DE LA JEFA DE GOBIERNO',

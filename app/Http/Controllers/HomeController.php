@@ -18,6 +18,7 @@ use App\Exports\Reportes_periodosExport;
 
 use Maatwebsite\Excel\Concerns\WithDrawings;
 use Maatwebsite\Excel\Concerns\WithEvents;
+use App\Exports\MapsExport;
 
 
 
@@ -1260,6 +1261,44 @@ public function guardar_pdf_admin(Request $request){
     }
 
 
+ public function mapa_asistencia()
+    {   
+             
+              return view('leaflet.mapasleaf');
+    }
+
+public function lugar_map(Request $request){ 
+        
+        return view('leaflet.mapasleaf');
+    }
+
+
+
+
+public function guardarmapa_asistencia(Request $request){
+
+       DB::table('maps')->insert([
+                 'latitude' =>  $request['lat'],
+                 'longitude' => $request['long'],
+                 'creator_id'=>\Auth::user()->id,
+                 'created_at'=>$request['fecha'],
+               ]);
+
+        return "1";
+
+}
+
+
+////////////////////////////////////REPORTE DEL MAPA
+
+    public function excel_mapagm(){
+        
+        
+        return Excel::download(new  MapsExport, 'ASISTENCIA UBICACIÓN EN GABINETES MATUTINOS.xlsx');
+      
+        
+    }
+    
 
 
 

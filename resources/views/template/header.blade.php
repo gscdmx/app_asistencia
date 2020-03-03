@@ -80,6 +80,7 @@ if (isset(\Auth::user()->permisos)) {
 
             <li><a href="{{url('/sendero')}}"> <i class="icon-list"></i>ASISTENCIA SENDERO SEGURO</a></li>
             <li><a href="{{url('/getlistadosendero')}}"> <i class="icon-list"></i>VER MI ASISTENCIA SENDERO SEGURO</a></li>
+            <li><a href="{{url('/mapasView_asistencia')}}"> <i class="icon-list"></i>MI UBICACION EN LA C.T GABINETE MATUTINO</a></li>
           
 
 
@@ -150,11 +151,14 @@ if (isset(\Auth::user()->permisos)) {
               <li><a href="{{url('/excel_cuestionario_entrevistas')}}"> <i class="icon-list"></i>Reporte Entrevista MP</a></li>
                <?php endif?>
               
-               <?php if(in_array(16, $array_permisos)):?>
+               <!--<?php if(in_array(16, $array_permisos)):?>
               <li><a href="{{url('/excel_cuestionario_sendero')}}"> <i class="icon-list"></i>Reporte de Sendero Seguro</a></li>
-               <?php endif?>
+               <?php endif?>-->
 
-
+              
+               <!--<?php if(in_array(18, $array_permisos)):?>
+              <li><a href="{{url('/excel_mapgm')}}"> <i class="icon-list"></i>Reporte de ubicaciones Gabinetes Matutinos</a></li>
+               <?php endif?>-->
                
 
 
@@ -170,18 +174,15 @@ if (isset(\Auth::user()->permisos)) {
                <!--<li><a href="{{url('/faltantesView_miercoles')}}"><i class="icon-list"></i>Faltantes por Fecha Miércoles</a></li>-->
                 <li><a href="{{url('/reporteGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Asistencia</a></li>
                 <li><a href="{{url('/alcaldiasGrafica')}}"> <i class="fa fa-bar-chart"></i>Gráfica de Alcaldía</a></li>
-                
-                         
-                
-                
+      
                 
                 
               </ul>
-            </li>
+              </li>
              <?php endif?>
              
              
-         <?php if(in_array(17, $array_permisos)):?>
+            <?php if(in_array(17, $array_permisos)):?>
              <li><a href="#exampledropdownDropdown_visitas" aria-expanded="false" data-toggle="collapse"> <i class="icon-user"></i>COORDINACIÓN GENERAL</a>
               <ul id="exampledropdownDropdown_visitas" class="collapse list-unstyled ">
                 <li><a href="{{url('/visitas_coordinador')}}">Visitas Coordinación General CDMX</a></li>
