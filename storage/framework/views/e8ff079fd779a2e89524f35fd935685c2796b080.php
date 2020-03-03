@@ -77,6 +77,8 @@
 
 <script  type="text/javascript">
 
+
+var map = new L.map('mapid');  
       //funcion para obtener coordenadas 
       function getlatlong(){
         if (navigator.geolocation) {
@@ -86,6 +88,10 @@
                 var lng = position.coords.longitude;
 
                 console.log(lat+" "+lng);
+
+
+               
+
 
                 pintar_mapa(lat,lng);
 
@@ -108,7 +114,8 @@
         //funcion para puintar mapa(pasando parametros de latitud y longitud)
         function pintar_mapa(lat,long){  
 
-          var map = L.map('mapid').setView([lat, long], 18);
+          
+           map.setView([lat, long], 18); 
 
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
