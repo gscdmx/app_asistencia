@@ -198,7 +198,7 @@ Route::get('/getexcel_visitas_coordinador', 'cuestionariosController@excel_visit
 
 //COORDGM
 
-Route::get('/get_mapa_asistencia', 'HomeController@get_mapa_file_asistencia');
+//Route::get('/get_mapa_asistencia', 'HomeController@get_mapa_file_asistencia');
 Route::get('/mapasView_asistencia', 'HomeController@lugar_map');
 Route::post('/guardar_mapa_asistencia', 'HomeController@guardarmapa_asistencia');
 Route::get('/excel_mapgm', 'HomeController@excel_mapagm');

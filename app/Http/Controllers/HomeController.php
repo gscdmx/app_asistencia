@@ -1261,11 +1261,11 @@ public function guardar_pdf_admin(Request $request){
     }
 
 
- public function mapa_asistencia()
+ /*public function mapa_asistencia()
     {   
              
               return view('leaflet.mapasleaf');
-    }
+    }*/
 
 public function lugar_map(Request $request){ 
         
