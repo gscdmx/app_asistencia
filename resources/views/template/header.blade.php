@@ -62,6 +62,7 @@ if (isset(\Auth::user()->permisos)) {
           <ul id="side-main-menu" class="side-menu list-unstyled">  
           
             <li><a href="{{url('/home')}}"> <i class="icon-padnote"></i>°INICIO</a></li>
+            <li><a href="{{url('/mapasView_asistencia')}}"> <i class="icon-list"></i>MI UBICACIóN EN LA C.T GABINETE MATUTINO</a></li>
             <li><a href="{{url('/getlistadoasistencias')}}"> <i class="icon-list"></i>MIS ASISTENCIAS DIARIAS</a></li>
             <li><a href="{{url('/getlistadoasistencias_miercoles')}}"> <i class="icon-list"></i>MIS ASISTENCIAS VESPERTINAS</a></li>
             
@@ -80,7 +81,7 @@ if (isset(\Auth::user()->permisos)) {
 
             <li><a href="{{url('/sendero')}}"> <i class="icon-list"></i>ASISTENCIA SENDERO SEGURO</a></li>
             <li><a href="{{url('/getlistadosendero')}}"> <i class="icon-list"></i>VER MI ASISTENCIA SENDERO SEGURO</a></li>
-            <li><a href="{{url('/mapasView_asistencia')}}"> <i class="icon-list"></i>MI UBICACION EN LA C.T GABINETE MATUTINO</a></li>
+            
           
 
 
