@@ -48,7 +48,7 @@ class HomeMiercolesController extends Controller
         $fecha_actual=$date->format('Y-m-d');
         
          
-            $existe_registro= DB::table('tb_asistencias_miercoles')
+            $existe_registro=\App\tb_asistencias_miercoles::select("tb_asistencias_miercoles.*")
              ->where("tb_asistencias_miercoles.user_registro",\Auth::user()->id)
                    ->where("tb_asistencias_miercoles.fecha",$fecha_actual)
                    ->first();
@@ -202,7 +202,7 @@ class HomeMiercolesController extends Controller
 
             
             if ($request['se_realizo_mesa']=='si') {
-              DB::table('tb_asistencias_miercoles')->insert([
+              $inserto = \App\tb_asistencias_miercoles::create([ 
              
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
@@ -239,8 +239,8 @@ class HomeMiercolesController extends Controller
             }else{
                 
                 
-                DB::table('tb_asistencias_miercoles')->insert([
-               
+                 $inserto = \App\tb_asistencias_miercoles::create([ 
+              
                  'id_ct' => $request['ct'],
                  'se_realizo' => $request['se_realizo_mesa'], 
                  'no_motivo' => $request['motivo'],
