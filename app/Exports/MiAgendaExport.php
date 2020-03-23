@@ -49,8 +49,8 @@ class MiAgendaExport implements FromCollection, WithHeadings
             'HORA DE TÉRMINO DE ACTIVIDAD O EVENTO',	                
             'DURACIÓN DE ACTIVIDAD O EVENTO',
             'NOMBRE DE ACTIVIDAD O EVENTO',
-            'FECHA DE CAPTURA REAL',
-            'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
+            'FECHA REAL DE CAPTURA',
+            'FECHA REAL DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
 
            
             

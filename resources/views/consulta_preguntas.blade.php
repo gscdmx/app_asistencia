@@ -68,7 +68,7 @@ table, th, td {
                   <thead>
                     <tr>
                            
-
+                     <th>Fecha Real de captura del Registro</th>
                      <th>Alcaldia:</th>
                      <th>Region:</th>                  
                      <th>Coordinación Territorial/Sector:</th>
@@ -101,7 +101,7 @@ table, th, td {
                     
                     <tr>
                         
-                                          
+                     <td>{{$consulta->created_at}}</td>                       
                      <td>{{$consulta->delegacion}}</td>
                      <td>{{$consulta->region}}</td>                 
                      <td>{{$consulta->ct2}} {{$consulta->sector}}</td>

@@ -61,8 +61,8 @@ class ListaExport implements WithDrawings, FromCollection, WithHeadings
             '¿ESTUVO PRESENTE EL JEFE DE SECTOR EN LA FORMACIÓN?',	
             'TOTAL DE JEFES DE CUADRANTES EN LA FORMACIÓN',	
             'CON IMAGEN',	
-            'FECHA DE CAPTURA REAL',
-            'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
+            'FECHA REAL DE CAPTURA',
+            'FECHA REAL DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
            
             
         ];

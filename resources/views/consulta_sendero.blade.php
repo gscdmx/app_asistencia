@@ -71,12 +71,13 @@ table, th, td {
                 <table class="table table-striped" id="tabla_de_senderos">
                   <thead>
                     <tr>
-                      <th>Fecha de Captura</th>
+                      <th>Fecha Real de captura del Registro</th>
+                      <th>ID</th>
+                      <th>Fecha de la Reunión</th>
                       <th>Hora de Inicio</th>
                       <th>Hora de Término</th>
                       <th>Coordinación Territorial</th>
                       <th>Se realizó Sendero Seguro</th>
-                      <th>ID</th>
                       <th>Motivo por el que no se realizo</th>
                       <th>Jefa de Gobierno</th>
                       <th>Ministerio Público</th>
@@ -97,13 +98,13 @@ table, th, td {
                     @foreach($senderos as $sendero)
                     
                     <tr>
-                      
+                      <td>{{$consulta->created_at}}</td>  
+                      <td>{{$sendero->id}}</td>
                       <td>{{$sendero->fecha}}</td>
                       <td>{{$sendero->hora_i}}</td>
                       <td>{{$sendero->hora_f}}</td>
                       <td>{{$sendero->ct2}} {{$sendero->sector}}</td>
                       <td>{{$sendero->se_realizo}}</td>
-                      <td>{{$sendero->id}}</td>
                       <td>{{$sendero->no_motivo}}</td>
                       <td>{{$sendero->jg}}</td>
                       <td>{{$sendero->mp}}</td>

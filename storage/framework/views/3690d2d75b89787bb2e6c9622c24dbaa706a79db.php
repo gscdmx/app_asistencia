@@ -68,6 +68,7 @@ table, th, td {
                 <table class="table table-striped" id="tabla_de_asistenciagm">
                   <thead>
                     <tr>
+                      <th>Fecha Real de captura del Registro</th>
                       <th>ID</th>
                       <th>Fecha de Captura GM</th>
                       <th>Hora de Inicio</th>
@@ -92,7 +93,7 @@ table, th, td {
                     <?php $__currentLoopData = $asistencias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $asistencia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     
                     <tr>
-                        
+                                          <td><?php echo e($asistencia->created_at); ?></td> 
                                           <td><?php echo e($asistencia->id); ?></td>
                                           <td><?php echo e($asistencia->fecha); ?></td>
                                           <td><?php echo e($asistencia->hora_i); ?></td>
