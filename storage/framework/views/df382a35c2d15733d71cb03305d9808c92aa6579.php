@@ -275,7 +275,7 @@
           <label class="col-sm-2 form-control-label">Describe el motivo por el cuál no se realizó el Gabinete Vespertino:</label>
           <div class="col-sm-10">
             <!--<input type="text" class="form-control">-->
-            <textarea id="motivo" name="motivo" class="form-control" required></textarea>
+            <textarea id="motivo" name="motivo" class="form-control"></textarea>
           </div>
         </div>
 
@@ -587,7 +587,7 @@
            <div class="table-responsive">  
               <table class="table table-bordered" id="dynamic_field">  
                    <tr>  
-                       <td><input type="text" name="otros[]" placeholder="Escribe aqui" class="form-control name_list" /></td>  
+                       <td><input type="text" name="otros[]" placeholder="Escribe aqui otro asistente" class="form-control name_list" /></td>  
                        <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Mas Asistentes</button></td>  
                    </tr>  
                </table>  
@@ -734,7 +734,7 @@ var i=1;
 
     $('#add').click(function(){  
               i++;  
-              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="otros[]" placeholder="Enter your Name" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+              $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="otros[]" placeholder="Escribe otro asistente" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
          });  
 
 
