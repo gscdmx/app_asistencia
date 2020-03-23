@@ -63,7 +63,7 @@ class EntrevistasMpExport implements WithDrawings, FromCollection, WithHeadings
             'Persona o servidor público desalentando denuncia',
             'El trato a los ciudadanos es',
             'Fecha real de captura',
-            'Fecha de actualización'
+            'Fecha real de actualización'
            
             
         ];

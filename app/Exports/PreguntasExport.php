@@ -81,8 +81,8 @@ public function headings(): array
             'NOMBRE DEL CIUDADANO ENTREVISTADO',
             'TÉLEFONO DEL VECINO',
             '¿EL VECINO ACEPTO SER PARTE DE LA RED VECINAL?',
-            'FECHA DE CAPTURA REAL',
-            'FECHA DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
+            'FECHA REAL DE CAPTURA',
+            'FECHA REAL DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO'
            
             
         ];

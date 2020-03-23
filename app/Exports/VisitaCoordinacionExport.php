@@ -56,7 +56,7 @@ class VisitaCoordinacionExport implements WithDrawings, FromCollection, WithHead
             'TELÉFONO',
             'DIRECCIÓN',
             'CORREO ELECTRÓNICO',
-            'FECHA REAL DEL REGISTRO'
+            'FECHA REAL DE CAPTURA'
            
             
         ];

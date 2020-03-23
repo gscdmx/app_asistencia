@@ -70,6 +70,7 @@ table, th, td {
                   <thead>
                     <tr>
                      
+                     <th>Fecha Real de captura del Registro</th>
                      <th>Id</th>
                      <th>Fecha de la Visita:</th>
                      <th>Hora:</th>
@@ -88,7 +89,7 @@ table, th, td {
                     <tr>
                         
                                           
-                     
+                     <td>{{$consulta->created_at}}</td> 
                      <td>{{$visita->id}}</td>
                      <td>{{$visita->fecha}}</td>
                      <td>{{$visita->hora_i}}</td>

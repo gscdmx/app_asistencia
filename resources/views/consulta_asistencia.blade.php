@@ -68,6 +68,7 @@ table, th, td {
                 <table class="table table-striped" id="tabla_de_asistenciagm">
                   <thead>
                     <tr>
+                      <th>Fecha Real de captura del Registro</th>
                       <th>ID</th>
                       <th>Fecha de Captura GM</th>
                       <th>Hora de Inicio</th>
@@ -92,7 +93,7 @@ table, th, td {
                     @foreach($asistencias as $asistencia)
                     
                     <tr>
-                        
+                                          <td>{{$asistencia->created_at}}</td> 
                                           <td>{{$asistencia->id}}</td>
                                           <td>{{$asistencia->fecha}}</td>
                                           <td>{{$asistencia->hora_i}}</td>

@@ -58,8 +58,8 @@ public function headings(): array
             'EN BASE A LA PREGUNTA 14, SI(¿CÓMO FUE LA ATENCIÓN EN EL MIISTERIO PÚBLICO?, NO(¿POR QUÉ?)',
             '15- COMENTARIOS:',
             'NOMBRE',
-            'FECHA DE CAPTURA',
-            'FECHA DE ACTUALIZACIÓN'
+            'FECHA REAL DE CAPTURA',
+            'FECHA REAL DE ACTUALIZACIÓN'
            
         ];
     }

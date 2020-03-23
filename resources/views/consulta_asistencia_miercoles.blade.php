@@ -79,6 +79,8 @@ table, th, td {
                 <table class="table table-striped" id="tabla_de_asistenciagv">
                   <thead>
                     <tr>
+                      <th>Fecha Real de captura del Registro</th>
+                      <th>ID</th>
                       <th>Fecha de Captura</th>
                       <th>Hora de Inicio</th>
                       <th>Hora de Término</th>
@@ -105,7 +107,8 @@ table, th, td {
                     @foreach($asistencias as $asistencia)
                     
                     <tr>
-                      
+                      <td>{{$asistencia->created_at}}</td> 
+                      <td>{{$asistencia->id}}</td>
                       <td>{{$asistencia->fecha}}</td>
                       <td>{{$asistencia->hora_i}}</td>
                       <td>{{$asistencia->hora_f}}</td>

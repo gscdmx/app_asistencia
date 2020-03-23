@@ -78,7 +78,7 @@ public function headings(): array
             'REPRESENTANTE DE ALCALDÍA',
             'PRESENTA IMAGEN',
             'NÚMERO DE ASISTENTES',
-            'FECHA DE CAPTURA'
+            'FECHA REAL DE CAPTURA'
            
             
         ];

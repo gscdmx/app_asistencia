@@ -1,6 +1,4 @@
-@extends('template.header')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.css"/>
 
@@ -39,21 +37,23 @@ table, th, td {
       <h4>ACTIVIDADES SEMANALES</h4>
     </div>
     <div class="card-body">
-      <form class="form-horizontal" method="POST" action="{{ url('/getlistadoagenda') }}">
+      <form class="form-horizontal" method="POST" action="<?php echo e(url('/getlistadoagenda')); ?>">
 
-      {{ csrf_field() }}
+      <?php echo e(csrf_field()); ?>
 
 
-      @if( Session::has('mensaje') )
-                   <div class="alert alert-{{ Session::get('mensaje')['color'] }} alert-dismissable">
+
+      <?php if( Session::has('mensaje') ): ?>
+                   <div class="alert alert-<?php echo e(Session::get('mensaje')['color']); ?> alert-dismissable">
                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       {{ Session::get('mensaje')['mensaje'] }}
+                       <?php echo e(Session::get('mensaje')['mensaje']); ?>
+
                    </div>
-      @endif
+      <?php endif; ?>
 
 <div class="col-sm-4 offset-sm-2">
            
-            <a href="{{ url('/getexcel_agenda') }}" class="btn btn-primary">Descargar Agenda</a>
+            <a href="<?php echo e(url('/getexcel_agenda')); ?>" class="btn btn-primary">Descargar Agenda</a>
 </div>
 
 
@@ -70,7 +70,7 @@ table, th, td {
                   <thead>
                     <tr>
                            
-                     <th>Fecha Real de captura del Registro</th>
+                     <th>Fecha Real de captura del registro</th>
                      <th>Alcaldia:</th>
                      <th>Region:</th>                  
                      <th>Coordinación Territorial/Sector:</th>
@@ -89,26 +89,26 @@ table, th, td {
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach($consultas as $consulta)
+                    <?php $__currentLoopData = $consultas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $consulta): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     
                     <tr>
                         
-                     <td>{{$consulta->created_at}}</td>                     
-                     <td>{{$consulta->delegacion}}</td>
-                     <td>{{$consulta->region}}</td>                 
-                     <td>{{$consulta->ct2}} {{$consulta->sector}}</td>
-                     <td>{{$consulta->cuadrante}}</td>
-                     <td>{{$consulta->id}}</td>
-                     <td>{{$consulta->fecha}}</td>
-                     <td>{{$consulta->hora_i}}</td>
-                     <td>{{$consulta->hora_f}}</td>
-                     <td>{{$consulta->duracion}}</td>
-                     <td>{{$consulta->nombre_activad}}</td>
+                     <td><?php echo e($consulta->created_at); ?></td>                     
+                     <td><?php echo e($consulta->delegacion); ?></td>
+                     <td><?php echo e($consulta->region); ?></td>                 
+                     <td><?php echo e($consulta->ct2); ?> <?php echo e($consulta->sector); ?></td>
+                     <td><?php echo e($consulta->cuadrante); ?></td>
+                     <td><?php echo e($consulta->id); ?></td>
+                     <td><?php echo e($consulta->fecha); ?></td>
+                     <td><?php echo e($consulta->hora_i); ?></td>
+                     <td><?php echo e($consulta->hora_f); ?></td>
+                     <td><?php echo e($consulta->duracion); ?></td>
+                     <td><?php echo e($consulta->nombre_activad); ?></td>
                      
                      <td>
 
                     
-                    <button type="button" class="btn btn-primary accion_modal"     data-toggle="modal" data-id="{{$consulta->id}}" data-target="#exampleModal">Cancelar Registro</button>
+                    <button type="button" class="btn btn-primary accion_modal"     data-toggle="modal" data-id="<?php echo e($consulta->id); ?>" data-target="#exampleModal">Cancelar Registro</button>
                     
                      
 
@@ -117,7 +117,7 @@ table, th, td {
 
                     </tr>
 
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                    
                   </tbody>
                   
@@ -152,8 +152,9 @@ table, th, td {
                                       </button>
                                     </div>
 
-                                    <form method="POST" action="{{ url('/elimiar_registro_agenda') }}">
-                                      {{ csrf_field() }}
+                                    <form method="POST" action="<?php echo e(url('/elimiar_registro_agenda')); ?>">
+                                      <?php echo e(csrf_field()); ?>
+
 
                                     <div class="modal-body">
                                       Esta seguro que desea cancelar el registro?
@@ -172,21 +173,21 @@ table, th, td {
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('js')  
+<?php $__env->startSection('js'); ?>  
  
-@endsection
+<?php $__env->stopSection(); ?>
 
 
 
 
 
-@section('customjs')
+<?php $__env->startSection('customjs'); ?>
 
 
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/sl-1.3.0/datatables.min.js"></script>
@@ -213,7 +214,7 @@ table, th, td {
 
       //2 (get)
       /*
-       var url="{{url('/elimiar_registro_agenda2daopcion')}}"+'/'+id
+       var url="<?php echo e(url('/elimiar_registro_agenda2daopcion')); ?>"+'/'+id
        $("#urleliminar").attr('href', url);
       */
 
@@ -222,4 +223,5 @@ table, th, td {
 
 </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('template.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

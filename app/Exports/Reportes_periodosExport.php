@@ -73,8 +73,8 @@ class Reportes_periodosExport implements WithDrawings, FromCollection, WithHeadi
             'PDI DE INTELIGENCIA SOCIAL',
             'REUNIÓN CON JEFA DE GOBIERNO',
             'FECHA REAL DE CAPTURA',
-            'FECHA DE CREACIÓN',
-            'PRESENTA IMAGEN',
+            'FECHA REAL DE ACTUALIZACIÓN Ó MODIFICACIÓN DEL REGISTRO',
+            'PRESENTA IMAGEN'
             
 
 
