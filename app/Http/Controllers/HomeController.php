@@ -53,7 +53,7 @@ class HomeController extends Controller
         $timezone = new \DateTimeZone('America/Mexico_City');
         $date = new \DateTime();
         $date->setTimeZone($timezone); 
-        $fecha_actual=$date->format('Y-m-d');
+        $fecha_actual=$date->format('Y-m-d H:i:s');
         
      
         
