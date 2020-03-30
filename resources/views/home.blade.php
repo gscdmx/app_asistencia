@@ -361,6 +361,9 @@
            <input id="checkboxCustom000" type="checkbox" name="jg[]" value="No asistió" class="form-control-custom">
            <label for="checkboxCustom000">No asistió</label>
 
+           <input id="checkboxCustom000987" type="checkbox" name="jg[]" value="virtual" class="form-control-custom">
+           <label for="checkboxCustom000987">Virtual</label>
+
 
          </div>
        
@@ -390,6 +393,9 @@
             <input id="checkboxCustom21" type="checkbox" name="mp[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom21">No asistió</label>
 
+            <input id="checkboxCustom2187" type="checkbox" name="mp[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom2187">Virtual</label>
+
 
 
           </div>
@@ -416,6 +422,9 @@
 
             <input id="checkboxCustom41" type="checkbox" name="jsp[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom41">No asistió</label>
+
+            <input id="checkboxCustom41888" type="checkbox" name="jsp[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom41888">Virtual</label>
 
 
           </div>
@@ -445,6 +454,9 @@
             <input id="checkboxCustom61" type="checkbox" name="jspi[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom61">No asistió</label>
 
+            <input id="checkboxCustom61667" type="checkbox" name="jspi[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom61667">Virtual</label>
+
 
 
 
@@ -471,8 +483,11 @@
             <label for="checkboxCustom8">Suplente</label>
 
 
-             <input id="checkboxCustom81" type="checkbox" name="jc[]" value="No asistió" class="form-control-custom">
+            <input id="checkboxCustom81" type="checkbox" name="jc[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom81">No asistió</label>
+
+            <input id="checkboxCustom819999" type="checkbox" name="jc[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom819999">Virtual</label>
 
           </div>
         
@@ -497,8 +512,11 @@
             <label for="checkboxCustom10">Suplente</label>
 
 
-             <input id="checkboxCustom101" type="checkbox" name="ml[]" value="No asistió" class="form-control-custom">
+            <input id="checkboxCustom101" type="checkbox" name="ml[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom101">No asistió</label>
+
+            <input id="checkboxCustom101777" type="checkbox" name="ml[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom101777">Virtual</label>
 
 
           </div>
@@ -526,8 +544,12 @@
             <label for="checkboxCustom00000001">Suplente</label>
 
 
-             <input id="checkboxCustom00000002" type="checkbox" name="representante_alcaldia[]" value="No asistió" class="form-control-custom">
+            <input id="checkboxCustom00000002" type="checkbox" name="representante_alcaldia[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom00000002">No asistió</label>
+
+            <input id="checkboxCustom00000002123456" type="checkbox" name="representante_alcaldia[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom00000002123456">Virtual</label>
+
 
 
           </div>
@@ -555,8 +577,11 @@
             <label for="checkboxCustom00000004">Suplente</label>
 
 
-             <input id="checkboxCustom00000005" type="checkbox" name="ins[]" value="No asistió" class="form-control-custom">
+            <input id="checkboxCustom00000005" type="checkbox" name="ins[]" value="No asistió" class="form-control-custom">
             <label for="checkboxCustom00000005">No asistió</label>
+
+            <input id="checkboxCustom000000057777777" type="checkbox" name="ins[]" value="virtual" class="form-control-custom">
+            <label for="checkboxCustom000000057777777">Virtual</label>
 
 
           </div>
