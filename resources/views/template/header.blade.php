@@ -72,7 +72,7 @@ if (isset(\Auth::user()->permisos)) {
              
             <li><a href="{{url('/usuariopdfView')}}"> <i class="icon-list"></i>MIS PDF'S</a></li>
             <li><a href="{{url('/vinculosView')}}"> <i class="icon-list"></i>MIS VÍNCULOS</a></li>
-            <!--<li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>-->
+            <li><a href="{{url('/entrevistas')}}"> <i class="icon-list"></i>MI ENTREVISTA MP</a></li>
             <li><a href="{{url('/mapasView')}}"> <i class="icon-list"></i>MIS MAPAS INCIDENCIA DELICTIVA Y RED VECINAL</a></li>
             <li><a href="{{url('/agenda')}}"> <i class="icon-list"></i>MI AGENDA</a></li>
             <li><a href="{{url('/getlistadoagenda')}}"> <i class="icon-list"></i>VER MI AGENDA SEMANAL</a></li>
